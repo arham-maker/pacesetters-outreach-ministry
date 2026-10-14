@@ -15,11 +15,7 @@
 
   <header class="pom-header">
     <a class="pom-logo" href="/">
-      <img class="pom-logo-mark" src="/assets/logo-mark.svg" alt="" width="36" height="42">
-      <span class="pom-wordmark">
-        <span>Pacesetters</span>
-        <span>Outreach Ministry</span>
-      </span>
+      <img class="pom-logo-mark" src="/assets/logo.png" alt="Pacesetters Outreach Ministry" width="200" height="48">
     </a>
 
     <div class="pom-header-tools">
@@ -53,11 +49,7 @@
   <footer class="pom-footer">
     <div class="pom-footer-top">
       <a class="pom-logo" href="/">
-        <img class="pom-logo-mark" src="/assets/logo-mark.svg" alt="" width="36" height="42">
-        <span class="pom-wordmark">
-          <span>Pacesetters</span>
-          <span>Outreach Ministry</span>
-        </span>
+        <img class="pom-logo-mark" src="/assets/logo.png" alt="Pacesetters Outreach Ministry" width="200" height="48">
       </a>
 
       <nav class="pom-footer-nav" aria-label="Footer" data-pom-nav>

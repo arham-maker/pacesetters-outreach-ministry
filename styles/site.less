@@ -83,25 +83,10 @@ h1, h2, h3, p { margin: 0; }
 }
 
 .pom-logo-mark {
-  width: 36px;
-  height: 42px;
-  filter: ~"brightness(0) invert(1)";
-}
-
-.pom-wordmark {
-  display: flex;
-  flex-direction: column;
-  text-transform: uppercase;
-  letter-spacing: 0.16em;
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 1.15;
-}
-
-.pom-wordmark span:last-child {
-  font-size: 8px;
-  letter-spacing: 0.18em;
-  font-weight: 500;
+  width: auto;
+  height: 52px;
+  max-width: 240px;
+  object-fit: contain;
 }
 
 .pom-header-tools {
@@ -298,7 +283,7 @@ button.pom-btn {
 
 .pom-has-plain .pom-header-tools { grid-column: 3; }
 .pom-has-plain .pom-sidenav .pom-nav-list { flex-direction: row; gap: 28px; }
-.pom-has-plain .pom-logo-mark { filter: none; }
+.pom-has-plain .pom-header .pom-logo-mark { filter: ~"brightness(0)"; }
 .pom-has-plain .pom-join-btn {
   background: transparent;
   color: @ink;
@@ -316,6 +301,7 @@ button.pom-btn {
 
 @media (max-width: 900px) {
   .pom-header { padding: 20px 20px 0; }
+  .pom-logo-mark { height: 40px; }
   .pom-menu-toggle { display: inline-flex; }
   .pom-sidenav,
   .pom-has-plain .pom-sidenav {
