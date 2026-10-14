@@ -40,9 +40,6 @@
           <li><a href="/contact">Contact</a></li>
         </ul>
       </div>
-      <div class="pom-nav-cms" data-nav-cms>
-        <squarespace:navigation navigationId="mainNav" template="nav-list" />
-      </div>
     </nav>
   </header>
 
@@ -70,9 +67,6 @@
             <li><a href="/contact">Contact</a></li>
           </ul>
         </div>
-        <div class="pom-nav-cms" data-nav-cms>
-          <squarespace:navigation navigationId="footerNav" template="nav-list" />
-        </div>
       </nav>
 
       <div class="pom-social">
@@ -92,9 +86,6 @@
           <li><a href="/terms">Terms &amp; Conditions</a></li>
           <li><a href="/help">Help &amp; Support</a></li>
         </ul>
-      </div>
-      <div class="pom-nav-cms" data-nav-cms>
-        <squarespace:navigation navigationId="legalNav" template="nav-list" />
       </div>
     </nav>
   </footer>
