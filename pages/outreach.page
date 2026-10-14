@@ -1,0 +1,108 @@
+<div class="pom-page pom-page-outreach">
+  <section class="pom-hero is-embrace" data-pom-region="outreach-hero">
+    <div class="pom-hero-copy pom-fallback">
+      <a class="pom-back" href="/services"><span class="pom-arrow" aria-hidden="true"></span> Back to Services</a>
+      <h1>Community Outreach</h1>
+      <p class="pom-lede">Compassion and encouragement, close to home.</p>
+    </div>
+    <div class="pom-cms"><squarespace:block-field id="outreach-hero" columns="12" /></div>
+  </section>
+
+  <section class="pom-intro" data-pom-region="outreach-intro">
+    <div class="pom-fallback">
+      <div>
+        <p class="pom-eyebrow">Our Outreach</p>
+        <h2>A light in our communities.</h2>
+      </div>
+      <div>
+        <p class="pom-prose">We reach people who are hurting, young people, and those experiencing homelessness—sharing God’s love through compassion and Christian encouragement.</p>
+        <p class="pom-prose">Serving Youngstown, Cleveland, and Pennsylvania for over 30 years.</p>
+      </div>
+    </div>
+    <div class="pom-cms"><squarespace:block-field id="outreach-intro" columns="12" /></div>
+  </section>
+
+  <section class="pom-reach" data-pom-region="outreach-who">
+    <div class="pom-fallback">
+      <div class="pom-media is-hands" role="img" aria-label="Hands stacked together"></div>
+      <div class="pom-reach-list">
+        <p class="pom-eyebrow">Who we reach</p>
+        <article>
+          <h3>People who are hurting</h3>
+          <p>We offer a listening heart and Christian encouragement.</p>
+        </article>
+        <article>
+          <h3>Young people</h3>
+          <p>We share hope and support as they navigate life's challenges.</p>
+        </article>
+        <article>
+          <h3>People experiencing homelessness</h3>
+          <p>We meet people with compassion, dignity, and a connection to God’s love.</p>
+        </article>
+      </div>
+    </div>
+    <div class="pom-cms"><squarespace:block-field id="outreach-who" columns="12" /></div>
+  </section>
+
+  <section class="pom-testimonials" data-pom-region="outreach-testimonials">
+    <div class="pom-fallback">
+      <div class="pom-testimonials-intro">
+        <div>
+          <p class="pom-eyebrow">Testimonials</p>
+          <h2>Stories of faith and hope.</h2>
+          <div class="pom-quote-nav">
+            <button class="pom-icon-btn is-prev" type="button" data-quote="prev" aria-label="Previous story"><span class="pom-arrow"></span></button>
+            <button class="pom-icon-btn is-next" type="button" data-quote="next" aria-label="Next story"><span class="pom-arrow"></span></button>
+          </div>
+        </div>
+      </div>
+      <div class="pom-quote-wrap" data-quotes>
+        <blockquote class="pom-quote is-active">
+          <div class="pom-quote-mark" aria-hidden="true">“</div>
+          <p>Lorem ipsum dolor sit amet consectetur. Neque rhoncus et quis in pretium augue commodo. Eget est erat auctor sit nunc urna dolor massa eget. Aliquet praesent in laoreet orci turpis et faucibus. Egestas malesuada a ut auctor euismod.</p>
+          <cite>— Jane Doe</cite>
+        </blockquote>
+      </div>
+    </div>
+    <div class="pom-cms"><squarespace:block-field id="outreach-testimonials" columns="12" /></div>
+  </section>
+
+  <section class="pom-faq" data-pom-region="outreach-faq">
+    <div class="pom-fallback">
+      <div class="pom-faq-intro"><div><p class="pom-eyebrow">FAQ</p><h2>A few helpful answers.</h2></div></div>
+      <div class="pom-faq-list" data-accordion>
+        <div class="pom-faq-item is-open">
+          <button class="pom-faq-q" type="button" aria-expanded="true">Where does the ministry serve? <span class="pom-faq-icon" aria-hidden="true"></span></button>
+          <div class="pom-faq-a">Our outreach serves communities in Youngstown, Cleveland, and throughout Pennsylvania.</div>
+        </div>
+        <div class="pom-faq-item">
+          <button class="pom-faq-q" type="button" aria-expanded="false">How can I get involved? <span class="pom-faq-icon" aria-hidden="true"></span></button>
+          <div class="pom-faq-a"></div>
+        </div>
+      </div>
+    </div>
+    <div class="pom-cms"><squarespace:block-field id="outreach-faq" columns="12" /></div>
+  </section>
+
+  <section class="pom-contact is-crowd" data-pom-region="outreach-contact">
+    <div class="pom-fallback">
+      <div>
+        <p class="pom-eyebrow">Get in Touch</p>
+        <h2>We’d love to hear from you.</h2>
+        <p class="pom-contact-lead">Have a question, need prayer, or want to help?</p>
+        <div class="pom-contact-meta">
+          <a href="tel:3305059062">330-505-9062</a>
+          <a href="mailto:larry.vicks@currently.com">larry.vicks@currently.com</a>
+        </div>
+      </div>
+      <form class="pom-form-card" data-contact-form>
+        <div class="pom-field"><label for="outreach-name">Name</label><input id="outreach-name" name="name" type="text"></div>
+        <div class="pom-field"><label for="outreach-email">Email</label><input id="outreach-email" name="email" type="email"></div>
+        <div class="pom-field"><label for="outreach-message">Message</label><textarea id="outreach-message" name="message"></textarea></div>
+        <button class="pom-link" type="submit">Send Message <span class="pom-arrow" aria-hidden="true"></span></button>
+        <p class="pom-form-note" hidden>Thank you. Add a Squarespace Form block in this region to deliver messages.</p>
+      </form>
+    </div>
+    <div class="pom-cms"><squarespace:block-field id="outreach-contact" columns="12" /></div>
+  </section>
+</div>

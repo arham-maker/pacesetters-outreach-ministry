@@ -1,0 +1,102 @@
+<div class="pom-page pom-page-prayer">
+  <section class="pom-hero is-candles" data-pom-region="prayer-hero">
+    <div class="pom-hero-copy pom-fallback">
+      <a class="pom-back" href="/services"><span class="pom-arrow" aria-hidden="true"></span> Back to Services</a>
+      <h1>Prayer &amp; Encouragement</h1>
+    </div>
+    <div class="pom-cms"><squarespace:block-field id="prayer-hero" columns="12" /></div>
+  </section>
+
+  <section class="pom-split is-cream" data-pom-region="prayer-alone">
+    <div class="pom-fallback">
+      <div class="pom-media is-hands" role="img" aria-label="Quiet moment of prayer"></div>
+      <div class="pom-split-copy">
+        <h2>You don’t have to walk alone.</h2>
+        <p>Connect with our ministry for prayer and spiritual encouragement when you are hurting, facing uncertainty, or simply need someone to listen.</p>
+      </div>
+    </div>
+    <div class="pom-cms"><squarespace:block-field id="prayer-alone" columns="12" /></div>
+  </section>
+
+  <section class="pom-reach" data-pom-region="prayer-support">
+    <div class="pom-fallback">
+      <div class="pom-media is-bible" role="img" aria-label="Open Bible"></div>
+      <div class="pom-reach-list">
+        <p class="pom-eyebrow">How we can support you</p>
+        <article>
+          <h3>Prayer</h3>
+          <p>We lift your requests to God and pray for you</p>
+        </article>
+        <article>
+          <h3>Spiritual encouragement</h3>
+          <p>We share biblical hope and encouragement through God’s Word.</p>
+        </article>
+        <article>
+          <h3>Connection with the ministry</h3>
+          <p>We welcome you to be part of our local church and online fellowship.</p>
+        </article>
+      </div>
+    </div>
+    <div class="pom-cms"><squarespace:block-field id="prayer-support" columns="12" /></div>
+  </section>
+
+  <section class="pom-testimonials" data-pom-region="prayer-testimonials">
+    <div class="pom-fallback">
+      <div class="pom-testimonials-intro">
+        <div>
+          <p class="pom-eyebrow">Testimonials</p>
+          <h2>Stories of faith and hope.</h2>
+          <div class="pom-quote-nav">
+            <button class="pom-icon-btn is-prev" type="button" data-quote="prev" aria-label="Previous story"><span class="pom-arrow"></span></button>
+            <button class="pom-icon-btn is-next" type="button" data-quote="next" aria-label="Next story"><span class="pom-arrow"></span></button>
+          </div>
+        </div>
+      </div>
+      <div class="pom-quote-wrap" data-quotes>
+        <blockquote class="pom-quote is-active">
+          <div class="pom-quote-mark" aria-hidden="true">“</div>
+          <p>Lorem ipsum dolor sit amet consectetur. Neque rhoncus et quis in pretium augue commodo. Eget est erat auctor sit nunc urna dolor massa eget. Aliquet praesent in laoreet orci turpis et faucibus. Egestas malesuada a ut auctor euismod.</p>
+          <cite>— Jane Doe</cite>
+        </blockquote>
+      </div>
+    </div>
+    <div class="pom-cms"><squarespace:block-field id="prayer-testimonials" columns="12" /></div>
+  </section>
+
+  <section class="pom-faq" data-pom-region="prayer-faq">
+    <div class="pom-fallback">
+      <div class="pom-faq-intro"><div><p class="pom-eyebrow">FAQ</p><h2>A few helpful answers.</h2></div></div>
+      <div class="pom-faq-list" data-accordion>
+        <div class="pom-faq-item is-open">
+          <button class="pom-faq-q" type="button" aria-expanded="true">Can I request prayer for someone else? <span class="pom-faq-icon" aria-hidden="true"></span></button>
+          <div class="pom-faq-a">Yes. You can share a request without including private details.</div>
+        </div>
+        <div class="pom-faq-item"><button class="pom-faq-q" type="button" aria-expanded="false">Can I connect with the ministry? <span class="pom-faq-icon" aria-hidden="true"></span></button><div class="pom-faq-a"></div></div>
+        <div class="pom-faq-item"><button class="pom-faq-q" type="button" aria-expanded="false">Can I join prayer online? <span class="pom-faq-icon" aria-hidden="true"></span></button><div class="pom-faq-a"></div></div>
+      </div>
+    </div>
+    <div class="pom-cms"><squarespace:block-field id="prayer-faq" columns="12" /></div>
+  </section>
+
+  <section class="pom-contact is-crowd" data-pom-region="prayer-contact">
+    <div class="pom-fallback">
+      <div>
+        <p class="pom-eyebrow">Get in Touch</p>
+        <h2>We’d love to hear from you.</h2>
+        <p class="pom-contact-lead">Have a question, need prayer, or want to help?</p>
+        <div class="pom-contact-meta">
+          <a href="tel:3305059062">330-505-9062</a>
+          <a href="mailto:larry.vicks@currently.com">larry.vicks@currently.com</a>
+        </div>
+      </div>
+      <form class="pom-form-card" data-contact-form>
+        <div class="pom-field"><label for="prayer-name">Name</label><input id="prayer-name" name="name" type="text"></div>
+        <div class="pom-field"><label for="prayer-email">Email</label><input id="prayer-email" name="email" type="email"></div>
+        <div class="pom-field"><label for="prayer-message">Message</label><textarea id="prayer-message" name="message"></textarea></div>
+        <button class="pom-link" type="submit">Send Message <span class="pom-arrow" aria-hidden="true"></span></button>
+        <p class="pom-form-note" hidden>Thank you. Add a Squarespace Form block in this region to deliver messages.</p>
+      </form>
+    </div>
+    <div class="pom-cms"><squarespace:block-field id="prayer-contact" columns="12" /></div>
+  </section>
+</div>

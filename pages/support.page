@@ -1,0 +1,8 @@
+<article class="pom-page-plain pom-legal-page" data-pom-region="support-body">
+  <div class="pom-fallback">
+    <h1>Help &amp; Support</h1>
+    <p>Questions about gatherings, prayer, or the store can be sent through the contact page.</p>
+    <p><a class="pom-link" href="/contact">Contact the ministry <span class="pom-arrow" aria-hidden="true"></span></a></p>
+  </div>
+  <div class="pom-cms"><squarespace:block-field id="support-body" columns="12" /></div>
+</article>

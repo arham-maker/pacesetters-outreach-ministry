@@ -1,0 +1,138 @@
+<div class="pom-page pom-page-about">
+  <section class="pom-hero is-sunset" data-pom-region="about-hero">
+    <div class="pom-hero-copy pom-fallback">
+      <p class="pom-eyebrow">About Pacesetters</p>
+      <h1>Rooted in faith. Reaching out with hope.</h1>
+      <p class="pom-lede">Lorem ipsum dolor sit amet consectetur. Ultrices erat bibendum ridiculus fringilla nisl venenatis et.</p>
+    </div>
+    <div class="pom-cms"><squarespace:block-field id="about-hero" columns="12" /></div>
+  </section>
+
+  <section class="pom-triptych" data-pom-region="about-story">
+    <div class="pom-fallback">
+      <div class="pom-panel">
+        <div>
+          <p class="pom-eyebrow">Our Story</p>
+          <h2>Over 30 years<br>of reaching people.</h2>
+        </div>
+      </div>
+      <div class="pom-media is-sunset" role="img" aria-label="Hands reaching toward the light"></div>
+      <div class="pom-panel">
+        <p>Lorem ipsum dolor sit amet consectetur. Nisi libero dapibus justo nunc imperdiet amet convallis. Donec adipiscing varius luctus at maecenas dictum ut. Tincidunt tincidunt lorem nisl maecenas. Dui risus amet posuere semper.</p>
+      </div>
+    </div>
+    <div class="pom-cms"><squarespace:block-field id="about-story" columns="12" /></div>
+  </section>
+
+  <section data-pom-region="about-purpose">
+    <div class="pom-fallback">
+      <div class="pom-intro">
+        <div>
+          <p class="pom-eyebrow">Our Purpose</p>
+          <h2>To be a light<br>in our communities.</h2>
+        </div>
+        <p class="pom-prose">Lorem ipsum dolor sit amet consectetur. Nisi libero dapibus justo nunc imperdiet amet convallis. Donec adipiscing varius luctus at maecenas dictum ut. Tincidunt tincidunt lorem nisl maecenas.</p>
+      </div>
+      <div class="pom-benefits">
+        <article>
+          <h3>Serve with compassion</h3>
+          <p>Lorem ipsum dolor sit amet consectetur.</p>
+        </article>
+        <article>
+          <h3>Encourage growth in faith</h3>
+          <p>Lorem ipsum dolor sit amet consectetur.</p>
+        </article>
+        <article>
+          <h3>Strengthen local fellowship</h3>
+          <p>Lorem ipsum dolor sit amet consectetur.</p>
+        </article>
+      </div>
+    </div>
+    <div class="pom-cms"><squarespace:block-field id="about-purpose" columns="12" /></div>
+  </section>
+
+  <section class="pom-split is-dark is-reverse" data-pom-region="about-faith">
+    <div class="pom-fallback">
+      <div class="pom-split-copy">
+        <h2>Faith shapes how we serve.</h2>
+        <p>Lorem ipsum dolor sit amet consectetur. Pellentesque etiam sit urna ac urna laoreet vitae orci. Feugiat egestas eu fames libero tincidunt suspendisse.</p>
+      </div>
+      <div class="pom-media is-hands" role="img" aria-label="Raised hands in warm light"></div>
+    </div>
+    <div class="pom-cms"><squarespace:block-field id="about-faith" columns="12" /></div>
+  </section>
+
+  <section class="pom-split is-cream" data-pom-region="about-reach">
+    <div class="pom-fallback">
+      <div class="pom-media is-bible" role="img" aria-label="People studying a Bible together"></div>
+      <div class="pom-split-copy">
+        <p class="pom-eyebrow">Our Growing Reach</p>
+        <h2>Local roots.<br>Fellowship beyond borders.</h2>
+        <p>Lorem ipsum dolor sit amet consectetur. Et ultrices massa amet fermentum massa iaculis turpis. Commodo at commodo et orci nisi risus.</p>
+        <a class="pom-link" href="/events">View Program &amp; Join <span class="pom-arrow" aria-hidden="true"></span></a>
+      </div>
+    </div>
+    <div class="pom-cms"><squarespace:block-field id="about-reach" columns="12" /></div>
+  </section>
+
+  <section class="pom-testimonials" data-pom-region="about-testimonials" aria-label="Testimonials">
+    <div class="pom-fallback">
+      <div class="pom-testimonials-intro">
+        <div>
+          <p class="pom-eyebrow">Testimonials</p>
+          <h2>Stories of faith and hope.</h2>
+          <div class="pom-quote-nav">
+            <button class="pom-icon-btn is-prev" type="button" data-quote="prev" aria-label="Previous story"><span class="pom-arrow"></span></button>
+            <button class="pom-icon-btn is-next" type="button" data-quote="next" aria-label="Next story"><span class="pom-arrow"></span></button>
+          </div>
+        </div>
+      </div>
+      <div class="pom-quote-wrap" data-quotes>
+        <blockquote class="pom-quote is-active">
+          <div class="pom-quote-mark" aria-hidden="true">“</div>
+          <p>Lorem ipsum dolor sit amet consectetur. Neque rhoncus et quis in pretium augue commodo. Eget est erat auctor sit nunc urna dolor massa eget. Aliquet praesent in laoreet orci turpis et faucibus. Egestas malesuada a ut auctor euismod.</p>
+          <cite>— Jane Doe</cite>
+        </blockquote>
+      </div>
+    </div>
+    <div class="pom-cms"><squarespace:block-field id="about-testimonials" columns="12" /></div>
+  </section>
+
+  <section class="pom-faq" data-pom-region="about-faq">
+    <div class="pom-fallback">
+      <div class="pom-faq-intro"><div><p class="pom-eyebrow">FAQ</p><h2>A few helpful answers.</h2></div></div>
+      <div class="pom-faq-list" data-accordion>
+        <div class="pom-faq-item is-open">
+          <button class="pom-faq-q" type="button" aria-expanded="true">How can I join Saturday Night Live? <span class="pom-faq-icon" aria-hidden="true"></span></button>
+          <div class="pom-faq-a">Visit the program page for current Zoom meeting details.</div>
+        </div>
+        <div class="pom-faq-item"><button class="pom-faq-q" type="button" aria-expanded="false">Can I request prayer? <span class="pom-faq-icon" aria-hidden="true"></span></button><div class="pom-faq-a"></div></div>
+        <div class="pom-faq-item"><button class="pom-faq-q" type="button" aria-expanded="false">How can I get involved? <span class="pom-faq-icon" aria-hidden="true"></span></button><div class="pom-faq-a"></div></div>
+        <div class="pom-faq-item"><button class="pom-faq-q" type="button" aria-expanded="false">What can I find in the store? <span class="pom-faq-icon" aria-hidden="true"></span></button><div class="pom-faq-a"></div></div>
+      </div>
+    </div>
+    <div class="pom-cms"><squarespace:block-field id="about-faq" columns="12" /></div>
+  </section>
+
+  <section class="pom-contact is-crowd" id="get-in-touch" data-pom-region="about-contact">
+    <div class="pom-fallback">
+      <div>
+        <p class="pom-eyebrow">Get in Touch</p>
+        <h2>We’d love to hear from you.</h2>
+        <p class="pom-contact-lead">Have a question, need prayer, or want to help?</p>
+        <div class="pom-contact-meta">
+          <a href="tel:3305059062">330-505-9062</a>
+          <a href="mailto:larry.vicks@currently.com">larry.vicks@currently.com</a>
+        </div>
+      </div>
+      <form class="pom-form-card" data-contact-form>
+        <div class="pom-field"><label for="about-name">Name</label><input id="about-name" name="name" type="text"></div>
+        <div class="pom-field"><label for="about-email">Email</label><input id="about-email" name="email" type="email"></div>
+        <div class="pom-field"><label for="about-message">Message</label><textarea id="about-message" name="message"></textarea></div>
+        <button class="pom-link" type="submit">Send Message <span class="pom-arrow" aria-hidden="true"></span></button>
+        <p class="pom-form-note" hidden>Thank you. Add a Squarespace Form block in this region to deliver messages.</p>
+      </form>
+    </div>
+    <div class="pom-cms"><squarespace:block-field id="about-contact" columns="12" /></div>
+  </section>
+</div>

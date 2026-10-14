@@ -1,0 +1,152 @@
+<div class="pom-page pom-page-store">
+  <section class="pom-hero is-books" data-pom-region="store-hero">
+    <div class="pom-hero-copy pom-fallback"><h1 class="pom-sr">Ministry Store</h1></div>
+  </section>
+
+  <section class="pom-intro" data-pom-region="store-intro">
+    <div class="pom-fallback">
+      <div>
+        <p class="pom-eyebrow">Ministry Resources</p>
+        <h2>Return to words that encourage.</h2>
+      </div>
+      <div>
+        <p class="pom-prose">Explore music, sermons, and books from our ministry to support your walk of faith.</p>
+        <a class="pom-link" href="#ministry-store">Browse Resources <span class="pom-arrow" aria-hidden="true"></span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="pom-cats" data-pom-region="store-categories" aria-label="Resource categories">
+    <article>
+      <div class="pom-media is-books"></div>
+      <h3>Music &amp; CDs</h3>
+      <p>Music to encourage worship and reflection.</p>
+    </article>
+    <article>
+      <div class="pom-media is-amber"></div>
+      <h3>Sermons</h3>
+      <p>Messages rooted in God’s Word.</p>
+    </article>
+    <article>
+      <div class="pom-media is-bible"></div>
+      <h3>Books</h3>
+      <p>Reading for spiritual growth and encouragement.</p>
+    </article>
+  </section>
+
+  <section id="ministry-store" data-pom-region="store-grid">
+    <div class="pom-fallback">
+      <div class="pom-store-head">
+        <div>
+          <p class="pom-eyebrow">Ministry Store</p>
+          <h2>Browse Resources</h2>
+        </div>
+      </div>
+      <div class="pom-filters" data-filters>
+        <button type="button" class="is-active" data-filter="all">All Resources</button>
+        <button type="button" data-filter="music">Music &amp; CDs</button>
+        <button type="button" data-filter="sermon">Sermons</button>
+        <button type="button" data-filter="book">Books</button>
+      </div>
+      <div class="pom-products" data-product-grid>
+        {.repeated section items}
+        <article class="pom-product" data-category="{categories.0}">
+          <a href="{fullUrl}">
+            <div class="pom-media is-books">
+              {.section assetUrl}<img src="{assetUrl}?format=800w" alt="{title}">{.end}
+            </div>
+            <h3>{title}</h3>
+            <p class="pom-product-cat">{.section categories.0}{categories.0}{.end}</p>
+            <p class="pom-product-price">{.section variants.0.price.decimalValue}${variants.0.price.decimalValue}{.or}$XX.XX{.end}</p>
+            <span class="pom-link">View Details <span class="pom-arrow" aria-hidden="true"></span></span>
+          </a>
+        </article>
+        {.or}
+        <article class="pom-product" data-category="music"><a href="/store"><div class="pom-media is-books"></div><h3>Lorem ipsum</h3><p class="pom-product-cat">Music &amp; CDs</p><p class="pom-product-price">$XX.XX</p><span class="pom-link">View Details <span class="pom-arrow" aria-hidden="true"></span></span></a></article>
+        <article class="pom-product" data-category="sermons"><a href="/store"><div class="pom-media is-amber"></div><h3>Lorem ipsum</h3><p class="pom-product-cat">Sermons</p><p class="pom-product-price">$XX.XX</p><span class="pom-link">View Details <span class="pom-arrow" aria-hidden="true"></span></span></a></article>
+        <article class="pom-product" data-category="books"><a href="/store"><div class="pom-media is-bible"></div><h3>Lorem ipsum</h3><p class="pom-product-cat">Books</p><p class="pom-product-price">$XX.XX</p><span class="pom-link">View Details <span class="pom-arrow" aria-hidden="true"></span></span></a></article>
+        <article class="pom-product" data-category="music"><a href="/store"><div class="pom-media is-candles"></div><h3>Lorem ipsum</h3><p class="pom-product-cat">Music &amp; CDs</p><p class="pom-product-price">$XX.XX</p><span class="pom-link">View Details <span class="pom-arrow" aria-hidden="true"></span></span></a></article>
+        <article class="pom-product" data-category="books"><a href="/store"><div class="pom-media is-sunset"></div><h3>Lorem ipsum</h3><p class="pom-product-cat">Books</p><p class="pom-product-price">$XX.XX</p><span class="pom-link">View Details <span class="pom-arrow" aria-hidden="true"></span></span></a></article>
+        <article class="pom-product" data-category="sermons"><a href="/store"><div class="pom-media is-pew"></div><h3>Lorem ipsum</h3><p class="pom-product-cat">Sermons</p><p class="pom-product-price">$XX.XX</p><span class="pom-link">View Details <span class="pom-arrow" aria-hidden="true"></span></span></a></article>
+        {.end}
+      </div>
+    </div>
+  </section>
+
+  <section class="pom-points" data-pom-region="store-encourage">
+    <div class="pom-fallback">
+      <h2>Make space for everyday encouragement.</h2>
+      <div>
+        <article>
+          <h3>Listen and reflect</h3>
+          <p>Play music and sermons when you need quiet time with God.</p>
+        </article>
+        <article>
+          <h3>Read and revisit</h3>
+          <p>Return to messages and books that speak to your current season.</p>
+        </article>
+        <article>
+          <h3>Grow in faith</h3>
+          <p>Use these resources to encourage a deeper walk with Christ.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="pom-testimonials" data-pom-region="store-testimonials">
+    <div class="pom-fallback">
+      <div class="pom-testimonials-intro">
+        <div>
+          <p class="pom-eyebrow">Testimonials</p>
+          <h2>Stories of faith and hope.</h2>
+          <div class="pom-quote-nav">
+            <button class="pom-icon-btn is-prev" type="button" data-quote="prev" aria-label="Previous story"><span class="pom-arrow"></span></button>
+            <button class="pom-icon-btn is-next" type="button" data-quote="next" aria-label="Next story"><span class="pom-arrow"></span></button>
+          </div>
+        </div>
+      </div>
+      <div class="pom-quote-wrap" data-quotes>
+        <blockquote class="pom-quote is-active">
+          <div class="pom-quote-mark" aria-hidden="true">“</div>
+          <p>Lorem ipsum dolor sit amet consectetur. Neque rhoncus et quis in pretium augue commodo. Eget est erat auctor sit nunc urna dolor massa eget. Aliquet praesent in laoreet orci turpis et faucibus. Egestas malesuada a ut auctor euismod.</p>
+          <cite>— Jane Doe</cite>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="pom-faq" data-pom-region="store-faq">
+    <div class="pom-fallback">
+      <div class="pom-faq-intro"><div><p class="pom-eyebrow">FAQ</p><h2>A few helpful answers.</h2></div></div>
+      <div class="pom-faq-list" data-accordion>
+        <div class="pom-faq-item is-open">
+          <button class="pom-faq-q" type="button" aria-expanded="true">What can I find in the store? <span class="pom-faq-icon" aria-hidden="true"></span></button>
+          <div class="pom-faq-a">The ministry offers music, sermon recordings, CDs, and books.</div>
+        </div>
+        <div class="pom-faq-item"><button class="pom-faq-q" type="button" aria-expanded="false">How do I learn more about a resource? <span class="pom-faq-icon" aria-hidden="true"></span></button><div class="pom-faq-a"></div></div>
+        <div class="pom-faq-item"><button class="pom-faq-q" type="button" aria-expanded="false">Can I ask about current availability? <span class="pom-faq-icon" aria-hidden="true"></span></button><div class="pom-faq-a"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pom-contact is-crowd" data-pom-region="store-contact">
+    <div class="pom-fallback">
+      <div>
+        <p class="pom-eyebrow">Get in Touch</p>
+        <h2>We’d love to hear from you.</h2>
+        <p class="pom-contact-lead">Have a question, need prayer, or want to help?</p>
+        <div class="pom-contact-meta">
+          <a href="tel:3305059062">330-505-9062</a>
+          <a href="mailto:larry.vicks@currently.com">larry.vicks@currently.com</a>
+        </div>
+      </div>
+      <form class="pom-form-card" data-contact-form>
+        <div class="pom-field"><label for="store-name">Name</label><input id="store-name" name="name" type="text"></div>
+        <div class="pom-field"><label for="store-email">Email</label><input id="store-email" name="email" type="email"></div>
+        <div class="pom-field"><label for="store-message">Message</label><textarea id="store-message" name="message"></textarea></div>
+        <button class="pom-link" type="submit">Send Message <span class="pom-arrow" aria-hidden="true"></span></button>
+        <p class="pom-form-note" hidden>Thank you. Add a Squarespace Form block in this region to deliver messages.</p>
+      </form>
+    </div>
+  </section>
+</div>

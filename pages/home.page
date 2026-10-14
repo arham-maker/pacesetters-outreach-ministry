@@ -1,0 +1,132 @@
+<div class="pom-page pom-page-home">
+  <section class="pom-hero is-pew" data-pom-region="home-hero">
+    <div class="pom-hero-copy pom-fallback">
+      <h1>Faith. Hope. A place to belong.</h1>
+      <p class="pom-lede">Sharing God’s love in our communities and beyond.</p>
+      <div class="pom-actions">
+        <a class="pom-btn pom-btn-light" href="/events">Join Saturday Night Live <span class="pom-arrow" aria-hidden="true"></span></a>
+        <a class="pom-btn pom-btn-ghost" href="/about">Explore Our Ministry <span class="pom-arrow" aria-hidden="true"></span></a>
+      </div>
+    </div>
+    <div class="pom-cms"><squarespace:block-field id="home-hero" columns="12" /></div>
+  </section>
+
+  <section class="pom-triptych" data-pom-region="home-purpose" aria-label="Our purpose">
+    <div class="pom-fallback">
+      <div class="pom-panel">
+        <div>
+          <p class="pom-eyebrow">Our Purpose</p>
+          <h2>A light in every community.</h2>
+        </div>
+      </div>
+      <div class="pom-media is-hands" role="img" aria-label="People gathered with open Bibles"></div>
+      <div class="pom-panel">
+        <div>
+          <p>For over 30 years, we’ve reached people with compassion, Christian fellowship, and the encouragement of God’s Word.</p>
+          <a class="pom-link" href="/about">About Pacesetters <span class="pom-arrow" aria-hidden="true"></span></a>
+        </div>
+      </div>
+    </div>
+    <div class="pom-cms"><squarespace:block-field id="home-purpose" columns="12" /></div>
+  </section>
+
+  <section class="pom-split is-cream" id="saturday-night-live" data-pom-region="home-snl">
+    <div class="pom-fallback">
+      <div class="pom-media is-bible" role="img" aria-label="Open Bible and microphone"></div>
+      <div class="pom-split-copy">
+        <p class="pom-eyebrow">Weekly · Online via Zoom</p>
+        <h2>Saturday night live</h2>
+        <p>Preaching, music, and prayer with Pastor Michael Vance.</p>
+        <a class="pom-link" href="/events">View Program &amp; Join <span class="pom-arrow" aria-hidden="true"></span></a>
+      </div>
+    </div>
+    <div class="pom-cms"><squarespace:block-field id="home-saturday" columns="12" /></div>
+  </section>
+
+  <section class="pom-split is-dark is-reverse" data-pom-region="home-store-promo">
+    <div class="pom-fallback">
+      <div class="pom-split-copy">
+        <h2>Encouragement for everyday faith.</h2>
+        <p>Music, sermons, and books from our ministry.</p>
+        <a class="pom-link is-end" href="/store">Browse the Store <span class="pom-arrow" aria-hidden="true"></span></a>
+      </div>
+      <div class="pom-media is-books" role="img" aria-label="Books, CDs, and headphones"></div>
+    </div>
+    <div class="pom-cms"><squarespace:block-field id="home-store-promo" columns="12" /></div>
+  </section>
+
+  <section class="pom-testimonials" data-pom-region="home-testimonials" aria-label="Testimonials">
+    <div class="pom-fallback">
+      <div class="pom-testimonials-intro">
+        <div>
+          <p class="pom-eyebrow">Testimonials</p>
+          <h2>Stories of faith and hope.</h2>
+          <div class="pom-quote-nav">
+            <button class="pom-icon-btn is-prev" type="button" data-quote="prev" aria-label="Previous story"><span class="pom-arrow"></span></button>
+            <button class="pom-icon-btn is-next" type="button" data-quote="next" aria-label="Next story"><span class="pom-arrow"></span></button>
+          </div>
+        </div>
+      </div>
+      <div class="pom-quote-wrap" data-quotes>
+        <blockquote class="pom-quote is-active">
+          <div class="pom-quote-mark" aria-hidden="true">“</div>
+          <p>Lorem ipsum dolor sit amet consectetur. Neque rhoncus et quis in pretium augue commodo. Eget est erat auctor sit nunc urna dolor massa eget. Aliquet praesent in laoreet orci turpis et faucibus. Egestas malesuada a ut auctor euismod.</p>
+          <cite>— Jane Doe</cite>
+        </blockquote>
+      </div>
+    </div>
+    <div class="pom-cms"><squarespace:block-field id="home-testimonials" columns="12" /></div>
+  </section>
+
+  <section class="pom-faq" data-pom-region="home-faq" aria-label="Frequently asked questions">
+    <div class="pom-fallback">
+      <div class="pom-faq-intro">
+        <div>
+          <p class="pom-eyebrow">FAQ</p>
+          <h2>A few helpful answers.</h2>
+        </div>
+      </div>
+      <div class="pom-faq-list" data-accordion>
+        <div class="pom-faq-item is-open">
+          <button class="pom-faq-q" type="button" aria-expanded="true">How can I join Saturday Night Live? <span class="pom-faq-icon" aria-hidden="true"></span></button>
+          <div class="pom-faq-a">Visit the program page for current Zoom meeting details.</div>
+        </div>
+        <div class="pom-faq-item">
+          <button class="pom-faq-q" type="button" aria-expanded="false">Can I request prayer? <span class="pom-faq-icon" aria-hidden="true"></span></button>
+          <div class="pom-faq-a"></div>
+        </div>
+        <div class="pom-faq-item">
+          <button class="pom-faq-q" type="button" aria-expanded="false">How can I get involved? <span class="pom-faq-icon" aria-hidden="true"></span></button>
+          <div class="pom-faq-a"></div>
+        </div>
+        <div class="pom-faq-item">
+          <button class="pom-faq-q" type="button" aria-expanded="false">What can I find in the store? <span class="pom-faq-icon" aria-hidden="true"></span></button>
+          <div class="pom-faq-a"></div>
+        </div>
+      </div>
+    </div>
+    <div class="pom-cms"><squarespace:block-field id="home-faq" columns="12" /></div>
+  </section>
+
+  <section class="pom-contact is-crowd" id="get-in-touch" data-pom-region="home-contact">
+    <div class="pom-fallback">
+      <div>
+        <p class="pom-eyebrow">Get in Touch</p>
+        <h2>We’d love to hear from you.</h2>
+        <p class="pom-contact-lead">Have a question, need prayer, or want to help?</p>
+        <div class="pom-contact-meta">
+          <a href="tel:3305059062">330-505-9062</a>
+          <a href="mailto:larry.vicks@currently.com">larry.vicks@currently.com</a>
+        </div>
+      </div>
+      <form class="pom-form-card" data-contact-form action="/contact" method="post">
+        <div class="pom-field"><label for="home-name">Name</label><input id="home-name" name="name" type="text" autocomplete="name"></div>
+        <div class="pom-field"><label for="home-email">Email</label><input id="home-email" name="email" type="email" autocomplete="email"></div>
+        <div class="pom-field"><label for="home-message">Message</label><textarea id="home-message" name="message"></textarea></div>
+        <button class="pom-link" type="submit">Send Message <span class="pom-arrow" aria-hidden="true"></span></button>
+        <p class="pom-form-note" hidden>Thank you. Add a Squarespace Form block in this region to deliver messages.</p>
+      </form>
+    </div>
+    <div class="pom-cms"><squarespace:block-field id="home-contact" columns="12" /></div>
+  </section>
+</div>
