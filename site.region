@@ -2,11 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <squarespace:headers />
 </head>
-<body id="{squarespace.page-id}" class="{squarespace.page-classes}">
-  <div id="page" data-content-field="main-content">
+<body>
+  <div id="page">
     {squarespace.main-content}
   </div>
   <squarespace:footers />
