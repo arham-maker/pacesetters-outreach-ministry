@@ -1,7 +1,12 @@
 <ul class="pom-nav-list">
 {.repeated section items}
   <li class="pom-nav-item{.section active} is-active{.end}">
-    <a href="{url}">{title}</a>
+    {.section collection}
+      <a href="{fullUrl}">{navigationTitle}</a>
+    {.end}
+    {.section externalLink}
+      <a href="{url}">{title}</a>
+    {.end}
   </li>
 {.end}
 </ul>

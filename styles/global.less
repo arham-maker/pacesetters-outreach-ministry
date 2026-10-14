@@ -1,5 +1,3 @@
-@import "tokens.less";
-
 * { box-sizing: border-box; }
 
 html { scroll-behavior: smooth; }
@@ -29,7 +27,7 @@ h1, h2, h3, p { margin: 0; }
   padding: 0;
   margin: -1px;
   overflow: hidden;
-  clip: rect(0, 0, 0, 0);
+  clip: ~"rect(0, 0, 0, 0)";
   border: 0;
 }
 
@@ -230,8 +228,8 @@ h1, h2, h3, p { margin: 0; }
   height: 16px;
   display: inline-block;
   background: currentColor;
-  -webkit-mask: url("/assets/arrow.svg") ~"center / contain" no-repeat;
-  mask: url("/assets/arrow.svg") ~"center / contain" no-repeat;
+  -webkit-mask: ~'url("/assets/arrow.svg") center / contain no-repeat';
+  mask: ~'url("/assets/arrow.svg") center / contain no-repeat';
   transform: ~"rotate(90deg)";
 }
 
@@ -289,6 +287,14 @@ h1, h2, h3, p { margin: 0; }
   border-color: @ink;
 }
 .pom-has-plain .pom-menu-toggle { border-color: @ink; }
+
+.pom-has-plain #page > .sqs-layout {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 12px 24px 80px;
+  color: @ink;
+  font-family: @font-sans;
+}
 
 @media (max-width: 900px) {
   .pom-header { padding: 20px 20px 0; }

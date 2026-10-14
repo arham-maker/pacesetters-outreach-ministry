@@ -5,7 +5,7 @@
     body.classList.add("pom-editing");
   }
 
-  if (document.querySelector(".pom-page-plain, .pom-page-contact")) {
+  if (document.querySelector(".pom-page-plain, .pom-page-contact") || !document.querySelector(".pom-page, .pom-hero")) {
     body.classList.add("pom-has-plain");
   }
 
