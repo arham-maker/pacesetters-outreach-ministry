@@ -23,7 +23,7 @@
     </a>
 
     <div class="pom-header-tools">
-      <a class="pom-btn pom-btn-light pom-join" href="/events">Join Online <span class="pom-arrow" aria-hidden="true"></span></a>
+      <a class="pom-btn pom-btn-light pom-join-btn" href="/events">Join Online <span class="pom-arrow" aria-hidden="true"></span></a>
       <button class="pom-menu-toggle" type="button" aria-expanded="false" aria-controls="pom-drawer">
         <span class="pom-menu-bars" aria-hidden="true"></span>
         <span class="pom-sr">Menu</span>

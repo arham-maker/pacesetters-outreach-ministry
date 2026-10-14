@@ -37,7 +37,7 @@
 
   Array.prototype.forEach.call(document.querySelectorAll("[data-pom-region]"), function (region) {
     var cms = region.querySelector(".pom-cms");
-    if (cms && cms.querySelector(".sqs-block, .sqs-row, .form-wrapper")) {
+    if (cms && cms.querySelector(".sqs-block:not(.sqs-block-spacer), .form-wrapper")) {
       region.classList.add("has-cms");
     }
   });

@@ -208,7 +208,10 @@ h1, h2, h3, p { margin: 0; }
   gap: 10px;
 }
 
-.pom-btn {
+a.pom-btn,
+button.pom-btn {
+  display: inline-flex;
+  width: auto;
   min-height: 44px;
   padding: 10px 18px;
   border-radius: 999px;
@@ -217,6 +220,7 @@ h1, h2, h3, p { margin: 0; }
   line-height: 1;
   cursor: pointer;
   background: transparent;
+  grid-template-columns: none;
 }
 
 .pom-btn-light {
@@ -295,7 +299,7 @@ h1, h2, h3, p { margin: 0; }
 .pom-has-plain .pom-header-tools { grid-column: 3; }
 .pom-has-plain .pom-sidenav .pom-nav-list { flex-direction: row; gap: 28px; }
 .pom-has-plain .pom-logo-mark { filter: none; }
-.pom-has-plain .pom-join {
+.pom-has-plain .pom-join-btn {
   background: transparent;
   color: @ink;
   border-color: @ink;
@@ -341,7 +345,7 @@ h1, h2, h3, p { margin: 0; }
     gap: 18px;
   }
   .pom-legal { margin-top: 36px; }
-  .pom-join { padding-inline: 12px; }
+  .pom-join-btn { padding-inline: 12px; }
 }
 
 
@@ -772,7 +776,7 @@ h1, h2, h3, p { margin: 0; }
 .pom-eventbar strong { display: block; font-family: @font-serif; font-size: 22px; font-weight: 400; }
 .pom-eventbar span { color: @ink-soft; font-size: 14px; }
 
-.pom-join {
+section.pom-join {
   display: grid;
   grid-template-columns: 360px 1fr;
   gap: 40px;
