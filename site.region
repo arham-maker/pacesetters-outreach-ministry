@@ -99,7 +99,7 @@
     </nav>
   </footer>
 
-  <squarespace:script src="site.js" combo="false" />
+  <script src="/scripts/site.js"></script>
   <squarespace:footers />
 </body>
 </html>
