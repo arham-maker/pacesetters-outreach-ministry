@@ -2,12 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <squarespace:headers />
 </head>
 <body>
-  <div id="page">
-    {squarespace.main-content}
-  </div>
-  <squarespace:footers />
+  <div id="page">{squarespace.main-content}</div>
 </body>
 </html>
