@@ -46,7 +46,7 @@
     </nav>
   </header>
 
-  <main id="page" role="main">
+  <main id="page" role="main" data-content-field="main-content">
     {squarespace.main-content}
   </main>
 
