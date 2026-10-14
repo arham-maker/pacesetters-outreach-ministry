@@ -50,14 +50,12 @@
       </div>
       <div class="pom-products" data-product-grid>
         {.repeated section items}
-        <article class="pom-product" data-category="{categories.0}">
+        <article class="pom-product">
           <a href="{fullUrl}">
             <div class="pom-media is-books">
               {.section assetUrl}<img src="{assetUrl}?format=800w" alt="{title}">{.end}
             </div>
             <h3>{title}</h3>
-            <p class="pom-product-cat">{.section categories.0}{categories.0}{.end}</p>
-            <p class="pom-product-price">{.section variants.0.price.decimalValue}${variants.0.price.decimalValue}{.or}$XX.XX{.end}</p>
             <span class="pom-link">View Details <span class="pom-arrow" aria-hidden="true"></span></span>
           </a>
         </article>

@@ -73,7 +73,7 @@ h1, h2, h3, p { margin: 0; }
 .pom-logo-mark {
   width: 36px;
   height: 42px;
-  filter: brightness(0) invert(1);
+  filter: ~"brightness(0) invert(1)";
 }
 
 .pom-wordmark {
@@ -218,7 +218,7 @@ h1, h2, h3, p { margin: 0; }
   border-color: rgba(255, 255, 255, 0.85);
 }
 
-.pom-btn:hover { transform: translateY(-1px); }
+.pom-btn:hover { transform: ~"translateY(-1px)"; }
 
 .pom-link {
   font-size: 16px;
@@ -230,13 +230,13 @@ h1, h2, h3, p { margin: 0; }
   height: 16px;
   display: inline-block;
   background: currentColor;
-  -webkit-mask: url("/assets/arrow.svg") center / contain no-repeat;
-  mask: url("/assets/arrow.svg") center / contain no-repeat;
-  transform: rotate(90deg);
+  -webkit-mask: url("/assets/arrow.svg") ~"center / contain" no-repeat;
+  mask: url("/assets/arrow.svg") ~"center / contain" no-repeat;
+  transform: ~"rotate(90deg)";
 }
 
 .pom-link:hover .pom-arrow,
-.pom-btn:hover .pom-arrow { transform: rotate(90deg) translate(2px, 2px); }
+.pom-btn:hover .pom-arrow { transform: ~"rotate(90deg) translate(2px, 2px)"; }
 
 .pom-icon-btn {
   width: 58px;
@@ -252,8 +252,8 @@ h1, h2, h3, p { margin: 0; }
 }
 
 .pom-icon-btn .pom-arrow { width: 18px; height: 18px; }
-.pom-icon-btn.is-prev .pom-arrow { transform: rotate(-90deg); }
-.pom-icon-btn.is-next .pom-arrow { transform: rotate(90deg); }
+.pom-icon-btn.is-prev .pom-arrow { transform: ~"rotate(-90deg)"; }
+.pom-icon-btn.is-next .pom-arrow { transform: ~"rotate(90deg)"; }
 
 .pom-quote-nav {
   display: flex;
@@ -324,7 +324,3 @@ h1, h2, h3, p { margin: 0; }
   .pom-join { padding-inline: 12px; }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-  .pom-btn:hover { transform: none; }
-}

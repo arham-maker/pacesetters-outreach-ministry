@@ -7,7 +7,7 @@
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&amp;family=Manrope:wght@400;500;600&amp;display=swap" rel="stylesheet">
   <squarespace:headers />
 </head>
 <body id="{squarespace.page-id}" class="{squarespace.page-classes}">

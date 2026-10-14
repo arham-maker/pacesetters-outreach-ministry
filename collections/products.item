@@ -4,9 +4,7 @@
   </div>
   <div>
     <a class="pom-back" href="/store"><span class="pom-arrow" aria-hidden="true"></span> Back to Store</a>
-    <p class="pom-eyebrow">{.section categories.0}{categories.0}{.end}</p>
     <h1>{title}</h1>
-    <p class="pom-price">{.section variants.0.price.decimalValue}${variants.0.price.decimalValue}{.end}</p>
     {.section excerpt}<p class="pom-prose">{excerpt}</p>{.end}
     {.section body}<div class="pom-prose">{body}</div>{.end}
     <div class="pom-add sqs-add-to-cart-button-wrapper" data-item-id="{id}">

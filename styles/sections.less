@@ -7,7 +7,10 @@
   align-items: flex-end;
   color: @white;
   padding: 160px 80px 88px;
-  background: #1a120e center / cover no-repeat;
+  background-color: #1a120e;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   overflow: hidden;
 }
 
@@ -16,7 +19,7 @@
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(90deg, rgba(12, 8, 6, 0.72) 0%, rgba(12, 8, 6, 0.28) 48%, rgba(12, 8, 6, 0.35) 100%);
+    ~"linear-gradient(90deg, rgba(12, 8, 6, 0.72) 0%, rgba(12, 8, 6, 0.28) 48%, rgba(12, 8, 6, 0.35) 100%)";
 }
 
 .pom-hero-copy {
@@ -28,7 +31,7 @@
 .pom-hero h1 {
   font-family: @font-serif;
   font-weight: 400;
-  font-size: clamp(46px, 5.4vw, 76px);
+  font-size: ~"clamp(46px, 5.4vw, 76px)";
   line-height: 0.98;
   letter-spacing: -0.02em;
   max-width: 10em;
@@ -67,7 +70,7 @@
   font-size: 14px;
 }
 
-.pom-back .pom-arrow { transform: rotate(-90deg); }
+.pom-back .pom-arrow { transform: ~"rotate(-90deg)"; }
 
 .pom-triptych {
   display: grid;
@@ -90,7 +93,7 @@
 .pom-faq h2 {
   font-family: @font-serif;
   font-weight: 400;
-  font-size: clamp(36px, 3.4vw, 52px);
+  font-size: ~"clamp(36px, 3.4vw, 52px)";
   line-height: 1.08;
   letter-spacing: -0.02em;
 }
@@ -110,7 +113,10 @@
 .pom-media {
   position: relative;
   min-height: 280px;
-  background: #2a211c center / cover no-repeat;
+  background-color: #2a211c;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .pom-media img {
@@ -121,16 +127,16 @@
   inset: 0;
 }
 
-.is-amber { background-image: radial-gradient(circle at 70% 40%, #f0c27a 0%, #c47a3a 28%, #5a3018 62%, #1c120e 100%); }
-.is-pew { background-image: linear-gradient(160deg, #3a2418, #8a5a32 40%, #1a120e); }
-.is-hands { background-image: linear-gradient(180deg, #f2c9a0, #c47b58 45%, #6a3a32); }
-.is-bible { background-image: linear-gradient(120deg, #1d140f, #6b4a2a 55%, #d7a15a); }
-.is-books { background-image: linear-gradient(200deg, #e7d3b0, #b88958 40%, #3d2a1c); }
-.is-crowd { background-image: linear-gradient(90deg, #120e0c, #4a3428 50%, #c98448); }
-.is-sunset { background-image: linear-gradient(180deg, #f6d7a8, #e08958 50%, #8a4030); }
-.is-zoom { background-image: linear-gradient(135deg, #243044, #8d6a45 60%, #efe6d4); }
-.is-candles { background-image: radial-gradient(circle at 80% 30%, #f3d7a1, #a15a32 36%, #1a120e 78%); }
-.is-embrace { background-image: linear-gradient(100deg, #d8d2cc, #8d7b72 40%, #2c2422); }
+.is-amber { background-image: ~"radial-gradient(circle at 70% 40%, #f0c27a 0%, #c47a3a 28%, #5a3018 62%, #1c120e 100%)"; }
+.is-pew { background-image: ~"linear-gradient(160deg, #3a2418, #8a5a32 40%, #1a120e)"; }
+.is-hands { background-image: ~"linear-gradient(180deg, #f2c9a0, #c47b58 45%, #6a3a32)"; }
+.is-bible { background-image: ~"linear-gradient(120deg, #1d140f, #6b4a2a 55%, #d7a15a)"; }
+.is-books { background-image: ~"linear-gradient(200deg, #e7d3b0, #b88958 40%, #3d2a1c)"; }
+.is-crowd { background-image: ~"linear-gradient(90deg, #120e0c, #4a3428 50%, #c98448)"; }
+.is-sunset { background-image: ~"linear-gradient(180deg, #f6d7a8, #e08958 50%, #8a4030)"; }
+.is-zoom { background-image: ~"linear-gradient(135deg, #243044, #8d6a45 60%, #efe6d4)"; }
+.is-candles { background-image: ~"radial-gradient(circle at 80% 30%, #f3d7a1, #a15a32 36%, #1a120e 78%)"; }
+.is-embrace { background-image: ~"linear-gradient(100deg, #d8d2cc, #8d7b72 40%, #2c2422)"; }
 
 .pom-split {
   display: grid;
@@ -239,7 +245,7 @@
 
 .pom-quote p {
   font-family: @font-serif;
-  font-size: clamp(22px, 2vw, 28px);
+  font-size: ~"clamp(22px, 2vw, 28px)";
   line-height: 1.35;
   margin: 18px 0 28px;
   max-width: 728px;
@@ -288,7 +294,7 @@
   background: @ink;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  transform: ~"translate(-50%, -50%)";
 }
 
 .pom-faq-icon:before { width: 12px; height: 1.5px; }
@@ -313,14 +319,17 @@
   align-items: center;
   padding: 64px 80px;
   color: @white;
-  background: #1a1410 center / cover no-repeat;
+  background-color: #1a1410;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .pom-contact:before {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgba(16, 12, 10, 0.72), rgba(16, 12, 10, 0.45));
+  background: ~"linear-gradient(90deg, rgba(16, 12, 10, 0.72), rgba(16, 12, 10, 0.45))";
 }
 
 .pom-contact > * { position: relative; z-index: 1; }
@@ -328,7 +337,7 @@
 .pom-contact h2 {
   font-family: @font-serif;
   font-weight: 400;
-  font-size: clamp(36px, 3.5vw, 52px);
+  font-size: ~"clamp(36px, 3.5vw, 52px)";
   line-height: 1.08;
   max-width: 460px;
 }
