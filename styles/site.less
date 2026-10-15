@@ -774,7 +774,10 @@ a.pom-join-btn {
 .pom-hero-bar.is-dark { background: @ink; color: @white; }
 .pom-page-home .pom-triptych .is-hands { background-image: ~'url("/assets/home-purpose.png")'; }
 .pom-page-home .pom-split.is-cream .is-bible { background-image: ~'url("/assets/home-snl.png")'; }
-.pom-page-home .pom-split.is-dark .is-books { background-image: ~'url("/assets/home-store.png")'; }
+.pom-page-home .pom-split.is-dark .is-books,
+.pom-split.is-dark.is-store .pom-media.is-books {
+  background-image: ~'url("/assets/home-store-figma.png")' !important;
+}
 .pom-page-home .pom-contact.is-crowd,
 .pom-contact.is-crowd {
   background-image: none;
@@ -881,29 +884,31 @@ a.pom-join-btn {
 
 .pom-split.is-dark.is-store .pom-link .pom-arrow,
 .pom-split.is-dark.is-store .pom-link .pom-arrow.is-ne,
-.pom-split.is-dark.is-store .pom-link:hover .pom-arrow {
-  width: 11px !important;
-  height: 11px !important;
-  flex: 0 0 11px;
+.pom-split.is-dark.is-store .pom-link:hover .pom-arrow,
+.pom-split.is-dark.is-store .pom-link:hover .pom-arrow.is-ne {
+  width: 14px !important;
+  height: 14px !important;
+  flex: 0 0 14px;
   margin: 0;
   padding: 0;
   border: 0 !important;
-  border-top: 1.5px solid currentColor !important;
-  border-right: 1.5px solid currentColor !important;
-  background: transparent !important;
-  -webkit-mask: none !important;
-  mask: none !important;
-  -webkit-mask-image: none !important;
-  mask-image: none !important;
-  transform: ~"rotate(45deg)" !important;
+  background: currentColor !important;
+  -webkit-mask: ~'url("/assets/arrow-ne.svg") center / contain no-repeat' !important;
+  mask: ~'url("/assets/arrow-ne.svg") center / contain no-repeat' !important;
+  transform: none !important;
   display: inline-block;
 }
 
 .pom-split.is-dark.is-store .pom-media.is-books {
   min-height: 560px;
-  background-image: ~'url("/assets/home-store.png")' !important;
   background-size: cover;
   background-position: center;
+}
+
+.pom-split.is-dark.is-store .pom-split-copy h2,
+.pom-split.is-dark.is-store .pom-split-copy p,
+.pom-split.is-dark.is-store .pom-link {
+  text-align: right !important;
 }
 
 .pom-intro {
