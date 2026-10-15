@@ -1,5 +1,5 @@
 <div class="pom-page pom-page-events">
-  <section class="pom-hero is-zoom" data-pom-region="events-hero">
+  <section class="pom-hero is-events-zoom" data-pom-region="events-hero">
     <div class="pom-hero-copy pom-fallback">
       <h1>Online Fellowship</h1>
       <p class="pom-lede">Faith and fellowship, wherever you are.</p>
@@ -7,20 +7,20 @@
     <div class="pom-cms"><squarespace:block-field id="events-hero" columns="12" /></div>
   </section>
 
-  <section class="pom-split is-cream" data-pom-region="events-feature">
+  <section class="pom-split is-events-feature" data-pom-region="events-feature">
     <div class="pom-fallback">
       <div class="pom-split-copy">
         <p class="pom-eyebrow">Weekly · Online via Zoom</p>
         <h2>Night Live</h2>
         <p>Join Pastor Michael Vance for preaching, music, prayer, and spiritual encouragement.</p>
-        <a class="pom-link" href="#get-in-touch">Request Zoom Details <span class="pom-arrow is-ne" aria-hidden="true"></span></a>
+        <a class="pom-link" href="#get-in-touch"><span class="pom-link-text">Request Zoom Details</span><span class="pom-arrow is-ne" aria-hidden="true"></span></a>
       </div>
-      <div class="pom-media is-bible" role="img" aria-label="Saturday Night Live gathering"></div>
+      <div class="pom-media is-events-feature" role="img" aria-label="Online livestream and camera setup"></div>
     </div>
     <div class="pom-cms"><squarespace:block-field id="events-feature" columns="12" /></div>
   </section>
 
-  <section class="pom-expect" data-pom-region="events-expect">
+  <section class="pom-expect is-events-expect" data-pom-region="events-expect">
     <div class="pom-fallback">
       <p class="pom-eyebrow pom-expect-label">What to expect</p>
       <div class="pom-expect-grid">
@@ -41,39 +41,48 @@
     <div class="pom-cms"><squarespace:block-field id="events-expect" columns="12" /></div>
   </section>
 
-  <section class="pom-event-block" data-pom-region="events-list">
+  <section class="pom-event-block is-events-gather" data-pom-region="events-list">
     <div class="pom-fallback">
       <p class="pom-eyebrow">Gather with Us</p>
       <h2>Upcoming Gatherings</h2>
       <div class="pom-eventbar">
-        <div class="pom-event-when"><span>Weekly</span><strong>Saturday</strong></div>
-        <div>
-          <strong>Saturday Night Live</strong>
-          <span>Pastor Michael Vance · Online via Zoom</span>
+        <div class="pom-event-when">
+          <span>Weekly</span>
+          <strong>Saturday</strong>
         </div>
-        <div><span>Timings</span><strong>Lorem Ipsum</strong></div>
-        <div><span>Joining Details</span><strong>Lorem Ipsum</strong></div>
+        <div class="pom-event-main">
+          <strong>Saturday Night Live</strong>
+          <span>Pastor Micheal Vance · Online via Zoom</span>
+        </div>
+        <div class="pom-event-meta">
+          <p><strong>Timings</strong> <span>Lorem Ipsum</span></p>
+          <p><strong>Joining Details</strong> <span>Lorem Ipsum</span></p>
+        </div>
       </div>
     </div>
     <div class="pom-cms"><squarespace:block-field id="events-list" columns="12" /></div>
   </section>
 
-  <section class="pom-join is-tan" data-pom-region="events-join">
+  <section class="pom-join is-events-join" data-pom-region="events-join">
     <div class="pom-fallback">
-      <div>
+      <div class="pom-join-intro">
         <p class="pom-eyebrow">Joining Online</p>
         <h2>How to join</h2>
       </div>
       <div class="pom-steps">
         <article>
-          <div class="pom-step-no">1</div>
-          <h3>Contact the ministry</h3>
-          <p>Ask for the current Zoom meeting details.</p>
+          <div class="pom-step-no" aria-hidden="true">1</div>
+          <div>
+            <h3>Contact the ministry</h3>
+            <p>Ask for the current Zoom meeting details.</p>
+          </div>
         </article>
         <article>
-          <div class="pom-step-no">2</div>
-          <h3>Connect through Zoom</h3>
-          <p>Use the meeting details provided by the ministry.</p>
+          <div class="pom-step-no" aria-hidden="true">2</div>
+          <div>
+            <h3>Connect through Zoom</h3>
+            <p>Use the meeting details provided by the ministry.</p>
+          </div>
         </article>
       </div>
     </div>
@@ -143,7 +152,7 @@
         <div class="pom-field"><label for="events-name">Name</label><input id="events-name" name="name" type="text"></div>
         <div class="pom-field"><label for="events-email">Email</label><input id="events-email" name="email" type="email"></div>
         <div class="pom-field"><label for="events-message">Message</label><textarea id="events-message" name="message"></textarea></div>
-        <button class="pom-link" type="submit">Send Message <span class="pom-arrow is-ne" aria-hidden="true"></span></button>
+        <button class="pom-link" type="submit"><span class="pom-link-text">Send Message</span><span class="pom-arrow is-ne" aria-hidden="true"></span></button>
         <p class="pom-form-note" hidden>Thank you. Add a Squarespace Form block in this region to deliver messages.</p>
       </form>
     </div>

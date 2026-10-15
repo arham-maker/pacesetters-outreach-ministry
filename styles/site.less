@@ -10,8 +10,8 @@
 @contact-muted: #656464;
 @line: rgba(38, 38, 37, 0.16);
 @white: #ffffff;
-@font-serif: "Instrument Serif", "Palatino Linotype", Palatino, serif;
-@font-sans: "Manrope", "Gill Sans", "Trebuchet MS", sans-serif;
+@font-serif: "Neue Haas Grotesk Display Pro", "neue-haas-grotesk-display", serif;
+@font-sans: "Neue Haas Grotesk Display Pro", "neue-haas-grotesk-display", sans-serif;
 @font-display: "Neue Haas Grotesk Display Pro", "neue-haas-grotesk-display", "Helvetica Neue", Helvetica, Arial, sans-serif;
 @header-offset: 824px;
 @pad: 50px;
@@ -806,9 +806,412 @@ a.pom-join-btn {
 
 .pom-page-outreach .pom-hero,
 .pom-page-prayer .pom-hero,
-.pom-page-events .pom-hero,
 .pom-page-store .pom-hero {
   padding: 180px @gutter 88px;
+}
+
+/* Events — Figma 702:616 */
+.pom-page-events .pom-hero.is-events-zoom {
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 50px;
+  background-image: ~'url("/assets/events/events-hero.png")';
+  background-position: center center;
+  background-size: cover;
+}
+
+.pom-page-events .pom-hero.is-events-zoom:before {
+  background:
+    ~"linear-gradient(89.87deg, rgb(12, 9, 9) 0%, rgba(12, 9, 9, 0) 53.2%)",
+    ~"linear-gradient(89.38deg, rgba(59, 51, 42, 0) 83.4%, rgb(59, 51, 42) 99.7%)";
+}
+
+.pom-page-events .pom-hero-copy {
+  max-width: 700px;
+  width: max-content;
+}
+
+.pom-page-events .pom-hero h1 {
+  font-family: @font-display !important;
+  font-weight: 400;
+  font-size: 90px;
+  line-height: 90px;
+  letter-spacing: 0;
+  max-width: none;
+  width: max-content;
+  white-space: nowrap;
+  color: #fefefe;
+  margin: 0;
+}
+
+.pom-page-events .pom-hero .pom-lede {
+  font-family: @font-display;
+  font-size: 40px;
+  line-height: 48px;
+  font-weight: 400;
+  letter-spacing: 0;
+  color: #fefefe;
+  max-width: 662px;
+  margin-top: 20px;
+}
+
+.pom-page-events .pom-split.is-events-feature {
+  min-height: 500px;
+  background: @tan;
+  font-family: @font-display;
+  align-items: stretch;
+}
+
+.pom-page-events .pom-split.is-events-feature .pom-split-copy {
+  align-items: flex-end;
+  text-align: right;
+  padding: 48px 50px;
+  justify-content: center;
+}
+
+.pom-page-events .pom-split.is-events-feature .pom-eyebrow {
+  font-family: @font-display;
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  color: @gold-figma;
+  margin: 0 0 20px;
+  text-align: right;
+}
+
+.pom-page-events .pom-split.is-events-feature h2 {
+  font-family: @font-display !important;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 56px;
+  letter-spacing: 0;
+  color: @ink !important;
+  max-width: none;
+  margin: 0 0 10px;
+  text-align: right;
+}
+
+.pom-page-events .pom-split.is-events-feature .pom-split-copy > p:not(.pom-eyebrow) {
+  font-family: @font-display;
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 400;
+  color: @contact-muted !important;
+  margin: 0 0 50px;
+  max-width: none;
+  text-align: right;
+}
+
+.pom-page-events .pom-split.is-events-feature .pom-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  align-self: flex-end;
+  font-family: @font-display;
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 400;
+  color: @ink !important;
+  text-decoration: none !important;
+}
+
+.pom-page-events .pom-split.is-events-feature .pom-link .pom-link-text {
+  text-decoration: underline;
+  text-decoration-thickness: 4%;
+  text-underline-offset: 13%;
+}
+
+.pom-page-events .pom-split.is-events-feature .pom-link .pom-arrow,
+.pom-page-events .pom-split.is-events-feature .pom-link .pom-arrow.is-ne {
+  width: 14px !important;
+  height: 14px !important;
+  flex: 0 0 14px;
+  border: 0 !important;
+  background: currentColor !important;
+  -webkit-mask: ~'url("/assets/arrow-ne.svg") center / contain no-repeat' !important;
+  mask: ~'url("/assets/arrow-ne.svg") center / contain no-repeat' !important;
+  transform: none !important;
+}
+
+.pom-page-events .pom-media.is-events-feature {
+  background-image: ~'url("/assets/events/events-feature.png")' !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  min-height: 500px;
+}
+
+.pom-page-events .pom-expect.is-events-expect {
+  padding: 50px 100px;
+  background: @paper;
+  font-family: @font-display;
+}
+
+.pom-page-events .pom-expect.is-events-expect .pom-expect-label {
+  font-family: @font-display;
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  color: @gold-figma;
+  margin: 0 0 50px;
+}
+
+.pom-page-events .pom-expect.is-events-expect .pom-expect-grid {
+  display: grid;
+  grid-template-columns: ~"repeat(3, 1fr)";
+  gap: 50px;
+}
+
+.pom-page-events .pom-expect.is-events-expect .pom-expect-grid article {
+  padding: 0;
+  border: 0;
+  position: relative;
+}
+
+.pom-page-events .pom-expect.is-events-expect .pom-expect-grid article + article:before {
+  content: "";
+  position: absolute;
+  left: -25px;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: @gold-figma;
+}
+
+.pom-page-events .pom-expect.is-events-expect h3 {
+  font-family: @font-display !important;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: 0;
+  color: @ink !important;
+  margin: 0;
+}
+
+.pom-page-events .pom-expect.is-events-expect p {
+  font-family: @font-display;
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 400;
+  color: @contact-muted;
+  margin: 0;
+}
+
+.pom-page-events .pom-event-block.is-events-gather {
+  padding: 50px 100px;
+  background: @cream;
+  font-family: @font-display;
+}
+
+.pom-page-events .pom-event-block.is-events-gather .pom-eyebrow {
+  font-family: @font-display;
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  color: @gold-figma;
+  margin: 0 0 20px;
+}
+
+.pom-page-events .pom-event-block.is-events-gather h2 {
+  font-family: @font-display !important;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 56px;
+  letter-spacing: 0;
+  color: @ink !important;
+  margin: 0 0 50px;
+}
+
+.pom-page-events .pom-eventbar {
+  margin-top: 0;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 50px;
+  align-items: center;
+  padding: 0;
+  border: 0;
+  border-top: 1px solid @gold-figma;
+  padding-top: 50px;
+}
+
+.pom-page-events .pom-event-when {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.pom-page-events .pom-event-when span {
+  font-family: @font-display;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 400;
+  color: @gold-figma;
+}
+
+.pom-page-events .pom-event-when strong {
+  font-family: @font-display;
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 400;
+  color: #242b3c;
+}
+
+.pom-page-events .pom-event-main {
+  position: relative;
+  padding-left: 50px;
+}
+
+.pom-page-events .pom-event-main:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: @gold-figma;
+}
+
+.pom-page-events .pom-event-main strong {
+  display: block;
+  font-family: @font-display;
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 400;
+  color: @ink;
+}
+
+.pom-page-events .pom-event-main span {
+  display: block;
+  font-family: @font-display;
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 400;
+  color: @contact-muted;
+}
+
+.pom-page-events .pom-event-meta {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 12px;
+  align-self: stretch;
+}
+
+.pom-page-events .pom-event-meta p {
+  margin: 0;
+  font-family: @font-display;
+  font-size: 22px;
+  line-height: 30px;
+  color: @contact-muted;
+  white-space: nowrap;
+}
+
+.pom-page-events .pom-event-meta strong {
+  font-weight: 400;
+  color: #242b3c;
+}
+
+.pom-page-events .pom-join.is-events-join {
+  display: grid;
+  grid-template-columns: 493px 1fr;
+  gap: 0;
+  padding: 0;
+  background: @tan;
+  font-family: @font-display;
+  align-items: stretch;
+}
+
+.pom-page-events .pom-join.is-events-join > .pom-fallback {
+  display: contents;
+}
+
+.pom-page-events .pom-join-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  text-align: right;
+  padding: 100px 50px;
+  background: @tan;
+}
+
+.pom-page-events .pom-join-intro .pom-eyebrow {
+  font-family: @font-display;
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  color: @gold-figma;
+  margin: 0 0 20px;
+  text-align: right;
+}
+
+.pom-page-events .pom-join-intro h2 {
+  font-family: @font-display !important;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 56px;
+  letter-spacing: 0;
+  color: @ink !important;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.pom-page-events .pom-join.is-events-join .pom-steps {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  padding: 100px 100px 100px 50px;
+  align-content: center;
+  background: @tan;
+}
+
+.pom-page-events .pom-join.is-events-join .pom-steps article {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.pom-page-events .pom-join.is-events-join .pom-step-no {
+  width: 50px;
+  height: 50px;
+  flex: 0 0 50px;
+  border-radius: 50%;
+  border: 1px solid @gold-figma;
+  background: transparent;
+  color: @gold-figma;
+  font-family: @font-display;
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.pom-page-events .pom-join.is-events-join .pom-steps h3 {
+  font-family: @font-display !important;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: 0;
+  color: @ink !important;
+  margin: 0;
+}
+
+.pom-page-events .pom-join.is-events-join .pom-steps p {
+  font-family: @font-display;
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 400;
+  color: @contact-muted;
+  margin: 0;
 }
 
 /* Services / Main Service List — Figma 645:413 */
@@ -2458,6 +2861,77 @@ section.pom-join.is-tan {
   .pom-form-stack h3 { font-size: 24px; line-height: 32px; }
   .pom-form-stack .pom-field-row { grid-template-columns: 1fr; gap: 0; }
   .pom-form-stack .pom-btn-dark { font-size: 18px; min-height: 56px; }
+  .pom-page-events .pom-hero.is-events-zoom {
+    align-items: flex-end;
+    padding: 140px 24px 48px;
+    height: auto;
+    min-height: 680px;
+  }
+  .pom-page-events .pom-hero-copy { width: auto; max-width: 100%; }
+  .pom-page-events .pom-hero h1 {
+    font-size: 42px;
+    line-height: 48px;
+    width: auto;
+    white-space: normal;
+  }
+  .pom-page-events .pom-hero .pom-lede {
+    font-size: 20px;
+    line-height: 28px;
+    max-width: none;
+  }
+  .pom-page-events .pom-split.is-events-feature .pom-split-copy,
+  .pom-page-events .pom-split.is-events-feature .pom-eyebrow,
+  .pom-page-events .pom-split.is-events-feature h2,
+  .pom-page-events .pom-split.is-events-feature .pom-split-copy > p:not(.pom-eyebrow) {
+    align-items: flex-start;
+    text-align: left;
+  }
+  .pom-page-events .pom-split.is-events-feature .pom-link { align-self: flex-start; }
+  .pom-page-events .pom-split.is-events-feature .pom-split-copy { padding: 40px 24px; }
+  .pom-page-events .pom-split.is-events-feature h2 { font-size: 36px; line-height: 44px; }
+  .pom-page-events .pom-split.is-events-feature .pom-split-copy > p:not(.pom-eyebrow) {
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 28px;
+  }
+  .pom-page-events .pom-expect.is-events-expect,
+  .pom-page-events .pom-event-block.is-events-gather {
+    padding: 40px 24px;
+  }
+  .pom-page-events .pom-expect.is-events-expect .pom-expect-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .pom-page-events .pom-expect.is-events-expect .pom-expect-grid article + article:before {
+    display: none;
+  }
+  .pom-page-events .pom-event-block.is-events-gather h2 { font-size: 36px; line-height: 44px; margin-bottom: 28px; }
+  .pom-page-events .pom-eventbar {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding-top: 28px;
+  }
+  .pom-page-events .pom-event-when { align-items: flex-start; text-align: left; }
+  .pom-page-events .pom-event-main { padding-left: 0; }
+  .pom-page-events .pom-event-main:before { display: none; }
+  .pom-page-events .pom-event-meta p { white-space: normal; }
+  .pom-page-events .pom-join.is-events-join {
+    grid-template-columns: 1fr;
+  }
+  .pom-page-events .pom-join-intro {
+    align-items: flex-start;
+    text-align: left;
+    padding: 40px 24px 0;
+  }
+  .pom-page-events .pom-join-intro .pom-eyebrow,
+  .pom-page-events .pom-join-intro h2 { text-align: left; }
+  .pom-page-events .pom-join-intro h2 { white-space: normal; font-size: 36px; line-height: 44px; }
+  .pom-page-events .pom-join.is-events-join .pom-steps {
+    grid-template-columns: 1fr;
+    padding: 28px 24px 40px;
+  }
+  .pom-page-events .pom-join.is-events-join .pom-steps h3 { font-size: 24px; line-height: 32px; }
+  .pom-page-events .pom-join.is-events-join .pom-steps p { font-size: 18px; line-height: 26px; }
   .pom-triptych .pom-panel h2 { font-size: 36px; line-height: 44px; }
   .pom-triptych .pom-fallback > .pom-panel:last-child p { font-size: 20px; line-height: 28px; }
   .pom-split.is-dark.is-store .pom-split-copy {
