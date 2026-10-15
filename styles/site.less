@@ -1095,6 +1095,19 @@ section.pom-join {
 }
 
 @media (max-width: 1100px) {
+  .pom-triptych { grid-template-columns: 1fr; min-height: 0; }
+  .pom-triptych .pom-fallback > .pom-panel:first-child,
+  .pom-triptych .pom-fallback > .pom-panel:last-child {
+    justify-content: flex-start;
+    text-align: left;
+    padding: 48px 24px;
+  }
+  .pom-triptych .pom-fallback > .pom-panel:first-child > div,
+  .pom-triptych .pom-fallback > .pom-panel:last-child > div {
+    max-width: none;
+    margin-left: 0;
+  }
+  .pom-triptych .pom-media { min-height: 360px; }
   .pom-testimonials,
   .pom-faq,
   .pom-expect,
