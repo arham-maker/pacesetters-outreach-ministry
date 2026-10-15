@@ -895,43 +895,99 @@ a.pom-join-btn {
 
 .pom-faq {
   display: grid;
-  grid-template-columns: 562fr 878fr;
+  grid-template-columns: 0.42fr 0.58fr;
   min-height: 520px;
   background: @cream;
+  font-family: @font-display;
 }
 
-.pom-faq-list { padding: 72px 80px 72px 50px; align-self: center; }
+.pom-faq .pom-faq-intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  text-align: right;
+  padding: 88px 48px 88px @wide;
+}
 
-.pom-faq-item { border-bottom: 1px solid rgba(38, 38, 37, 0.16); }
+.pom-faq .pom-faq-intro > div {
+  max-width: 249px;
+  width: 100%;
+  text-align: right;
+}
+
+.pom-faq .pom-eyebrow {
+  font-family: @font-display;
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  color: @gold-figma;
+  text-align: right;
+  margin: 0 0 18px;
+}
+
+.pom-faq h2,
+.pom-faq .pom-faq-intro h2 {
+  font-family: @font-display !important;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 56px;
+  letter-spacing: 0;
+  color: @ink !important;
+  max-width: 249px;
+  margin: 0 0 0 auto;
+  text-align: right;
+}
+
+.pom-faq-list {
+  padding: 88px @wide 88px 40px;
+  align-self: center;
+  width: 100%;
+}
+
+.pom-faq-item {
+  border-top: 1px solid @gold-figma;
+  border-bottom: 0;
+}
+
+.pom-faq-item:last-child { border-bottom: 1px solid @gold-figma; }
 
 .pom-faq-q {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 20px;
+  gap: 24px;
   background: transparent;
   border: 0;
-  padding: 16px 0;
+  padding: 22px 0;
   text-align: left;
   cursor: pointer;
-  font-size: 20px;
+  font-family: @font-display;
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 400;
+  color: @ink;
+  letter-spacing: 0;
 }
 
 .pom-faq-icon {
-  width: 42px;
-  height: 42px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
-  background: @gold-soft;
+  border: 1.5px solid @gold-figma;
+  background: transparent;
   position: relative;
-  flex: 0 0 42px;
+  flex: 0 0 36px;
 }
 
 .pom-faq-icon:before,
 .pom-faq-icon:after {
   content: "";
   position: absolute;
-  background: @ink;
+  background: @gold-figma;
   left: 50%;
   top: 50%;
   transform: ~"translate(-50%, -50%)";
@@ -943,12 +999,19 @@ a.pom-join-btn {
 
 .pom-faq-a {
   display: none;
-  padding: 0 62px 16px 0;
-  color: @ink-soft;
-  max-width: 520px;
+  padding: 0 56px 22px 0;
+  max-width: 485px;
+  font-family: @font-display;
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 400;
+  letter-spacing: 0;
+  color: @contact-muted;
 }
 
 .pom-faq-item.is-open .pom-faq-a { display: block; }
+
+.pom-faq-item.is-open .pom-faq-q { padding-bottom: 12px; }
 
 .pom-contact {
   position: relative;
@@ -1375,6 +1438,22 @@ section.pom-join.is-tan {
   .pom-intro h2,
   .pom-testimonials h2,
   .pom-faq h2,
+  .pom-faq .pom-faq-intro h2 {
+    font-size: 36px;
+    line-height: 44px;
+    max-width: none;
+    margin-left: 0;
+    text-align: left;
+  }
+  .pom-faq .pom-faq-intro,
+  .pom-faq .pom-faq-intro > div,
+  .pom-faq .pom-eyebrow {
+    text-align: left;
+    align-items: flex-start;
+  }
+  .pom-faq .pom-eyebrow { font-size: 16px; line-height: 24px; }
+  .pom-faq-q { font-size: 20px; line-height: 28px; }
+  .pom-faq-a { font-size: 16px; line-height: 24px; }
   .pom-contact h2 { font-size: 36px; }
   .pom-hero-bars { flex-direction: column; width: 100%; }
   .pom-hero-bar { width: 100%; min-width: 0; }
