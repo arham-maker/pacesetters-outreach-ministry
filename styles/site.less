@@ -343,30 +343,65 @@ a.pom-join-btn {
 .pom-quote-nav {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   margin-top: 40px;
 }
 
 .pom-quote-nav .pom-icon-btn {
   width: 52px;
   height: 52px;
+  padding: 0;
   background: transparent;
   border: 1.5px solid @ink;
   color: @ink;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+  position: relative;
+  z-index: 1;
 }
 
-.pom-quote-nav .pom-icon-btn + .pom-icon-btn { margin-left: -12px; }
+.pom-quote-nav .pom-icon-btn.is-next { z-index: 2; }
+
+.pom-quote-nav .pom-icon-btn + .pom-icon-btn { margin-left: -18px; }
 
 .pom-quote-nav .pom-icon-btn .pom-arrow {
-  width: 10px;
-  height: 10px;
-  background: transparent;
-  -webkit-mask: none;
-  mask: none;
-  border-right: 1.5px solid currentColor;
-  border-bottom: 1.5px solid currentColor;
+  width: 14px;
+  height: 14px;
+  margin: 0;
+  border: 0;
+  background: currentColor;
+  -webkit-mask: ~'url("/assets/chevron-right.svg") center / contain no-repeat';
+  mask: ~'url("/assets/chevron-right.svg") center / contain no-repeat';
+  transform: none;
+  display: block;
+  flex: 0 0 14px;
 }
-.pom-quote-nav .pom-icon-btn.is-prev .pom-arrow { transform: ~"rotate(135deg)"; }
-.pom-quote-nav .pom-icon-btn.is-next .pom-arrow { transform: ~"rotate(-45deg)"; }
+
+.pom-quote-nav .pom-icon-btn.is-prev .pom-arrow {
+  -webkit-mask-image: ~'url("/assets/chevron-left.svg")';
+  mask-image: ~'url("/assets/chevron-left.svg")';
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  transform: none;
+}
+
+.pom-quote-nav .pom-icon-btn.is-next .pom-arrow {
+  -webkit-mask-image: ~'url("/assets/chevron-right.svg")';
+  mask-image: ~'url("/assets/chevron-right.svg")';
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  transform: none;
+}
 
 .pom-has-plain .pom-header {
   color: @ink;
@@ -910,14 +945,15 @@ a.pom-join-btn {
 .pom-quote.is-active { display: block; max-width: 728px; }
 
 .pom-quote-mark {
-  font-family: @font-display;
-  font-size: 42px;
-  line-height: 1;
-  font-weight: 400;
-  color: @contact-muted;
   width: 28px;
   height: 24px;
   margin: 0 0 16px;
+  color: @contact-muted;
+  background: currentColor;
+  -webkit-mask: ~'url("/assets/quote-mark.svg") center / contain no-repeat';
+  mask: ~'url("/assets/quote-mark.svg") center / contain no-repeat';
+  font-size: 0;
+  line-height: 0;
   overflow: hidden;
 }
 
