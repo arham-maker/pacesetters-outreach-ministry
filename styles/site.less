@@ -24,6 +24,17 @@ body {
   font-size: 16px;
   line-height: 1.55;
   text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+.pom-page {
+  width: 100%;
+  max-width: none;
+  overflow-x: hidden;
+}
+
+.pom-page img {
+  max-width: 100%;
 }
 
 img { max-width: 100%; display: block; }
@@ -468,15 +479,41 @@ a.pom-join-btn {
 
 .pom-triptych {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  min-height: 600px;
-  background: @paper;
+  grid-template-columns: 1fr 1.2fr 1fr;
+  min-height: 640px;
+  background: @white;
 }
 
 .pom-panel {
   display: flex;
   align-items: center;
   padding: 72px @pad;
+}
+
+.pom-triptych .pom-fallback > .pom-panel:first-child {
+  justify-content: flex-end;
+  text-align: right;
+  padding-right: 36px;
+}
+
+.pom-triptych .pom-fallback > .pom-panel:first-child > div {
+  max-width: 280px;
+  margin-left: auto;
+}
+
+.pom-triptych .pom-fallback > .pom-panel:last-child {
+  text-align: left;
+  padding-left: 36px;
+}
+
+.pom-triptych .pom-fallback > .pom-panel:last-child > div {
+  max-width: 320px;
+}
+
+.pom-triptych .pom-fallback > .pom-panel:last-child p {
+  font-family: @font-serif;
+  font-size: 18px;
+  line-height: 1.45;
 }
 
 .pom-panel h2,
@@ -593,7 +630,7 @@ a.pom-join-btn {
   border-radius: 0;
 }
 .pom-hero-bar span:first-child { text-decoration: underline; text-underline-offset: 5px; }
-.pom-hero-bar.is-light { background: @cream; color: @ink; }
+.pom-hero-bar.is-light { background: @white; color: @ink; }
 .pom-hero-bar.is-dark { background: @ink; color: @white; }
 .pom-page-home .pom-triptych .is-hands { background-image: ~'url("/assets/home-purpose.png")'; }
 .pom-page-home .pom-split.is-cream .is-bible { background-image: ~'url("/assets/home-snl.png")'; }
@@ -604,12 +641,12 @@ a.pom-join-btn {
 
 .pom-split {
   display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
-  min-height: 500px;
+  grid-template-columns: 1fr 1fr;
+  min-height: 520px;
   background: @paper;
 }
 
-.pom-split.is-reverse { grid-template-columns: 0.95fr 1.05fr; }
+.pom-split.is-reverse { grid-template-columns: 1fr 1fr; }
 .pom-split.is-reverse .pom-media { order: 2; }
 
 .pom-split.is-cream { background: @cream; }
@@ -620,7 +657,16 @@ a.pom-join-btn {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 64px 72px;
+  padding: 72px 80px;
+}
+
+.pom-split.is-cream .pom-split-copy {
+  background: @cream;
+}
+
+.pom-split.is-dark .pom-split-copy h2 {
+  color: @white;
+  max-width: 420px;
 }
 
 .pom-split-copy .pom-link.is-end { align-self: flex-end; }
@@ -843,13 +889,20 @@ a.pom-join-btn {
 .pom-contact-meta a:hover { text-decoration: underline; }
 
 .pom-form-card {
-  background: @paper;
+  background: @white;
   color: @ink;
-  padding: 32px 28px 24px;
+  padding: 40px 36px 32px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
 }
 
-.pom-field { margin-bottom: 18px; }
-.pom-field label { display: block; font-size: 14px; margin-bottom: 6px; }
+.pom-field { margin-bottom: 22px; }
+.pom-field label {
+  display: block;
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  margin-bottom: 8px;
+  color: @ink-soft;
+}
 
 .pom-field input,
 .pom-field textarea {
@@ -857,8 +910,9 @@ a.pom-join-btn {
   border: 0;
   border-bottom: 1px solid #d9d1c5;
   background: transparent;
-  padding: 8px 0 10px;
+  padding: 8px 0 12px;
   outline: none;
+  font-family: @font-sans;
 }
 
 .pom-field textarea { min-height: 72px; resize: vertical; }

@@ -103,15 +103,15 @@
         </div>
         <div class="pom-faq-item">
           <button class="pom-faq-q" type="button" aria-expanded="false">Can I request prayer? <span class="pom-faq-icon" aria-hidden="true"></span></button>
-          <div class="pom-faq-a"></div>
+          <div class="pom-faq-a">Yes. Reach out through our contact form or email and our team will pray with you and for you.</div>
         </div>
         <div class="pom-faq-item">
           <button class="pom-faq-q" type="button" aria-expanded="false">How can I get involved? <span class="pom-faq-icon" aria-hidden="true"></span></button>
-          <div class="pom-faq-a"></div>
+          <div class="pom-faq-a">Join Saturday Night Live, serve in outreach, or support the ministry store. Contact us and we’ll help you take the next step.</div>
         </div>
         <div class="pom-faq-item">
           <button class="pom-faq-q" type="button" aria-expanded="false">What can I find in the store? <span class="pom-faq-icon" aria-hidden="true"></span></button>
-          <div class="pom-faq-a"></div>
+          <div class="pom-faq-a">Music &amp; CDs, sermons, and books for everyday encouragement and faith.</div>
         </div>
       </div>
     </div>
