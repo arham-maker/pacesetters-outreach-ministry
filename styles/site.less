@@ -204,11 +204,24 @@ h1, h2, h3, p { margin: 0; }
 
 .pom-social {
   display: flex;
-  gap: 22px;
+  gap: 18px;
   justify-content: flex-end;
+  align-items: center;
 }
 
-.pom-social a { display: flex; }
+.pom-social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: @white;
+  line-height: 0;
+}
+
+.pom-social-icon {
+  display: block;
+  width: 22px;
+  height: 22px;
+}
 
 .pom-legal {
   display: flex;
