@@ -764,15 +764,21 @@ a.pom-join-btn {
   left: 0;
   top: 38%;
   z-index: 1;
-  max-width: 680px;
+  max-width: none;
+  width: max-content;
   padding: 0 64px;
+}
+.pom-page-home .pom-hero-line {
+  display: inline-block;
+  white-space: nowrap;
 }
 .pom-page-home .pom-hero h1 {
   font-family: @font-display;
   font-weight: 400;
   font-size: 72px;
   line-height: 90px;
-  max-width: 631px;
+  max-width: none;
+  width: max-content;
   margin: 0;
   letter-spacing: 0;
   color: #fefefe;
@@ -784,7 +790,8 @@ a.pom-join-btn {
   font-size: 40px;
   line-height: 48px;
   letter-spacing: 0;
-  max-width: 650px;
+  max-width: none;
+  width: max-content;
   margin-top: 18px;
   color: #fefefe;
   text-shadow: 0 1px 12px rgba(12, 8, 6, 0.35);
@@ -1792,8 +1799,26 @@ section.pom-join.is-tan {
   }
   .pom-hero { height: auto; min-height: 680px; }
   .pom-hero h1 { font-size: 42px; }
-  .pom-page-home .pom-hero h1 { font-size: 42px; line-height: 52px; max-width: none; }
-  .pom-page-home .pom-lede { font-size: 22px; line-height: 30px; max-width: none; }
+  .pom-page-home .pom-hero-copy {
+    position: relative;
+    top: auto;
+    width: auto;
+    max-width: 100%;
+    padding: 0 24px;
+  }
+  .pom-page-home .pom-hero-line { white-space: normal; }
+  .pom-page-home .pom-hero h1 {
+    font-size: 42px;
+    line-height: 52px;
+    width: auto;
+    max-width: none;
+  }
+  .pom-page-home .pom-lede {
+    font-size: 22px;
+    line-height: 30px;
+    width: auto;
+    max-width: none;
+  }
   .pom-sidenav .pom-nav-list a { font-size: 18px; line-height: 26px; }
   .pom-panel h2,
   .pom-split h2,
