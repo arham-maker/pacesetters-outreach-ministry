@@ -223,6 +223,11 @@ h1, h2, h3, p { margin: 0; }
   opacity: 0.86;
 }
 
+.pom-legal .pom-nav-list a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 .pom-btn,
 .pom-link {
   display: inline-flex;
@@ -924,14 +929,14 @@ a.pom-join-btn {
 
 .pom-contact {
   position: relative;
-  min-height: 497px;
+  min-height: 520px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 40px;
+  gap: 48px;
   align-items: center;
-  padding: 64px 80px;
-  color: @white;
-  background-color: #1a1410;
+  padding: 72px 80px;
+  color: @ink;
+  background-color: #cfc4b4;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -941,56 +946,79 @@ a.pom-join-btn {
   content: "";
   position: absolute;
   inset: 0;
-  background: ~"linear-gradient(90deg, rgba(16, 12, 10, 0.72), rgba(16, 12, 10, 0.45))";
+  background:
+    ~"linear-gradient(90deg, rgba(247, 244, 237, 0.9) 0%, rgba(247, 244, 237, 0.72) 42%, rgba(247, 244, 237, 0.4) 100%)";
 }
 
 .pom-contact > * { position: relative; z-index: 1; }
 
 .pom-contact h2 {
-  font-family: @font-serif;
-  font-weight: 400;
+  font-family: @font-sans;
+  font-weight: 500;
   font-size: @font-h2;
   line-height: 1.08;
   max-width: 460px;
+  color: @ink;
+  letter-spacing: -0.02em;
 }
 
-.pom-contact .pom-eyebrow { color: #e4d2ae; }
-.pom-contact-lead { margin: 16px 0 22px; max-width: 380px; }
+.pom-contact .pom-eyebrow { color: @gold; }
+.pom-contact-lead {
+  margin: 16px 0 28px;
+  max-width: 380px;
+  color: @ink-soft;
+  font-size: @font-body;
+}
 
 .pom-contact-meta {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 12px;
   font-size: 15px;
+  color: @ink;
 }
 
-.pom-contact-meta a:hover { text-decoration: underline; }
+.pom-contact-meta a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  width: fit-content;
+  color: @ink;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.pom-contact-meta a:hover { opacity: 0.75; }
 
 .pom-form-card {
+  display: flex;
+  flex-direction: column;
   background: @white;
   color: @ink;
-  padding: 40px 36px 32px;
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+  padding: 44px 40px 36px;
+  box-shadow: 0 12px 36px rgba(38, 38, 37, 0.12);
 }
 
 .pom-field { margin-bottom: 22px; }
 .pom-field label {
   display: block;
-  font-size: 13px;
-  letter-spacing: 0.04em;
+  font-size: 14px;
+  letter-spacing: 0;
   margin-bottom: 8px;
-  color: @ink-soft;
+  color: @ink;
+  font-weight: 400;
 }
 
 .pom-field input,
 .pom-field textarea {
   width: 100%;
   border: 0;
-  border-bottom: 1px solid #d9d1c5;
+  border-bottom: 1px solid @gold;
   background: transparent;
   padding: 8px 0 12px;
   outline: none;
   font-family: @font-sans;
+  color: @ink;
 }
 
 .pom-field textarea { min-height: 72px; resize: vertical; }
@@ -999,10 +1027,14 @@ a.pom-join-btn {
 
 .pom-form-card .pom-link {
   margin-left: auto;
+  margin-top: 8px;
   background: transparent;
   border: 0;
   cursor: pointer;
   padding: 0;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  color: @ink;
 }
 
 .pom-form-note { margin-top: 12px; font-size: 14px; color: @ink-soft; }
@@ -1376,42 +1408,60 @@ body[class*="cart"] ,
   flex: 0 0 18px;
 }
 
-.pom-contact-meta.is-icons a {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  text-decoration: underline;
-  text-underline-offset: 4px;
-}
-
 .pom-meta-icon {
-  width: 18px;
-  height: 18px;
+  width: 16px;
+  height: 16px;
   display: inline-block;
-  border: 1.5px solid currentColor;
-  border-radius: 50%;
   position: relative;
-  flex: 0 0 18px;
+  flex: 0 0 16px;
+  color: @ink;
 }
 
 .pom-meta-icon.is-phone:before {
   content: "";
   position: absolute;
-  inset: 4px;
+  left: 5px;
+  top: 1px;
+  width: 6px;
+  height: 6px;
   border: 1.5px solid currentColor;
-  border-radius: 2px;
+  border-radius: 50%;
+}
+
+.pom-meta-icon.is-phone:after {
+  content: "";
+  position: absolute;
+  left: 2px;
+  bottom: 0;
+  width: 12px;
+  height: 7px;
+  border: 1.5px solid currentColor;
+  border-bottom: 0;
+  border-radius: 8px 8px 0 0;
 }
 
 .pom-meta-icon.is-mail:before {
   content: "";
   position: absolute;
-  inset: 5px 3px;
+  inset: 2px 0;
   border: 1.5px solid currentColor;
 }
 
+.pom-meta-icon.is-mail:after {
+  content: "";
+  position: absolute;
+  left: 1px;
+  top: 3px;
+  width: 7px;
+  height: 7px;
+  border-left: 1.5px solid currentColor;
+  border-top: 1.5px solid currentColor;
+  transform: ~"rotate(45deg)";
+}
+
 .pom-meta-icon.is-lock {
+  border: 1.5px solid @gold;
   border-radius: 3px;
-  border-color: @gold;
 }
 
 .pom-meta-icon.is-lock:before {

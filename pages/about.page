@@ -130,16 +130,16 @@
         <p class="pom-eyebrow">Get in Touch</p>
         <h2>We’d love to hear from you.</h2>
         <p class="pom-contact-lead">Have a question, need prayer, or want to help?</p>
-        <div class="pom-contact-meta">
-          <a href="tel:3305059062">330-505-9062</a>
-          <a href="mailto:larry.vicks@currently.com">larry.vicks@currently.com</a>
+        <div class="pom-contact-meta is-icons">
+          <a href="tel:3305059062">330-505-9062 <span class="pom-meta-icon is-phone" aria-hidden="true"></span></a>
+          <a href="mailto:larry.vicks@currently.com">larry.vicks@currently.com <span class="pom-meta-icon is-mail" aria-hidden="true"></span></a>
         </div>
       </div>
       <form class="pom-form-card" data-contact-form>
         <div class="pom-field"><label for="about-name">Name</label><input id="about-name" name="name" type="text"></div>
         <div class="pom-field"><label for="about-email">Email</label><input id="about-email" name="email" type="email"></div>
         <div class="pom-field"><label for="about-message">Message</label><textarea id="about-message" name="message"></textarea></div>
-        <button class="pom-link" type="submit">Send Message <span class="pom-arrow" aria-hidden="true"></span></button>
+        <button class="pom-link" type="submit">Send Message <span class="pom-arrow is-ne" aria-hidden="true"></span></button>
         <p class="pom-form-note" hidden>Thank you. Add a Squarespace Form block in this region to deliver messages.</p>
       </form>
     </div>
