@@ -1034,7 +1034,14 @@ section.pom-join {
   .pom-expect,
   .pom-eventbar { grid-template-columns: 1fr; }
   .pom-testimonials-intro,
-  .pom-faq-intro { align-items: flex-start; }
+  .pom-faq-intro {
+    align-items: flex-start;
+    text-align: left;
+    padding: 48px 24px 12px;
+  }
+  .pom-testimonials-intro h2,
+  .pom-faq-intro h2 { margin-left: 0; }
+  .pom-quote-nav { justify-content: flex-start; }
 }
 
 @media (max-width: 900px) {
