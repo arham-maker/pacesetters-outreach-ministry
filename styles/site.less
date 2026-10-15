@@ -951,8 +951,9 @@ a.pom-join-btn {
   overflow: hidden;
   min-height: 560px;
   display: block;
-  padding: 80px @wide;
+  padding: 88px @wide;
   color: @ink;
+  font-family: @font-display;
   background-color: #cfc4b4;
   background-image: ~'url("/assets/contact-crowd.png")';
   background-position: center;
@@ -967,13 +968,14 @@ a.pom-join-btn {
   z-index: 0;
   pointer-events: none;
   background:
-    ~"linear-gradient(90deg, rgba(247, 244, 237, 0.88) 0%, rgba(247, 244, 237, 0.7) 46%, rgba(247, 244, 237, 0.42) 100%)";
+    ~"linear-gradient(90deg, rgba(247, 244, 237, 0.9) 0%, rgba(247, 244, 237, 0.72) 44%, rgba(247, 244, 237, 0.38) 100%)";
 }
 
-.pom-contact > .pom-fallback {
+.pom-contact > .pom-fallback,
+.pom-page-product .pom-contact {
   display: grid !important;
   grid-template-columns: 1fr 1fr;
-  gap: 56px;
+  gap: 64px;
   align-items: center;
   position: relative;
   z-index: 2;
@@ -982,40 +984,48 @@ a.pom-join-btn {
 
 .pom-contact > .pom-cms {
   z-index: -1;
+  pointer-events: none;
 }
 
 .pom-contact-copy {
   position: relative;
   z-index: 2;
-  max-width: 480px;
+  max-width: 520px;
   color: @ink;
 }
 
-.pom-contact-copy .pom-eyebrow {
-  color: @gold;
+.pom-contact-copy .pom-eyebrow,
+.pom-contact .pom-eyebrow {
+  font-family: @font-display;
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  color: @gold-figma;
   text-align: right;
   max-width: 420px;
-  margin-left: auto;
-  margin-right: 0;
-  margin-bottom: 18px;
+  margin: 0 0 18px auto;
 }
 
 .pom-contact h2 {
-  font-family: @font-sans;
-  font-weight: 500;
-  font-size: @font-h2;
-  line-height: 1.08;
+  font-family: @font-display;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 56px;
   max-width: 460px;
   color: @ink !important;
-  letter-spacing: -0.02em;
+  letter-spacing: 0;
 }
 
-.pom-contact .pom-eyebrow { color: @gold; }
 .pom-contact-lead {
-  margin: 16px 0 36px;
-  max-width: 400px;
-  color: @ink-soft !important;
-  font-size: @font-body;
+  margin: 18px 0 40px;
+  max-width: 460px;
+  color: @contact-muted !important;
+  font-family: @font-display;
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 400;
 }
 
 .pom-contact-meta {
@@ -1023,8 +1033,7 @@ a.pom-join-btn {
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
-  gap: 18px 36px;
-  font-size: 15px;
+  gap: 16px 40px;
   color: @ink;
 }
 
@@ -1033,9 +1042,14 @@ a.pom-join-btn {
   align-items: center;
   gap: 10px;
   width: fit-content;
+  font-family: @font-display;
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 400;
   color: @ink !important;
   text-decoration: underline;
-  text-underline-offset: 4px;
+  text-decoration-thickness: 4%;
+  text-underline-offset: 13%;
   pointer-events: auto;
 }
 
@@ -1048,17 +1062,18 @@ a.pom-join-btn {
   z-index: 3;
   background: #fff;
   color: @ink;
-  padding: 48px 44px 40px;
-  box-shadow: none;
+  padding: 52px 48px 44px;
+  box-shadow: 0 18px 48px rgba(38, 38, 37, 0.08);
   pointer-events: auto;
 }
 
-.pom-field { margin-bottom: 26px; }
+.pom-field { margin-bottom: 28px; }
 .pom-field label {
   display: block;
-  font-size: 14px;
+  font-family: @font-display;
+  font-size: 16px;
   letter-spacing: 0;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   color: @ink;
   font-weight: 400;
 }
@@ -1067,15 +1082,15 @@ a.pom-join-btn {
 .pom-field textarea {
   display: block;
   width: 100%;
-  min-height: 28px;
+  min-height: 36px;
   border: 0 !important;
   border-radius: 0;
-  border-bottom: 1px solid @gold !important;
+  border-bottom: 1px solid @gold-figma !important;
   background: transparent !important;
   box-shadow: none !important;
-  padding: 8px 0 14px;
+  padding: 6px 0 12px;
   outline: none !important;
-  font-family: @font-sans;
+  font-family: @font-display;
   font-size: 16px;
   line-height: 1.4;
   color: @ink;
@@ -1085,7 +1100,7 @@ a.pom-join-btn {
 }
 
 .pom-field textarea {
-  min-height: 96px;
+  min-height: 110px;
   resize: none;
   overflow: auto;
 }
@@ -1098,11 +1113,13 @@ a.pom-join-btn {
   align-items: center;
   gap: 10px;
   margin-left: auto;
-  margin-top: 4px;
+  margin-top: 8px;
   background: transparent;
   border: 0;
   cursor: pointer;
   padding: 0;
+  font-family: @font-display;
+  font-size: 16px;
   text-decoration: underline;
   text-underline-offset: 5px;
   color: @ink;
@@ -1797,8 +1814,10 @@ body[class*="cart"] ,
 }
 
 .pom-page-product .pom-contact {
-  display: grid;
+  display: grid !important;
   grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
 }
 
 .pom-checkout {
