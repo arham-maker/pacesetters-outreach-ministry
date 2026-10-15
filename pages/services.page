@@ -1,5 +1,5 @@
 <div class="pom-page pom-page-services">
-  <section class="pom-hero is-candles" data-pom-region="services-hero">
+  <section class="pom-hero is-services-candles" data-pom-region="services-hero">
     <div class="pom-hero-copy pom-fallback">
       <p class="pom-eyebrow">How We Serve</p>
       <h1>Faith in action.</h1>
@@ -8,50 +8,50 @@
     <div class="pom-cms"><squarespace:block-field id="services-hero" columns="12" /></div>
   </section>
 
-  <section class="pom-split" data-pom-region="services-outreach">
+  <section class="pom-split is-svc is-svc-cream" data-pom-region="services-outreach">
     <div class="pom-fallback">
-      <div class="pom-media is-crowd" role="img" aria-label="Community gathered outdoors"></div>
+      <div class="pom-media is-svc-outreach" role="img" aria-label="Hands stacked together in unity"></div>
       <div class="pom-split-copy">
         <h2>Community Outreach</h2>
         <p>Reaching people who are hurting, young people, and those experiencing homelessness with compassion and Christian encouragement.</p>
-        <a class="pom-link" href="/community-outreach">Explore Outreach <span class="pom-arrow" aria-hidden="true"></span></a>
+        <a class="pom-link" href="/community-outreach"><span class="pom-link-text">Explore Outreach</span><span class="pom-arrow is-ne" aria-hidden="true"></span></a>
       </div>
     </div>
     <div class="pom-cms"><squarespace:block-field id="services-outreach" columns="12" /></div>
   </section>
 
-  <section class="pom-split is-reverse is-cream" data-pom-region="services-prayer">
+  <section class="pom-split is-svc is-svc-tan is-svc-end" data-pom-region="services-prayer">
     <div class="pom-fallback">
       <div class="pom-split-copy">
         <h2>Prayer &amp; Encouragement</h2>
         <p>Connect with our ministry for prayer, a listening heart, and encouragement through God’s Word.</p>
-        <a class="pom-link" href="/prayer">Request Prayer <span class="pom-arrow" aria-hidden="true"></span></a>
+        <a class="pom-link" href="/prayer"><span class="pom-link-text">Request Prayer</span><span class="pom-arrow is-ne" aria-hidden="true"></span></a>
       </div>
-      <div class="pom-media is-hands" role="img" aria-label="Hands resting on an open Bible"></div>
+      <div class="pom-media is-svc-prayer" role="img" aria-label="Hands clasped in prayer over an open Bible"></div>
     </div>
     <div class="pom-cms"><squarespace:block-field id="services-prayer" columns="12" /></div>
   </section>
 
-  <section class="pom-split" data-pom-region="services-online">
+  <section class="pom-split is-svc is-svc-cream" data-pom-region="services-online">
     <div class="pom-fallback">
-      <div class="pom-media is-zoom" role="img" aria-label="Laptop showing an online gathering"></div>
+      <div class="pom-media is-svc-online" role="img" aria-label="Laptop showing an online fellowship call"></div>
       <div class="pom-split-copy">
         <h2>Online Fellowship</h2>
         <p>Join Pastor Michael Vance for preaching, music, and prayer through our weekly Saturday Night Live Zoom program.</p>
-        <a class="pom-link" href="/events">View Program <span class="pom-arrow" aria-hidden="true"></span></a>
+        <a class="pom-link" href="/events"><span class="pom-link-text">View Program</span><span class="pom-arrow is-ne" aria-hidden="true"></span></a>
       </div>
     </div>
     <div class="pom-cms"><squarespace:block-field id="services-online" columns="12" /></div>
   </section>
 
-  <section class="pom-split is-reverse is-cream" data-pom-region="services-resources">
+  <section class="pom-split is-svc is-svc-tan is-svc-end" data-pom-region="services-resources">
     <div class="pom-fallback">
       <div class="pom-split-copy">
         <h2>Ministry Resources</h2>
         <p>Explore music, sermons, and books to encourage your everyday walk of faith.</p>
-        <a class="pom-link" href="/store">Browse the Store <span class="pom-arrow" aria-hidden="true"></span></a>
+        <a class="pom-link" href="/store"><span class="pom-link-text">Browse the Store</span><span class="pom-arrow is-ne" aria-hidden="true"></span></a>
       </div>
-      <div class="pom-media is-books" role="img" aria-label="Person reading a book"></div>
+      <div class="pom-media is-svc-resources" role="img" aria-label="People gathered studying open Bibles"></div>
     </div>
     <div class="pom-cms"><squarespace:block-field id="services-resources" columns="12" /></div>
   </section>
@@ -110,7 +110,7 @@
       <div class="pom-contact-copy">
         <p class="pom-eyebrow">Get in Touch</p>
         <h2>Find your next step.</h2>
-        <p class="pom-contact-lead">Need prayer, have a question, or want to get involved? We’d love to hear from you.</p>
+        <p class="pom-contact-lead">Need prayer, have a question, or want to get involved?<br>We’d love to hear from you.</p>
         <div class="pom-contact-meta is-icons">
           <a href="tel:3305059087">330 505-9087 <span class="pom-meta-icon is-phone" aria-hidden="true"></span></a>
           <a href="mailto:terryolivia@currently.com">terryolivia@currently.com <span class="pom-meta-icon is-mail" aria-hidden="true"></span></a>
@@ -120,7 +120,7 @@
         <div class="pom-field"><label for="services-name">Name</label><input id="services-name" name="name" type="text"></div>
         <div class="pom-field"><label for="services-email">Email</label><input id="services-email" name="email" type="email"></div>
         <div class="pom-field"><label for="services-message">Message</label><textarea id="services-message" name="message"></textarea></div>
-        <button class="pom-link" type="submit">Send Message <span class="pom-arrow is-ne" aria-hidden="true"></span></button>
+        <button class="pom-link" type="submit"><span class="pom-link-text">Send Message</span><span class="pom-arrow is-ne" aria-hidden="true"></span></button>
         <p class="pom-form-note" hidden>Thank you. Add a Squarespace Form block in this region to deliver messages.</p>
       </form>
     </div>

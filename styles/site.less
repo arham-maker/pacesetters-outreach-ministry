@@ -2,6 +2,7 @@
 @ink: #262625;
 @ink-soft: #5c5854;
 @cream: #f7f4ed;
+@tan: #f0e5d3;
 @paper: #fefefe;
 @gold: #c4a36a;
 @gold-figma: #b78c31;
@@ -803,12 +804,168 @@ a.pom-join-btn {
   width: auto;
 }
 
-.pom-page-services .pom-hero,
 .pom-page-outreach .pom-hero,
 .pom-page-prayer .pom-hero,
 .pom-page-events .pom-hero,
 .pom-page-store .pom-hero {
   padding: 180px @gutter 88px;
+}
+
+/* Services / Main Service List — Figma 645:413 */
+.pom-page-services .pom-hero.is-services-candles {
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 50px;
+  background-image: ~'url("/assets/services/services-hero.png")';
+  background-position: center center;
+  background-size: cover;
+}
+
+.pom-page-services .pom-hero.is-services-candles:before {
+  background:
+    ~"linear-gradient(89.87deg, rgb(12, 9, 9) 0%, rgba(12, 9, 9, 0) 53.2%)",
+    ~"linear-gradient(89.38deg, rgba(59, 51, 42, 0) 83.4%, rgb(59, 51, 42) 99.7%)";
+}
+
+.pom-page-services .pom-hero-copy {
+  max-width: 650px;
+  width: max-content;
+}
+
+.pom-page-services .pom-hero .pom-eyebrow {
+  font-family: @font-display;
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  color: #f0e5d3;
+  margin: 0 0 20px;
+}
+
+.pom-page-services .pom-hero h1 {
+  font-family: @font-display !important;
+  font-weight: 400;
+  font-size: 90px;
+  line-height: 90px;
+  letter-spacing: 0;
+  max-width: none;
+  width: max-content;
+  white-space: nowrap;
+  color: #fefefe;
+  margin: 0;
+}
+
+.pom-page-services .pom-hero .pom-lede {
+  font-family: @font-display;
+  font-size: 40px;
+  line-height: 48px;
+  font-weight: 400;
+  letter-spacing: 0;
+  color: #fefefe;
+  max-width: 650px;
+  margin-top: 20px;
+}
+
+.pom-page-services .pom-split.is-svc {
+  min-height: 500px;
+  font-family: @font-display;
+  align-items: stretch;
+}
+
+.pom-page-services .pom-split.is-svc-cream { background: @cream; }
+.pom-page-services .pom-split.is-svc-tan { background: @tan; }
+
+.pom-page-services .pom-split.is-svc .pom-media {
+  min-height: 500px;
+  background-size: cover !important;
+  background-position: center center !important;
+}
+
+.pom-page-services .pom-media.is-svc-outreach {
+  background-image: ~'url("/assets/services/services-outreach.png")' !important;
+}
+.pom-page-services .pom-media.is-svc-prayer {
+  background-image: ~'url("/assets/services/services-prayer.png")' !important;
+}
+.pom-page-services .pom-media.is-svc-online {
+  background-image: ~'url("/assets/services/services-online.png")' !important;
+}
+.pom-page-services .pom-media.is-svc-resources {
+  background-image: ~'url("/assets/services/services-resources.png")' !important;
+}
+
+.pom-page-services .pom-split.is-svc .pom-split-copy {
+  padding: 48px 50px;
+  justify-content: center;
+  gap: 0;
+}
+
+.pom-page-services .pom-split.is-svc h2 {
+  font-family: @font-display !important;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 56px;
+  letter-spacing: 0;
+  color: @ink !important;
+  max-width: none;
+  margin: 0 0 10px;
+}
+
+.pom-page-services .pom-split.is-svc .pom-split-copy > p {
+  font-family: @font-display;
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 400;
+  color: @contact-muted !important;
+  margin: 0 0 50px;
+  max-width: none;
+}
+
+.pom-page-services .pom-split.is-svc .pom-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  align-self: flex-start;
+  font-family: @font-display;
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 400;
+  color: @ink !important;
+  text-decoration: none !important;
+}
+
+.pom-page-services .pom-split.is-svc .pom-link .pom-link-text {
+  text-decoration: underline;
+  text-decoration-thickness: 4%;
+  text-underline-offset: 13%;
+}
+
+.pom-page-services .pom-split.is-svc .pom-link .pom-arrow,
+.pom-page-services .pom-split.is-svc .pom-link .pom-arrow.is-ne,
+.pom-page-services .pom-split.is-svc .pom-link:hover .pom-arrow {
+  width: 14px !important;
+  height: 14px !important;
+  flex: 0 0 14px;
+  border: 0 !important;
+  background: currentColor !important;
+  -webkit-mask: ~'url("/assets/arrow-ne.svg") center / contain no-repeat' !important;
+  mask: ~'url("/assets/arrow-ne.svg") center / contain no-repeat' !important;
+  transform: none !important;
+}
+
+.pom-page-services .pom-split.is-svc-end .pom-split-copy {
+  align-items: flex-end;
+  text-align: right;
+}
+
+.pom-page-services .pom-split.is-svc-end h2,
+.pom-page-services .pom-split.is-svc-end .pom-split-copy > p {
+  text-align: right;
+}
+
+.pom-page-services .pom-split.is-svc-end .pom-link {
+  align-self: flex-end;
 }
 
 /* About page — Figma 698:2 exact */
@@ -2224,6 +2381,38 @@ section.pom-join.is-tan {
   }
   .pom-page-about .pom-split.is-about-reach h2 { font-size: 36px; line-height: 44px; }
   .pom-page-about .pom-split.is-about-reach .pom-split-copy { padding: 40px 24px; }
+  .pom-page-services .pom-hero.is-services-candles {
+    align-items: flex-end;
+    padding: 140px 24px 48px;
+    height: auto;
+    min-height: 680px;
+  }
+  .pom-page-services .pom-hero-copy { width: auto; max-width: 100%; }
+  .pom-page-services .pom-hero h1 {
+    font-size: 42px;
+    line-height: 48px;
+    width: auto;
+    white-space: normal;
+  }
+  .pom-page-services .pom-hero .pom-lede {
+    font-size: 20px;
+    line-height: 28px;
+    max-width: none;
+  }
+  .pom-page-services .pom-split.is-svc .pom-split-copy { padding: 40px 24px; }
+  .pom-page-services .pom-split.is-svc h2 { font-size: 36px; line-height: 44px; }
+  .pom-page-services .pom-split.is-svc .pom-split-copy > p {
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 28px;
+  }
+  .pom-page-services .pom-split.is-svc-end .pom-split-copy,
+  .pom-page-services .pom-split.is-svc-end h2,
+  .pom-page-services .pom-split.is-svc-end .pom-split-copy > p {
+    align-items: flex-start;
+    text-align: left;
+  }
+  .pom-page-services .pom-split.is-svc-end .pom-link { align-self: flex-start; }
   .pom-triptych .pom-panel h2 { font-size: 36px; line-height: 44px; }
   .pom-triptych .pom-fallback > .pom-panel:last-child p { font-size: 20px; line-height: 28px; }
   .pom-split.is-dark.is-store .pom-split-copy {
