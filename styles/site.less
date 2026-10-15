@@ -1383,6 +1383,7 @@ section.pom-join.is-tan {
   .pom-testimonials,
   .pom-faq,
   .pom-contact,
+  .pom-contact > .pom-fallback,
   .pom-expect,
   .pom-join,
   .pom-steps,
@@ -1390,9 +1391,10 @@ section.pom-join.is-tan {
   .pom-products,
   .pom-points,
   .pom-eventbar {
-    display: grid;
+    display: grid !important;
     grid-template-columns: 1fr;
   }
+  .pom-form-card { max-width: none; justify-self: stretch; }
   .pom-split.is-reverse .pom-media { order: 0; }
   .pom-media { min-height: 240px; }
   .pom-panel,
