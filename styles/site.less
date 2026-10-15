@@ -869,22 +869,39 @@ a.pom-join-btn {
   font-weight: 400;
   letter-spacing: 0;
   color: #fefefe !important;
+  text-decoration: none !important;
+}
+
+.pom-split.is-dark.is-store .pom-link .pom-link-text {
   text-decoration: underline;
   text-decoration-thickness: 4%;
   text-underline-offset: 13%;
   text-decoration-skip-ink: auto;
 }
 
-.pom-split.is-dark.is-store .pom-link .pom-arrow.is-ne {
-  width: 11px;
-  height: 11px;
+.pom-split.is-dark.is-store .pom-link .pom-arrow,
+.pom-split.is-dark.is-store .pom-link .pom-arrow.is-ne,
+.pom-split.is-dark.is-store .pom-link:hover .pom-arrow {
+  width: 11px !important;
+  height: 11px !important;
   flex: 0 0 11px;
   margin: 0;
-  transform: ~"rotate(45deg)";
+  padding: 0;
+  border: 0 !important;
+  border-top: 1.5px solid currentColor !important;
+  border-right: 1.5px solid currentColor !important;
+  background: transparent !important;
+  -webkit-mask: none !important;
+  mask: none !important;
+  -webkit-mask-image: none !important;
+  mask-image: none !important;
+  transform: ~"rotate(45deg)" !important;
+  display: inline-block;
 }
 
 .pom-split.is-dark.is-store .pom-media.is-books {
   min-height: 560px;
+  background-image: ~'url("/assets/home-store.png")' !important;
   background-size: cover;
   background-position: center;
 }

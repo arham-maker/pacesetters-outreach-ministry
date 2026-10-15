@@ -48,7 +48,7 @@
       <div class="pom-split-copy">
         <h2>Encouragement for everyday faith.</h2>
         <p>Music, sermons, and books from our ministry.</p>
-        <a class="pom-link is-end" href="/store">Browse the Store <span class="pom-arrow is-ne" aria-hidden="true"></span></a>
+        <a class="pom-link is-end" href="/store"><span class="pom-link-text">Browse the Store</span><span class="pom-arrow is-ne" aria-hidden="true"></span></a>
       </div>
       <div class="pom-media is-books" role="img" aria-label="Books, CDs, and headphones"></div>
     </div>
