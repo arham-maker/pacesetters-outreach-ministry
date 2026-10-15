@@ -16,28 +16,28 @@
       <div class="pom-panel">
         <div>
           <p class="pom-eyebrow">Our Purpose</p>
-          <h2>A light in every community.</h2>
+          <h2>A light in every<br>community.</h2>
         </div>
       </div>
       <div class="pom-media is-hands" role="img" aria-label="People gathered with open Bibles"></div>
       <div class="pom-panel">
         <div>
           <p>For over 30 years, we’ve reached people with compassion, Christian fellowship, and the encouragement of God’s Word.</p>
-          <a class="pom-link" href="/about">About Pacesetters <span class="pom-arrow" aria-hidden="true"></span></a>
+          <a class="pom-link" href="/about"><span class="pom-link-text">About Pacesetters</span><span class="pom-arrow is-ne" aria-hidden="true"></span></a>
         </div>
       </div>
     </div>
     <div class="pom-cms"><squarespace:block-field id="home-purpose" columns="12" /></div>
   </section>
 
-  <section class="pom-split is-cream" id="saturday-night-live" data-pom-region="home-snl">
+  <section class="pom-split is-cream is-snl" id="saturday-night-live" data-pom-region="home-snl">
     <div class="pom-fallback">
       <div class="pom-media is-bible" role="img" aria-label="Open Bible and microphone"></div>
       <div class="pom-split-copy">
         <p class="pom-eyebrow">Weekly · Online via Zoom</p>
         <h2>Saturday night live</h2>
         <p>Preaching, music, and prayer with Pastor Michael Vance.</p>
-        <a class="pom-link" href="/events">View Program &amp; Join <span class="pom-arrow" aria-hidden="true"></span></a>
+        <a class="pom-link" href="/events"><span class="pom-link-text">View Program &amp; Join</span><span class="pom-arrow is-ne" aria-hidden="true"></span></a>
       </div>
     </div>
     <div class="pom-cms"><squarespace:block-field id="home-saturday" columns="12" /></div>

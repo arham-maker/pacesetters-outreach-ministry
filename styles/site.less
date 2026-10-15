@@ -561,6 +561,7 @@ a.pom-join-btn {
   grid-template-columns: 1fr 1.2fr 1fr;
   min-height: 640px;
   background: @white;
+  font-family: @font-display;
 }
 
 .pom-panel {
@@ -572,27 +573,89 @@ a.pom-join-btn {
 .pom-triptych .pom-fallback > .pom-panel:first-child {
   justify-content: flex-end;
   text-align: right;
-  padding-right: 36px;
+  padding: 48px 40px 48px 40px;
 }
 
 .pom-triptych .pom-fallback > .pom-panel:first-child > div {
-  max-width: 280px;
+  max-width: 324px;
+  width: 100%;
   margin-left: auto;
+  text-align: right;
+}
+
+.pom-triptych .pom-eyebrow {
+  font-family: @font-display;
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  color: @gold-figma;
+  text-align: right;
+  margin: 0 0 16px;
+}
+
+.pom-triptych .pom-panel h2 {
+  font-family: @font-display !important;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 56px;
+  letter-spacing: 0;
+  color: @ink !important;
+  max-width: 324px;
+  margin: 0 0 0 auto;
+  text-align: right;
 }
 
 .pom-triptych .pom-fallback > .pom-panel:last-child {
   text-align: left;
-  padding-left: 36px;
+  padding: 48px 40px;
 }
 
 .pom-triptych .pom-fallback > .pom-panel:last-child > div {
-  max-width: 320px;
+  max-width: 375px;
 }
 
 .pom-triptych .pom-fallback > .pom-panel:last-child p {
-  font-family: @font-serif;
-  font-size: 18px;
-  line-height: 1.45;
+  font-family: @font-display;
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 400;
+  letter-spacing: 0;
+  color: @contact-muted;
+  margin: 0 0 28px;
+}
+
+.pom-triptych .pom-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: @font-display;
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 400;
+  color: @ink !important;
+  text-decoration: none !important;
+}
+
+.pom-triptych .pom-link .pom-link-text {
+  text-decoration: underline;
+  text-decoration-thickness: 4%;
+  text-underline-offset: 13%;
+  text-decoration-skip-ink: auto;
+}
+
+.pom-triptych .pom-link .pom-arrow,
+.pom-triptych .pom-link .pom-arrow.is-ne,
+.pom-triptych .pom-link:hover .pom-arrow {
+  width: 14px !important;
+  height: 14px !important;
+  flex: 0 0 14px;
+  border: 0 !important;
+  background: currentColor !important;
+  -webkit-mask: ~'url("/assets/arrow-ne.svg") center / contain no-repeat' !important;
+  mask: ~'url("/assets/arrow-ne.svg") center / contain no-repeat' !important;
+  transform: none !important;
 }
 
 .pom-panel h2,
@@ -812,6 +875,85 @@ a.pom-join-btn {
 
 .pom-split.is-cream .pom-split-copy {
   background: @cream;
+}
+
+/* Saturday Night Live — Figma exact */
+.pom-split.is-cream.is-snl {
+  min-height: 560px;
+  font-family: @font-display;
+}
+
+.pom-split.is-cream.is-snl .pom-split-copy {
+  padding: 48px 40px;
+  background: @cream;
+}
+
+.pom-split.is-cream.is-snl .pom-eyebrow {
+  font-family: @font-display;
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  color: @gold-figma;
+  margin: 0 0 16px;
+}
+
+.pom-split.is-cream.is-snl h2 {
+  font-family: @font-display !important;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 56px;
+  letter-spacing: 0;
+  color: @ink !important;
+  margin: 0;
+  max-width: none;
+  white-space: nowrap;
+}
+
+.pom-split.is-cream.is-snl .pom-split-copy > p:not(.pom-eyebrow) {
+  font-family: @font-display;
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 400;
+  letter-spacing: 0;
+  color: @contact-muted !important;
+  margin: 20px 0 36px;
+  max-width: none;
+  white-space: nowrap;
+}
+
+.pom-split.is-cream.is-snl .pom-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  align-self: flex-start;
+  font-family: @font-display;
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 400;
+  color: @ink !important;
+  text-decoration: none !important;
+}
+
+.pom-split.is-cream.is-snl .pom-link .pom-link-text {
+  text-decoration: underline;
+  text-decoration-thickness: 4%;
+  text-underline-offset: 13%;
+  text-decoration-skip-ink: auto;
+}
+
+.pom-split.is-cream.is-snl .pom-link .pom-arrow,
+.pom-split.is-cream.is-snl .pom-link .pom-arrow.is-ne,
+.pom-split.is-cream.is-snl .pom-link:hover .pom-arrow {
+  width: 14px !important;
+  height: 14px !important;
+  flex: 0 0 14px;
+  border: 0 !important;
+  background: currentColor !important;
+  -webkit-mask: ~'url("/assets/arrow-ne.svg") center / contain no-repeat' !important;
+  mask: ~'url("/assets/arrow-ne.svg") center / contain no-repeat' !important;
+  transform: none !important;
 }
 
 .pom-split.is-dark .pom-split-copy h2 {
@@ -1653,6 +1795,13 @@ section.pom-join.is-tan {
   .pom-faq-q { font-size: 20px; line-height: 28px; }
   .pom-faq-a { font-size: 16px; line-height: 24px; }
   .pom-contact h2 { font-size: 36px; }
+  .pom-split.is-cream.is-snl h2,
+  .pom-split.is-cream.is-snl .pom-split-copy > p:not(.pom-eyebrow) {
+    white-space: normal;
+  }
+  .pom-split.is-cream.is-snl .pom-split-copy { padding: 40px 24px; }
+  .pom-triptych .pom-panel h2 { font-size: 36px; line-height: 44px; }
+  .pom-triptych .pom-fallback > .pom-panel:last-child p { font-size: 20px; line-height: 28px; }
   .pom-split.is-dark.is-store .pom-split-copy {
     align-items: flex-start;
     text-align: left;
