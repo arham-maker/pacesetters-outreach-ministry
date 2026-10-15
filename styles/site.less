@@ -1010,9 +1010,10 @@ a.pom-join-btn {
 .pom-contact-copy {
   position: relative;
   z-index: 2;
-  max-width: 560px;
+  max-width: none;
+  width: 100%;
   color: @ink;
-  text-align: left;
+  text-align: right;
 }
 
 .pom-contact-copy .pom-eyebrow,
@@ -1024,7 +1025,7 @@ a.pom-join-btn {
   letter-spacing: 0;
   text-transform: uppercase;
   color: @gold-figma;
-  text-align: left;
+  text-align: right;
   max-width: none;
   margin: 0 0 20px;
 }
@@ -1034,22 +1035,24 @@ a.pom-join-btn {
   font-weight: 400;
   font-size: 48px;
   line-height: 56px;
-  max-width: 520px;
+  max-width: none;
   margin: 0;
   color: @ink !important;
   letter-spacing: 0;
-  text-align: left;
+  text-align: right;
+  white-space: nowrap;
 }
 
 .pom-contact-lead {
   margin: 20px 0 48px;
-  max-width: 520px;
+  max-width: none;
   color: @contact-muted !important;
   font-family: @font-display;
   font-size: 28px;
   line-height: 36px;
   font-weight: 400;
-  text-align: left;
+  text-align: right;
+  white-space: nowrap;
 }
 
 .pom-contact-meta {
@@ -1057,6 +1060,7 @@ a.pom-join-btn {
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: flex-end;
   gap: 18px 48px;
   color: @ink;
 }
@@ -1395,6 +1399,18 @@ section.pom-join.is-tan {
     grid-template-columns: 1fr;
   }
   .pom-form-card { max-width: none; justify-self: stretch; }
+  .pom-contact-copy,
+  .pom-contact-copy .pom-eyebrow,
+  .pom-contact .pom-eyebrow,
+  .pom-contact h2,
+  .pom-contact-lead {
+    text-align: left;
+  }
+  .pom-contact h2,
+  .pom-contact-lead {
+    white-space: normal;
+  }
+  .pom-contact-meta { justify-content: flex-start; }
   .pom-split.is-reverse .pom-media { order: 0; }
   .pom-media { min-height: 240px; }
   .pom-panel,
