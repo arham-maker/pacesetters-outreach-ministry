@@ -77,7 +77,7 @@
         </div>
         <div class="pom-faq-item">
           <button class="pom-faq-q" type="button" aria-expanded="false">How can I get involved? <span class="pom-faq-icon" aria-hidden="true"></span></button>
-          <div class="pom-faq-a"></div>
+          <div class="pom-faq-a">Join an outreach event, volunteer locally, or contact us to find a place to serve.</div>
         </div>
       </div>
     </div>

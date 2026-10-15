@@ -71,8 +71,8 @@
           <button class="pom-faq-q" type="button" aria-expanded="true">Can I request prayer for someone else? <span class="pom-faq-icon" aria-hidden="true"></span></button>
           <div class="pom-faq-a">Yes. You can share a request without including private details.</div>
         </div>
-        <div class="pom-faq-item"><button class="pom-faq-q" type="button" aria-expanded="false">Can I connect with the ministry? <span class="pom-faq-icon" aria-hidden="true"></span></button><div class="pom-faq-a"></div></div>
-        <div class="pom-faq-item"><button class="pom-faq-q" type="button" aria-expanded="false">Can I join prayer online? <span class="pom-faq-icon" aria-hidden="true"></span></button><div class="pom-faq-a"></div></div>
+        <div class="pom-faq-item"><button class="pom-faq-q" type="button" aria-expanded="false">Can I connect with the ministry? <span class="pom-faq-icon" aria-hidden="true"></span></button><div class="pom-faq-a">Yes. Reach out by phone, email, or the contact form and we will welcome you into fellowship.</div></div>
+        <div class="pom-faq-item"><button class="pom-faq-q" type="button" aria-expanded="false">Can I join prayer online? <span class="pom-faq-icon" aria-hidden="true"></span></button><div class="pom-faq-a">Yes. Saturday Night Live includes prayer each week via Zoom.</div></div>
       </div>
     </div>
     <div class="pom-cms"><squarespace:block-field id="prayer-faq" columns="12" /></div>
