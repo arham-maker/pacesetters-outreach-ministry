@@ -718,7 +718,14 @@ a.pom-join-btn {
 .pom-page-home .pom-triptych .is-hands { background-image: ~'url("/assets/home-purpose.png")'; }
 .pom-page-home .pom-split.is-cream .is-bible { background-image: ~'url("/assets/home-snl.png")'; }
 .pom-page-home .pom-split.is-dark .is-books { background-image: ~'url("/assets/home-store.png")'; }
-.pom-page-home .pom-contact.is-crowd { background-image: ~'url("/assets/home-hero.png")'; }
+.pom-page-home .pom-contact.is-crowd,
+.pom-contact.is-crowd {
+  background-image: none;
+}
+.pom-page-home .pom-contact.is-crowd:before,
+.pom-contact.is-crowd:before {
+  background-image: ~'url("/assets/contact-crowd.png")';
+}
 .pom-page-home .pom-testimonials-intro,
 .pom-page-home .pom-faq-intro { text-align: right; }
 
@@ -929,28 +936,60 @@ a.pom-join-btn {
 
 .pom-contact {
   position: relative;
-  min-height: 520px;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: 560px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 48px;
+  gap: 56px;
   align-items: center;
-  padding: 72px 80px;
+  padding: 80px @wide;
   color: @ink;
   background-color: #cfc4b4;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+}
+
+.pom-contact:before,
+.pom-contact:after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
 }
 
 .pom-contact:before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    ~"linear-gradient(90deg, rgba(247, 244, 237, 0.9) 0%, rgba(247, 244, 237, 0.72) 42%, rgba(247, 244, 237, 0.4) 100%)";
+  inset: -40px;
+  background-color: #cfc4b4;
+  background-image: ~'url("/assets/contact-crowd.png")';
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: ~"blur(16px)";
+  transform: ~"scale(1.08)";
 }
 
-.pom-contact > * { position: relative; z-index: 1; }
+.pom-contact:after {
+  inset: 0;
+  background:
+    ~"linear-gradient(90deg, rgba(247, 244, 237, 0.82) 0%, rgba(247, 244, 237, 0.58) 48%, rgba(247, 244, 237, 0.28) 100%)";
+}
+
+.pom-contact > * {
+  position: relative;
+  z-index: 2;
+  pointer-events: auto;
+}
+
+.pom-contact-copy {
+  max-width: 480px;
+}
+
+.pom-contact-copy .pom-eyebrow {
+  color: @gold;
+  text-align: right;
+  max-width: 420px;
+  margin-left: auto;
+  margin-right: 0;
+}
 
 .pom-contact h2 {
   font-family: @font-sans;
@@ -964,16 +1003,18 @@ a.pom-join-btn {
 
 .pom-contact .pom-eyebrow { color: @gold; }
 .pom-contact-lead {
-  margin: 16px 0 28px;
-  max-width: 380px;
+  margin: 16px 0 36px;
+  max-width: 400px;
   color: @ink-soft;
   font-size: @font-body;
 }
 
 .pom-contact-meta {
   display: flex;
-  flex-direction: column;
-  gap: 12px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 18px 36px;
   font-size: 15px;
   color: @ink;
 }
@@ -986,6 +1027,7 @@ a.pom-join-btn {
   color: @ink;
   text-decoration: underline;
   text-underline-offset: 4px;
+  pointer-events: auto;
 }
 
 .pom-contact-meta a:hover { opacity: 0.75; }
@@ -993,41 +1035,50 @@ a.pom-join-btn {
 .pom-form-card {
   display: flex;
   flex-direction: column;
-  background: @white;
+  position: relative;
+  z-index: 3;
+  background: @paper;
   color: @ink;
-  padding: 44px 40px 36px;
-  box-shadow: 0 12px 36px rgba(38, 38, 37, 0.12);
+  padding: 48px 44px 40px;
+  box-shadow: none;
+  pointer-events: auto;
 }
 
-.pom-field { margin-bottom: 22px; }
+.pom-field { margin-bottom: 26px; }
 .pom-field label {
   display: block;
   font-size: 14px;
   letter-spacing: 0;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
   color: @ink;
   font-weight: 400;
 }
 
 .pom-field input,
 .pom-field textarea {
+  display: block;
   width: 100%;
   border: 0;
+  border-radius: 0;
   border-bottom: 1px solid @gold;
   background: transparent;
-  padding: 8px 0 12px;
+  padding: 8px 0 14px;
   outline: none;
   font-family: @font-sans;
+  font-size: 16px;
   color: @ink;
+  pointer-events: auto;
+  -webkit-appearance: none;
+  appearance: none;
 }
 
-.pom-field textarea { min-height: 72px; resize: vertical; }
+.pom-field textarea { min-height: 88px; resize: vertical; }
 .pom-field input:focus,
 .pom-field textarea:focus { border-bottom-color: @ink; }
 
 .pom-form-card .pom-link {
   margin-left: auto;
-  margin-top: 8px;
+  margin-top: 4px;
   background: transparent;
   border: 0;
   cursor: pointer;
@@ -1035,6 +1086,7 @@ a.pom-join-btn {
   text-decoration: underline;
   text-underline-offset: 5px;
   color: @ink;
+  pointer-events: auto;
 }
 
 .pom-form-note { margin-top: 12px; font-size: 14px; color: @ink-soft; }
@@ -1187,6 +1239,8 @@ section.pom-join.is-tan {
   height: 1px;
   overflow: hidden;
   clip: ~"rect(0, 0, 0, 0)";
+  pointer-events: none;
+  z-index: -1;
 }
 
 [data-pom-region].has-cms > .pom-cms,
@@ -1196,6 +1250,8 @@ section.pom-join.is-tan {
   height: auto;
   overflow: visible;
   clip: auto;
+  pointer-events: auto;
+  z-index: 1;
 }
 
 .pom-editing [data-pom-region] > .pom-cms {
