@@ -232,7 +232,7 @@ a.pom-join-btn {
   padding: 10px 18px;
 }
 .pom-join-btn .pom-arrow,
-.pom-hero-bar .pom-arrow { transform: ~"rotate(-90deg)"; }
+.pom-hero-bar .pom-arrow { transform: none; }
 
 .pom-btn-light {
   background: @white;
@@ -508,33 +508,36 @@ a.pom-join-btn {
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-end;
-  padding: 150px 0 0;
+  padding: 180px 0 0;
   overflow: hidden;
 }
 .pom-page-home .pom-hero.is-pew {
   background-image: ~'url("/assets/home-hero.png")';
-  background-position: 62% 70%;
-  background-size: ~"128% auto";
+  background-position: 58% 62%;
+  background-size: ~"132% auto";
 }
 .pom-page-home .pom-hero:before {
-  background: ~"linear-gradient(90deg, rgba(18, 10, 6, 0.22) 0%, rgba(18, 10, 6, 0) 48%)";
+  background: ~"linear-gradient(90deg, rgba(20, 12, 8, 0.18) 0%, rgba(20, 12, 8, 0) 52%)";
 }
 .pom-page-home .pom-hero-copy {
-  max-width: 920px;
-  padding: 0 80px 48px;
+  max-width: 900px;
+  padding: 0 64px 56px;
 }
 .pom-page-home .pom-hero h1 {
-  font-size: 84px;
-  line-height: 0.96;
+  font-family: @font-sans;
+  font-weight: 500;
+  font-size: 72px;
+  line-height: 1.02;
   max-width: none;
   letter-spacing: -0.03em;
 }
 .pom-page-home .pom-lede {
-  font-family: @font-serif;
-  font-size: 34px;
-  line-height: 1.2;
-  max-width: 640px;
-  margin-top: 28px;
+  font-family: @font-sans;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.4;
+  max-width: 520px;
+  margin-top: 22px;
 }
 .pom-hero-bars {
   display: flex;
@@ -545,17 +548,17 @@ a.pom-join-btn {
   display: inline-flex;
   align-items: center;
   justify-content: space-between;
-  gap: 36px;
-  min-width: 280px;
-  min-height: 68px;
-  padding: 0 32px;
+  gap: 40px;
+  min-width: 292px;
+  min-height: 70px;
+  padding: 0 28px;
   font-size: 16px;
   line-height: 1;
   border-radius: 0;
 }
 .pom-hero-bar span:first-child { text-decoration: underline; text-underline-offset: 5px; }
-.pom-hero-bar.is-light { background: #ffffff; color: #262625; }
-.pom-hero-bar.is-dark { background: #2a2a2a; color: #ffffff; }
+.pom-hero-bar.is-light { background: #f7f4ed; color: #262625; }
+.pom-hero-bar.is-dark { background: #262625; color: #ffffff; }
 .pom-page-home .pom-triptych .is-hands { background-image: ~'url("/assets/home-purpose.png")'; }
 .pom-page-home .pom-split.is-cream .is-bible { background-image: ~'url("/assets/home-snl.png")'; }
 .pom-page-home .pom-split.is-dark .is-books { background-image: ~'url("/assets/home-store.png")'; }
@@ -995,10 +998,10 @@ section.pom-join {
   .pom-hero { min-height: 680px; padding: 140px 24px 48px; }
   .pom-page-home .pom-hero { padding: 120px 0 0; }
   .pom-page-home .pom-hero-copy { padding: 0 24px 32px; }
-  .pom-page-home .pom-hero h1 { font-size: 52px; }
-  .pom-page-home .pom-lede { font-size: 24px; }
+  .pom-page-home .pom-hero h1 { font-size: 42px; }
+  .pom-page-home .pom-lede { font-size: 16px; }
   .pom-hero-bars { flex-direction: column; width: 100%; }
-  .pom-hero-bar { width: 100%; }
+  .pom-hero-bar { width: 100%; min-width: 0; }
   .pom-triptych,
   .pom-split,
   .pom-split.is-reverse,
