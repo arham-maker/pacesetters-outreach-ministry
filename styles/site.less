@@ -292,8 +292,8 @@ a.pom-join-btn {
 }
 
 .pom-icon-btn .pom-arrow { width: 16px; height: 16px; }
-.pom-icon-btn.is-prev .pom-arrow { transform: ~"rotate(-135deg)"; }
-.pom-icon-btn.is-next .pom-arrow { transform: ~"rotate(45deg)"; }
+.pom-icon-btn.is-prev .pom-arrow { transform: ~"rotate(-90deg)"; }
+.pom-icon-btn.is-next .pom-arrow { transform: ~"rotate(90deg)"; }
 
 .pom-quote-nav {
   display: flex;
@@ -302,6 +302,18 @@ a.pom-join-btn {
 }
 
 .pom-quote-nav .pom-icon-btn + .pom-icon-btn { margin-left: -10px; }
+
+.pom-quote-nav .pom-icon-btn .pom-arrow {
+  width: 10px;
+  height: 10px;
+  background: transparent;
+  -webkit-mask: none;
+  mask: none;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+}
+.pom-quote-nav .pom-icon-btn.is-prev .pom-arrow { transform: ~"rotate(135deg)"; }
+.pom-quote-nav .pom-icon-btn.is-next .pom-arrow { transform: ~"rotate(-45deg)"; }
 
 .pom-has-plain .pom-header {
   color: @ink;
