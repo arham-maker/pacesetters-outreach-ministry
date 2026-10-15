@@ -5,8 +5,8 @@
       <p class="pom-lede">Sharing God’s love in our communities<br>and beyond.</p>
     </div>
     <div class="pom-hero-bars">
-      <a class="pom-hero-bar is-light" href="/events"><span>Join Saturday Night Live</span> <span class="pom-arrow is-ne" aria-hidden="true"></span></a>
-      <a class="pom-hero-bar is-dark" href="/about"><span>Explore Our Ministry</span> <span class="pom-arrow is-ne" aria-hidden="true"></span></a>
+      <a class="pom-hero-bar is-light" href="/events"><span class="pom-link-text">Join Saturday Night Live</span><span class="pom-arrow is-ne" aria-hidden="true"></span></a>
+      <a class="pom-hero-bar is-dark" href="/about"><span class="pom-link-text">Explore Our Ministry</span><span class="pom-arrow is-ne" aria-hidden="true"></span></a>
     </div>
     <div class="pom-cms"><squarespace:block-field id="home-hero" columns="12" /></div>
   </section>

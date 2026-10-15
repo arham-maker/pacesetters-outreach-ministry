@@ -133,12 +133,15 @@ h1, h2, h3, p { margin: 0; }
   text-align: right;
 }
 
-.pom-sidenav .pom-nav-list { align-items: flex-end; gap: 22px; }
+.pom-sidenav .pom-nav-list { align-items: flex-end; gap: 18px; }
 .pom-sidenav .pom-nav-list a {
-  font-family: @font-sans;
-  font-size: @font-nav;
+  font-family: @font-display;
+  font-size: 24px;
   font-weight: 400;
-  line-height: 1.2;
+  line-height: 32px;
+  letter-spacing: 0;
+  color: #fefefe;
+  text-align: right;
   text-shadow: 0 1px 8px rgba(12, 8, 6, 0.55);
 }
 
@@ -761,31 +764,36 @@ a.pom-join-btn {
   left: 0;
   top: 38%;
   z-index: 1;
-  max-width: 900px;
+  max-width: 680px;
   padding: 0 64px;
 }
 .pom-page-home .pom-hero h1 {
-  font-family: @font-sans;
+  font-family: @font-display;
   font-weight: 400;
-  font-size: @font-hero-home;
-  line-height: 1.02;
-  max-width: none;
-  letter-spacing: -0.02em;
+  font-size: 72px;
+  line-height: 90px;
+  max-width: 631px;
+  margin: 0;
+  letter-spacing: 0;
+  color: #fefefe;
   text-shadow: 0 2px 18px rgba(12, 8, 6, 0.28);
 }
 .pom-page-home .pom-lede {
-  font-family: @font-sans;
+  font-family: @font-display;
   font-weight: 400;
-  font-size: @font-lede;
-  line-height: 1.4;
-  max-width: 520px;
+  font-size: 40px;
+  line-height: 48px;
+  letter-spacing: 0;
+  max-width: 650px;
   margin-top: 18px;
+  color: #fefefe;
   text-shadow: 0 1px 12px rgba(12, 8, 6, 0.35);
 }
 .pom-page-home .pom-hero-bars {
   position: relative;
   z-index: 2;
   margin-top: auto;
+  width: auto;
 }
 
 .pom-page-about .pom-hero,
@@ -824,17 +832,38 @@ a.pom-join-btn {
   display: inline-flex;
   align-items: center;
   justify-content: space-between;
-  gap: 48px;
+  gap: 14px;
   min-width: 320px;
   min-height: 72px;
   padding: 0 32px;
-  font-size: 16px;
-  line-height: 1;
+  font-family: @font-display;
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 400;
+  letter-spacing: 0;
   border-radius: 0;
+  text-decoration: none !important;
 }
-.pom-hero-bar span:first-child { text-decoration: underline; text-underline-offset: 5px; }
-.pom-hero-bar.is-light { background: @white; color: @ink; }
-.pom-hero-bar.is-dark { background: @ink; color: @white; }
+.pom-hero-bar .pom-link-text {
+  text-decoration: underline;
+  text-decoration-thickness: 4%;
+  text-underline-offset: 13%;
+  text-decoration-skip-ink: auto;
+}
+.pom-hero-bar .pom-arrow,
+.pom-hero-bar .pom-arrow.is-ne,
+.pom-hero-bar:hover .pom-arrow {
+  width: 14px !important;
+  height: 14px !important;
+  flex: 0 0 14px;
+  border: 0 !important;
+  background: currentColor !important;
+  -webkit-mask: ~'url("/assets/arrow-ne.svg") center / contain no-repeat' !important;
+  mask: ~'url("/assets/arrow-ne.svg") center / contain no-repeat' !important;
+  transform: none !important;
+}
+.pom-hero-bar.is-light { background: @cream; color: @ink; }
+.pom-hero-bar.is-dark { background: @ink; color: #f7f4ed; }
 .pom-page-home .pom-triptych .is-hands { background-image: ~'url("/assets/home-purpose.png")'; }
 .pom-page-home .pom-split.is-cream .is-bible { background-image: ~'url("/assets/home-snl.png")'; }
 .pom-page-home .pom-split.is-dark .is-books,
@@ -1754,8 +1783,9 @@ section.pom-join.is-tan {
   }
   .pom-hero { height: auto; min-height: 680px; }
   .pom-hero h1 { font-size: 42px; }
-  .pom-page-home .pom-hero h1 { font-size: 42px; }
-  .pom-page-home .pom-lede { font-size: 16px; }
+  .pom-page-home .pom-hero h1 { font-size: 42px; line-height: 52px; max-width: none; }
+  .pom-page-home .pom-lede { font-size: 22px; line-height: 30px; max-width: none; }
+  .pom-sidenav .pom-nav-list a { font-size: 18px; line-height: 26px; }
   .pom-panel h2,
   .pom-split h2,
   .pom-intro h2,
