@@ -2413,6 +2413,51 @@ section.pom-join.is-tan {
     text-align: left;
   }
   .pom-page-services .pom-split.is-svc-end .pom-link { align-self: flex-start; }
+  .pom-page-contact .pom-hero.is-contact-bible {
+    align-items: flex-end;
+    padding: 140px 24px 48px;
+    height: auto;
+    min-height: 680px;
+  }
+  .pom-page-contact .pom-hero-copy { width: auto; max-width: 100%; }
+  .pom-page-contact .pom-hero h1 {
+    font-size: 42px;
+    line-height: 48px;
+    width: auto;
+    white-space: normal;
+  }
+  .pom-page-contact .pom-hero .pom-lede {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .pom-contact-page {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 48px 24px;
+  }
+  .pom-contact-info {
+    align-items: flex-start;
+    text-align: left;
+  }
+  .pom-contact-info .pom-eyebrow,
+  .pom-contact-info h2,
+  .pom-contact-info .pom-prose {
+    text-align: left;
+    max-width: none;
+  }
+  .pom-contact-info h2 { font-size: 36px; line-height: 44px; }
+  .pom-contact-info .pom-prose { font-size: 18px; line-height: 26px; margin-bottom: 28px; }
+  .pom-page-contact .pom-contact-info .pom-contact-meta {
+    justify-content: flex-start;
+  }
+  .pom-page-contact .pom-contact-info .pom-contact-meta a {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .pom-form-stack { max-width: none; justify-self: stretch; }
+  .pom-form-stack h3 { font-size: 24px; line-height: 32px; }
+  .pom-form-stack .pom-field-row { grid-template-columns: 1fr; gap: 0; }
+  .pom-form-stack .pom-btn-dark { font-size: 18px; min-height: 56px; }
   .pom-triptych .pom-panel h2 { font-size: 36px; line-height: 44px; }
   .pom-triptych .pom-fallback > .pom-panel:last-child p { font-size: 20px; line-height: 28px; }
   .pom-split.is-dark.is-store .pom-split-copy {
@@ -2672,37 +2717,184 @@ body[class*="cart"] ,
   border: 1.5px solid @gold;
 }
 
+/* Contact page — Figma exact */
+.pom-page-contact .pom-hero.is-contact-bible {
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 50px;
+  background-image: ~'url("/assets/contact/contact-hero.png")';
+  background-position: center center;
+  background-size: cover;
+}
+
+.pom-page-contact .pom-hero.is-contact-bible:before {
+  background:
+    ~"linear-gradient(89.87deg, rgb(12, 9, 9) 0%, rgba(12, 9, 9, 0) 53.2%)",
+    ~"linear-gradient(89.38deg, rgba(59, 51, 42, 0) 83.4%, rgb(59, 51, 42) 99.7%)";
+}
+
+.pom-page-contact .pom-hero-copy {
+  max-width: 720px;
+  width: max-content;
+}
+
+.pom-page-contact .pom-hero h1 {
+  font-family: @font-display !important;
+  font-weight: 400;
+  font-size: 90px;
+  line-height: 90px;
+  letter-spacing: 0;
+  max-width: none;
+  width: max-content;
+  white-space: nowrap;
+  color: #fefefe;
+  margin: 0;
+}
+
+.pom-page-contact .pom-hero .pom-lede {
+  font-family: @font-display;
+  font-size: 40px;
+  line-height: 48px;
+  font-weight: 400;
+  letter-spacing: 0;
+  color: #fefefe;
+  max-width: none;
+  margin-top: 20px;
+}
+
 .pom-contact-page {
   display: grid;
   grid-template-columns: 0.9fr 1.1fr;
   gap: 64px;
-  padding: 80px @wide;
+  padding: 100px;
   background: @paper;
   align-items: start;
+  font-family: @font-display;
 }
 
 .pom-contact-page > .pom-fallback { display: contents; }
 
-.pom-contact-info h2 {
-  font-family: @font-serif;
+.pom-contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  padding-top: 8px;
+}
+
+.pom-contact-info .pom-eyebrow {
+  font-family: @font-display;
+  font-size: 22px;
+  line-height: 30px;
   font-weight: 400;
-  font-size: @font-h2;
-  line-height: 1.08;
-  margin-bottom: 18px;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  color: @gold-figma;
+  margin: 0 0 20px;
+  text-align: right;
+}
+
+.pom-contact-info h2 {
+  font-family: @font-display !important;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 56px;
+  letter-spacing: 0;
+  margin: 0 0 20px;
   max-width: 420px;
+  color: @ink !important;
+  text-align: right;
 }
 
 .pom-contact-info .pom-prose {
+  font-family: @font-display;
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 400;
   max-width: 420px;
-  margin-bottom: 28px;
-  color: @ink-soft;
+  margin: 0 0 50px;
+  color: @contact-muted;
+  text-align: right;
+}
+
+.pom-page-contact .pom-contact-info .pom-contact-meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 28px 40px;
+}
+
+.pom-page-contact .pom-contact-info .pom-contact-meta a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: @font-display;
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 400;
+  color: @ink;
+  text-decoration: underline;
+  text-decoration-thickness: 4%;
+  text-underline-offset: 13%;
+}
+
+.pom-form-stack {
+  width: 100%;
+  max-width: 720px;
+  justify-self: end;
 }
 
 .pom-form-stack h3 {
-  font-family: @font-serif;
+  font-family: @font-display !important;
   font-weight: 400;
-  font-size: 28px;
-  margin-bottom: 28px;
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: 0;
+  margin: 0 0 36px;
+  color: @ink !important;
+}
+
+.pom-form-stack .pom-field-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+
+.pom-form-stack .pom-field {
+  margin-bottom: 36px;
+}
+
+.pom-form-stack .pom-field-row .pom-field {
+  margin-bottom: 36px;
+}
+
+.pom-form-stack .pom-check {
+  font-family: @font-display;
+  font-size: 16px;
+  line-height: 24px;
+  color: @ink;
+  margin: 8px 0 28px;
+}
+
+.pom-form-stack .pom-btn-dark {
+  font-family: @font-display;
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 400;
+  gap: 12px;
+  min-height: 64px;
+}
+
+.pom-form-stack .pom-btn-dark .pom-arrow,
+.pom-form-stack .pom-btn-dark .pom-arrow.is-ne {
+  width: 14px !important;
+  height: 14px !important;
+  flex: 0 0 14px;
+  border: 0 !important;
+  background: currentColor !important;
+  -webkit-mask: ~'url("/assets/arrow-ne.svg") center / contain no-repeat' !important;
+  mask: ~'url("/assets/arrow-ne.svg") center / contain no-repeat' !important;
+  transform: none !important;
 }
 
 .pom-expect {
