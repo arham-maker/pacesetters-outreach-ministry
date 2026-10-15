@@ -80,7 +80,7 @@
     <div class="pom-testimonials-intro">
       <div>
         <p class="pom-eyebrow">Testimonials</p>
-        <h2>Stories of faith and hope.</h2>
+        <h2>Stories of faith<br>and hope.</h2>
         <div class="pom-quote-nav">
           <button class="pom-icon-btn is-prev" type="button" data-quote="prev" aria-label="Previous story"><span class="pom-arrow"></span></button>
           <button class="pom-icon-btn is-next" type="button" data-quote="next" aria-label="Next story"><span class="pom-arrow"></span></button>

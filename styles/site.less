@@ -343,10 +343,18 @@ a.pom-join-btn {
 .pom-quote-nav {
   display: flex;
   justify-content: flex-end;
-  margin-top: 36px;
+  margin-top: 40px;
 }
 
-.pom-quote-nav .pom-icon-btn + .pom-icon-btn { margin-left: -10px; }
+.pom-quote-nav .pom-icon-btn {
+  width: 52px;
+  height: 52px;
+  background: transparent;
+  border: 1.5px solid @ink;
+  color: @ink;
+}
+
+.pom-quote-nav .pom-icon-btn + .pom-icon-btn { margin-left: -12px; }
 
 .pom-quote-nav .pom-icon-btn .pom-arrow {
   width: 10px;
@@ -832,6 +840,7 @@ a.pom-join-btn {
   grid-template-columns: 0.42fr 0.58fr;
   min-height: 520px;
   background: @white;
+  font-family: @font-display;
 }
 
 .pom-testimonials-intro,
@@ -844,10 +853,19 @@ a.pom-join-btn {
   padding: 72px 40px 72px 64px;
 }
 
+.pom-testimonials .pom-testimonials-intro {
+  padding: 96px 56px 96px @wide;
+}
+
 .pom-testimonials-intro > div,
 .pom-faq-intro > div {
   max-width: 320px;
   width: 100%;
+}
+
+.pom-testimonials .pom-testimonials-intro > div {
+  max-width: 280px;
+  text-align: right;
 }
 
 .pom-testimonials-intro h2,
@@ -856,41 +874,73 @@ a.pom-join-btn {
   margin-left: auto;
 }
 
+.pom-testimonials .pom-eyebrow {
+  font-family: @font-display;
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  color: @gold-figma;
+  text-align: right;
+  margin: 0 0 16px;
+}
+
+.pom-testimonials h2,
+.pom-testimonials .pom-testimonials-intro h2 {
+  font-family: @font-display !important;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 56px;
+  letter-spacing: 0;
+  color: @ink !important;
+  max-width: 277px;
+  margin: 0 0 0 auto;
+  text-align: right;
+}
+
 .pom-quote-wrap {
-  padding: 88px 96px 88px 56px;
+  padding: 96px @wide 96px 48px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
 .pom-quote { display: none; }
-.pom-quote.is-active { display: block; }
+.pom-quote.is-active { display: block; max-width: 728px; }
 
 .pom-quote-mark {
-  font-family: @font-serif;
-  font-size: 48px;
+  font-family: @font-display;
+  font-size: 42px;
   line-height: 1;
-  color: rgba(38, 38, 37, 0.28);
-  margin-bottom: 8px;
+  font-weight: 400;
+  color: @contact-muted;
+  width: 28px;
+  height: 24px;
+  margin: 0 0 16px;
+  overflow: hidden;
 }
 
 .pom-quote p {
-  font-family: @font-sans;
+  font-family: @font-display;
   font-weight: 400;
-  font-size: @font-quote;
-  line-height: 1.65;
-  color: @ink-soft;
+  font-size: 28px;
+  line-height: 36px;
+  letter-spacing: 0;
+  color: @contact-muted;
   margin: 0 0 28px;
-  max-width: 560px;
+  max-width: 728px;
 }
 
 .pom-quote cite {
   display: block;
   font-style: normal;
-  font-family: @font-sans;
-  font-size: @font-body;
-  font-weight: 500;
-  color: @gold;
+  font-family: @font-display;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 400;
+  letter-spacing: 0;
+  color: @gold-figma;
 }
 
 .pom-faq {
@@ -1439,6 +1489,23 @@ section.pom-join.is-tan {
   .pom-split h2,
   .pom-intro h2,
   .pom-testimonials h2,
+  .pom-testimonials .pom-testimonials-intro h2 {
+    font-size: 36px;
+    line-height: 44px;
+    max-width: none;
+    margin-left: 0;
+    text-align: left;
+  }
+  .pom-testimonials .pom-testimonials-intro,
+  .pom-testimonials .pom-testimonials-intro > div,
+  .pom-testimonials .pom-eyebrow {
+    text-align: left;
+    align-items: flex-start;
+  }
+  .pom-testimonials .pom-eyebrow { font-size: 16px; line-height: 24px; }
+  .pom-quote p { font-size: 20px; line-height: 28px; }
+  .pom-quote cite { font-size: 18px; line-height: 26px; }
+  .pom-quote-nav { justify-content: flex-start; }
   .pom-faq h2,
   .pom-faq .pom-faq-intro h2 {
     font-size: 36px;
