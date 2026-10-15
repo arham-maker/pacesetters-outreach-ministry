@@ -43,12 +43,12 @@
     <div class="pom-cms"><squarespace:block-field id="home-saturday" columns="12" /></div>
   </section>
 
-  <section class="pom-split is-dark is-reverse" data-pom-region="home-store-promo">
+  <section class="pom-split is-dark is-store is-reverse" data-pom-region="home-store-promo">
     <div class="pom-fallback">
       <div class="pom-split-copy">
         <h2>Encouragement for everyday faith.</h2>
         <p>Music, sermons, and books from our ministry.</p>
-        <a class="pom-link" href="/store">Browse the Store <span class="pom-arrow" aria-hidden="true"></span></a>
+        <a class="pom-link is-end" href="/store">Browse the Store <span class="pom-arrow is-ne" aria-hidden="true"></span></a>
       </div>
       <div class="pom-media is-books" role="img" aria-label="Books, CDs, and headphones"></div>
     </div>

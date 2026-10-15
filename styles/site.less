@@ -818,6 +818,77 @@ a.pom-join-btn {
 
 .pom-split-copy .pom-link.is-end { align-self: flex-end; }
 
+/* Home store promo — Figma exact */
+.pom-split.is-dark.is-store {
+  min-height: 560px;
+  background: @ink;
+  font-family: @font-display;
+}
+
+.pom-split.is-dark.is-store .pom-split-copy {
+  align-items: flex-end;
+  text-align: right;
+  padding: 88px @wide;
+  background: @ink;
+}
+
+.pom-split.is-dark.is-store .pom-split-copy h2 {
+  font-family: @font-display !important;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 56px;
+  letter-spacing: 0;
+  color: #fefefe !important;
+  max-width: 670px;
+  width: 100%;
+  margin: 0;
+  text-align: right;
+}
+
+.pom-split.is-dark.is-store .pom-split-copy p {
+  font-family: @font-display;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 36px;
+  letter-spacing: 0;
+  color: #f0e5d3 !important;
+  max-width: 670px;
+  width: 100%;
+  margin: 20px 0 40px;
+  text-align: right;
+}
+
+.pom-split.is-dark.is-store .pom-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  align-self: flex-end;
+  font-family: @font-display;
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 400;
+  letter-spacing: 0;
+  color: #fefefe !important;
+  text-decoration: underline;
+  text-decoration-thickness: 4%;
+  text-underline-offset: 13%;
+  text-decoration-skip-ink: auto;
+}
+
+.pom-split.is-dark.is-store .pom-link .pom-arrow.is-ne {
+  width: 11px;
+  height: 11px;
+  flex: 0 0 11px;
+  margin: 0;
+  transform: ~"rotate(45deg)";
+}
+
+.pom-split.is-dark.is-store .pom-media.is-books {
+  min-height: 560px;
+  background-size: cover;
+  background-position: center;
+}
+
 .pom-intro {
   display: grid;
   grid-template-columns: 0.72fr 1.28fr;
@@ -1558,6 +1629,26 @@ section.pom-join.is-tan {
   .pom-faq-q { font-size: 20px; line-height: 28px; }
   .pom-faq-a { font-size: 16px; line-height: 24px; }
   .pom-contact h2 { font-size: 36px; }
+  .pom-split.is-dark.is-store .pom-split-copy {
+    align-items: flex-start;
+    text-align: left;
+    padding: 56px 24px;
+  }
+  .pom-split.is-dark.is-store .pom-split-copy h2,
+  .pom-split.is-dark.is-store .pom-split-copy p {
+    text-align: left;
+    font-size: 32px;
+    line-height: 40px;
+  }
+  .pom-split.is-dark.is-store .pom-split-copy p {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .pom-split.is-dark.is-store .pom-link {
+    align-self: flex-start;
+    font-size: 18px;
+    line-height: 26px;
+  }
   .pom-hero-bars { flex-direction: column; width: 100%; }
   .pom-hero-bar { width: 100%; min-width: 0; }
   .pom-triptych,
