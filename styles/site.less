@@ -803,13 +803,323 @@ a.pom-join-btn {
   width: auto;
 }
 
-.pom-page-about .pom-hero,
 .pom-page-services .pom-hero,
 .pom-page-outreach .pom-hero,
 .pom-page-prayer .pom-hero,
 .pom-page-events .pom-hero,
 .pom-page-store .pom-hero {
   padding: 180px @gutter 88px;
+}
+
+/* About page — Figma 698:2 exact */
+.pom-page-about .pom-hero.is-about-tree {
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 50px;
+  background-image: ~'url("/assets/about/about-hero.png")';
+  background-position: center center;
+  background-size: cover;
+}
+
+.pom-page-about .pom-hero.is-about-tree:before {
+  background:
+    ~"linear-gradient(89.87deg, rgb(12, 9, 9) 0%, rgba(12, 9, 9, 0) 53.2%)",
+    ~"linear-gradient(89.38deg, rgba(59, 51, 42, 0) 83.4%, rgb(59, 51, 42) 99.7%)";
+}
+
+.pom-page-about .pom-hero-copy {
+  max-width: 900px;
+  width: max-content;
+}
+
+.pom-page-about .pom-hero .pom-eyebrow {
+  font-family: @font-display;
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  color: #f0e5d3;
+  margin: 0 0 20px;
+}
+
+.pom-page-about .pom-hero h1 {
+  font-family: @font-display !important;
+  font-weight: 400;
+  font-size: 90px;
+  line-height: 90px;
+  letter-spacing: 0;
+  max-width: none;
+  width: max-content;
+  color: #fefefe;
+  margin: 0;
+}
+
+.pom-page-about .pom-hero-line {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.pom-page-about .pom-hero .pom-lede {
+  font-family: @font-display;
+  font-size: 40px;
+  line-height: 48px;
+  font-weight: 400;
+  letter-spacing: 0;
+  color: #fefefe;
+  max-width: 852px;
+  margin-top: 20px;
+}
+
+.pom-page-about .pom-triptych.is-about-story {
+  min-height: 600px;
+  background: #fefefe;
+  border-bottom: 1px solid @gold-figma;
+}
+
+.pom-page-about .pom-triptych.is-about-story .pom-media.is-about-story {
+  background-image: ~'url("/assets/about/about-story.png")' !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  min-height: 600px;
+}
+
+.pom-page-about .pom-triptych.is-about-story .pom-fallback > .pom-panel:last-child p {
+  font-family: @font-display;
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 400;
+  color: @contact-muted;
+}
+
+.pom-about-purpose {
+  background: @cream;
+  padding: 50px 100px;
+  font-family: @font-display;
+}
+
+.pom-about-purpose > .pom-fallback {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.pom-about-purpose-top {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.pom-about-purpose-title {
+  flex: 0 0 367px;
+  max-width: 367px;
+}
+
+.pom-about-purpose .pom-eyebrow {
+  font-family: @font-display;
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  color: @gold-figma;
+  margin: 0 0 20px;
+}
+
+.pom-about-purpose h2 {
+  font-family: @font-display !important;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 56px;
+  letter-spacing: 0;
+  color: @ink !important;
+  margin: 0;
+}
+
+.pom-about-purpose-rule {
+  flex: 0 0 1px;
+  align-self: stretch;
+  width: 1px;
+  background: @gold-figma;
+}
+
+.pom-about-purpose-prose {
+  flex: 1 1 auto;
+  font-family: @font-display;
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 400;
+  color: @contact-muted;
+  margin: 0;
+}
+
+.pom-about-purpose-line {
+  height: 1px;
+  width: 100%;
+  background: @gold-figma;
+}
+
+.pom-about-purpose-grid {
+  display: grid;
+  grid-template-columns: ~"repeat(3, 1fr)";
+  gap: 50px;
+}
+
+.pom-about-purpose-grid article {
+  position: relative;
+}
+
+.pom-about-purpose-grid article + article:before {
+  content: "";
+  position: absolute;
+  left: -25px;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: @gold-figma;
+}
+
+.pom-about-purpose-grid h3 {
+  font-family: @font-display !important;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: 0;
+  color: @ink !important;
+  margin: 0;
+}
+
+.pom-about-purpose-grid p {
+  font-family: @font-display;
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 400;
+  color: @contact-muted;
+  margin: 0;
+}
+
+.pom-page-about .pom-split.is-about-faith {
+  min-height: 500px;
+  background: @ink;
+  font-family: @font-display;
+}
+
+.pom-page-about .pom-split.is-about-faith .pom-split-copy {
+  align-items: flex-end;
+  text-align: right;
+  padding: 48px 50px;
+  justify-content: center;
+}
+
+.pom-page-about .pom-split.is-about-faith h2 {
+  font-family: @font-display !important;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 56px;
+  letter-spacing: 0;
+  color: #fefefe !important;
+  max-width: none;
+  white-space: nowrap;
+  margin: 0;
+  text-align: right;
+}
+
+.pom-page-about .pom-split.is-about-faith .pom-split-copy > p {
+  font-family: @font-display;
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 400;
+  color: #f0e5d3 !important;
+  margin: 10px 0 0;
+  max-width: 646px;
+  text-align: right;
+}
+
+.pom-page-about .pom-split.is-about-faith .pom-media.is-about-faith {
+  background-image: ~'url("/assets/about/about-faith.png")' !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  min-height: 500px;
+}
+
+.pom-page-about .pom-split.is-about-reach {
+  min-height: 500px;
+  background: @cream;
+  font-family: @font-display;
+}
+
+.pom-page-about .pom-split.is-about-reach .pom-media.is-about-reach {
+  background-image: ~'url("/assets/about/about-reach.png")' !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  min-height: 500px;
+}
+
+.pom-page-about .pom-split.is-about-reach .pom-split-copy {
+  padding: 55px 50px;
+  justify-content: center;
+}
+
+.pom-page-about .pom-split.is-about-reach .pom-eyebrow {
+  font-family: @font-display;
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  color: @gold-figma;
+  margin: 0 0 20px;
+}
+
+.pom-page-about .pom-split.is-about-reach h2 {
+  font-family: @font-display !important;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 56px;
+  letter-spacing: 0;
+  color: @ink !important;
+  max-width: none;
+  margin: 0;
+}
+
+.pom-page-about .pom-split.is-about-reach .pom-split-copy > p:not(.pom-eyebrow) {
+  font-family: @font-display;
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 400;
+  color: @contact-muted !important;
+  margin: 10px 0 36px;
+  max-width: none;
+}
+
+.pom-page-about .pom-split.is-about-reach .pom-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: @font-display;
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 400;
+  color: @ink !important;
+  text-decoration: none !important;
+}
+
+.pom-page-about .pom-split.is-about-reach .pom-link .pom-link-text {
+  text-decoration: underline;
+  text-decoration-thickness: 4%;
+  text-underline-offset: 13%;
+}
+
+.pom-page-about .pom-split.is-about-reach .pom-link .pom-arrow,
+.pom-page-about .pom-split.is-about-reach .pom-link .pom-arrow.is-ne {
+  width: 14px !important;
+  height: 14px !important;
+  flex: 0 0 14px;
+  border: 0 !important;
+  background: currentColor !important;
+  -webkit-mask: ~'url("/assets/arrow-ne.svg") center / contain no-repeat' !important;
+  mask: ~'url("/assets/arrow-ne.svg") center / contain no-repeat' !important;
+  transform: none !important;
 }
 
 .pom-page-about .pom-testimonials-intro,
