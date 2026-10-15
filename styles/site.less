@@ -617,31 +617,35 @@ a.pom-join-btn {
   justify-content: flex-end;
   min-height: @header-offset;
   height: @header-offset;
-  padding: 180px 0 0;
+  padding: 0;
   overflow: hidden;
 }
 .pom-page-home .pom-hero.is-pew {
   background-image: ~'url("/assets/home-hero.png")';
-  background-position: 58% 62%;
-  background-size: ~"132% auto";
+  background-position: center 42%;
+  background-size: cover;
 }
 .pom-page-home .pom-hero:before {
   z-index: 0;
-  background: ~"linear-gradient(90deg, rgba(20, 12, 8, 0.22) 0%, rgba(20, 12, 8, 0.08) 42%, rgba(20, 12, 8, 0) 58%)";
+  background:
+    ~"linear-gradient(90deg, rgba(20, 12, 8, 0.28) 0%, rgba(20, 12, 8, 0.1) 40%, rgba(20, 12, 8, 0) 62%)",
+    ~"linear-gradient(180deg, rgba(20, 12, 8, 0.18) 0%, rgba(20, 12, 8, 0) 28%, rgba(20, 12, 8, 0.22) 100%)";
 }
 .pom-page-home .pom-hero-copy {
-  position: relative;
+  position: absolute;
+  left: 0;
+  top: 38%;
   z-index: 1;
   max-width: 900px;
-  padding: 0 64px 48px;
+  padding: 0 64px;
 }
 .pom-page-home .pom-hero h1 {
   font-family: @font-sans;
-  font-weight: 500;
+  font-weight: 400;
   font-size: @font-hero-home;
   line-height: 1.02;
   max-width: none;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.02em;
   text-shadow: 0 2px 18px rgba(12, 8, 6, 0.28);
 }
 .pom-page-home .pom-lede {
@@ -650,8 +654,13 @@ a.pom-join-btn {
   font-size: @font-lede;
   line-height: 1.4;
   max-width: 520px;
-  margin-top: 22px;
+  margin-top: 18px;
   text-shadow: 0 1px 12px rgba(12, 8, 6, 0.35);
+}
+.pom-page-home .pom-hero-bars {
+  position: relative;
+  z-index: 2;
+  margin-top: auto;
 }
 
 .pom-page-about .pom-hero,
@@ -1195,8 +1204,12 @@ section.pom-join.is-tan {
 
 @media (max-width: 900px) {
   .pom-hero { min-height: 680px; padding: 140px 24px 48px; }
-  .pom-page-home .pom-hero { padding: 120px 0 0; }
-  .pom-page-home .pom-hero-copy { padding: 0 24px 32px; }
+  .pom-page-home .pom-hero { padding: 0; }
+  .pom-page-home .pom-hero-copy { top: 32%; padding: 0 24px; }
+  .pom-page-home .pom-hero.is-pew {
+    background-position: center 40%;
+    background-size: cover;
+  }
   .pom-hero { height: auto; min-height: 680px; }
   .pom-hero h1 { font-size: 42px; }
   .pom-page-home .pom-hero h1 { font-size: 42px; }
