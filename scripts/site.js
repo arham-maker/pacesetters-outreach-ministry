@@ -27,11 +27,9 @@
   }
 
   Array.prototype.forEach.call(document.querySelectorAll("[data-pom-nav]"), function (nav) {
-    var cms = nav.querySelector("[data-nav-cms]");
     var fallback = nav.querySelector("[data-nav-fallback]");
-    if (cms && fallback && cms.querySelector("a[href]")) {
-      fallback.hidden = true;
-      nav.classList.add("is-cms-nav");
+    if (fallback) {
+      fallback.hidden = false;
     }
   });
 

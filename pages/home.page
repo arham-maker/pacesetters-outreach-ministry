@@ -48,7 +48,7 @@
       <div class="pom-split-copy">
         <h2>Encouragement for everyday faith.</h2>
         <p>Music, sermons, and books from our ministry.</p>
-        <a class="pom-link is-end" href="/store">Browse the Store <span class="pom-arrow" aria-hidden="true"></span></a>
+        <a class="pom-link" href="/store">Browse the Store <span class="pom-arrow" aria-hidden="true"></span></a>
       </div>
       <div class="pom-media is-books" role="img" aria-label="Books, CDs, and headphones"></div>
     </div>
@@ -69,7 +69,6 @@
       </div>
       <div class="pom-quote-wrap" data-quotes>
         <blockquote class="pom-quote is-active">
-          <div class="pom-quote-mark" aria-hidden="true">“</div>
           <p>Lorem ipsum dolor sit amet consectetur. Neque rhoncus et quis in pretium augue commodo. Eget est erat auctor sit nunc urna dolor massa eget. Aliquet praesent in laoreet orci turpis et faucibus. Egestas malesuada a ut auctor euismod.</p>
           <cite>— Jane Doe</cite>
         </blockquote>
@@ -89,7 +88,7 @@
       <div class="pom-faq-list" data-accordion>
         <div class="pom-faq-item is-open">
           <button class="pom-faq-q" type="button" aria-expanded="true">How can I join Saturday Night Live? <span class="pom-faq-icon" aria-hidden="true"></span></button>
-          <div class="pom-faq-a">Visit the program page for current Zoom meeting details.</div>
+          <div class="pom-faq-a">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
         </div>
         <div class="pom-faq-item">
           <button class="pom-faq-q" type="button" aria-expanded="false">Can I request prayer? <span class="pom-faq-icon" aria-hidden="true"></span></button>

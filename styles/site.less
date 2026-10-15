@@ -95,6 +95,8 @@ h1, h2, h3, p { margin: 0; }
   gap: 16px;
 }
 
+.pom-nav-cms { display: none; }
+
 .pom-sidenav {
   position: absolute;
   top: 148px;
@@ -176,7 +178,7 @@ h1, h2, h3, p { margin: 0; }
 .pom-legal {
   display: flex;
   justify-content: flex-end;
-  margin-top: 72px;
+  margin-top: 28px;
 }
 
 .pom-legal .pom-nav-list {
@@ -207,6 +209,9 @@ button.pom-btn {
   background: transparent;
   grid-template-columns: none;
 }
+
+a.pom-join-btn { display: none; }
+.pom-has-plain a.pom-join-btn { display: inline-flex; }
 
 .pom-btn-light {
   background: @white;
@@ -475,13 +480,24 @@ button.pom-btn {
 
 .pom-page-home .pom-hero.is-pew { background-image: ~'url("/assets/home-hero.png")'; }
 .pom-page-home .pom-hero:before {
-  background: ~"linear-gradient(90deg, rgba(12, 8, 6, 0.5) 0%, rgba(12, 8, 6, 0.12) 48%, rgba(12, 8, 6, 0.22) 100%)";
+  background: ~"linear-gradient(90deg, rgba(12, 8, 6, 0.42) 0%, rgba(12, 8, 6, 0.08) 42%, rgba(12, 8, 6, 0.2) 100%)";
+}
+.pom-page-home .pom-actions {
+  position: relative;
+  z-index: 2;
+  margin-bottom: -22px;
 }
 .pom-page-home .pom-triptych .is-hands { background-image: ~'url("/assets/home-purpose.png")'; }
 .pom-page-home .pom-split.is-cream .is-bible { background-image: ~'url("/assets/home-snl.png")'; }
 .pom-page-home .pom-split.is-dark .is-books { background-image: ~'url("/assets/home-store.png")'; }
+.pom-page-home .pom-contact.is-crowd { background-image: ~'url("/assets/home-hero.png")'; }
 .pom-page-home .pom-testimonials-intro,
 .pom-page-home .pom-faq-intro { text-align: right; }
+.pom-page-home .pom-quote p {
+  font-size: 18px;
+  line-height: 1.55;
+  margin-top: 0;
+}
 
 .pom-split {
   display: grid;
