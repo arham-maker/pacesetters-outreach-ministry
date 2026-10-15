@@ -99,7 +99,7 @@
       <div class="pom-faq-list" data-accordion>
         <div class="pom-faq-item is-open">
           <button class="pom-faq-q" type="button" aria-expanded="true">How can I join Saturday Night Live? <span class="pom-faq-icon" aria-hidden="true"></span></button>
-          <div class="pom-faq-a">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+          <div class="pom-faq-a">Visit the program page for current Zoom meeting details.</div>
         </div>
         <div class="pom-faq-item">
           <button class="pom-faq-q" type="button" aria-expanded="false">Can I request prayer? <span class="pom-faq-icon" aria-hidden="true"></span></button>

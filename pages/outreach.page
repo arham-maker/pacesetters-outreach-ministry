@@ -62,6 +62,16 @@
           <p>Lorem ipsum dolor sit amet consectetur. Neque rhoncus et quis in pretium augue commodo. Eget est erat auctor sit nunc urna dolor massa eget. Aliquet praesent in laoreet orci turpis et faucibus. Egestas malesuada a ut auctor euismod.</p>
           <cite>— Jane Doe</cite>
         </blockquote>
+        <blockquote class="pom-quote">
+          <div class="pom-quote-mark" aria-hidden="true">“</div>
+          <p>Being part of this community has strengthened my faith and given me a place to belong. Every gathering reminds me that God’s love is near.</p>
+          <cite>— Michael R.</cite>
+        </blockquote>
+        <blockquote class="pom-quote">
+          <div class="pom-quote-mark" aria-hidden="true">“</div>
+          <p>Saturday Night Live connects us even when we are far apart. The teaching and prayer leave me encouraged for the week ahead.</p>
+          <cite>— Sarah L.</cite>
+        </blockquote>
       </div>
     </div>
     <div class="pom-cms"><squarespace:block-field id="outreach-testimonials" columns="12" /></div>
@@ -77,7 +87,7 @@
         </div>
         <div class="pom-faq-item">
           <button class="pom-faq-q" type="button" aria-expanded="false">How can I get involved? <span class="pom-faq-icon" aria-hidden="true"></span></button>
-          <div class="pom-faq-a">Join an outreach event, volunteer locally, or contact us to find a place to serve.</div>
+          <div class="pom-faq-a">Join Saturday Night Live, serve in outreach, or support the ministry store. Contact us and we’ll help you take the next step.</div>
         </div>
       </div>
     </div>

@@ -93,6 +93,16 @@
           <p>Lorem ipsum dolor sit amet consectetur. Neque rhoncus et quis in pretium augue commodo. Eget est erat auctor sit nunc urna dolor massa eget. Aliquet praesent in laoreet orci turpis et faucibus. Egestas malesuada a ut auctor euismod.</p>
           <cite>— Jane Doe</cite>
         </blockquote>
+        <blockquote class="pom-quote">
+          <div class="pom-quote-mark" aria-hidden="true">“</div>
+          <p>Being part of this community has strengthened my faith and given me a place to belong. Every gathering reminds me that God’s love is near.</p>
+          <cite>— Michael R.</cite>
+        </blockquote>
+        <blockquote class="pom-quote">
+          <div class="pom-quote-mark" aria-hidden="true">“</div>
+          <p>Saturday Night Live connects us even when we are far apart. The teaching and prayer leave me encouraged for the week ahead.</p>
+          <cite>— Sarah L.</cite>
+        </blockquote>
       </div>
     </div>
     <div class="pom-cms"><squarespace:block-field id="about-testimonials" columns="12" /></div>

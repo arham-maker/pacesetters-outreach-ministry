@@ -44,7 +44,7 @@
         <div><span>Weekly</span><strong>Saturday</strong></div>
         <div>
           <strong>Saturday Night Live</strong>
-          <span>Pastor Micheal Vance · Online via Zoom</span>
+          <span>Pastor Michael Vance · Online via Zoom</span>
         </div>
         <div>Timings Lorem Ipsum</div>
         <div>Joining Details Lorem Ipsum</div>
@@ -93,6 +93,16 @@
           <p>Lorem ipsum dolor sit amet consectetur. Neque rhoncus et quis in pretium augue commodo. Eget est erat auctor sit nunc urna dolor massa eget. Aliquet praesent in laoreet orci turpis et faucibus. Egestas malesuada a ut auctor euismod.</p>
           <cite>— Jane Doe</cite>
         </blockquote>
+        <blockquote class="pom-quote">
+          <div class="pom-quote-mark" aria-hidden="true">“</div>
+          <p>Being part of this community has strengthened my faith and given me a place to belong. Every gathering reminds me that God’s love is near.</p>
+          <cite>— Michael R.</cite>
+        </blockquote>
+        <blockquote class="pom-quote">
+          <div class="pom-quote-mark" aria-hidden="true">“</div>
+          <p>Saturday Night Live connects us even when we are far apart. The teaching and prayer leave me encouraged for the week ahead.</p>
+          <cite>— Sarah L.</cite>
+        </blockquote>
       </div>
     </div>
     <div class="pom-cms"><squarespace:block-field id="events-testimonials" columns="12" /></div>
@@ -106,8 +116,8 @@
           <button class="pom-faq-q" type="button" aria-expanded="true">When does Saturday Night Live meet? <span class="pom-faq-icon" aria-hidden="true"></span></button>
           <div class="pom-faq-a">It meets weekly. Contact the ministry for the current time and Zoom access details.</div>
         </div>
-        <div class="pom-faq-item"><button class="pom-faq-q" type="button" aria-expanded="false">Can I join from another state? <span class="pom-faq-icon" aria-hidden="true"></span></button><div class="pom-faq-a"></div></div>
-        <div class="pom-faq-item"><button class="pom-faq-q" type="button" aria-expanded="false">Can I request prayer? <span class="pom-faq-icon" aria-hidden="true"></span></button><div class="pom-faq-a"></div></div>
+        <div class="pom-faq-item"><button class="pom-faq-q" type="button" aria-expanded="false">Can I join from another state? <span class="pom-faq-icon" aria-hidden="true"></span></button><div class="pom-faq-a">Yes. Saturday Night Live is online via Zoom, so you can join from anywhere with an internet connection.</div></div>
+        <div class="pom-faq-item"><button class="pom-faq-q" type="button" aria-expanded="false">Can I request prayer? <span class="pom-faq-icon" aria-hidden="true"></span></button><div class="pom-faq-a">Yes. Reach out through our contact form or email and our team will pray with you and for you.</div></div>
       </div>
     </div>
     <div class="pom-cms"><squarespace:block-field id="events-faq" columns="12" /></div>
