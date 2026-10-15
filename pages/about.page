@@ -110,7 +110,7 @@
 
   <section class="pom-faq" data-pom-region="about-faq">
     <div class="pom-fallback">
-      <div class="pom-faq-intro"><div><p class="pom-eyebrow">FAQ</p><h2>A few helpful answers.</h2></div></div>
+      <div class="pom-faq-intro"><div><p class="pom-eyebrow">FAQ</p><h2>A few helpful<br>answers.</h2></div></div>
       <div class="pom-faq-list" data-accordion>
         <div class="pom-faq-item is-open">
           <button class="pom-faq-q" type="button" aria-expanded="true">How can I join Saturday Night Live? <span class="pom-faq-icon" aria-hidden="true"></span></button>
