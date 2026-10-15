@@ -936,9 +936,466 @@ a.pom-join-btn {
 }
 
 .pom-page-outreach .pom-hero,
-.pom-page-prayer .pom-hero,
-.pom-page-store .pom-hero {
+.pom-page-prayer .pom-hero {
   padding: 180px @gutter 88px;
+}
+
+/* Store — Figma 702:837 */
+.pom-page-store .pom-hero.is-store-resources {
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 50px;
+  background-image: ~'url("/assets/store/store-hero.png")';
+  background-position: center center;
+  background-size: cover;
+}
+
+.pom-page-store .pom-hero.is-store-resources:before {
+  background:
+    ~"linear-gradient(89.87deg, rgb(12, 9, 9) 0%, rgba(12, 9, 9, 0) 53.2%)",
+    ~"linear-gradient(89.38deg, rgba(59, 51, 42, 0) 83.4%, rgb(59, 51, 42) 99.7%)";
+}
+
+.pom-page-store .pom-hero-copy {
+  max-width: 900px;
+  width: max-content;
+}
+
+.pom-page-store .pom-hero h1 {
+  font-family: @font-display !important;
+  font-weight: 400;
+  font-size: 90px;
+  line-height: 90px;
+  letter-spacing: 0;
+  max-width: none;
+  width: max-content;
+  white-space: nowrap;
+  color: #fefefe;
+  margin: 0;
+}
+
+.pom-page-store .pom-hero .pom-lede {
+  font-family: @font-display;
+  font-size: 40px;
+  line-height: 48px;
+  font-weight: 400;
+  letter-spacing: 0;
+  color: #fefefe;
+  max-width: 662px;
+  margin-top: 20px;
+}
+
+.pom-page-store .pom-intro.is-store-intro {
+  display: grid;
+  grid-template-columns: 562px 1fr;
+  gap: 0;
+  padding: 0;
+  background: #fefefe;
+  align-items: stretch;
+  font-family: @font-display;
+}
+
+.pom-page-store .pom-intro.is-store-intro > .pom-fallback {
+  display: contents;
+}
+
+.pom-page-store .pom-intro.is-store-intro .pom-intro-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  text-align: right;
+  padding: 100px 50px;
+  background: #fefefe;
+}
+
+.pom-page-store .pom-intro.is-store-intro .pom-eyebrow {
+  font-family: @font-display;
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  color: @gold-figma;
+  margin: 0 0 20px;
+  text-align: right;
+}
+
+.pom-page-store .pom-intro.is-store-intro h2 {
+  font-family: @font-display !important;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 56px;
+  letter-spacing: 0;
+  color: @ink !important;
+  margin: 0;
+  text-align: right;
+}
+
+.pom-page-store .pom-intro.is-store-intro .pom-intro-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 20px;
+  padding: 100px 100px 100px 50px;
+  background: #fefefe;
+}
+
+.pom-page-store .pom-intro.is-store-intro .pom-prose {
+  font-family: @font-display;
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 400;
+  color: @contact-muted !important;
+  margin: 0;
+  max-width: none;
+}
+
+.pom-page-store .pom-intro.is-store-intro .pom-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 0;
+  color: @ink;
+  font-family: @font-display;
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.pom-page-store .pom-intro.is-store-intro .pom-link .pom-link-text {
+  text-decoration: underline;
+  text-decoration-thickness: 4%;
+  text-underline-offset: 13%;
+}
+
+.pom-page-store .pom-intro.is-store-intro .pom-link .pom-arrow,
+.pom-page-store .pom-intro.is-store-intro .pom-link .pom-arrow.is-ne {
+  width: 14px !important;
+  height: 14px !important;
+  flex: 0 0 14px;
+  border: 0 !important;
+  background: currentColor !important;
+  -webkit-mask: ~'url("/assets/arrow-ne.svg") center / contain no-repeat' !important;
+  mask: ~'url("/assets/arrow-ne.svg") center / contain no-repeat' !important;
+  transform: none !important;
+}
+
+.pom-page-store .pom-cats.is-store-cats {
+  display: grid;
+  grid-template-columns: ~"repeat(3, 1fr)";
+  gap: 50px;
+  padding: 50px 100px;
+  background: @cream;
+  font-family: @font-display;
+  align-items: start;
+}
+
+.pom-page-store .pom-cats.is-store-cats > .pom-fallback {
+  display: contents;
+}
+
+.pom-page-store .pom-cats.is-store-cats article {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  position: relative;
+}
+
+.pom-page-store .pom-cats.is-store-cats article + article:before {
+  content: "";
+  position: absolute;
+  left: -25px;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: @gold-figma;
+}
+
+.pom-page-store .pom-cats.is-store-cats .pom-media {
+  height: 252px;
+  min-height: 252px;
+  margin: 0;
+  width: 100%;
+}
+
+.pom-page-store .pom-media.is-store-cat-music {
+  background-image: ~'url("/assets/store/store-cat-music.png")';
+}
+.pom-page-store .pom-media.is-store-cat-sermons {
+  background-image: ~'url("/assets/store/store-cat-sermons.png")';
+}
+.pom-page-store .pom-media.is-store-cat-books {
+  background-image: ~'url("/assets/store/store-cat-books.png")';
+}
+
+.pom-page-store .pom-cats.is-store-cats h3 {
+  font-family: @font-display !important;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: 0;
+  color: @ink !important;
+  margin: 0;
+}
+
+.pom-page-store .pom-cats.is-store-cats p {
+  font-family: @font-display;
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 400;
+  color: @contact-muted;
+  margin: 0;
+}
+
+.pom-page-store .pom-store-grid {
+  padding: 0;
+  background: #fefefe;
+  font-family: @font-display;
+}
+
+.pom-page-store .pom-store-grid > .pom-fallback {
+  display: block;
+  padding: 0 100px 72px;
+}
+
+.pom-page-store .pom-store-head {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 60px 0 20px;
+  justify-content: flex-start;
+}
+
+.pom-page-store .pom-store-head .pom-eyebrow {
+  font-family: @font-display;
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  color: @gold-figma;
+  margin: 0;
+}
+
+.pom-page-store .pom-store-head h2 {
+  font-family: @font-display !important;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 56px;
+  letter-spacing: 0;
+  color: @ink !important;
+  margin: 0;
+}
+
+.pom-page-store .pom-filters {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0;
+  padding: 0 0 50px;
+  width: 100%;
+}
+
+.pom-page-store .pom-filters button {
+  flex: 1 1 0;
+  min-width: 0;
+  min-height: 0;
+  padding: 20px 50px;
+  border: 0;
+  border-radius: 0;
+  background: @cream;
+  color: @ink;
+  font-family: @font-display;
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 400;
+  text-decoration: underline;
+  text-decoration-thickness: 4%;
+  text-underline-offset: 13%;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.pom-page-store .pom-filters button.is-active {
+  background: @ink;
+  color: @cream;
+  border-color: @ink;
+}
+
+.pom-page-store .pom-products {
+  display: grid;
+  grid-template-columns: ~"repeat(3, 1fr)";
+  gap: 50px;
+  padding: 0;
+}
+
+.pom-page-store .pom-product {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.pom-page-store .pom-product > a {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+  text-decoration: none;
+  color: inherit;
+  width: 100%;
+}
+
+.pom-page-store .pom-product .pom-media {
+  height: 252px;
+  min-height: 252px;
+  margin: 0;
+  width: 100%;
+}
+
+.pom-page-store .pom-media.is-store-p01 { background-image: ~'url("/assets/store/store-product-01.png")'; }
+.pom-page-store .pom-media.is-store-p02 { background-image: ~'url("/assets/store/store-product-02.png")'; }
+.pom-page-store .pom-media.is-store-p03 { background-image: ~'url("/assets/store/store-product-03.png")'; }
+.pom-page-store .pom-media.is-store-p04 { background-image: ~'url("/assets/store/store-product-04.png")'; }
+.pom-page-store .pom-media.is-store-p05 { background-image: ~'url("/assets/store/store-product-05.png")'; }
+.pom-page-store .pom-media.is-store-p06 { background-image: ~'url("/assets/store/store-product-06.png")'; }
+
+.pom-page-store .pom-product-meta {
+  width: 100%;
+}
+
+.pom-page-store .pom-product-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  width: 100%;
+}
+
+.pom-page-store .pom-product h3 {
+  font-family: @font-display !important;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: 0;
+  color: @ink !important;
+  margin: 0;
+}
+
+.pom-page-store .pom-product-price {
+  font-family: @font-display;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 40px;
+  color: @ink;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.pom-page-store .pom-product-cat {
+  font-family: @font-display;
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 400;
+  color: @contact-muted;
+  margin: 0;
+}
+
+.pom-page-store .pom-product .pom-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 0;
+  color: @ink;
+  font-family: @font-display;
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.pom-page-store .pom-product .pom-link .pom-link-text {
+  text-decoration: underline;
+  text-decoration-thickness: 4%;
+  text-underline-offset: 13%;
+}
+
+.pom-page-store .pom-product .pom-link .pom-arrow,
+.pom-page-store .pom-product .pom-link .pom-arrow.is-ne {
+  width: 14px !important;
+  height: 14px !important;
+  flex: 0 0 14px;
+  border: 0 !important;
+  background: currentColor !important;
+  -webkit-mask: ~'url("/assets/arrow-ne.svg") center / contain no-repeat' !important;
+  mask: ~'url("/assets/arrow-ne.svg") center / contain no-repeat' !important;
+  transform: none !important;
+}
+
+.pom-page-store .pom-points.is-store-encourage {
+  display: grid;
+  grid-template-columns: 1fr 670px;
+  gap: 100px;
+  padding: 65px 100px;
+  background: @ink;
+  align-items: center;
+  font-family: @font-display;
+}
+
+.pom-page-store .pom-points.is-store-encourage > .pom-fallback {
+  display: contents;
+}
+
+.pom-page-store .pom-points.is-store-encourage h2 {
+  font-family: @font-display !important;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 56px;
+  letter-spacing: 0;
+  color: #fefefe !important;
+  margin: 0;
+  text-align: right;
+  justify-self: end;
+}
+
+.pom-page-store .pom-points.is-store-encourage .pom-points-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.pom-page-store .pom-points.is-store-encourage article {
+  padding: 0;
+  border: 0;
+  border-bottom: 1px solid rgba(254, 254, 254, 0.22);
+  padding-bottom: 20px;
+}
+
+.pom-page-store .pom-points.is-store-encourage article:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.pom-page-store .pom-points.is-store-encourage h3 {
+  font-family: @font-display !important;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: 0;
+  color: #fefefe !important;
+  margin: 0;
+}
+
+.pom-page-store .pom-points.is-store-encourage p {
+  font-family: @font-display;
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 400;
+  color: #eeeeef;
+  margin: 0;
 }
 
 /* Events — Figma 702:616 */
@@ -3063,6 +3520,105 @@ section.pom-join.is-tan {
   }
   .pom-page-events .pom-join.is-events-join .pom-steps h3 { font-size: 24px; line-height: 32px; }
   .pom-page-events .pom-join.is-events-join .pom-steps p { font-size: 18px; line-height: 26px; }
+  .pom-page-store .pom-hero.is-store-resources {
+    align-items: flex-end;
+    padding: 140px 24px 48px;
+    height: auto;
+    min-height: 680px;
+  }
+  .pom-page-store .pom-hero-copy { width: auto; max-width: 100%; }
+  .pom-page-store .pom-hero h1 {
+    font-size: 42px;
+    line-height: 48px;
+    width: auto;
+    white-space: normal;
+  }
+  .pom-page-store .pom-hero .pom-lede {
+    font-size: 20px;
+    line-height: 28px;
+    max-width: none;
+  }
+  .pom-page-store .pom-intro.is-store-intro {
+    grid-template-columns: 1fr;
+  }
+  .pom-page-store .pom-intro.is-store-intro .pom-intro-copy,
+  .pom-page-store .pom-intro.is-store-intro .pom-eyebrow,
+  .pom-page-store .pom-intro.is-store-intro h2 {
+    align-items: flex-start;
+    text-align: left;
+  }
+  .pom-page-store .pom-intro.is-store-intro .pom-intro-copy,
+  .pom-page-store .pom-intro.is-store-intro .pom-intro-body {
+    padding: 40px 24px;
+  }
+  .pom-page-store .pom-intro.is-store-intro h2 { font-size: 36px; line-height: 44px; }
+  .pom-page-store .pom-intro.is-store-intro .pom-prose {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .pom-page-store .pom-cats.is-store-cats {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 40px 24px;
+  }
+  .pom-page-store .pom-cats.is-store-cats article + article:before { display: none; }
+  .pom-page-store .pom-cats.is-store-cats article { gap: 20px; }
+  .pom-page-store .pom-cats.is-store-cats h3 { font-size: 24px; line-height: 32px; }
+  .pom-page-store .pom-cats.is-store-cats p { font-size: 18px; line-height: 26px; }
+  .pom-page-store .pom-store-grid > .pom-fallback { padding: 0 24px 48px; }
+  .pom-page-store .pom-store-head,
+  .pom-page-store .pom-filters,
+  .pom-page-store .pom-products {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .pom-page-store .pom-store-head { padding-top: 40px; padding-bottom: 18px; }
+  .pom-page-store .pom-store-head h2 { font-size: 36px; line-height: 44px; }
+  .pom-page-store .pom-filters {
+    flex-wrap: wrap;
+    gap: 8px;
+    padding-top: 0;
+    padding-bottom: 32px;
+  }
+  .pom-page-store .pom-filters button {
+    flex: 1 1 calc(50% - 4px);
+    padding: 14px 16px;
+    font-size: 16px;
+    line-height: 24px;
+    white-space: normal;
+  }
+  .pom-page-store .pom-products {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .pom-page-store .pom-product h3,
+  .pom-page-store .pom-product-price {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .pom-page-store .pom-product-cat {
+    font-size: 18px;
+    line-height: 26px;
+  }
+  .pom-page-store .pom-points.is-store-encourage {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 48px 24px;
+  }
+  .pom-page-store .pom-points.is-store-encourage h2 {
+    text-align: left;
+    justify-self: start;
+    font-size: 36px;
+    line-height: 44px;
+  }
+  .pom-page-store .pom-points.is-store-encourage h3 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .pom-page-store .pom-points.is-store-encourage p {
+    font-size: 18px;
+    line-height: 26px;
+  }
   .pom-triptych .pom-panel h2 { font-size: 36px; line-height: 44px; }
   .pom-triptych .pom-fallback > .pom-panel:last-child p { font-size: 20px; line-height: 28px; }
   .pom-split.is-dark.is-store .pom-split-copy {
