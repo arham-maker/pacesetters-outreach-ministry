@@ -720,10 +720,6 @@ a.pom-join-btn {
 .pom-page-home .pom-split.is-dark .is-books { background-image: ~'url("/assets/home-store.png")'; }
 .pom-page-home .pom-contact.is-crowd,
 .pom-contact.is-crowd {
-  background-image: none;
-}
-.pom-page-home .pom-contact.is-crowd:before,
-.pom-contact.is-crowd:before {
   background-image: ~'url("/assets/contact-crowd.png")';
 }
 .pom-page-home .pom-testimonials-intro,
@@ -936,51 +932,47 @@ a.pom-join-btn {
 
 .pom-contact {
   position: relative;
-  isolation: isolate;
   overflow: hidden;
   min-height: 560px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 56px;
-  align-items: center;
+  display: block;
   padding: 80px @wide;
   color: @ink;
-  background-color: #cfc4b4;
-}
-
-.pom-contact:before,
-.pom-contact:after {
-  content: "";
-  position: absolute;
-  pointer-events: none;
-  z-index: 0;
-}
-
-.pom-contact:before {
-  inset: -40px;
   background-color: #cfc4b4;
   background-image: ~'url("/assets/contact-crowd.png")';
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  filter: ~"blur(16px)";
-  transform: ~"scale(1.08)";
 }
 
-.pom-contact:after {
+.pom-contact:before {
+  content: "";
+  position: absolute;
   inset: 0;
+  z-index: 0;
+  pointer-events: none;
   background:
-    ~"linear-gradient(90deg, rgba(247, 244, 237, 0.82) 0%, rgba(247, 244, 237, 0.58) 48%, rgba(247, 244, 237, 0.28) 100%)";
+    ~"linear-gradient(90deg, rgba(247, 244, 237, 0.88) 0%, rgba(247, 244, 237, 0.7) 46%, rgba(247, 244, 237, 0.42) 100%)";
 }
 
-.pom-contact > * {
+.pom-contact > .pom-fallback {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: center;
   position: relative;
   z-index: 2;
-  pointer-events: auto;
+  width: 100%;
+}
+
+.pom-contact > .pom-cms {
+  z-index: -1;
 }
 
 .pom-contact-copy {
+  position: relative;
+  z-index: 2;
   max-width: 480px;
+  color: @ink;
 }
 
 .pom-contact-copy .pom-eyebrow {
@@ -989,6 +981,7 @@ a.pom-join-btn {
   max-width: 420px;
   margin-left: auto;
   margin-right: 0;
+  margin-bottom: 18px;
 }
 
 .pom-contact h2 {
@@ -997,7 +990,7 @@ a.pom-join-btn {
   font-size: @font-h2;
   line-height: 1.08;
   max-width: 460px;
-  color: @ink;
+  color: @ink !important;
   letter-spacing: -0.02em;
 }
 
@@ -1005,7 +998,7 @@ a.pom-join-btn {
 .pom-contact-lead {
   margin: 16px 0 36px;
   max-width: 400px;
-  color: @ink-soft;
+  color: @ink-soft !important;
   font-size: @font-body;
 }
 
@@ -1024,7 +1017,7 @@ a.pom-join-btn {
   align-items: center;
   gap: 10px;
   width: fit-content;
-  color: @ink;
+  color: @ink !important;
   text-decoration: underline;
   text-underline-offset: 4px;
   pointer-events: auto;
@@ -1037,7 +1030,7 @@ a.pom-join-btn {
   flex-direction: column;
   position: relative;
   z-index: 3;
-  background: @paper;
+  background: #fff;
   color: @ink;
   padding: 48px 44px 40px;
   box-shadow: none;
@@ -1058,25 +1051,36 @@ a.pom-join-btn {
 .pom-field textarea {
   display: block;
   width: 100%;
-  border: 0;
+  min-height: 28px;
+  border: 0 !important;
   border-radius: 0;
-  border-bottom: 1px solid @gold;
-  background: transparent;
+  border-bottom: 1px solid @gold !important;
+  background: transparent !important;
+  box-shadow: none !important;
   padding: 8px 0 14px;
-  outline: none;
+  outline: none !important;
   font-family: @font-sans;
   font-size: 16px;
+  line-height: 1.4;
   color: @ink;
   pointer-events: auto;
   -webkit-appearance: none;
   appearance: none;
 }
 
-.pom-field textarea { min-height: 88px; resize: vertical; }
+.pom-field textarea {
+  min-height: 96px;
+  resize: none;
+  overflow: auto;
+}
+
 .pom-field input:focus,
-.pom-field textarea:focus { border-bottom-color: @ink; }
+.pom-field textarea:focus { border-bottom-color: @ink !important; }
 
 .pom-form-card .pom-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   margin-left: auto;
   margin-top: 4px;
   background: transparent;
@@ -1219,7 +1223,6 @@ section.pom-join.is-tan {
 .pom-split > .pom-fallback,
 .pom-testimonials > .pom-fallback,
 .pom-faq > .pom-fallback,
-.pom-contact > .pom-fallback,
 .pom-reach > .pom-fallback,
 .pom-intro > .pom-fallback,
 .pom-expect > .pom-fallback,
