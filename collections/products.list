@@ -71,7 +71,7 @@
     </div>
   </section>
 
-  <section class="pom-points" data-pom-region="store-encourage">
+  <section class="pom-points is-dark" data-pom-region="store-encourage">
     <div class="pom-fallback">
       <h2>Make space for everyday encouragement.</h2>
       <div>
@@ -95,7 +95,7 @@
     <div class="pom-fallback">
       <div class="pom-testimonials-intro">
         <div>
-          <p class="pom-eyebrow">Testimonials</p>
+          <p class="pom-eyebrow">Stories of Faith</p>
           <h2>Stories of faith and hope.</h2>
           <div class="pom-quote-nav">
             <button class="pom-icon-btn is-prev" type="button" data-quote="prev" aria-label="Previous story"><span class="pom-arrow"></span></button>

@@ -5,7 +5,10 @@
     body.classList.add("pom-editing");
   }
 
-  if (document.querySelector(".pom-page-plain, .pom-page-contact") || !document.querySelector(".pom-page, .pom-hero")) {
+  if (document.querySelector(".pom-page-plain, .pom-page-checkout") || (!document.querySelector(".pom-page, .pom-hero") && !document.querySelector(".pom-page-product"))) {
+    body.classList.add("pom-has-plain");
+  }
+  if (document.querySelector(".pom-page-product, .pom-page-checkout")) {
     body.classList.add("pom-has-plain");
   }
 
@@ -119,6 +122,52 @@
         note.hidden = false;
       }
       form.reset();
+    });
+  });
+
+  Array.prototype.forEach.call(document.querySelectorAll("[data-qty]"), function (wrap) {
+    var input = wrap.querySelector("input");
+    var minus = wrap.querySelector("[data-qty-minus]");
+    var plus = wrap.querySelector("[data-qty-plus]");
+    if (!input) {
+      return;
+    }
+    function setQty(next) {
+      var value = Math.max(1, parseInt(next, 10) || 1);
+      input.value = String(value);
+    }
+    if (minus) {
+      minus.addEventListener("click", function () {
+        setQty(parseInt(input.value, 10) - 1);
+      });
+    }
+    if (plus) {
+      plus.addEventListener("click", function () {
+        setQty(parseInt(input.value, 10) + 1);
+      });
+    }
+  });
+
+  Array.prototype.forEach.call(document.querySelectorAll("[data-checkout-form]"), function (form) {
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+      var modal = document.querySelector("[data-order-modal]");
+      if (modal) {
+        modal.hidden = false;
+        body.classList.add("pom-modal-open");
+      }
+    });
+  });
+
+  Array.prototype.forEach.call(document.querySelectorAll("[data-modal-close], [data-order-modal]"), function (el) {
+    el.addEventListener("click", function (event) {
+      if (el.hasAttribute("data-modal-close") || event.target === el) {
+        var modal = document.querySelector("[data-order-modal]");
+        if (modal) {
+          modal.hidden = true;
+          body.classList.remove("pom-modal-open");
+        }
+      }
     });
   });
 })();

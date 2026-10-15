@@ -1,7 +1,7 @@
 <div class="pom-page pom-page-outreach">
   <section class="pom-hero is-embrace" data-pom-region="outreach-hero">
     <div class="pom-hero-copy pom-fallback">
-      <a class="pom-back" href="/services"><span class="pom-arrow" aria-hidden="true"></span> Back to Services</a>
+      <a class="pom-back" href="/services"><span class="pom-arrow is-back" aria-hidden="true"></span> Back to Services</a>
       <h1>Community Outreach</h1>
       <p class="pom-lede">Compassion and encouragement, close to home.</p>
     </div>

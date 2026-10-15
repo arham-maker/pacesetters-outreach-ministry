@@ -1,23 +1,89 @@
 <div class="pom-page pom-page-contact">
-  <section class="pom-contact is-crowd" id="get-in-touch" data-pom-region="contact-main">
+  <section class="pom-hero is-pew" data-pom-region="contact-hero">
+    <div class="pom-hero-copy pom-fallback">
+      <h1>Contact Us</h1>
+      <p class="pom-lede">We’d love to hear from you.</p>
+    </div>
+    <div class="pom-cms"><squarespace:block-field id="contact-hero" columns="12" /></div>
+  </section>
+
+  <section class="pom-contact-page" data-pom-region="contact-form">
     <div class="pom-fallback">
-      <div>
+      <div class="pom-contact-info">
         <p class="pom-eyebrow">Get in Touch</p>
-        <h2>We’d love to hear from you.</h2>
-        <p class="pom-contact-lead">Have a question, need prayer, or want to help?</p>
-        <div class="pom-contact-meta">
-          <a href="tel:3305059062">330-505-9062</a>
-          <a href="mailto:larry.vicks@currently.com">larry.vicks@currently.com</a>
+        <h2>A question, a prayer, or a way to help.</h2>
+        <p class="pom-prose">Reach out anytime — we’re here for prayer, fellowship, and practical support in your walk of faith.</p>
+        <div class="pom-contact-meta is-icons">
+          <a href="tel:3305059062"><span class="pom-meta-icon is-phone" aria-hidden="true"></span>330-505-9062</a>
+          <a href="mailto:larry.vicks@currently.com"><span class="pom-meta-icon is-mail" aria-hidden="true"></span>larry.vicks@currently.com</a>
         </div>
       </div>
-      <form class="pom-form-card" data-contact-form>
-        <div class="pom-field"><label for="contact-name">Name</label><input id="contact-name" name="name" type="text" autocomplete="name"></div>
-        <div class="pom-field"><label for="contact-email">Email</label><input id="contact-email" name="email" type="email" autocomplete="email"></div>
-        <div class="pom-field"><label for="contact-message">Message</label><textarea id="contact-message" name="message"></textarea></div>
-        <button class="pom-link" type="submit">Send Message <span class="pom-arrow" aria-hidden="true"></span></button>
+      <form class="pom-form-stack" data-contact-form>
+        <h3>Send us a message</h3>
+        <div class="pom-field"><label for="contact-first">First name</label><input id="contact-first" name="firstName" type="text" autocomplete="given-name"></div>
+        <div class="pom-field"><label for="contact-last">Last name</label><input id="contact-last" name="lastName" type="text" autocomplete="family-name"></div>
+        <div class="pom-field"><label for="contact-email">Email address</label><input id="contact-email" name="email" type="email" autocomplete="email"></div>
+        <div class="pom-field"><label for="contact-phone">Phone number (optional)</label><input id="contact-phone" name="phone" type="tel" autocomplete="tel"></div>
+        <div class="pom-field"><label for="contact-message">Message*</label><textarea id="contact-message" name="message" required></textarea></div>
+        <label class="pom-check"><input type="checkbox" name="terms" required><span>I agree to the Terms &amp; Conditions and Privacy Policy.</span></label>
+        <button class="pom-btn-dark" type="submit">Send Message <span class="pom-arrow is-ne" aria-hidden="true"></span></button>
         <p class="pom-form-note" hidden>Thank you. Add a Squarespace Form block in this region to deliver messages.</p>
       </form>
     </div>
-    <div class="pom-cms"><squarespace:block-field id="contact-main" columns="12" /></div>
+    <div class="pom-cms"><squarespace:block-field id="contact-form" columns="12" /></div>
+  </section>
+
+  <section class="pom-testimonials" data-pom-region="contact-testimonials">
+    <div class="pom-fallback">
+      <div class="pom-testimonials-intro">
+        <div>
+          <p class="pom-eyebrow">Testimonials</p>
+          <h2>Stories of faith and hope.</h2>
+          <div class="pom-quote-nav">
+            <button class="pom-icon-btn is-prev" type="button" data-quote="prev" aria-label="Previous story"><span class="pom-arrow"></span></button>
+            <button class="pom-icon-btn is-next" type="button" data-quote="next" aria-label="Next story"><span class="pom-arrow"></span></button>
+          </div>
+        </div>
+      </div>
+      <div class="pom-quote-wrap" data-quotes>
+        <blockquote class="pom-quote is-active">
+          <div class="pom-quote-mark" aria-hidden="true">“</div>
+          <p>Lorem ipsum dolor sit amet consectetur. Neque rhoncus et quis in pretium augue commodo. Eget est erat auctor sit nunc urna dolor massa eget. Aliquet praesent in laoreet orci turpis et faucibus. Egestas malesuada a ut auctor euismod.</p>
+          <cite>— Jane Doe</cite>
+        </blockquote>
+        <blockquote class="pom-quote">
+          <div class="pom-quote-mark" aria-hidden="true">“</div>
+          <p>Being part of this community has strengthened my faith and given me a place to belong. Every gathering reminds me that God’s love is near.</p>
+          <cite>— Michael R.</cite>
+        </blockquote>
+        <blockquote class="pom-quote">
+          <div class="pom-quote-mark" aria-hidden="true">“</div>
+          <p>Saturday Night Live connects us even when we are far apart. The teaching and prayer leave me encouraged for the week ahead.</p>
+          <cite>— Sarah L.</cite>
+        </blockquote>
+      </div>
+    </div>
+    <div class="pom-cms"><squarespace:block-field id="contact-testimonials" columns="12" /></div>
+  </section>
+
+  <section class="pom-faq" data-pom-region="contact-faq">
+    <div class="pom-fallback">
+      <div class="pom-faq-intro"><div><p class="pom-eyebrow">FAQ</p><h2>A few helpful answers.</h2></div></div>
+      <div class="pom-faq-list" data-accordion>
+        <div class="pom-faq-item is-open">
+          <button class="pom-faq-q" type="button" aria-expanded="true">What can I find in the store? <span class="pom-faq-icon" aria-hidden="true"></span></button>
+          <div class="pom-faq-a">The ministry offers music, sermon recordings, CDs, and books.</div>
+        </div>
+        <div class="pom-faq-item">
+          <button class="pom-faq-q" type="button" aria-expanded="false">How do I learn more about a resource? <span class="pom-faq-icon" aria-hidden="true"></span></button>
+          <div class="pom-faq-a">Open any resource for details, or contact the ministry with questions about a specific title.</div>
+        </div>
+        <div class="pom-faq-item">
+          <button class="pom-faq-q" type="button" aria-expanded="false">Can I ask about current availability? <span class="pom-faq-icon" aria-hidden="true"></span></button>
+          <div class="pom-faq-a">Yes. Call or email us and we’ll confirm what’s available and how to obtain it.</div>
+        </div>
+      </div>
+    </div>
+    <div class="pom-cms"><squarespace:block-field id="contact-faq" columns="12" /></div>
   </section>
 </div>

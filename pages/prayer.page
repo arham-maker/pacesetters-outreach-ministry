@@ -1,8 +1,9 @@
 <div class="pom-page pom-page-prayer">
   <section class="pom-hero is-candles" data-pom-region="prayer-hero">
     <div class="pom-hero-copy pom-fallback">
-      <a class="pom-back" href="/services"><span class="pom-arrow" aria-hidden="true"></span> Back to Services</a>
+      <a class="pom-back" href="/services"><span class="pom-arrow is-back" aria-hidden="true"></span> Back to Services</a>
       <h1>Prayer &amp; Encouragement</h1>
+      <p class="pom-lede">A listening heart. Encouragement through God’s Word.</p>
     </div>
     <div class="pom-cms"><squarespace:block-field id="prayer-hero" columns="12" /></div>
   </section>

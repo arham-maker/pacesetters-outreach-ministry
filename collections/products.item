@@ -1,14 +1,127 @@
-<article class="pom-product-page">
-  <div class="pom-media is-books">
-    {.section assetUrl}<img src="{assetUrl}?format=1500w" alt="{title}">{.end}
-  </div>
-  <div>
-    <a class="pom-back" href="/store"><span class="pom-arrow" aria-hidden="true"></span> Back to Store</a>
-    <h1>{title}</h1>
-    {.section excerpt}<p class="pom-prose">{excerpt}</p>{.end}
-    {.section body}<div class="pom-prose">{body}</div>{.end}
-    <div class="pom-add sqs-add-to-cart-button-wrapper" data-item-id="{id}">
-      <div class="sqs-add-to-cart-button">Add to Cart</div>
+<div class="pom-page pom-page-product">
+  <section class="pom-product-head">
+    <a class="pom-back is-ink" href="/store"><span class="pom-arrow is-back" aria-hidden="true"></span> Back to Store</a>
+    <h1>Product Details</h1>
+    <p class="pom-lede">{.section excerpt}{excerpt}{.or}Lorem ipsum dolor sit amet consectetur. Pulvinar quis ac ut tellus aliquet. Amet.{.end}</p>
+  </section>
+
+  <section class="pom-product-main">
+    <div class="pom-product-gallery">
+      <div class="pom-media is-books">
+        {.section assetUrl}<img src="{assetUrl}?format=1500w" alt="{title}">{.end}
+      </div>
+      <div class="pom-gallery-nav" aria-hidden="true">
+        <button class="pom-icon-btn is-prev" type="button"><span class="pom-arrow"></span></button>
+        <button class="pom-icon-btn is-next" type="button"><span class="pom-arrow"></span></button>
+      </div>
+      <div class="pom-gallery-dots" aria-hidden="true"><span class="is-active"></span><span></span><span></span></div>
     </div>
-  </div>
-</article>
+    <div class="pom-product-info">
+      <p class="pom-eyebrow">Music &amp; CDs</p>
+      <h2>{title}</h2>
+      <p class="pom-prose">{.section excerpt}{excerpt}{.or}Lorem ipsum dolor sit amet consectetur. Neque rhoncus et quis in pretium augue commodo.{.end}</p>
+      <div class="pom-qty" data-qty>
+        <span>Quantity</span>
+        <div class="pom-qty-ctrl">
+          <button type="button" data-qty-minus aria-label="Decrease quantity">−</button>
+          <input type="text" value="1" readonly aria-label="Quantity">
+          <button type="button" data-qty-plus aria-label="Increase quantity">+</button>
+        </div>
+      </div>
+      <a class="pom-btn-dark" href="/checkout">Buy Now <span class="pom-arrow is-ne" aria-hidden="true"></span></a>
+      <div class="pom-add sqs-add-to-cart-button-wrapper" data-item-id="{id}">
+        <div class="sqs-add-to-cart-button">Add to Cart</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pom-product-about">
+    <h2>About this resource</h2>
+    {.section body}
+    <div class="pom-prose">{body}</div>
+    {.or}
+    <p class="pom-prose">Lorem ipsum dolor sit amet consectetur. Neque rhoncus et quis in pretium augue commodo. Eget est erat auctor sit nunc urna dolor massa eget.</p>
+    <p class="pom-prose">Aliquet praesent in laoreet orci turpis et faucibus. Egestas malesuada a ut auctor euismod.</p>
+    {.end}
+  </section>
+
+  <section class="pom-related">
+    <p class="pom-eyebrow">You May Also Like</p>
+    <h2>More resources for your walk of faith.</h2>
+    <div class="pom-related-grid">
+      <article class="pom-product">
+        <a href="/store">
+          <div class="pom-media is-books"></div>
+          <div class="pom-product-meta"><h3>Lorem ipsum</h3><span class="pom-product-price">$XX.XX</span></div>
+          <p class="pom-product-cat">Music &amp; CDs</p>
+          <span class="pom-link">View Details <span class="pom-arrow is-ne" aria-hidden="true"></span></span>
+        </a>
+      </article>
+      <article class="pom-product">
+        <a href="/store">
+          <div class="pom-media is-amber"></div>
+          <div class="pom-product-meta"><h3>Lorem ipsum</h3><span class="pom-product-price">$XX.XX</span></div>
+          <p class="pom-product-cat">Sermons</p>
+          <span class="pom-link">View Details <span class="pom-arrow is-ne" aria-hidden="true"></span></span>
+        </a>
+      </article>
+      <article class="pom-product">
+        <a href="/store">
+          <div class="pom-media is-bible"></div>
+          <div class="pom-product-meta"><h3>Lorem ipsum</h3><span class="pom-product-price">$XX.XX</span></div>
+          <p class="pom-product-cat">Books</p>
+          <span class="pom-link">View Details <span class="pom-arrow is-ne" aria-hidden="true"></span></span>
+        </a>
+      </article>
+    </div>
+  </section>
+
+  <section class="pom-testimonials">
+    <div class="pom-testimonials-intro">
+      <div>
+        <p class="pom-eyebrow">Testimonials</p>
+        <h2>Stories of faith and hope.</h2>
+        <div class="pom-quote-nav">
+          <button class="pom-icon-btn is-prev" type="button" data-quote="prev" aria-label="Previous story"><span class="pom-arrow"></span></button>
+          <button class="pom-icon-btn is-next" type="button" data-quote="next" aria-label="Next story"><span class="pom-arrow"></span></button>
+        </div>
+      </div>
+    </div>
+    <div class="pom-quote-wrap" data-quotes>
+      <blockquote class="pom-quote is-active">
+        <div class="pom-quote-mark" aria-hidden="true">“</div>
+        <p>Lorem ipsum dolor sit amet consectetur. Neque rhoncus et quis in pretium augue commodo. Eget est erat auctor sit nunc urna dolor massa eget.</p>
+        <cite>— Jane Doe</cite>
+      </blockquote>
+      <blockquote class="pom-quote">
+        <div class="pom-quote-mark" aria-hidden="true">“</div>
+        <p>Being part of this community has strengthened my faith and given me a place to belong.</p>
+        <cite>— Michael R.</cite>
+      </blockquote>
+      <blockquote class="pom-quote">
+        <div class="pom-quote-mark" aria-hidden="true">“</div>
+        <p>Saturday Night Live connects us even when we are far apart.</p>
+        <cite>— Sarah L.</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <section class="pom-contact is-crowd" id="get-in-touch">
+    <div>
+      <p class="pom-eyebrow">Get in Touch</p>
+      <h2>We’d love to hear from you.</h2>
+      <p class="pom-contact-lead">Have a question, need prayer, or want to help?</p>
+      <div class="pom-contact-meta is-icons">
+        <a href="tel:3305059062"><span class="pom-meta-icon is-phone" aria-hidden="true"></span>330-505-9062</a>
+        <a href="mailto:larry.vicks@currently.com"><span class="pom-meta-icon is-mail" aria-hidden="true"></span>larry.vicks@currently.com</a>
+      </div>
+    </div>
+    <form class="pom-form-card" data-contact-form>
+      <div class="pom-field"><label for="prod-name">Name</label><input id="prod-name" name="name" type="text"></div>
+      <div class="pom-field"><label for="prod-email">Email</label><input id="prod-email" name="email" type="email"></div>
+      <div class="pom-field"><label for="prod-message">Message</label><textarea id="prod-message" name="message"></textarea></div>
+      <button class="pom-link" type="submit">Send Message <span class="pom-arrow is-ne" aria-hidden="true"></span></button>
+      <p class="pom-form-note" hidden>Thank you. Add a Squarespace Form block to deliver messages.</p>
+    </form>
+  </section>
+</div>

@@ -1,59 +1,64 @@
 <div class="pom-page pom-page-events">
-  <section class="pom-hero is-pew" data-pom-region="events-hero">
-    <div class="pom-hero-copy pom-fallback"><h1 class="pom-sr">Events</h1></div>
+  <section class="pom-hero is-zoom" data-pom-region="events-hero">
+    <div class="pom-hero-copy pom-fallback">
+      <h1>Online Fellowship</h1>
+      <p class="pom-lede">Faith and fellowship, wherever you are.</p>
+    </div>
     <div class="pom-cms"><squarespace:block-field id="events-hero" columns="12" /></div>
   </section>
 
   <section class="pom-split is-cream" data-pom-region="events-feature">
     <div class="pom-fallback">
-      <div class="pom-media is-bible" role="img" aria-label="Saturday Night Live gathering"></div>
       <div class="pom-split-copy">
         <p class="pom-eyebrow">Weekly · Online via Zoom</p>
-        <h2>Saturday night live</h2>
+        <h2>Night Live</h2>
         <p>Join Pastor Michael Vance for preaching, music, prayer, and spiritual encouragement.</p>
-        <a class="pom-link" href="#get-in-touch">Request Zoom Details <span class="pom-arrow" aria-hidden="true"></span></a>
+        <a class="pom-link" href="#get-in-touch">Request Zoom Details <span class="pom-arrow is-ne" aria-hidden="true"></span></a>
       </div>
+      <div class="pom-media is-bible" role="img" aria-label="Saturday Night Live gathering"></div>
     </div>
     <div class="pom-cms"><squarespace:block-field id="events-feature" columns="12" /></div>
   </section>
 
   <section class="pom-expect" data-pom-region="events-expect">
     <div class="pom-fallback">
-      <p class="pom-eyebrow">What to expect</p>
-      <article>
-        <h3>Preaching</h3>
-        <p>Biblical teaching to encourage and strengthen your faith.</p>
-      </article>
-      <article>
-        <h3>Music</h3>
-        <p>Worship through music that lifts our hearts to God.</p>
-      </article>
-      <article>
-        <h3>Prayer &amp; encouragement</h3>
-        <p>A time to pray together and receive encouragement for everyday life.</p>
-      </article>
+      <p class="pom-eyebrow pom-expect-label">What to expect</p>
+      <div class="pom-expect-grid">
+        <article>
+          <h3>Preaching</h3>
+          <p>Biblical teaching to encourage and strengthen your faith.</p>
+        </article>
+        <article>
+          <h3>Music</h3>
+          <p>Worship through music that lifts our hearts to God.</p>
+        </article>
+        <article>
+          <h3>Prayer &amp; encouragement</h3>
+          <p>A time to pray together and receive encouragement for everyday life.</p>
+        </article>
+      </div>
     </div>
     <div class="pom-cms"><squarespace:block-field id="events-expect" columns="12" /></div>
   </section>
 
   <section class="pom-event-block" data-pom-region="events-list">
     <div class="pom-fallback">
-      <p class="pom-kicker">Gather with Us</p>
+      <p class="pom-eyebrow">Gather with Us</p>
       <h2>Upcoming Gatherings</h2>
       <div class="pom-eventbar">
-        <div><span>Weekly</span><strong>Saturday</strong></div>
+        <div class="pom-event-when"><span>Weekly</span><strong>Saturday</strong></div>
         <div>
           <strong>Saturday Night Live</strong>
           <span>Pastor Michael Vance · Online via Zoom</span>
         </div>
-        <div>Timings Lorem Ipsum</div>
-        <div>Joining Details Lorem Ipsum</div>
+        <div><span>Timings</span><strong>Lorem Ipsum</strong></div>
+        <div><span>Joining Details</span><strong>Lorem Ipsum</strong></div>
       </div>
     </div>
     <div class="pom-cms"><squarespace:block-field id="events-list" columns="12" /></div>
   </section>
 
-  <section class="pom-join" data-pom-region="events-join">
+  <section class="pom-join is-tan" data-pom-region="events-join">
     <div class="pom-fallback">
       <div>
         <p class="pom-eyebrow">Joining Online</p>
@@ -129,16 +134,16 @@
         <p class="pom-eyebrow">Get in Touch</p>
         <h2>We’d love to hear from you.</h2>
         <p class="pom-contact-lead">Have a question, need prayer, or want to help?</p>
-        <div class="pom-contact-meta">
-          <a href="tel:3305059062">330-505-9062</a>
-          <a href="mailto:larry.vicks@currently.com">larry.vicks@currently.com</a>
+        <div class="pom-contact-meta is-icons">
+          <a href="tel:3305059062"><span class="pom-meta-icon is-phone" aria-hidden="true"></span>330-505-9062</a>
+          <a href="mailto:larry.vicks@currently.com"><span class="pom-meta-icon is-mail" aria-hidden="true"></span>larry.vicks@currently.com</a>
         </div>
       </div>
       <form class="pom-form-card" data-contact-form>
         <div class="pom-field"><label for="events-name">Name</label><input id="events-name" name="name" type="text"></div>
         <div class="pom-field"><label for="events-email">Email</label><input id="events-email" name="email" type="email"></div>
         <div class="pom-field"><label for="events-message">Message</label><textarea id="events-message" name="message"></textarea></div>
-        <button class="pom-link" type="submit">Send Message <span class="pom-arrow" aria-hidden="true"></span></button>
+        <button class="pom-link" type="submit">Send Message <span class="pom-arrow is-ne" aria-hidden="true"></span></button>
         <p class="pom-form-note" hidden>Thank you. Add a Squarespace Form block in this region to deliver messages.</p>
       </form>
     </div>

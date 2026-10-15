@@ -1,7 +1,7 @@
 <div class="pom-page pom-page-about">
   <section class="pom-hero is-sunset" data-pom-region="about-hero">
     <div class="pom-hero-copy pom-fallback">
-      <p class="pom-eyebrow">About Pacesetters</p>
+      <p class="pom-eyebrow">Who We Are</p>
       <h1>Rooted in faith. Reaching out with hope.</h1>
       <p class="pom-lede">Lorem ipsum dolor sit amet consectetur. Ultrices erat bibendum ridiculus fringilla nisl venenatis et.</p>
     </div>
@@ -66,7 +66,7 @@
     <div class="pom-fallback">
       <div class="pom-media is-bible" role="img" aria-label="People studying a Bible together"></div>
       <div class="pom-split-copy">
-        <p class="pom-eyebrow">Our Growing Reach</p>
+        <p class="pom-eyebrow">Local Roots</p>
         <h2>Local roots.<br>Fellowship beyond borders.</h2>
         <p>Lorem ipsum dolor sit amet consectetur. Et ultrices massa amet fermentum massa iaculis turpis. Commodo at commodo et orci nisi risus.</p>
         <a class="pom-link" href="/events">View Program &amp; Join <span class="pom-arrow" aria-hidden="true"></span></a>
