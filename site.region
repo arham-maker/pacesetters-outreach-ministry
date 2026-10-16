@@ -16,13 +16,16 @@
     </a>
 
     <div class="pom-header-tools">
-      <button class="pom-menu-toggle" type="button" aria-expanded="false" aria-controls="pom-drawer">
+      <button class="pom-menu-toggle" type="button" aria-expanded="false" aria-controls="pom-drawer" data-menu-toggle>
         <span class="pom-menu-bars" aria-hidden="true"></span>
         <span class="pom-sr">Menu</span>
       </button>
     </div>
 
     <nav id="pom-drawer" class="pom-sidenav" aria-label="Primary" data-pom-nav>
+      <button class="pom-menu-close" type="button" data-menu-close aria-label="Close menu">
+        <span aria-hidden="true">&times;</span>
+      </button>
       <div class="pom-nav-fallback" data-nav-fallback>
         <ul class="pom-nav-list">
           <li><a href="/about">About</a></li>

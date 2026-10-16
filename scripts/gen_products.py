@@ -164,18 +164,22 @@ def checkout_html(p: dict) -> str:
               </div>
             </div>
 
-            <div class="pom-checkout-section">
-              <h2><span>03</span> Payment details</h2>
-              <div class="pom-field"><label for="{s}-chk-card">Card number</label><input id="{s}-chk-card" name="card" type="text" inputmode="numeric" autocomplete="cc-number" required></div>
-              <div class="pom-field-row">
-                <div class="pom-field"><label for="{s}-chk-exp">MM / YY</label><input id="{s}-chk-exp" name="exp" type="text" autocomplete="cc-exp" placeholder="MM / YY" required></div>
-                <div class="pom-field"><label for="{s}-chk-cvc">CVC</label><input id="{s}-chk-cvc" name="cvc" type="text" inputmode="numeric" autocomplete="cc-csc" required></div>
+            <div class="pom-checkout-section pom-checkout-payment" data-pom-region="product-{s}-payment">
+              <div class="pom-fallback">
+                <h2><span>03</span> Payment details</h2>
+                <p class="pom-payment-hint">Demo layout only. In Squarespace Edit, replace this block with your payment method (Commerce checkout, Stripe, PayPal embed, or Code block).</p>
+                <div class="pom-field"><label for="{s}-chk-card">Card number</label><input id="{s}-chk-card" name="card" type="text" inputmode="numeric" autocomplete="cc-number"></div>
+                <div class="pom-field-row">
+                  <div class="pom-field"><label for="{s}-chk-exp">MM / YY</label><input id="{s}-chk-exp" name="exp" type="text" autocomplete="cc-exp" placeholder="MM / YY"></div>
+                  <div class="pom-field"><label for="{s}-chk-cvc">CVC</label><input id="{s}-chk-cvc" name="cvc" type="text" inputmode="numeric" autocomplete="cc-csc"></div>
+                </div>
+                <div class="pom-field"><label for="{s}-chk-cardname">Name on card</label><input id="{s}-chk-cardname" name="cardName" type="text" autocomplete="cc-name"></div>
+                <p class="pom-secure"><span class="pom-meta-icon is-lock" aria-hidden="true"></span> Your payment details are encrypted.</p>
               </div>
-              <div class="pom-field"><label for="{s}-chk-cardname">Name on card</label><input id="{s}-chk-cardname" name="cardName" type="text" autocomplete="cc-name" required></div>
-              <p class="pom-secure"><span class="pom-meta-icon is-lock" aria-hidden="true"></span> Your payment details are encrypted.</p>
-              <label class="pom-check"><input type="checkbox" name="terms" required checked><span>I agree to the Terms &amp; Conditions and Privacy Policy.</span></label>
+              <div class="pom-cms"><squarespace:block-field id="product-{s}-payment" columns="12" /></div>
             </div>
 
+            <label class="pom-check"><input type="checkbox" name="terms" required checked><span>I agree to the <a href="/terms">Terms &amp; Conditions</a> and <a href="/privacy">Privacy Policy</a>.</span></label>
             <button class="pom-btn-dark" type="submit"><span class="pom-link-text" data-order-pay>Pay {money(total)}</span><span class="pom-arrow is-ne" aria-hidden="true"></span></button>
             <p class="pom-form-error" data-checkout-error hidden>Please fill in all required fields to continue.</p>
           </form>

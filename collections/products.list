@@ -51,8 +51,8 @@
       <div class="pom-filters" data-filters>
         <button type="button" class="is-active" data-filter="all">All Resources</button>
         <button type="button" data-filter="music">Music &amp; CDs</button>
-        <button type="button" data-filter="sermon">Sermons</button>
-        <button type="button" data-filter="book">Books</button>
+        <button type="button" data-filter="sermons">Sermons</button>
+        <button type="button" data-filter="books">Books</button>
       </div>
       <div class="pom-products" data-product-grid>
         {.repeated section items}

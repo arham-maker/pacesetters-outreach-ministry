@@ -318,10 +318,27 @@ h1, h2, h3, p { margin: 0; }
   background: currentColor;
   position: relative;
   content: "";
+  transition: transform 0.2s ease, top 0.2s ease, background 0.2s ease;
 }
 
 .pom-menu-bars:before { position: absolute; top: -5px; }
 .pom-menu-bars:after { position: absolute; top: 5px; }
+
+.pom-menu-toggle.is-open .pom-menu-bars {
+  background: transparent;
+}
+.pom-menu-toggle.is-open .pom-menu-bars:before {
+  top: 0;
+  transform: rotate(45deg);
+}
+.pom-menu-toggle.is-open .pom-menu-bars:after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+.pom-menu-close {
+  display: none;
+}
 
 .pom-footer {
   background: @ink;
@@ -719,6 +736,29 @@ body.pom-has-cart .sqs-editable-button {
   }
   .pom-sidenav.is-open,
   .pom-has-plain .pom-sidenav.is-open { display: block; }
+  .pom-menu-close {
+    display: flex;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 44px;
+    height: 44px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(254, 254, 254, 0.55);
+    border-radius: 999px;
+    background: transparent;
+    color: #fefefe;
+    font-size: 28px;
+    line-height: 1;
+    cursor: pointer;
+    z-index: 2;
+    padding: 0;
+  }
+  .pom-menu-close span {
+    display: block;
+    margin-top: -2px;
+  }
   .pom-sidenav .pom-nav-list,
   .pom-has-plain .pom-sidenav .pom-nav-list {
     flex-direction: column;
@@ -737,6 +777,10 @@ body.pom-has-cart .sqs-editable-button {
     text-shadow: none !important;
   }
   body.pom-nav-open { overflow: hidden; }
+  body.pom-nav-open .pom-menu-toggle {
+    border-color: rgba(254, 254, 254, 0.7);
+    color: #fefefe;
+  }
   .pom-footer { padding: 36px 20px 28px; }
   .pom-footer-top,
   .pom-footer-nav .pom-nav-list,
@@ -5520,6 +5564,18 @@ body[class*="cart"] ,
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
+}
+
+.pom-page-checkout .pom-payment-hint {
+  margin: 0 0 24px;
+  font-family: @font-display;
+  font-size: 16px;
+  line-height: 24px;
+  color: rgba(38, 38, 37, 0.7);
+}
+
+.pom-page-checkout .pom-checkout-payment > .pom-cms {
+  margin-top: 8px;
 }
 
 .pom-page-checkout .pom-secure {

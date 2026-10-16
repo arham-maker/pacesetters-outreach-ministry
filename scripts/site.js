@@ -29,19 +29,31 @@
     body.classList.add("pom-has-cart");
   }
 
-  var toggle = document.querySelector(".pom-menu-toggle");
+  var toggle = document.querySelector("[data-menu-toggle], .pom-menu-toggle");
   var drawer = document.getElementById("pom-drawer");
+  function setMenuOpen(open) {
+    if (!drawer) {
+      return;
+    }
+    drawer.classList.toggle("is-open", open);
+    body.classList.toggle("pom-nav-open", open);
+    if (toggle) {
+      toggle.setAttribute("aria-expanded", open ? "true" : "false");
+      toggle.classList.toggle("is-open", open);
+    }
+  }
   if (toggle && drawer) {
     toggle.addEventListener("click", function () {
-      var open = drawer.classList.toggle("is-open");
-      toggle.setAttribute("aria-expanded", open ? "true" : "false");
-      body.classList.toggle("pom-nav-open", open);
+      setMenuOpen(!drawer.classList.contains("is-open"));
+    });
+    Array.prototype.forEach.call(document.querySelectorAll("[data-menu-close]"), function (btn) {
+      btn.addEventListener("click", function () {
+        setMenuOpen(false);
+      });
     });
     drawer.addEventListener("click", function (event) {
       if (event.target.closest("a")) {
-        drawer.classList.remove("is-open");
-        toggle.setAttribute("aria-expanded", "false");
-        body.classList.remove("pom-nav-open");
+        setMenuOpen(false);
       }
     });
   }
