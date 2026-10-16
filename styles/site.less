@@ -6272,4 +6272,139 @@ body.pom-modal-open { overflow: hidden; }
     margin: 0 20px;
     padding: 48px 20px 36px;
   }
+
+  /* Home mobile — match stacked Figma: left align, full-width CTAs */
+  .pom-page-home .pom-hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: stretch;
+    min-height: 100svh;
+    height: auto;
+    padding: 0 !important;
+  }
+
+  .pom-page-home .pom-hero-copy {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 0 28px;
+    padding: 96px 20px 0 !important;
+  }
+
+  .pom-page-home .pom-hero-line {
+    display: inline;
+    white-space: normal !important;
+  }
+
+  .pom-page-home .pom-hero h1,
+  .pom-page-home .pom-lede {
+    width: 100% !important;
+    max-width: 100% !important;
+    text-align: left;
+  }
+
+  .pom-page-home .pom-hero h1 {
+    font-size: 40px !important;
+    line-height: 48px !important;
+  }
+
+  .pom-page-home .pom-lede {
+    font-size: 20px !important;
+    line-height: 28px !important;
+    margin-top: 12px;
+  }
+
+  .pom-page-home .pom-hero-bars {
+    display: flex;
+    flex-direction: column;
+    width: 100% !important;
+    margin: 0;
+  }
+
+  .pom-page-home .pom-hero-bar {
+    width: 100%;
+    min-width: 0;
+    min-height: 64px;
+    padding: 0 20px;
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .pom-page-home .pom-triptych,
+  .pom-page-home .pom-triptych .pom-fallback > .pom-panel:first-child,
+  .pom-page-home .pom-triptych .pom-fallback > .pom-panel:first-child > div,
+  .pom-page-home .pom-triptych .pom-eyebrow,
+  .pom-page-home .pom-triptych .pom-panel h2,
+  .pom-page-home .pom-triptych .pom-fallback > .pom-panel:last-child,
+  .pom-page-home .pom-testimonials-intro,
+  .pom-page-home .pom-faq-intro,
+  .pom-page-home .pom-testimonials-intro > div,
+  .pom-page-home .pom-faq-intro > div {
+    text-align: left !important;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .pom-page-home .pom-triptych .pom-fallback > .pom-panel:first-child > div,
+  .pom-page-home .pom-triptych .pom-panel h2 {
+    max-width: none !important;
+    width: 100%;
+  }
+
+  .pom-page-home .pom-triptych .pom-fallback > .pom-panel:first-child,
+  .pom-page-home .pom-triptych .pom-fallback > .pom-panel:last-child {
+    padding: 40px 20px !important;
+  }
+
+  .pom-page-home .pom-triptych .pom-media {
+    min-height: 280px;
+    width: 100%;
+  }
+
+  .pom-page-home .pom-split.is-cream.is-snl .pom-split-copy,
+  .pom-page-home .pom-split.is-dark.is-store .pom-split-copy {
+    align-items: flex-start !important;
+    text-align: left !important;
+    padding: 40px 20px !important;
+  }
+
+  .pom-page-home .pom-split.is-dark.is-store .pom-split-copy h2,
+  .pom-page-home .pom-split.is-dark.is-store .pom-split-copy p {
+    text-align: left !important;
+    white-space: normal !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .pom-page-home .pom-split.is-dark.is-store .pom-link,
+  .pom-page-home .pom-split.is-dark.is-store .pom-link.is-end,
+  .pom-page-home .pom-split-copy .pom-link.is-end {
+    align-self: flex-start !important;
+  }
+
+  .pom-page-home .pom-split.is-cream.is-snl .pom-media.is-bible,
+  .pom-page-home .pom-split.is-dark.is-store .pom-media.is-books {
+    min-height: 260px;
+    width: 100%;
+  }
+
+  .pom-page-home .pom-testimonials,
+  .pom-page-home .pom-faq {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  .pom-page-home .pom-quote-nav {
+    justify-content: flex-start;
+  }
+
+  .pom-page-home .pom-contact > .pom-fallback {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
 }
