@@ -1,7 +1,42 @@
 <article class="pom-page-plain pom-legal-page" data-pom-region="privacy-body">
   <div class="pom-fallback">
     <h1>Privacy Policy</h1>
-    <p>This page is linked from the footer. Replace this text with the ministry’s privacy policy, or add blocks in the editor.</p>
+    <p class="pom-legal-lede">Last updated: October 16, 2026. This demo policy is placeholder text for layout review.</p>
+
+    <h2>1. Introduction</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pacesetters Outreach Ministry (“we,” “us,” or “our”) respects your privacy and is committed to protecting personal information you share with us through this website, our events, and our store.</p>
+    <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+    <h2>2. Information We Collect</h2>
+    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. We may collect:</p>
+    <ul>
+      <li>Name, email address, and phone number when you contact us or place an order</li>
+      <li>Shipping and billing details for store purchases</li>
+      <li>Prayer requests or messages you choose to submit</li>
+      <li>Basic analytics about how visitors use this site</li>
+    </ul>
+
+    <h2>3. How We Use Information</h2>
+    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. We use information to respond to inquiries, fulfill orders, improve our ministry resources, and communicate about gatherings or updates when you have opted in.</p>
+
+    <h2>4. Sharing of Information</h2>
+    <p>Integer malesuada nunc vel risus commodo viverra maecenas. We do not sell your personal information. We may share limited data with trusted service providers who help us operate the website, process payments, or deliver email—only as needed to provide those services.</p>
+
+    <h2>5. Cookies and Analytics</h2>
+    <p>Vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt. Our site may use cookies or similar tools to understand traffic and improve experience. You can adjust cookie settings in your browser.</p>
+
+    <h2>6. Data Security</h2>
+    <p>Nulla facilisi morbi tempus iaculis urna id volutpat lacus. We take reasonable steps to protect information, though no method of transmission over the internet is fully secure.</p>
+
+    <h2>7. Your Choices</h2>
+    <p>Enim ut tellus elementum sagittis vitae et leo duis. You may request to update or remove contact details, or unsubscribe from ministry emails, by contacting us using the details below.</p>
+
+    <h2>8. Children’s Privacy</h2>
+    <p>Faucibus purus in massa tempor nec feugiat. This website is not directed to children under 13. If you believe a child has provided personal information, please contact us so we can delete it.</p>
+
+    <h2>9. Contact</h2>
+    <p>For privacy questions, contact Pacesetters Outreach Ministry at <a href="mailto:terryolivia@currently.com">terryolivia@currently.com</a> or <a href="tel:3305059087">330 505-9087</a>.</p>
+    <p><a class="pom-link" href="/contact"><span class="pom-link-text">Go to Contact</span><span class="pom-arrow is-ne" aria-hidden="true"></span></a></p>
   </div>
   <div class="pom-cms"><squarespace:block-field id="privacy-body" columns="12" /></div>
 </article>

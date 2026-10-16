@@ -1,7 +1,43 @@
 <article class="pom-page-plain pom-legal-page" data-pom-region="terms-body">
   <div class="pom-fallback">
     <h1>Terms &amp; Conditions</h1>
-    <p>This page is linked from the footer. Replace this text with the ministry’s terms, or add blocks in the editor.</p>
+    <p class="pom-legal-lede">Last updated: October 16, 2026. This demo terms page uses placeholder content for layout review.</p>
+
+    <h2>1. Agreement to Terms</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. By accessing this website or purchasing resources from Pacesetters Outreach Ministry, you agree to these Terms &amp; Conditions. If you do not agree, please do not use the site.</p>
+
+    <h2>2. Ministry Purpose</h2>
+    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium. This site shares information about our gatherings, prayer ministry, outreach, and store resources for encouragement in faith.</p>
+
+    <h2>3. Use of the Website</h2>
+    <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit. You agree not to misuse the site, attempt unauthorized access, or submit harmful or unlawful content through forms or messages.</p>
+
+    <h2>4. Store Orders</h2>
+    <p>At vero eos et accusamus et iusto odio dignissimos ducimus. Product descriptions, prices, and availability may change. Orders are subject to confirmation. Shipping timelines are estimates and may vary.</p>
+    <ul>
+      <li>Prices are listed in USD unless otherwise noted</li>
+      <li>Payment must be completed for orders to process</li>
+      <li>If an item is unavailable, we will contact you when possible</li>
+    </ul>
+
+    <h2>5. Intellectual Property</h2>
+    <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque. Content on this site—including text, images, logos, music, and teaching resources—belongs to Pacesetters Outreach Ministry or its licensors and may not be copied for commercial use without permission.</p>
+
+    <h2>6. Prayer and Personal Content</h2>
+    <p>Temporibus autem quibusdam et aut officiis debitis. Prayer requests and messages you submit are handled with care. Do not include sensitive information you do not wish to share.</p>
+
+    <h2>7. Disclaimer</h2>
+    <p>Itaque earum rerum hic tenetur a sapiente delectus. Ministry resources are provided for encouragement and are not a substitute for professional counseling, medical, or legal advice.</p>
+
+    <h2>8. Limitation of Liability</h2>
+    <p>Ut aut reiciendis voluptatibus maiores alias consequatur. To the fullest extent permitted by law, Pacesetters Outreach Ministry is not liable for indirect or consequential damages arising from use of this website or products.</p>
+
+    <h2>9. Changes to These Terms</h2>
+    <p>Quis autem vel eum iure reprehenderit qui in ea voluptate. We may update these Terms from time to time. Continued use of the site after changes means you accept the updated Terms.</p>
+
+    <h2>10. Contact</h2>
+    <p>Questions about these Terms can be sent to <a href="mailto:terryolivia@currently.com">terryolivia@currently.com</a> or <a href="tel:3305059087">330 505-9087</a>.</p>
+    <p><a class="pom-link" href="/contact"><span class="pom-link-text">Go to Contact</span><span class="pom-arrow is-ne" aria-hidden="true"></span></a></p>
   </div>
   <div class="pom-cms"><squarespace:block-field id="terms-body" columns="12" /></div>
 </article>

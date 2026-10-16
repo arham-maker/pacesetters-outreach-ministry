@@ -1,8 +1,25 @@
 <article class="pom-page-plain pom-legal-page" data-pom-region="support-body">
   <div class="pom-fallback">
     <h1>Help &amp; Support</h1>
-    <p>Questions about gatherings, prayer, or the store can be sent through the contact page.</p>
-    <p><a class="pom-link" href="/contact">Contact the ministry <span class="pom-arrow" aria-hidden="true"></span></a></p>
+    <p class="pom-legal-lede">Lorem ipsum dolor sit amet — demo help content for the footer link.</p>
+
+    <h2>Orders and the Store</h2>
+    <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. For questions about a product, shipping, or an order summary, visit the store or contact us with your order details.</p>
+    <p><a class="pom-link" href="/store"><span class="pom-link-text">Browse the Store</span><span class="pom-arrow is-ne" aria-hidden="true"></span></a></p>
+
+    <h2>Saturday Night Live &amp; Events</h2>
+    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. Looking for Zoom details or gathering times? Check the Events page for current program information.</p>
+    <p><a class="pom-link" href="/events"><span class="pom-link-text">View Events</span><span class="pom-arrow is-ne" aria-hidden="true"></span></a></p>
+
+    <h2>Prayer Requests</h2>
+    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore. You can share a prayer need through our Contact page. Please avoid including private details you do not want stored.</p>
+
+    <h2>Technical Issues</h2>
+    <p>Excepteur sint occaecat cupidatat non proident. If a page will not load or a form does not submit, try refreshing your browser or contacting us by phone or email.</p>
+
+    <h2>Still need help?</h2>
+    <p>Reach Pacesetters Outreach Ministry at <a href="tel:3305059087">330 505-9087</a> or <a href="mailto:terryolivia@currently.com">terryolivia@currently.com</a>.</p>
+    <p><a class="pom-link" href="/contact"><span class="pom-link-text">Contact the ministry</span><span class="pom-arrow is-ne" aria-hidden="true"></span></a></p>
   </div>
   <div class="pom-cms"><squarespace:block-field id="support-body" columns="12" /></div>
 </article>

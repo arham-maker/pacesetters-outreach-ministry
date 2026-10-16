@@ -689,26 +689,54 @@ body.pom-has-cart .sqs-editable-button {
 }
 
 @media (max-width: 900px) {
-  .pom-header { padding: 20px 20px 0; }
+  .pom-header {
+    padding: 20px 20px 0;
+    z-index: 60;
+  }
   .pom-logo-mark { height: 40px; }
-  .pom-menu-toggle { display: inline-flex; }
+  .pom-menu-toggle {
+    display: inline-flex;
+    position: relative;
+    z-index: 70;
+  }
   .pom-sidenav,
   .pom-has-plain .pom-sidenav {
     display: none;
     position: fixed;
     inset: 0;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
     grid-column: auto;
     margin: 0;
-    background: rgba(38, 38, 37, 0.96);
+    background: @ink;
     color: @white;
-    padding: 120px 32px 40px;
-    text-align: left;
+    padding: 100px 20px 40px !important;
+    text-align: left !important;
+    z-index: 55;
+    overflow-y: auto;
   }
   .pom-sidenav.is-open,
   .pom-has-plain .pom-sidenav.is-open { display: block; }
   .pom-sidenav .pom-nav-list,
-  .pom-has-plain .pom-sidenav .pom-nav-list { flex-direction: column; gap: 22px; }
-  .pom-sidenav .pom-nav-list a { font-family: @font-serif; font-size: 36px; }
+  .pom-has-plain .pom-sidenav .pom-nav-list {
+    flex-direction: column;
+    align-items: flex-start !important;
+    gap: 22px;
+    text-align: left !important;
+  }
+  .pom-sidenav .pom-nav-list a,
+  .pom-has-plain .pom-sidenav .pom-nav-list a {
+    font-family: @font-display;
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: 400;
+    color: #fefefe !important;
+    text-align: left !important;
+    text-shadow: none !important;
+  }
+  body.pom-nav-open { overflow: hidden; }
   .pom-footer { padding: 36px 20px 28px; }
   .pom-footer-top,
   .pom-footer-nav .pom-nav-list,
@@ -4406,14 +4434,72 @@ section.pom-join.is-tan {
 .pom-legal-page {
   max-width: 760px;
   margin: 0 auto;
-  padding: 24px 24px 80px;
+  padding: 48px 100px 100px;
+  font-family: @font-display;
+  color: @ink;
 }
 
 .pom-legal-page h1 {
-  font-family: @font-serif;
+  font-family: @font-display;
   font-weight: 400;
   font-size: ~"clamp(42px, 5vw, 64px)";
-  margin-bottom: 18px;
+  line-height: 1.15;
+  margin: 0 0 16px;
+  color: @ink;
+}
+
+.pom-legal-page .pom-legal-lede {
+  font-size: 18px;
+  line-height: 28px;
+  color: @contact-muted;
+  margin: 0 0 36px;
+}
+
+.pom-legal-page h2 {
+  font-family: @font-display !important;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 36px;
+  margin: 36px 0 14px;
+  color: @ink !important;
+}
+
+.pom-legal-page p {
+  font-size: 18px;
+  line-height: 28px;
+  color: @contact-muted;
+  margin: 0 0 14px;
+}
+
+.pom-legal-page ul {
+  margin: 0 0 18px;
+  padding-left: 22px;
+  color: @contact-muted;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.pom-legal-page li { margin-bottom: 8px; }
+
+.pom-legal-page a {
+  color: @ink;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.pom-legal-page .pom-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 8px;
+  color: @ink !important;
+  text-decoration: none !important;
+  font-size: 18px;
+}
+
+.pom-legal-page .pom-link .pom-link-text {
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .pom-legal-page p + p { margin-top: 14px; }
@@ -6324,6 +6410,24 @@ body.pom-modal-open { overflow: hidden; }
     max-width: 100% !important;
     margin: 0 0 28px;
     padding: 96px 20px 0 !important;
+    box-sizing: border-box;
+  }
+
+  /* Mobile menu open: solid drawer, left-aligned links */
+  .pom-sidenav.is-open,
+  .pom-has-plain .pom-sidenav.is-open,
+  body.pom-nav-open .pom-sidenav {
+    background: @ink !important;
+    text-align: left !important;
+    padding: 100px 20px 40px !important;
+  }
+
+  body.pom-nav-open .pom-sidenav .pom-nav-list,
+  body.pom-nav-open .pom-sidenav .pom-nav-list a {
+    align-items: flex-start !important;
+    text-align: left !important;
+    color: #fefefe !important;
+    text-shadow: none !important;
   }
 
   .pom-page-home .pom-hero-line {
@@ -6438,5 +6542,159 @@ body.pom-modal-open { overflow: hidden; }
   .pom-page-home .pom-contact > .pom-fallback {
     padding-top: 48px;
     padding-bottom: 48px;
+  }
+
+  /* About / Services / Events / Outreach / Prayer / Contact mobile */
+  .pom-page-about .pom-hero,
+  .pom-page-services .pom-hero,
+  .pom-page-events .pom-hero,
+  .pom-page-outreach .pom-hero,
+  .pom-page-prayer .pom-hero,
+  .pom-page-contact .pom-hero {
+    height: auto !important;
+    min-height: 70svh;
+    padding: 120px 20px 40px !important;
+    align-items: flex-end;
+  }
+
+  .pom-page-about .pom-hero h1,
+  .pom-page-services .pom-hero h1,
+  .pom-page-events .pom-hero h1,
+  .pom-page-outreach .pom-hero h1,
+  .pom-page-prayer .pom-hero h1,
+  .pom-page-contact .pom-hero h1 {
+    font-size: 40px !important;
+    line-height: 48px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    white-space: normal !important;
+  }
+
+  .pom-page-about .pom-hero .pom-lede,
+  .pom-page-services .pom-hero .pom-lede,
+  .pom-page-events .pom-hero .pom-lede,
+  .pom-page-outreach .pom-hero .pom-lede,
+  .pom-page-prayer .pom-hero .pom-lede,
+  .pom-page-contact .pom-hero .pom-lede {
+    font-size: 18px !important;
+    line-height: 26px !important;
+    max-width: 100% !important;
+  }
+
+  .pom-page-about .pom-hero-copy,
+  .pom-page-services .pom-hero-copy,
+  .pom-page-events .pom-hero-copy,
+  .pom-page-outreach .pom-hero-copy,
+  .pom-page-prayer .pom-hero-copy,
+  .pom-page-contact .pom-hero-copy {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .pom-page-about .pom-split .pom-split-copy,
+  .pom-page-services .pom-split .pom-split-copy,
+  .pom-page-events .pom-split .pom-split-copy,
+  .pom-page-outreach .pom-intro > .pom-fallback,
+  .pom-page-outreach .pom-reach > .pom-fallback,
+  .pom-page-prayer .pom-split .pom-split-copy,
+  .pom-page-prayer .pom-reach > .pom-fallback,
+  .pom-page-about .pom-about-purpose,
+  .pom-page-events .pom-expect,
+  .pom-page-events .pom-event-block,
+  .pom-page-events .pom-join,
+  .pom-contact-page {
+    text-align: left !important;
+    align-items: flex-start !important;
+  }
+
+  .pom-page-services .pom-split.is-svc .pom-split-copy,
+  .pom-page-about .pom-split.is-about-reach .pom-split-copy,
+  .pom-page-about .pom-split.is-about-faith .pom-split-copy,
+  .pom-page-events .pom-split.is-events-feature .pom-split-copy,
+  .pom-page-prayer .pom-split.is-prayer-alone .pom-split-copy {
+    padding: 40px 20px !important;
+    align-items: flex-start !important;
+    text-align: left !important;
+  }
+
+  .pom-page-services .pom-split.is-svc h2,
+  .pom-page-services .pom-split.is-svc-end h2,
+  .pom-page-about .pom-split h2,
+  .pom-page-events .pom-split h2,
+  .pom-page-prayer .pom-split h2,
+  .pom-page-outreach .pom-intro h2,
+  .pom-contact-info h2 {
+    text-align: left !important;
+    font-size: 32px !important;
+    line-height: 40px !important;
+    white-space: normal !important;
+  }
+
+  .pom-page-outreach .pom-reach.is-outreach-who > .pom-fallback,
+  .pom-page-prayer .pom-reach.is-prayer-support > .pom-fallback {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .pom-page-outreach .pom-reach .pom-media,
+  .pom-page-prayer .pom-reach .pom-media,
+  .pom-page-services .pom-split .pom-media,
+  .pom-page-about .pom-split .pom-media,
+  .pom-page-events .pom-split .pom-media,
+  .pom-page-prayer .pom-split .pom-media {
+    min-height: 240px;
+    width: 100%;
+  }
+
+  .pom-contact-page {
+    grid-template-columns: 1fr !important;
+    gap: 32px;
+    padding: 40px 20px !important;
+  }
+
+  .pom-form-stack,
+  .pom-form-card {
+    width: 100%;
+    max-width: none;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .pom-page-plain.pom-legal-page,
+  .pom-legal-page {
+    padding: 32px 20px 64px !important;
+    max-width: none;
+  }
+
+  .pom-legal-page h1 {
+    font-size: 36px !important;
+    line-height: 42px !important;
+  }
+
+  .pom-legal-page h2 {
+    font-size: 22px !important;
+    line-height: 30px !important;
+  }
+
+  .pom-legal-page p,
+  .pom-legal-page li,
+  .pom-legal-page .pom-legal-lede {
+    font-size: 16px !important;
+    line-height: 26px !important;
+  }
+
+  /* Checkout + order modal mobile polish */
+  .pom-page-checkout .pom-checkout,
+  .pom-page-product.is-ordering .pom-page-checkout .pom-checkout {
+    padding: 32px 20px 48px !important;
+  }
+
+  .pom-page-checkout .pom-checkout-summary {
+    padding: 28px 20px !important;
+  }
+
+  .pom-modal.is-order-confirmed .pom-modal-card {
+    max-width: calc(100% - 40px);
   }
 }

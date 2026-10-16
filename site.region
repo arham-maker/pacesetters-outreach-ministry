@@ -86,9 +86,9 @@
     <nav class="pom-legal" aria-label="Legal" data-pom-nav>
       <div class="pom-nav-fallback" data-nav-fallback>
         <ul class="pom-nav-list">
-          <li><a href="/privacy-policy">Privacy Policy</a></li>
+          <li><a href="/privacy">Privacy Policy</a></li>
           <li><a href="/terms">Terms &amp; Conditions</a></li>
-          <li><a href="/help">Help &amp; Support</a></li>
+          <li><a href="/support">Help &amp; Support</a></li>
         </ul>
       </div>
       <div class="pom-nav-cms" data-nav-cms>
