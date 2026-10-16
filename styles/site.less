@@ -348,9 +348,19 @@ h1, h2, h3, p { margin: 0; }
 
 .pom-footer-top {
   display: grid;
-  grid-template-columns: 220px 1fr auto;
+  grid-template-columns: minmax(240px, 300px) 1fr auto;
   align-items: center;
   gap: 24px;
+}
+
+.pom-footer .pom-logo {
+  align-items: center;
+  gap: 14px;
+}
+
+.pom-footer .pom-logo-mark {
+  height: 64px;
+  max-width: 280px;
 }
 
 .pom-footer-nav .pom-nav-list {
@@ -366,6 +376,14 @@ h1, h2, h3, p { margin: 0; }
   align-items: center;
 }
 
+.pom-social > .pom-fallback,
+.pom-social > .pom-cms {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+}
+
 .pom-social a {
   display: flex;
   align-items: center;
@@ -376,8 +394,8 @@ h1, h2, h3, p { margin: 0; }
 
 .pom-social-icon {
   display: block;
-  width: 22px;
-  height: 22px;
+  width: 28px;
+  height: 28px;
 }
 
 .pom-legal {
