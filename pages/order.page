@@ -1,6 +1,6 @@
 <div class="pom-page pom-page-checkout">
   <div class="pom-page-checkout" data-unit-price="20.00" data-shipping="4.00">
-    <section class="pom-checkout" data-pom-region="songs-of-encouragement-checkout">
+    <section class="pom-checkout" data-pom-region="product-songs-of-encouragement-checkout">
       <div class="pom-fallback">
         <div class="pom-checkout-main">
           <a class="pom-back is-ink" href="/songs-of-encouragement"><span class="pom-arrow is-back" aria-hidden="true"></span> Back to Product</a>
@@ -65,6 +65,7 @@
           <p class="pom-summary-help">Need help with your order? <a href="/contact">Contact us</a></p>
         </aside>
       </div>
+      <div class="pom-cms"><squarespace:block-field id="product-songs-of-encouragement-checkout" columns="12" /></div>
     </section>
 
     <div class="pom-modal is-order-confirmed" data-order-modal hidden>
