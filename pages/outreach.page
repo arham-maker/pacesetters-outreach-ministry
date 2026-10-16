@@ -1,30 +1,30 @@
 <div class="pom-page pom-page-outreach">
-  <section class="pom-hero is-embrace" data-pom-region="outreach-hero">
+  <section class="pom-hero is-outreach-embrace" data-pom-region="outreach-hero">
     <div class="pom-hero-copy pom-fallback">
       <a class="pom-back" href="/services"><span class="pom-arrow is-back" aria-hidden="true"></span> Back to Services</a>
-      <h1>Community Outreach</h1>
-      <p class="pom-lede">Compassion and encouragement, close to home.</p>
+      <h1><span class="pom-hero-line">Community</span><br><span class="pom-hero-line">Outreach</span></h1>
+      <p class="pom-lede">Compassion and encouragement,<br>close to home.</p>
     </div>
     <div class="pom-cms"><squarespace:block-field id="outreach-hero" columns="12" /></div>
   </section>
 
-  <section class="pom-intro" data-pom-region="outreach-intro">
+  <section class="pom-intro is-outreach-intro" data-pom-region="outreach-intro">
     <div class="pom-fallback">
-      <div>
+      <div class="pom-intro-copy">
         <p class="pom-eyebrow">Our Outreach</p>
-        <h2>A light in our communities.</h2>
+        <h2>A light in<br>our communities.</h2>
       </div>
-      <div>
+      <div class="pom-intro-body">
         <p class="pom-prose">We reach people who are hurting, young people, and those experiencing homelessness—sharing God’s love through compassion and Christian encouragement.</p>
-        <p class="pom-prose">Serving Youngstown, Cleveland, and Pennsylvania for over 30 years.</p>
+        <p class="pom-prose is-strong">Serving Youngstown, Cleveland, and Pennsylvania for over 30 years.</p>
       </div>
     </div>
     <div class="pom-cms"><squarespace:block-field id="outreach-intro" columns="12" /></div>
   </section>
 
-  <section class="pom-reach" data-pom-region="outreach-who">
+  <section class="pom-reach is-outreach-who" data-pom-region="outreach-who">
     <div class="pom-fallback">
-      <div class="pom-media is-hands" role="img" aria-label="Hands stacked together"></div>
+      <div class="pom-media is-outreach-reach" role="img" aria-label="Hands stacked together"></div>
       <div class="pom-reach-list">
         <p class="pom-eyebrow">Who we reach</p>
         <article>
@@ -94,7 +94,7 @@
     <div class="pom-cms"><squarespace:block-field id="outreach-faq" columns="12" /></div>
   </section>
 
-  <section class="pom-contact is-crowd" data-pom-region="outreach-contact">
+  <section class="pom-contact is-crowd" id="get-in-touch" data-pom-region="outreach-contact">
     <div class="pom-fallback">
       <div class="pom-contact-copy">
         <p class="pom-eyebrow">Get in Touch</p>
@@ -109,7 +109,7 @@
         <div class="pom-field"><label for="outreach-name">Name</label><input id="outreach-name" name="name" type="text"></div>
         <div class="pom-field"><label for="outreach-email">Email</label><input id="outreach-email" name="email" type="email"></div>
         <div class="pom-field"><label for="outreach-message">Message</label><textarea id="outreach-message" name="message"></textarea></div>
-        <button class="pom-link" type="submit">Send Message <span class="pom-arrow is-ne" aria-hidden="true"></span></button>
+        <button class="pom-link" type="submit"><span class="pom-link-text">Send Message</span><span class="pom-arrow is-ne" aria-hidden="true"></span></button>
         <p class="pom-form-note" hidden>Thank you. Add a Squarespace Form block in this region to deliver messages.</p>
       </form>
     </div>
