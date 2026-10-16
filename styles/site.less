@@ -6273,6 +6273,38 @@ body.pom-modal-open { overflow: hidden; }
     padding: 48px 20px 36px;
   }
 
+  /* Global: desktop right-aligned blocks become left on mobile */
+  .pom-triptych .pom-fallback > .pom-panel:first-child,
+  .pom-triptych .pom-fallback > .pom-panel:first-child > div,
+  .pom-triptych .pom-eyebrow,
+  .pom-triptych .pom-panel h2,
+  .pom-split.is-dark.is-store .pom-split-copy,
+  .pom-split.is-dark.is-store .pom-split-copy h2,
+  .pom-split.is-dark.is-store .pom-split-copy p,
+  .pom-testimonials-intro,
+  .pom-faq-intro {
+    text-align: left !important;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+    margin-left: 0 !important;
+    white-space: normal !important;
+  }
+
+  .pom-split.is-dark.is-store .pom-link.is-end,
+  .pom-split-copy .pom-link.is-end {
+    align-self: flex-start !important;
+  }
+
+  .pom-hero-bars {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .pom-hero-bar {
+    width: 100%;
+    min-width: 0;
+  }
+
   /* Home mobile — match stacked Figma: left align, full-width CTAs */
   .pom-page-home .pom-hero {
     display: flex;
