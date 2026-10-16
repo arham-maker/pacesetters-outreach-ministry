@@ -113,23 +113,32 @@
   });
 
   Array.prototype.forEach.call(document.querySelectorAll("[data-filters]"), function (bar) {
-    var grid = document.querySelector("[data-product-grid]");
-    if (!grid) {
-      return;
-    }
     bar.addEventListener("click", function (event) {
       var button = event.target.closest("[data-filter]");
-      if (!button) {
+      if (!button || !bar.contains(button)) {
         return;
       }
-      var filter = button.getAttribute("data-filter");
+      event.preventDefault();
+      var filter = (button.getAttribute("data-filter") || "all").toLowerCase();
+      var scope = bar.parentNode || document;
+      var grid =
+        scope.querySelector("[data-product-grid]") ||
+        document.querySelector("[data-product-grid]");
+      if (!grid) {
+        return;
+      }
       Array.prototype.forEach.call(bar.querySelectorAll("[data-filter]"), function (tab) {
         tab.classList.toggle("is-active", tab === button);
       });
       Array.prototype.forEach.call(grid.querySelectorAll("[data-category]"), function (card) {
         var category = (card.getAttribute("data-category") || "").toLowerCase();
-        var show = filter === "all" || category.indexOf(filter) !== -1;
+        var show =
+          filter === "all" ||
+          category === filter ||
+          category.indexOf(filter) !== -1 ||
+          filter.indexOf(category) !== -1;
         card.hidden = !show;
+        card.classList.toggle("is-filtered-out", !show);
       });
     });
   });
