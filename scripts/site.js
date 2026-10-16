@@ -170,6 +170,48 @@
     });
   });
 
+  function money(n) {
+    return "$" + Number(n).toFixed(2);
+  }
+
+  function pad2(n) {
+    return n < 10 ? "0" + n : String(n);
+  }
+
+  function syncOrderSummary(page) {
+    var productView = page.querySelector("[data-product-view]");
+    var orderView = page.querySelector("[data-order-view]");
+    if (!orderView) {
+      return;
+    }
+    var qtyInput = productView ? productView.querySelector("[data-qty] input") : null;
+    var qty = Math.max(1, parseInt(qtyInput && qtyInput.value, 10) || 1);
+    var unit = parseFloat(orderView.getAttribute("data-unit-price") || "0") || 0;
+    var ship = parseFloat(orderView.getAttribute("data-shipping") || "4") || 0;
+    var sub = unit * qty;
+    var total = sub + ship;
+    var qtyEl = orderView.querySelector("[data-order-qty]");
+    var subEl = orderView.querySelector("[data-order-subtotal]");
+    var shipEl = orderView.querySelector("[data-order-shipping]");
+    var totalEl = orderView.querySelector("[data-order-total]");
+    var payEl = orderView.querySelector("[data-order-pay]");
+    if (qtyEl) {
+      qtyEl.textContent = "Quantity : " + pad2(qty);
+    }
+    if (subEl) {
+      subEl.textContent = money(sub);
+    }
+    if (shipEl) {
+      shipEl.textContent = money(ship);
+    }
+    if (totalEl) {
+      totalEl.textContent = money(total);
+    }
+    if (payEl) {
+      payEl.textContent = "Pay " + money(total);
+    }
+  }
+
   Array.prototype.forEach.call(document.querySelectorAll("[data-product-page]"), function (page) {
     var productView = page.querySelector("[data-product-view]");
     var orderView = page.querySelector("[data-order-view]");
@@ -178,7 +220,9 @@
     }
     function showOrder(on) {
       page.classList.toggle("is-ordering", on);
+      body.classList.toggle("pom-is-ordering", on);
       if (on) {
+        syncOrderSummary(page);
         orderView.hidden = false;
         productView.hidden = true;
         window.scrollTo(0, 0);
@@ -189,7 +233,7 @@
         orderView.hidden = true;
         productView.hidden = false;
         if (window.history && window.history.replaceState) {
-          window.history.replaceState(null, "", window.location.pathname);
+          window.history.replaceState(null, "", window.location.pathname + window.location.search);
         }
       }
     }
@@ -220,6 +264,10 @@
     function setQty(next) {
       var value = Math.max(1, parseInt(next, 10) || 1);
       input.value = String(value);
+      var page = wrap.closest("[data-product-page]");
+      if (page) {
+        syncOrderSummary(page);
+      }
     }
     if (minus) {
       minus.addEventListener("click", function () {
@@ -236,7 +284,21 @@
   Array.prototype.forEach.call(document.querySelectorAll("[data-checkout-form]"), function (form) {
     form.addEventListener("submit", function (event) {
       event.preventDefault();
-      var modal = document.querySelector("[data-order-modal]");
+      var error = form.querySelector("[data-checkout-error]");
+      if (!form.checkValidity()) {
+        if (error) {
+          error.hidden = false;
+        }
+        if (form.reportValidity) {
+          form.reportValidity();
+        }
+        return;
+      }
+      if (error) {
+        error.hidden = true;
+      }
+      var scope = form.closest("[data-order-view]") || form.closest(".pom-page-checkout") || document;
+      var modal = scope.querySelector("[data-order-modal]");
       if (modal) {
         modal.hidden = false;
         body.classList.add("pom-modal-open");
@@ -244,14 +306,11 @@
     });
   });
 
-  Array.prototype.forEach.call(document.querySelectorAll("[data-modal-close], [data-order-modal]"), function (el) {
-    el.addEventListener("click", function (event) {
-      if (el.hasAttribute("data-modal-close") || event.target === el) {
-        var modal = document.querySelector("[data-order-modal]");
-        if (modal) {
-          modal.hidden = true;
-          body.classList.remove("pom-modal-open");
-        }
+  Array.prototype.forEach.call(document.querySelectorAll("[data-order-modal]"), function (modal) {
+    modal.addEventListener("click", function (event) {
+      if (event.target === modal || event.target.closest("[data-modal-close]")) {
+        modal.hidden = true;
+        body.classList.remove("pom-modal-open");
       }
     });
   });

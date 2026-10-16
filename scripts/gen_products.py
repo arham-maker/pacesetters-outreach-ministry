@@ -134,7 +134,7 @@ def checkout_html(p: dict) -> str:
     s = p["slug"]
     sub = price_num(p)
     total = sub + SHIPPING
-    return f"""  <div class="pom-page-checkout" data-order-view hidden id="order">
+    return f"""  <div class="pom-page-checkout" data-order-view hidden id="order" data-unit-price="{sub:.2f}" data-shipping="{SHIPPING:.2f}">
     <section class="pom-checkout" data-pom-region="{s}-checkout">
       <div class="pom-fallback">
         <div class="pom-checkout-main">
@@ -142,7 +142,7 @@ def checkout_html(p: dict) -> str:
           <h1>Checkout</h1>
           <p class="pom-lede">Complete your order and bring encouragement home.</p>
 
-          <form class="pom-checkout-form" data-checkout-form>
+          <form class="pom-checkout-form" data-checkout-form novalidate>
             <div class="pom-checkout-section">
               <h2><span>01</span> Contact details</h2>
               <div class="pom-field"><label for="{s}-chk-name">Name</label><input id="{s}-chk-name" name="name" type="text" autocomplete="name" required></div>
@@ -168,15 +168,16 @@ def checkout_html(p: dict) -> str:
               <h2><span>03</span> Payment details</h2>
               <div class="pom-field"><label for="{s}-chk-card">Card number</label><input id="{s}-chk-card" name="card" type="text" inputmode="numeric" autocomplete="cc-number" required></div>
               <div class="pom-field-row">
-                <div class="pom-field"><label for="{s}-chk-exp">MM / YY</label><input id="{s}-chk-exp" name="exp" type="text" autocomplete="cc-exp" required></div>
-                <div class="pom-field"><label for="{s}-chk-cvc">CVC</label><input id="{s}-chk-cvc" name="cvc" type="text" autocomplete="cc-csc" required></div>
+                <div class="pom-field"><label for="{s}-chk-exp">MM / YY</label><input id="{s}-chk-exp" name="exp" type="text" autocomplete="cc-exp" placeholder="MM / YY" required></div>
+                <div class="pom-field"><label for="{s}-chk-cvc">CVC</label><input id="{s}-chk-cvc" name="cvc" type="text" inputmode="numeric" autocomplete="cc-csc" required></div>
               </div>
               <div class="pom-field"><label for="{s}-chk-cardname">Name on card</label><input id="{s}-chk-cardname" name="cardName" type="text" autocomplete="cc-name" required></div>
               <p class="pom-secure"><span class="pom-meta-icon is-lock" aria-hidden="true"></span> Your payment details are encrypted.</p>
               <label class="pom-check"><input type="checkbox" name="terms" required checked><span>I agree to the Terms &amp; Conditions and Privacy Policy.</span></label>
             </div>
 
-            <button class="pom-btn-dark" type="submit"><span class="pom-link-text">Pay {money(total)}</span><span class="pom-arrow is-ne" aria-hidden="true"></span></button>
+            <button class="pom-btn-dark" type="submit"><span class="pom-link-text" data-order-pay>Pay {money(total)}</span><span class="pom-arrow is-ne" aria-hidden="true"></span></button>
+            <p class="pom-form-error" data-checkout-error hidden>Please fill in all required fields to continue.</p>
           </form>
         </div>
 
@@ -186,15 +187,15 @@ def checkout_html(p: dict) -> str:
           <p class="pom-product-cat">{p['cat']}</p>
           <div class="pom-media is-checkout-item is-product-{p['img']}" role="img" aria-label="{p['title'].replace('&amp;', 'and')}"></div>
           <div class="pom-summary-row">
-            <span>Quantity : 01</span>
+            <span data-order-qty>Quantity : 01</span>
             <button class="pom-edit" type="button" data-back-product>Edit</button>
           </div>
           <div class="pom-summary-lines">
-            <div><span>Subtotal</span><strong>{p['price']}</strong></div>
-            <div><span>Shipping</span><strong>{money(SHIPPING)}</strong></div>
+            <div><span>Subtotal</span><strong data-order-subtotal>{p['price']}</strong></div>
+            <div><span>Shipping</span><strong data-order-shipping>{money(SHIPPING)}</strong></div>
             <div><span>Tax</span><strong>$0.00</strong></div>
           </div>
-          <div class="pom-summary-total"><span>Total</span><strong>{money(total)}</strong></div>
+          <div class="pom-summary-total"><span>Total</span><strong data-order-total>{money(total)}</strong></div>
           <p class="pom-summary-note">Thank you for supporting Pacesetters Outreach Ministry.</p>
           <p class="pom-summary-help">Need help with your order? <a href="/contact">Contact us</a></p>
         </aside>

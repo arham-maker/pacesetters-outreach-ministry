@@ -5519,7 +5519,37 @@ body[class*="cart"] ,
 }
 
 .pom-page-product .pom-page-checkout {
-  background: @paper;
+  background: #fefefe;
+}
+
+.pom-page-product.is-ordering .pom-page-checkout .pom-checkout {
+  padding-top: 48px;
+}
+
+.pom-page-checkout .pom-field label {
+  font-size: 18px;
+  line-height: 26px;
+  margin-bottom: 10px;
+  color: @contact-muted;
+}
+
+.pom-page-checkout .pom-field input {
+  border-bottom-color: rgba(38, 38, 37, 0.22) !important;
+  font-size: 20px;
+  line-height: 28px;
+  padding: 10px 0 14px;
+}
+
+.pom-page-checkout .pom-field input:focus {
+  border-bottom-color: @ink !important;
+}
+
+.pom-page-checkout .pom-form-error {
+  margin: 16px 0 0;
+  font-family: @font-display;
+  font-size: 16px;
+  line-height: 24px;
+  color: #a33;
 }
 
 .pom-page-product .pom-page-checkout .pom-back.is-ink,
