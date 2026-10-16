@@ -12,6 +12,15 @@
     body.classList.add("pom-has-plain");
   }
 
+  var path = (window.location.pathname || "").replace(/\/+$/, "") || "/";
+  if (
+    path === "/cart" ||
+    /cart/i.test(body.className) ||
+    document.querySelector(".cart-container, .sqs-cart-page, #cart, .empty-message, .cart-empty")
+  ) {
+    body.classList.add("pom-has-cart");
+  }
+
   var toggle = document.querySelector(".pom-menu-toggle");
   var drawer = document.getElementById("pom-drawer");
   if (toggle && drawer) {
@@ -122,6 +131,42 @@
         note.hidden = false;
       }
       form.reset();
+    });
+  });
+
+  Array.prototype.forEach.call(document.querySelectorAll("[data-gallery]"), function (gallery) {
+    var slides = gallery.querySelectorAll("[data-slide]");
+    var dotsWrap = gallery.querySelector("[data-gallery-dots]");
+    var dots = dotsWrap ? dotsWrap.querySelectorAll("[data-dot]") : [];
+    if (!slides.length) {
+      return;
+    }
+    var index = 0;
+    function show(next) {
+      index = (next + slides.length) % slides.length;
+      Array.prototype.forEach.call(slides, function (slide, i) {
+        slide.classList.toggle("is-active", i === index);
+      });
+      Array.prototype.forEach.call(dots, function (dot, i) {
+        dot.classList.toggle("is-active", i === index);
+      });
+    }
+    var prev = gallery.querySelector("[data-gallery-prev]");
+    var next = gallery.querySelector("[data-gallery-next]");
+    if (prev) {
+      prev.addEventListener("click", function () {
+        show(index - 1);
+      });
+    }
+    if (next) {
+      next.addEventListener("click", function () {
+        show(index + 1);
+      });
+    }
+    Array.prototype.forEach.call(dots, function (dot) {
+      dot.addEventListener("click", function () {
+        show(parseInt(dot.getAttribute("data-dot"), 10) || 0);
+      });
     });
   });
 

@@ -6,15 +6,17 @@
   </section>
 
   <section class="pom-product-main">
-    <div class="pom-product-gallery">
-      <div class="pom-media is-product-main">
+    <div class="pom-product-gallery" data-gallery>
+      <div class="pom-media is-product-main is-active" data-slide="0">
         {.section assetUrl}<img src="{assetUrl}?format=1500w" alt="{title}">{.or}<span class="pom-sr">Product image</span>{.end}
       </div>
-      <div class="pom-gallery-nav" aria-hidden="true">
-        <button class="pom-icon-btn is-prev" type="button" aria-label="Previous image"><span class="pom-arrow"></span></button>
-        <button class="pom-icon-btn is-next" type="button" aria-label="Next image"><span class="pom-arrow"></span></button>
+      <div class="pom-media is-product-p02" data-slide="1" role="img" aria-label="Related product image"></div>
+      <div class="pom-media is-product-p03" data-slide="2" role="img" aria-label="Related product image"></div>
+      <div class="pom-gallery-nav">
+        <button class="pom-icon-btn is-prev" type="button" data-gallery-prev aria-label="Previous image"><span class="pom-arrow"></span></button>
+        <button class="pom-icon-btn is-next" type="button" data-gallery-next aria-label="Next image"><span class="pom-arrow"></span></button>
       </div>
-      <div class="pom-gallery-dots" aria-hidden="true"><span class="is-active"></span><span></span></div>
+      <div class="pom-gallery-dots" data-gallery-dots><span class="is-active" data-dot="0"></span><span data-dot="1"></span><span data-dot="2"></span></div>
     </div>
     <div class="pom-product-info">
       <p class="pom-eyebrow">{.section tags}{tags}{.or}Music &amp; CDs{.end}</p>
@@ -28,7 +30,7 @@
           <button type="button" data-qty-plus aria-label="Increase quantity">+</button>
         </div>
       </div>
-      <a class="pom-btn-dark" href="/checkout"><span class="pom-link-text">Buy Now</span><span class="pom-arrow is-ne" aria-hidden="true"></span></a>
+      <a class="pom-btn-dark" href="/order"><span class="pom-link-text">Buy Now</span><span class="pom-arrow is-ne" aria-hidden="true"></span></a>
       <div class="pom-add sqs-add-to-cart-button-wrapper" data-item-id="{id}">
         <div class="sqs-add-to-cart-button">Add to Cart</div>
       </div>

@@ -99,8 +99,31 @@ def related_html(current_slug: str) -> str:
     return "\n".join(bits)
 
 
+def gallery_slides(p: dict) -> str:
+    imgs = [p["img"]]
+    for o in PRODUCTS:
+        if o["img"] not in imgs:
+            imgs.append(o["img"])
+        if len(imgs) >= 3:
+            break
+    slides = []
+    dots = []
+    for i, img in enumerate(imgs):
+        active = " is-active" if i == 0 else ""
+        dot_class = "is-active" if i == 0 else ""
+        slides.append(
+            f'      <div class="pom-media is-product-{img}{active}" data-slide="{i}" role="img" aria-label="{p["title"].replace("&amp;", "and")} image {i + 1}"></div>'
+        )
+        if dot_class:
+            dots.append(f'<span class="{dot_class}" data-dot="{i}"></span>')
+        else:
+            dots.append(f'<span data-dot="{i}"></span>')
+    return "\n".join(slides), "".join(dots)
+
+
 def page_html(p: dict) -> str:
     related = related_html(p["slug"])
+    slides, dots = gallery_slides(p)
     return f"""<div class="pom-page pom-page-product">
   <section class="pom-product-head">
     <a class="pom-back is-ink" href="/store"><span class="pom-arrow is-back" aria-hidden="true"></span> Back to Store</a>
@@ -109,13 +132,13 @@ def page_html(p: dict) -> str:
   </section>
 
   <section class="pom-product-main">
-    <div class="pom-product-gallery">
-      <div class="pom-media is-product-{p['img']}" role="img" aria-label="{p['title'].replace('&amp;', 'and')}"></div>
-      <div class="pom-gallery-nav" aria-hidden="true">
-        <button class="pom-icon-btn is-prev" type="button" aria-label="Previous image"><span class="pom-arrow"></span></button>
-        <button class="pom-icon-btn is-next" type="button" aria-label="Next image"><span class="pom-arrow"></span></button>
+    <div class="pom-product-gallery" data-gallery>
+{slides}
+      <div class="pom-gallery-nav">
+        <button class="pom-icon-btn is-prev" type="button" data-gallery-prev aria-label="Previous image"><span class="pom-arrow"></span></button>
+        <button class="pom-icon-btn is-next" type="button" data-gallery-next aria-label="Next image"><span class="pom-arrow"></span></button>
       </div>
-      <div class="pom-gallery-dots" aria-hidden="true"><span class="is-active"></span><span></span></div>
+      <div class="pom-gallery-dots" data-gallery-dots>{dots}</div>
     </div>
     <div class="pom-product-info">
       <p class="pom-eyebrow">{p['cat']}</p>
@@ -129,7 +152,7 @@ def page_html(p: dict) -> str:
           <button type="button" data-qty-plus aria-label="Increase quantity">+</button>
         </div>
       </div>
-      <a class="pom-btn-dark" href="/checkout"><span class="pom-link-text">Buy Now</span><span class="pom-arrow is-ne" aria-hidden="true"></span></a>
+      <a class="pom-btn-dark" href="/order"><span class="pom-link-text">Buy Now</span><span class="pom-arrow is-ne" aria-hidden="true"></span></a>
     </div>
   </section>
 
