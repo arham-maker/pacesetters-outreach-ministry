@@ -3581,11 +3581,196 @@ body.pom-has-cart .sqs-editable-button {
   pointer-events: auto;
 }
 
+/* Squarespace Form block → match designed contact form */
 .pom-form-card .sqs-block-form,
 .pom-form-stack .sqs-block-form,
 .pom-form-card .form-wrapper,
+.pom-form-stack .form-wrapper,
+.pom-form-card .sqs-block,
+.pom-form-stack .sqs-block {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+.pom-form-card.has-cms,
+.pom-form-stack.has-cms {
+  background: #fff;
+  box-shadow: 0 12px 40px rgba(38, 38, 37, 0.1);
+}
+
+.pom-form-card .form-wrapper,
 .pom-form-stack .form-wrapper {
-  width: 100%;
+  font-family: @font-display !important;
+  color: @ink !important;
+}
+
+.pom-form-card .form-wrapper .form-title,
+.pom-form-stack .form-wrapper .form-title,
+.pom-form-card .form-wrapper .title,
+.pom-form-stack .form-wrapper .title {
+  display: none !important;
+}
+
+.pom-form-card .form-wrapper .field-list .field,
+.pom-form-stack .form-wrapper .field-list .field,
+.pom-form-card .field-list .form-item,
+.pom-form-stack .field-list .form-item {
+  margin: 0 0 32px !important;
+  padding: 0 !important;
+  float: none !important;
+  width: 100% !important;
+  clear: both !important;
+}
+
+.pom-form-card .form-wrapper .field-list .field .title,
+.pom-form-stack .form-wrapper .field-list .field .title,
+.pom-form-card .form-wrapper .field-list .field .caption,
+.pom-form-stack .form-wrapper .field-list .field .caption,
+.pom-form-card .form-wrapper .field-list .caption,
+.pom-form-stack .form-wrapper .field-list .caption {
+  display: block !important;
+  float: none !important;
+  margin: 0 0 14px !important;
+  padding: 0 !important;
+  font-family: @font-display !important;
+  font-size: 16px !important;
+  line-height: 1.4 !important;
+  font-weight: 400 !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+  color: @ink !important;
+}
+
+.pom-form-card .form-wrapper .field-list .field .field-element,
+.pom-form-stack .form-wrapper .field-list .field .field-element,
+.pom-form-card .form-wrapper input[type="text"],
+.pom-form-card .form-wrapper input[type="email"],
+.pom-form-card .form-wrapper input[type="tel"],
+.pom-form-card .form-wrapper input[type="number"],
+.pom-form-card .form-wrapper textarea,
+.pom-form-stack .form-wrapper input[type="text"],
+.pom-form-stack .form-wrapper input[type="email"],
+.pom-form-stack .form-wrapper input[type="tel"],
+.pom-form-stack .form-wrapper input[type="number"],
+.pom-form-stack .form-wrapper textarea {
+  display: block !important;
+  width: 100% !important;
+  max-width: none !important;
+  min-height: 40px !important;
+  margin: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  border-bottom: 1px solid @gold-figma !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  padding: 8px 0 14px !important;
+  outline: none !important;
+  font-family: @font-display !important;
+  font-size: 16px !important;
+  line-height: 1.4 !important;
+  color: @ink !important;
+  -webkit-appearance: none !important;
+  appearance: none !important;
+}
+
+.pom-form-card .form-wrapper textarea,
+.pom-form-stack .form-wrapper textarea {
+  min-height: 120px !important;
+  resize: none !important;
+}
+
+.pom-form-card .form-wrapper .field-list .field .field-element:focus,
+.pom-form-stack .form-wrapper .field-list .field .field-element:focus,
+.pom-form-card .form-wrapper input:focus,
+.pom-form-card .form-wrapper textarea:focus,
+.pom-form-stack .form-wrapper input:focus,
+.pom-form-stack .form-wrapper textarea:focus {
+  border-bottom-color: @ink !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.pom-form-card .form-wrapper .field-list .description,
+.pom-form-stack .form-wrapper .field-list .description,
+.pom-form-card .form-wrapper .field-list .caption-wrapper,
+.pom-form-stack .form-wrapper .field-list .caption-wrapper {
+  font-family: @font-display !important;
+  font-size: 13px !important;
+  color: @ink-soft !important;
+}
+
+.pom-form-card .form-wrapper .form-button-wrapper,
+.pom-form-stack .form-wrapper .form-button-wrapper,
+.pom-form-card .form-wrapper .field-list + .form-button-wrapper,
+.pom-form-stack .form-wrapper .field-list + .form-button-wrapper {
+  display: flex !important;
+  justify-content: flex-end !important;
+  margin: 8px 0 0 !important;
+  padding: 0 !important;
+  text-align: right !important;
+}
+
+.pom-form-card .form-wrapper input[type="submit"],
+.pom-form-stack .form-wrapper input[type="submit"],
+.pom-form-card .form-wrapper button[type="submit"],
+.pom-form-stack .form-wrapper button[type="submit"],
+.pom-form-card .form-wrapper .sqs-system-button,
+.pom-form-stack .form-wrapper .sqs-system-button,
+.pom-form-card .form-wrapper .button.sqs-system-button,
+.pom-form-stack .form-wrapper .button.sqs-system-button {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: auto !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  font-family: @font-display !important;
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+  text-decoration: underline !important;
+  text-underline-offset: 5px !important;
+  color: @ink !important;
+  cursor: pointer !important;
+}
+
+.pom-form-card .form-wrapper input[type="submit"]:hover,
+.pom-form-stack .form-wrapper input[type="submit"]:hover,
+.pom-form-card .form-wrapper .sqs-system-button:hover,
+.pom-form-stack .form-wrapper .sqs-system-button:hover {
+  opacity: 0.72 !important;
+  background: transparent !important;
+  color: @ink !important;
+}
+
+.pom-form-stack.has-cms {
+  background: #fff;
+  padding: 48px 40px !important;
+  box-sizing: border-box;
+}
+
+.pom-form-card .form-wrapper .field.error .field-element,
+.pom-form-stack .form-wrapper .field.error .field-element {
+  border-bottom-color: #a33 !important;
+}
+
+.pom-form-card .form-wrapper .form-submission-text,
+.pom-form-stack .form-wrapper .form-submission-text {
+  font-family: @font-display !important;
+  font-size: 16px !important;
+  color: @ink !important;
 }
 
 .pom-contact > .pom-cms {
