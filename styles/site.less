@@ -3476,11 +3476,27 @@ body.pom-has-cart .sqs-editable-button {
     ~"linear-gradient(90deg, rgba(247, 244, 237, 0.78) 0%, rgba(247, 244, 237, 0.52) 42%, rgba(247, 244, 237, 0.22) 100%)";
 }
 
-.pom-contact > .pom-fallback,
-.pom-page-product .pom-contact {
+.pom-contact > .pom-fallback {
   display: grid !important;
   grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
   gap: 72px;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.pom-page-product .pom-contact {
+  display: block;
+  width: 100%;
+}
+
+.pom-page-product .pom-contact > .pom-fallback {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  gap: 64px;
   align-items: center;
   position: relative;
   z-index: 2;
@@ -5363,10 +5379,7 @@ body[class*="cart"] ,
 }
 
 .pom-page-product .pom-contact {
-  display: grid !important;
-  grid-template-columns: 1fr 1fr;
-  gap: 64px;
-  align-items: center;
+  display: block;
 }
 
 .pom-product-head {
@@ -6648,10 +6661,16 @@ body.pom-modal-open { overflow: hidden; }
 
   .pom-contact > .pom-fallback,
   .pom-page-home .pom-contact > .pom-fallback,
-  .pom-page-product .pom-contact {
-    padding: 0 !important;
+  .pom-page-product .pom-contact > .pom-fallback {
+    display: flex !important;
+    flex-direction: column !important;
+    grid-template-columns: none !important;
     gap: 28px !important;
     align-items: stretch !important;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
 
   .pom-contact-copy,
@@ -6666,12 +6685,14 @@ body.pom-modal-open { overflow: hidden; }
 
   .pom-contact-meta {
     justify-content: flex-start !important;
+    flex-wrap: wrap !important;
   }
 
   .pom-form-card {
     width: 100% !important;
     max-width: none !important;
     justify-self: stretch !important;
+    margin-left: 0 !important;
     padding: 32px 20px !important;
     box-sizing: border-box;
   }
@@ -6683,17 +6704,21 @@ body.pom-modal-open { overflow: hidden; }
     padding-right: 0;
   }
 
-  /* About / Services / Events / Outreach / Prayer / Contact mobile */
+  /* Constant banner size across pages */
+  .pom-hero,
+  .pom-page-home .pom-hero,
   .pom-page-about .pom-hero,
   .pom-page-services .pom-hero,
   .pom-page-events .pom-hero,
   .pom-page-outreach .pom-hero,
   .pom-page-prayer .pom-hero,
-  .pom-page-contact .pom-hero {
+  .pom-page-contact .pom-hero,
+  .pom-page-store .pom-hero {
     height: auto !important;
-    min-height: 70svh;
+    min-height: 70svh !important;
     padding: 120px 20px 40px !important;
-    align-items: flex-end;
+    align-items: flex-end !important;
+    box-sizing: border-box;
   }
 
   .pom-page-about .pom-hero h1,
@@ -6839,5 +6864,136 @@ body.pom-modal-open { overflow: hidden; }
 
   .pom-modal.is-order-confirmed .pom-modal-card {
     max-width: calc(100% - 40px);
+  }
+
+  /* Global mobile: every right-aligned block → left; uniform 20px section pad */
+  .pom-page [class*="pom-"],
+  .pom-page .pom-eyebrow,
+  .pom-page h1,
+  .pom-page h2,
+  .pom-page h3,
+  .pom-page p,
+  .pom-page .pom-lede,
+  .pom-page .pom-prose,
+  .pom-page .pom-split-copy,
+  .pom-page .pom-intro-copy,
+  .pom-page .pom-intro-body,
+  .pom-page .pom-panel,
+  .pom-page .pom-testimonials-intro,
+  .pom-page .pom-faq-intro,
+  .pom-page .pom-contact-copy,
+  .pom-page .pom-contact-info,
+  .pom-page .pom-about-purpose,
+  .pom-page .pom-reach-copy,
+  .pom-legal-page {
+    text-align: left !important;
+  }
+
+  .pom-page .pom-split-copy,
+  .pom-page .pom-intro-copy,
+  .pom-page .pom-panel,
+  .pom-page .pom-testimonials-intro,
+  .pom-page .pom-faq-intro,
+  .pom-page .pom-contact-copy,
+  .pom-page .pom-contact-info,
+  .pom-page .pom-about-purpose,
+  .pom-page .pom-triptych .pom-fallback > .pom-panel:first-child,
+  .pom-page .pom-triptych .pom-fallback > .pom-panel:last-child {
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+  }
+
+  .pom-page .pom-contact-meta,
+  .pom-page .pom-quote-nav,
+  .pom-page .pom-hero-bars {
+    justify-content: flex-start !important;
+  }
+
+  .pom-page h1,
+  .pom-page h2,
+  .pom-page .pom-lede,
+  .pom-page .pom-contact-lead,
+  .pom-page .pom-split-copy > p,
+  .pom-page .pom-intro-copy > div,
+  .pom-page .pom-testimonials-intro > div,
+  .pom-page .pom-faq-intro > div {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    max-width: none !important;
+    white-space: normal !important;
+  }
+
+  /* Outer sections only — 20px sides, no nested doubles */
+  .pom-triptych .pom-fallback > .pom-panel:first-child,
+  .pom-triptych .pom-fallback > .pom-panel:last-child,
+  .pom-split .pom-split-copy,
+  .pom-intro,
+  .pom-reach,
+  .pom-expect,
+  .pom-join,
+  .pom-event-block,
+  .pom-eventbar,
+  .pom-about-purpose,
+  .pom-points,
+  .pom-page-store .pom-intro,
+  .pom-page-store .pom-cats.is-store-cats,
+  .pom-page-store .pom-store-grid,
+  .pom-page-store .pom-points.is-store-encourage,
+  .pom-page-product .pom-product-head,
+  .pom-page-product .pom-product-main,
+  .pom-page-product .pom-product-about,
+  .pom-page-product .pom-related,
+  .pom-contact,
+  .pom-page-home .pom-contact,
+  .pom-page-product .pom-contact,
+  .pom-testimonials,
+  .pom-faq,
+  .pom-contact-page,
+  .pom-page-checkout .pom-checkout,
+  .pom-page-checkout .pom-checkout-summary {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    box-sizing: border-box;
+  }
+
+  /* Inners: horizontal pad comes from parent section */
+  .pom-testimonials-intro,
+  .pom-faq-intro,
+  .pom-quote-wrap,
+  .pom-faq-list,
+  .pom-contact > .pom-fallback,
+  .pom-page-product .pom-contact > .pom-fallback,
+  .pom-page-home .pom-contact > .pom-fallback,
+  .pom-intro > .pom-fallback,
+  .pom-reach > .pom-fallback,
+  .pom-join > .pom-fallback,
+  .pom-reach-list,
+  .pom-page-store .pom-intro > .pom-fallback,
+  .pom-page-store .pom-store-grid > .pom-fallback,
+  .pom-page-store .pom-store-head,
+  .pom-page-store .pom-filters,
+  .pom-page-store .pom-products,
+  .pom-page-store .pom-cats.is-store-cats > .pom-fallback,
+  .pom-page-store .pom-points.is-store-encourage > .pom-fallback {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .pom-hero-copy {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  /* Home hero bars keep their own 20px text inset */
+  .pom-page-home .pom-hero {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .pom-page-home .pom-hero-copy {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
   }
 }
