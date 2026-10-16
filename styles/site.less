@@ -935,8 +935,203 @@ a.pom-join-btn {
   width: auto;
 }
 
-.pom-page-prayer .pom-hero {
-  padding: 180px @gutter 88px;
+/* Prayer & Encouragement / Services 2 — Figma 702:441 */
+.pom-page-prayer .pom-hero.is-prayer-bible {
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 50px;
+  background-image: ~'url("/assets/prayer/prayer-hero.png")';
+  background-position: center center;
+  background-size: cover;
+}
+
+.pom-page-prayer .pom-hero.is-prayer-bible:before {
+  background:
+    ~"linear-gradient(89.87deg, rgb(12, 9, 9) 0%, rgba(12, 9, 9, 0) 53.2%)",
+    ~"linear-gradient(89.38deg, rgba(59, 51, 42, 0) 83.4%, rgb(59, 51, 42) 99.7%)";
+}
+
+.pom-page-prayer .pom-hero-copy {
+  max-width: 900px;
+  width: max-content;
+}
+
+.pom-page-prayer .pom-hero .pom-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  font-family: @font-display;
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 400;
+  color: #f0e5d3;
+  text-decoration: none;
+}
+
+.pom-page-prayer .pom-hero .pom-back .pom-arrow,
+.pom-page-prayer .pom-hero .pom-back .pom-arrow.is-back {
+  width: 14px !important;
+  height: 14px !important;
+  flex: 0 0 14px;
+  border: 0 !important;
+  background: currentColor !important;
+  -webkit-mask: ~'url("/assets/arrow-ne.svg") center / contain no-repeat' !important;
+  mask: ~'url("/assets/arrow-ne.svg") center / contain no-repeat' !important;
+  transform: rotate(-135deg) !important;
+}
+
+.pom-page-prayer .pom-hero h1 {
+  font-family: @font-display !important;
+  font-weight: 400;
+  font-size: 90px;
+  line-height: 90px;
+  letter-spacing: 0;
+  max-width: none;
+  width: max-content;
+  color: #fefefe;
+  margin: 0;
+}
+
+.pom-page-prayer .pom-hero-line {
+  white-space: nowrap;
+}
+
+.pom-page-prayer .pom-hero .pom-lede {
+  font-family: @font-display;
+  font-size: 40px;
+  line-height: 48px;
+  font-weight: 400;
+  letter-spacing: 0;
+  color: #fefefe;
+  max-width: 662px;
+  margin-top: 20px;
+}
+
+.pom-page-prayer .pom-split.is-prayer-alone {
+  display: grid;
+  grid-template-columns: 670px 1fr;
+  gap: 50px;
+  min-height: 500px;
+  padding: 0 0 0 50px;
+  background: #fefefe;
+  align-items: center;
+  font-family: @font-display;
+}
+
+.pom-page-prayer .pom-split.is-prayer-alone > .pom-fallback {
+  display: contents;
+}
+
+.pom-page-prayer .pom-split.is-prayer-alone .pom-split-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  text-align: right;
+  gap: 10px;
+  padding: 48px 0;
+}
+
+.pom-page-prayer .pom-split.is-prayer-alone h2 {
+  font-family: @font-display !important;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 56px;
+  letter-spacing: 0;
+  color: @ink !important;
+  margin: 0;
+  text-align: right;
+  max-width: none;
+}
+
+.pom-page-prayer .pom-split.is-prayer-alone .pom-split-copy > p {
+  font-family: @font-display;
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 400;
+  color: @contact-muted !important;
+  margin: 0;
+  text-align: right;
+  max-width: none;
+}
+
+.pom-page-prayer .pom-split.is-prayer-alone .pom-media.is-prayer-alone {
+  min-height: 500px;
+  height: 500px;
+  background-image: ~'url("/assets/prayer/prayer-alone.png")';
+  background-position: center center;
+  background-size: cover;
+}
+
+.pom-page-prayer .pom-reach.is-prayer-support {
+  display: grid;
+  grid-template-columns: 665px 1fr;
+  min-height: 500px;
+  background: @cream;
+  font-family: @font-display;
+  align-items: stretch;
+}
+
+.pom-page-prayer .pom-reach.is-prayer-support > .pom-fallback {
+  display: contents;
+}
+
+.pom-page-prayer .pom-reach.is-prayer-support .pom-media.is-prayer-support {
+  min-height: 500px;
+  height: 100%;
+  background-image: ~'url("/assets/prayer/prayer-support.png")';
+  background-position: center center;
+  background-size: cover;
+}
+
+.pom-page-prayer .pom-reach.is-prayer-support .pom-reach-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  padding: 65px 55px 65px 50px;
+}
+
+.pom-page-prayer .pom-reach.is-prayer-support .pom-eyebrow {
+  font-family: @font-display;
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  color: @gold-figma;
+  margin: 0 0 30px;
+}
+
+.pom-page-prayer .pom-reach.is-prayer-support article {
+  padding: 0 0 20px;
+  border-top: 0;
+  border-bottom: 1px solid @gold-figma;
+}
+
+.pom-page-prayer .pom-reach.is-prayer-support article:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.pom-page-prayer .pom-reach.is-prayer-support h3 {
+  font-family: @font-display !important;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: 0;
+  color: @ink !important;
+  margin: 0;
+}
+
+.pom-page-prayer .pom-reach.is-prayer-support p {
+  font-family: @font-display;
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 400;
+  color: @contact-muted;
+  margin: 0;
 }
 
 /* Community Outreach / Services 1 — Figma 701:227 */
@@ -3896,6 +4091,75 @@ section.pom-join.is-tan {
     line-height: 32px;
   }
   .pom-page-outreach .pom-reach.is-outreach-who p {
+    font-size: 18px;
+    line-height: 26px;
+  }
+  .pom-page-prayer .pom-hero.is-prayer-bible {
+    align-items: flex-end;
+    padding: 140px 24px 48px;
+    height: auto;
+    min-height: 680px;
+  }
+  .pom-page-prayer .pom-hero-copy { width: auto; max-width: 100%; }
+  .pom-page-prayer .pom-hero h1 {
+    font-size: 42px;
+    line-height: 48px;
+    width: auto;
+  }
+  .pom-page-prayer .pom-hero-line { white-space: normal; }
+  .pom-page-prayer .pom-hero .pom-lede {
+    font-size: 20px;
+    line-height: 28px;
+    max-width: none;
+  }
+  .pom-page-prayer .pom-hero .pom-back {
+    font-size: 18px;
+    line-height: 26px;
+  }
+  .pom-page-prayer .pom-split.is-prayer-alone {
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding: 0;
+    min-height: 0;
+  }
+  .pom-page-prayer .pom-split.is-prayer-alone .pom-split-copy,
+  .pom-page-prayer .pom-split.is-prayer-alone h2,
+  .pom-page-prayer .pom-split.is-prayer-alone .pom-split-copy > p {
+    align-items: flex-start;
+    text-align: left;
+  }
+  .pom-page-prayer .pom-split.is-prayer-alone .pom-split-copy {
+    padding: 40px 24px;
+    order: 1;
+  }
+  .pom-page-prayer .pom-split.is-prayer-alone .pom-media.is-prayer-alone {
+    order: 0;
+    min-height: 320px;
+    height: 320px;
+  }
+  .pom-page-prayer .pom-split.is-prayer-alone h2 {
+    font-size: 36px;
+    line-height: 44px;
+  }
+  .pom-page-prayer .pom-split.is-prayer-alone .pom-split-copy > p {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .pom-page-prayer .pom-reach.is-prayer-support {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+  .pom-page-prayer .pom-reach.is-prayer-support .pom-media.is-prayer-support {
+    min-height: 320px;
+  }
+  .pom-page-prayer .pom-reach.is-prayer-support .pom-reach-list {
+    padding: 40px 24px;
+  }
+  .pom-page-prayer .pom-reach.is-prayer-support h3 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .pom-page-prayer .pom-reach.is-prayer-support p {
     font-size: 18px;
     line-height: 26px;
   }
