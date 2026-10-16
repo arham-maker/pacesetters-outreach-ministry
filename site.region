@@ -11,9 +11,14 @@
   <a class="pom-skip" href="#page">Skip to content</a>
 
   <header class="pom-header">
-    <a class="pom-logo" href="/">
-      <img class="pom-logo-mark" src="/assets/logo.png" alt="Pacesetters Outreach Ministry" width="200" height="48">
-    </a>
+    <div class="pom-logo-wrap" data-pom-region="site-header-logo">
+      <div class="pom-fallback">
+        <a class="pom-logo" href="/">
+          <img class="pom-logo-mark" src="/assets/logo.png" alt="Pacesetters Outreach Ministry" width="200" height="48">
+        </a>
+      </div>
+      <div class="pom-cms"><squarespace:block-field id="site-header-logo" columns="12" /></div>
+    </div>
 
     <div class="pom-header-tools">
       <button class="pom-menu-toggle" type="button" aria-expanded="false" aria-controls="pom-drawer" data-menu-toggle>
@@ -47,9 +52,14 @@
 
   <footer class="pom-footer">
     <div class="pom-footer-top">
-      <a class="pom-logo" href="/">
-        <img class="pom-logo-mark" src="/assets/logo.png" alt="Pacesetters Outreach Ministry" width="200" height="48">
-      </a>
+      <div class="pom-logo-wrap" data-pom-region="site-footer-logo">
+        <div class="pom-fallback">
+          <a class="pom-logo" href="/">
+            <img class="pom-logo-mark" src="/assets/logo.png" alt="Pacesetters Outreach Ministry" width="200" height="48">
+          </a>
+        </div>
+        <div class="pom-cms"><squarespace:block-field id="site-footer-logo" columns="12" /></div>
+      </div>
 
       <nav class="pom-footer-nav" aria-label="Footer" data-pom-nav>
         <div class="pom-nav-fallback" data-nav-fallback>

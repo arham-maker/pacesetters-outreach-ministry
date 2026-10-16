@@ -1,12 +1,14 @@
 <div class="pom-page pom-page-home">
   <section class="pom-hero is-pew" data-pom-region="home-hero">
-    <div class="pom-hero-copy pom-fallback">
-      <h1><span class="pom-hero-line">Faith. Hope.</span><br><span class="pom-hero-line">A place to belong.</span></h1>
-      <p class="pom-lede"><span class="pom-hero-line">Sharing God’s love in our communities</span><br><span class="pom-hero-line">and beyond.</span></p>
-    </div>
-    <div class="pom-hero-bars">
-      <a class="pom-hero-bar is-light" href="/events"><span class="pom-link-text">Join Saturday Night Live</span><span class="pom-arrow is-ne" aria-hidden="true"></span></a>
-      <a class="pom-hero-bar is-dark" href="/about"><span class="pom-link-text">Explore Our Ministry</span><span class="pom-arrow is-ne" aria-hidden="true"></span></a>
+    <div class="pom-fallback">
+      <div class="pom-hero-copy">
+        <h1><span class="pom-hero-line">Faith. Hope.</span><br><span class="pom-hero-line">A place to belong.</span></h1>
+        <p class="pom-lede"><span class="pom-hero-line">Sharing God’s love in our communities</span><br><span class="pom-hero-line">and beyond.</span></p>
+      </div>
+      <div class="pom-hero-bars">
+        <a class="pom-hero-bar is-light" href="/events"><span class="pom-link-text">Join Saturday Night Live</span><span class="pom-arrow is-ne" aria-hidden="true"></span></a>
+        <a class="pom-hero-bar is-dark" href="/about"><span class="pom-link-text">Explore Our Ministry</span><span class="pom-arrow is-ne" aria-hidden="true"></span></a>
+      </div>
     </div>
     <div class="pom-cms"><squarespace:block-field id="home-hero" columns="12" /></div>
   </section>

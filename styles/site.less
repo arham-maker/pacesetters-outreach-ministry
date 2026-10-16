@@ -229,7 +229,20 @@ h1, h2, h3, p { margin: 0; }
 
 .pom-header a,
 .pom-header button,
+.pom-header .pom-logo-wrap,
 .pom-sidenav { pointer-events: auto; }
+
+.pom-logo-wrap {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+}
+
+.pom-logo-wrap > .pom-fallback {
+  display: flex;
+  align-items: center;
+}
 
 .pom-logo {
   display: flex;
@@ -245,6 +258,20 @@ h1, h2, h3, p { margin: 0; }
   height: 52px;
   max-width: 240px;
   object-fit: contain;
+}
+
+.pom-logo-wrap.has-cms .pom-logo-mark,
+.pom-logo-wrap .pom-cms img {
+  width: auto;
+  height: 52px;
+  max-width: 240px;
+  object-fit: contain;
+}
+
+.pom-footer .pom-logo-wrap.has-cms .pom-logo-mark,
+.pom-footer .pom-logo-wrap .pom-cms img {
+  height: 64px;
+  max-width: 280px;
 }
 
 .pom-header-tools {
@@ -602,7 +629,8 @@ a.pom-join-btn {
   color: @ink;
   text-shadow: none;
 }
-.pom-has-plain .pom-header .pom-logo-mark { filter: ~"brightness(0)"; }
+.pom-has-plain .pom-header .pom-logo-mark,
+.pom-has-plain .pom-header .pom-logo-wrap .pom-cms img { filter: ~"brightness(0)"; }
 .pom-has-plain .pom-join-btn {
   background: transparent;
   color: @ink;
@@ -1083,6 +1111,17 @@ body.pom-has-cart .sqs-editable-button {
   height: @header-offset;
   padding: 0;
   overflow: hidden;
+}
+
+.pom-page-home .pom-hero > .pom-fallback {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  z-index: 1;
 }
 .pom-page-home .pom-hero.is-pew {
   background-image: ~'url("/assets/home-hero.png")';
@@ -3905,6 +3944,15 @@ section.pom-join.is-tan {
 .pom-editing .pom-form-card:not(.has-cms) > .pom-cms:before,
 .pom-editing .pom-form-stack:not(.has-cms) > .pom-cms:before {
   content: "Add Form block here";
+}
+
+.pom-editing .pom-logo-wrap:not(.has-cms) > .pom-cms:before {
+  content: "Edit logo — add Image block";
+}
+
+.pom-editing .pom-logo-wrap > .pom-cms {
+  min-height: 48px;
+  padding: 8px 12px;
 }
 
 .pom-editing .pom-footer [data-pom-region] > .pom-cms {

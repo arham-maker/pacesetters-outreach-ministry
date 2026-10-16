@@ -4,14 +4,16 @@
   function refreshEditing() {
     var classes = document.documentElement.className + " " + body.className;
     var editing =
-      /sqs-edit|squarespace-editable|sqs-editing|sqs-backend/.test(classes) ||
+      /sqs-edit|squarespace-editable|sqs-editing|sqs-backend|squarespace-damask|edit-mode/.test(
+        classes
+      ) ||
       !!document.querySelector(
-        ".sqs-damask-edit, .sqs-layout-editing, .sqs-backend, [data-controller='EditMode']"
+        ".sqs-damask-edit, .sqs-layout-editing, .sqs-backend, .sqs-edit-mode-active, [data-controller='EditMode']"
       );
     body.classList.toggle("pom-editing", !!editing);
   }
   refreshEditing();
-  setInterval(refreshEditing, 1500);
+  setInterval(refreshEditing, 1200);
 
   if (document.querySelector(".pom-page-plain, .pom-page-checkout") || (!document.querySelector(".pom-page, .pom-hero") && !document.querySelector(".pom-page-product"))) {
     body.classList.add("pom-has-plain");
