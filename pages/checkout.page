@@ -1,8 +1,8 @@
-<div class="pom-page pom-page-checkout pom-page-plain">
+<div class="pom-page pom-page-checkout">
   <section class="pom-checkout" data-pom-region="checkout-main">
     <div class="pom-fallback">
       <div class="pom-checkout-main">
-        <a class="pom-back is-ink" href="/store"><span class="pom-arrow is-back" aria-hidden="true"></span> Back to Product</a>
+        <a class="pom-back is-ink" href="/product-details"><span class="pom-arrow is-back" aria-hidden="true"></span> Back to Product</a>
         <h1>Checkout</h1>
         <p class="pom-lede">Complete your order and bring encouragement home.</p>
 
@@ -36,11 +36,11 @@
               <div class="pom-field"><label for="chk-cvc">CVC</label><input id="chk-cvc" name="cvc" type="text" autocomplete="cc-csc" required></div>
             </div>
             <div class="pom-field"><label for="chk-cardname">Name on card</label><input id="chk-cardname" name="cardName" type="text" autocomplete="cc-name" required></div>
-            <p class="pom-secure"><span class="pom-meta-icon is-lock" aria-hidden="true"></span> Your payment details are encrypted</p>
+            <p class="pom-secure"><span class="pom-meta-icon is-lock" aria-hidden="true"></span> Your payment details are encrypted.</p>
             <label class="pom-check"><input type="checkbox" name="terms" required checked><span>I agree to the Terms &amp; Conditions and Privacy Policy.</span></label>
           </div>
 
-          <button class="pom-btn-dark" type="submit">Pay $24.00 <span class="pom-arrow is-ne" aria-hidden="true"></span></button>
+          <button class="pom-btn-dark" type="submit"><span class="pom-link-text">Pay $24.00</span><span class="pom-arrow is-ne" aria-hidden="true"></span></button>
         </form>
       </div>
 
@@ -48,10 +48,10 @@
         <p class="pom-eyebrow">Your Order Summary</p>
         <h3>Lorem Ipsum dolor sit amet.</h3>
         <p class="pom-product-cat">Music &amp; CDs</p>
-        <div class="pom-media is-books" role="img" aria-label="Order item"></div>
+        <div class="pom-media is-checkout-item" role="img" aria-label="Order item"></div>
         <div class="pom-summary-row">
           <span>Quantity : 01</span>
-          <a class="pom-edit" href="/store">Edit</a>
+          <a class="pom-edit" href="/product-details">Edit</a>
         </div>
         <div class="pom-summary-lines">
           <div><span>Subtotal</span><strong>$20.00</strong></div>
@@ -72,7 +72,7 @@
       <div class="pom-modal-check" aria-hidden="true"></div>
       <h2 id="order-success-title">Thank You for Your Purchase!</h2>
       <p>Lorem ipsum dolor sit amet consectetur. Neque rhoncus et quis in pretium augue commodo.</p>
-      <a class="pom-link is-gold" href="/store">Back to Store <span class="pom-arrow is-ne" aria-hidden="true"></span></a>
+      <a class="pom-link is-gold" href="/store"><span class="pom-link-text">Back to Store</span><span class="pom-arrow is-ne" aria-hidden="true"></span></a>
     </div>
   </div>
 </div>
