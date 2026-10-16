@@ -130,26 +130,33 @@
     <div class="pom-cms"><squarespace:block-field id="product-praise-and-reflection-testimonials" columns="12" /></div>
   </section>
 
-  <section class="pom-contact is-crowd" id="get-in-touch" data-pom-region="product-praise-and-reflection-contact">
-    <div class="pom-fallback">
-      <div class="pom-contact-copy">
-        <p class="pom-eyebrow">Get in Touch</p>
-        <h2>We’d love to hear from you.</h2>
-        <p class="pom-contact-lead">Have a question, need prayer, or want to help?</p>
-        <div class="pom-contact-meta is-icons">
-          <a href="tel:3305059087">330 505-9087 <span class="pom-meta-icon is-phone" aria-hidden="true"></span></a>
-          <a href="mailto:terryolivia@currently.com">terryolivia@currently.com <span class="pom-meta-icon is-mail" aria-hidden="true"></span></a>
+  <section class="pom-contact is-crowd" id="get-in-touch">
+    <div class="pom-contact-layout">
+      <div class="pom-contact-copy" data-pom-region="product-praise-and-reflection-contact-copy">
+        <div class="pom-fallback">
+          <p class="pom-eyebrow">Get in Touch</p>
+          <h2>We’d love to hear from you.</h2>
+          <p class="pom-contact-lead">Have a question, need prayer, or want to help?</p>
+          <div class="pom-contact-meta is-icons">
+            <a href="tel:3305059087">330 505-9087 <span class="pom-meta-icon is-phone" aria-hidden="true"></span></a>
+            <a href="mailto:terryolivia@currently.com">terryolivia@currently.com <span class="pom-meta-icon is-mail" aria-hidden="true"></span></a>
+          </div>
         </div>
+        <div class="pom-cms"><squarespace:block-field id="product-praise-and-reflection-contact-copy" columns="12" /></div>
       </div>
-      <form class="pom-form-card" data-contact-form>
-        <div class="pom-field"><label for="praise-and-reflection-name">Name</label><input id="praise-and-reflection-name" name="name" type="text"></div>
-        <div class="pom-field"><label for="praise-and-reflection-email">Email</label><input id="praise-and-reflection-email" name="email" type="email"></div>
-        <div class="pom-field"><label for="praise-and-reflection-message">Message</label><textarea id="praise-and-reflection-message" name="message"></textarea></div>
-        <button class="pom-link" type="submit"><span class="pom-link-text">Send Message</span><span class="pom-arrow is-ne" aria-hidden="true"></span></button>
-        <p class="pom-form-note" hidden>Thank you. Add a Squarespace Form block to deliver messages.</p>
-      </form>
+      <div class="pom-form-card" data-pom-region="product-praise-and-reflection-contact-form">
+        <div class="pom-fallback">
+          <p class="pom-form-cms-hint">Edit this page → click here → add a <strong>Form</strong> block to receive messages by email.</p>
+          <form data-contact-form>
+            <div class="pom-field"><label for="praise-and-reflection-name">Name</label><input id="praise-and-reflection-name" name="name" type="text"></div>
+            <div class="pom-field"><label for="praise-and-reflection-email">Email</label><input id="praise-and-reflection-email" name="email" type="email"></div>
+            <div class="pom-field"><label for="praise-and-reflection-message">Message</label><textarea id="praise-and-reflection-message" name="message"></textarea></div>
+            <button class="pom-link" type="submit"><span class="pom-link-text">Send Message</span><span class="pom-arrow is-ne" aria-hidden="true"></span></button>
+          </form>
+        </div>
+        <div class="pom-cms"><squarespace:block-field id="product-praise-and-reflection-contact-form" columns="12" /></div>
+      </div>
     </div>
-    <div class="pom-cms"><squarespace:block-field id="product-praise-and-reflection-contact" columns="12" /></div>
   </section>
   </div>
 

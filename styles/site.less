@@ -3497,6 +3497,7 @@ body.pom-has-cart .sqs-editable-button {
     ~"linear-gradient(90deg, rgba(247, 244, 237, 0.78) 0%, rgba(247, 244, 237, 0.52) 42%, rgba(247, 244, 237, 0.22) 100%)";
 }
 
+.pom-contact-layout,
 .pom-contact > .pom-fallback {
   display: grid !important;
   grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
@@ -3514,16 +3515,38 @@ body.pom-has-cart .sqs-editable-button {
   width: 100%;
 }
 
-.pom-page-product .pom-contact > .pom-fallback {
-  display: grid !important;
-  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+.pom-page-product .pom-contact-layout {
   gap: 64px;
-  align-items: center;
+}
+
+.pom-form-cms-hint {
+  margin: 0 0 20px;
+  font-family: @font-display;
+  font-size: 14px;
+  line-height: 22px;
+  color: rgba(38, 38, 37, 0.72);
+}
+
+.pom-form-card.has-cms > .pom-fallback,
+.pom-form-stack.has-cms > .pom-fallback {
+  display: none;
+}
+
+.pom-form-card.has-cms > .pom-cms,
+.pom-form-stack.has-cms > .pom-cms,
+.pom-editing .pom-form-card > .pom-cms,
+.pom-editing .pom-form-stack > .pom-cms {
   position: relative;
   z-index: 2;
+  display: block;
+  pointer-events: auto;
+}
+
+.pom-form-card .sqs-block-form,
+.pom-form-stack .sqs-block-form,
+.pom-form-card .form-wrapper,
+.pom-form-stack .form-wrapper {
   width: 100%;
-  max-width: 1240px;
-  margin: 0 auto;
 }
 
 .pom-contact > .pom-cms {
@@ -4810,6 +4833,14 @@ body[class*="cart"] ,
 }
 
 .pom-contact-page > .pom-fallback { display: contents; }
+
+.pom-contact-info > .pom-fallback {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  width: 100%;
+}
 
 .pom-contact-info {
   display: flex;
@@ -6697,9 +6728,11 @@ body.pom-modal-open { overflow: hidden; }
     max-width: none !important;
   }
 
+  .pom-contact-layout,
   .pom-contact > .pom-fallback,
   .pom-page-home .pom-contact > .pom-fallback,
-  .pom-page-product .pom-contact > .pom-fallback {
+  .pom-page-product .pom-contact > .pom-fallback,
+  .pom-page-product .pom-contact-layout {
     display: flex !important;
     flex-direction: column !important;
     grid-template-columns: none !important;

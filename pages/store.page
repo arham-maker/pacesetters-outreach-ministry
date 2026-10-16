@@ -213,25 +213,32 @@
     <div class="pom-cms"><squarespace:block-field id="store-faq" columns="12" /></div>
   </section>
 
-  <section class="pom-contact is-crowd" id="get-in-touch" data-pom-region="store-contact">
-    <div class="pom-fallback">
-      <div class="pom-contact-copy">
-        <p class="pom-eyebrow">Get in Touch</p>
-        <h2>We’d love to hear from you.</h2>
-        <p class="pom-contact-lead">Have a question, need prayer, or want to help?</p>
-        <div class="pom-contact-meta is-icons">
-          <a href="tel:3305059087">330 505-9087 <span class="pom-meta-icon is-phone" aria-hidden="true"></span></a>
-          <a href="mailto:terryolivia@currently.com">terryolivia@currently.com <span class="pom-meta-icon is-mail" aria-hidden="true"></span></a>
+  <section class="pom-contact is-crowd" id="get-in-touch">
+    <div class="pom-contact-layout">
+      <div class="pom-contact-copy" data-pom-region="store-contact-copy">
+        <div class="pom-fallback">
+          <p class="pom-eyebrow">Get in Touch</p>
+          <h2>We’d love to hear from you.</h2>
+          <p class="pom-contact-lead">Have a question, need prayer, or want to help?</p>
+          <div class="pom-contact-meta is-icons">
+            <a href="tel:3305059087">330 505-9087 <span class="pom-meta-icon is-phone" aria-hidden="true"></span></a>
+            <a href="mailto:terryolivia@currently.com">terryolivia@currently.com <span class="pom-meta-icon is-mail" aria-hidden="true"></span></a>
+          </div>
         </div>
+        <div class="pom-cms"><squarespace:block-field id="store-contact-copy" columns="12" /></div>
       </div>
-      <form class="pom-form-card" data-contact-form>
-        <div class="pom-field"><label for="store-name">Name</label><input id="store-name" name="name" type="text"></div>
-        <div class="pom-field"><label for="store-email">Email</label><input id="store-email" name="email" type="email"></div>
-        <div class="pom-field"><label for="store-message">Message</label><textarea id="store-message" name="message"></textarea></div>
-        <button class="pom-link" type="submit"><span class="pom-link-text">Send Message</span><span class="pom-arrow is-ne" aria-hidden="true"></span></button>
-        <p class="pom-form-note" hidden>Thank you. Add a Squarespace Form block in this region to deliver messages.</p>
-      </form>
+      <div class="pom-form-card" data-pom-region="store-contact-form">
+        <div class="pom-fallback">
+          <p class="pom-form-cms-hint">Edit this page → click here → add a <strong>Form</strong> block to receive messages by email.</p>
+          <form data-contact-form>
+            <div class="pom-field"><label for="store-name">Name</label><input id="store-name" name="name" type="text"></div>
+            <div class="pom-field"><label for="store-email">Email</label><input id="store-email" name="email" type="email"></div>
+            <div class="pom-field"><label for="store-message">Message</label><textarea id="store-message" name="message"></textarea></div>
+            <button class="pom-link" type="submit"><span class="pom-link-text">Send Message</span><span class="pom-arrow is-ne" aria-hidden="true"></span></button>
+          </form>
+        </div>
+        <div class="pom-cms"><squarespace:block-field id="store-contact-form" columns="12" /></div>
+      </div>
     </div>
-    <div class="pom-cms"><squarespace:block-field id="store-contact" columns="12" /></div>
   </section>
 </div>

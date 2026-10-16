@@ -73,7 +73,12 @@
 
   Array.prototype.forEach.call(document.querySelectorAll("[data-pom-region]"), function (region) {
     var cms = region.querySelector(".pom-cms");
-    if (cms && cms.querySelector(".sqs-block:not(.sqs-block-spacer), .form-wrapper, .sqs-block-image, .sqs-block-html, .sqs-block-markdown")) {
+    if (
+      cms &&
+      cms.querySelector(
+        ".sqs-block:not(.sqs-block-spacer), .form-wrapper, .sqs-block-form, .sqs-block-image, .sqs-block-html, .sqs-block-markdown"
+      )
+    ) {
       region.classList.add("has-cms");
     }
   });
@@ -161,9 +166,11 @@
         return;
       }
       event.preventDefault();
-      var note = form.querySelector(".pom-form-note");
-      if (note) {
-        note.hidden = false;
+      var card = form.closest("[data-pom-region]");
+      var hint = card ? card.querySelector(".pom-form-cms-hint") : null;
+      if (hint) {
+        hint.textContent = "Demo form only. In Edit mode, add a Squarespace Form block in this white box to receive real messages.";
+        hint.hidden = false;
       }
       form.reset();
     });
