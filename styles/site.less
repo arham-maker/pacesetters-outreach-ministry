@@ -5525,6 +5525,7 @@ body[class*="cart"] ,
   text-underline-offset: 3px;
 }
 
+/* Order Confirmed modal — Figma overlay on Checkout */
 .pom-modal {
   position: fixed;
   inset: 0;
@@ -5533,7 +5534,7 @@ body[class*="cart"] ,
   align-items: center;
   justify-content: center;
   padding: 24px;
-  background: rgba(20, 16, 12, 0.55);
+  background: rgba(12, 9, 9, 0.45);
 }
 
 .pom-modal[hidden] { display: none; }
@@ -5541,59 +5542,115 @@ body[class*="cart"] ,
 .pom-modal-card {
   position: relative;
   width: 100%;
-  max-width: 480px;
-  background: @white;
-  padding: 48px 40px 40px;
+  max-width: 560px;
+  background: #fefefe;
+  padding: 72px 56px 56px;
   text-align: center;
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.18);
+  border-radius: 0;
+  font-family: @font-display;
 }
 
 .pom-modal-close {
   position: absolute;
-  top: 14px;
-  right: 16px;
+  top: 20px;
+  right: 24px;
   border: 0;
   background: transparent;
-  font-size: 28px;
+  font-size: 32px;
   line-height: 1;
   cursor: pointer;
-  color: @ink;
+  color: @contact-muted;
+  padding: 0;
 }
 
 .pom-modal-check {
-  width: 56px;
-  height: 56px;
-  margin: 0 auto 22px;
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 30px;
   border-radius: 50%;
-  background: @gold;
+  background: @tan;
   position: relative;
 }
 
 .pom-modal-check:before {
   content: "";
   position: absolute;
-  left: 18px;
-  top: 16px;
-  width: 14px;
-  height: 24px;
-  border-right: 2px solid @white;
-  border-bottom: 2px solid @white;
+  left: 26px;
+  top: 20px;
+  width: 16px;
+  height: 28px;
+  border-right: 2.5px solid @gold-figma;
+  border-bottom: 2.5px solid @gold-figma;
   transform: ~"rotate(40deg)";
 }
 
+.pom-modal.is-order-confirmed .pom-modal-card h2 {
+  font-family: @font-display !important;
+  font-size: 40px;
+  line-height: 48px;
+  font-weight: 400;
+  letter-spacing: 0;
+  color: @ink !important;
+  margin: 0 0 20px;
+}
+
+.pom-modal.is-order-confirmed .pom-modal-card p {
+  font-family: @font-display;
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 400;
+  color: @contact-muted;
+  margin: 0 0 40px;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pom-modal.is-order-confirmed .pom-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-family: @font-display;
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 400;
+  color: @ink;
+  text-decoration: none;
+}
+
+.pom-modal.is-order-confirmed .pom-link .pom-link-text {
+  text-decoration: underline;
+  text-decoration-thickness: 4%;
+  text-underline-offset: 13%;
+}
+
+.pom-modal.is-order-confirmed .pom-link .pom-arrow,
+.pom-modal.is-order-confirmed .pom-link .pom-arrow.is-ne {
+  width: 14px !important;
+  height: 14px !important;
+  flex: 0 0 14px;
+  border: 0 !important;
+  background: currentColor !important;
+  -webkit-mask: ~'url("/assets/arrow-ne.svg") center / contain no-repeat' !important;
+  mask: ~'url("/assets/arrow-ne.svg") center / contain no-repeat' !important;
+  transform: none !important;
+}
+
 .pom-modal-card h2 {
-  font-family: @font-sans;
+  font-family: @font-display;
   font-size: 28px;
-  font-weight: 600;
+  font-weight: 400;
   margin-bottom: 14px;
 }
 
 .pom-modal-card p {
-  color: @ink-soft;
+  color: @contact-muted;
   margin-bottom: 24px;
 }
 
-.pom-link.is-gold { color: @gold; }
+.pom-link.is-gold { color: @gold-figma; }
 
 body.pom-modal-open { overflow: hidden; }
 
@@ -5688,5 +5745,58 @@ body.pom-modal-open { overflow: hidden; }
   }
   .pom-page-product .pom-testimonials {
     grid-template-columns: 1fr;
+  }
+  .pom-page-checkout .pom-checkout {
+    padding: 100px 24px 64px;
+  }
+  .pom-page-checkout .pom-checkout > .pom-fallback {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  .pom-page-checkout .pom-checkout-main h1 {
+    font-size: 42px;
+    line-height: 48px;
+  }
+  .pom-page-checkout .pom-checkout-main .pom-lede {
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 36px;
+  }
+  .pom-page-checkout .pom-checkout-section h2 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .pom-page-checkout .pom-field-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .pom-page-checkout .pom-checkout-summary {
+    position: static;
+    padding: 36px 24px;
+  }
+  .pom-page-checkout .pom-checkout-summary h3,
+  .pom-page-checkout .pom-summary-total {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .pom-page-checkout .pom-checkout-summary .pom-product-cat,
+  .pom-page-checkout .pom-summary-row,
+  .pom-page-checkout .pom-summary-lines div,
+  .pom-page-checkout .pom-edit {
+    font-size: 18px;
+    line-height: 26px;
+  }
+  .pom-modal.is-order-confirmed .pom-modal-card {
+    padding: 56px 28px 40px;
+    max-width: 100%;
+  }
+  .pom-modal.is-order-confirmed .pom-modal-card h2 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  .pom-modal.is-order-confirmed .pom-modal-card p,
+  .pom-modal.is-order-confirmed .pom-link {
+    font-size: 18px;
+    line-height: 26px;
   }
 }

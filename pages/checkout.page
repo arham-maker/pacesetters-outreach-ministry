@@ -66,13 +66,13 @@
     <div class="pom-cms"><squarespace:block-field id="checkout-main" columns="12" /></div>
   </section>
 
-  <div class="pom-modal" data-order-modal hidden>
+  <div class="pom-modal is-order-confirmed" data-order-modal hidden>
     <div class="pom-modal-card" role="dialog" aria-modal="true" aria-labelledby="order-success-title">
       <button class="pom-modal-close" type="button" data-modal-close aria-label="Close">&times;</button>
       <div class="pom-modal-check" aria-hidden="true"></div>
       <h2 id="order-success-title">Thank You for Your Purchase!</h2>
       <p>Lorem ipsum dolor sit amet consectetur. Neque rhoncus et quis in pretium augue commodo.</p>
-      <a class="pom-link is-gold" href="/store"><span class="pom-link-text">Back to Store</span><span class="pom-arrow is-ne" aria-hidden="true"></span></a>
+      <a class="pom-link" href="/store"><span class="pom-link-text">Back to Store</span><span class="pom-arrow is-ne" aria-hidden="true"></span></a>
     </div>
   </div>
 </div>
