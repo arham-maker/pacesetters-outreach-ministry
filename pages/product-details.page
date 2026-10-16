@@ -2,12 +2,12 @@
   <section class="pom-product-head">
     <a class="pom-back is-ink" href="/store"><span class="pom-arrow is-back" aria-hidden="true"></span> Back to Store</a>
     <h1>Product Details</h1>
-    <p class="pom-lede">Lorem ipsum dolor sit amet consectetur. Pulvinar quis ac ut tellus aliquet. Amet.</p>
+    <p class="pom-lede">Worship music to lift your heart and draw you closer to God.</p>
   </section>
 
   <section class="pom-product-main">
     <div class="pom-product-gallery">
-      <div class="pom-media is-product-main" role="img" aria-label="Product image"></div>
+      <div class="pom-media is-product-p01" role="img" aria-label="Songs of Encouragement"></div>
       <div class="pom-gallery-nav" aria-hidden="true">
         <button class="pom-icon-btn is-prev" type="button" aria-label="Previous image"><span class="pom-arrow"></span></button>
         <button class="pom-icon-btn is-next" type="button" aria-label="Next image"><span class="pom-arrow"></span></button>
@@ -16,8 +16,8 @@
     </div>
     <div class="pom-product-info">
       <p class="pom-eyebrow">Music &amp; CDs</p>
-      <h2>Lorem ipsum dolor sit amet</h2>
-      <p class="pom-prose">Lorem ipsum dolor sit amet consectetur. Neque rhoncus et quis in pretium augue commodo.</p>
+      <h2>Songs of Encouragement</h2>
+      <p class="pom-prose">A collection of encouraging songs for quiet time, family worship, and everyday faith.</p>
       <div class="pom-qty" data-qty>
         <span>Quantity</span>
         <div class="pom-qty-ctrl">
@@ -32,8 +32,8 @@
 
   <section class="pom-product-about">
     <h2>About this resource</h2>
-    <p class="pom-prose">Lorem ipsum dolor sit amet consectetur. Neque rhoncus et quis in pretium augue commodo. Eget est erat auctor sit nunc urna dolor massa eget. Aliquet praesent in laoreet orci turpis et faucibus. Egestas malesuada a ut auctor euismod.</p>
-    <p class="pom-prose">Aliquet praesent in laoreet orci turpis et faucibus. Egestas malesuada a ut auctor euismod. Lorem ipsum dolor sit amet consectetur. Neque rhoncus et quis in pretium augue commodo.</p>
+    <p class="pom-prose">Songs of Encouragement gathers music from our ministry to support worship and reflection throughout the week.</p>
+    <p class="pom-prose">Play these recordings when you need peace, praise, or a reminder of God's faithfulness in every season.</p>
   </section>
 
   <section class="pom-related">
@@ -41,25 +41,12 @@
     <h2>More resources for your walk of faith.</h2>
     <div class="pom-related-grid">
       <article class="pom-product">
-        <a href="/product-details">
-          <div class="pom-media is-store-p01" role="img" aria-label="Music resource"></div>
+        <a href="/hope-for-every-season">
+          <div class="pom-media is-store-p02" role="img" aria-label="Hope for Every Season"></div>
           <div class="pom-product-meta">
             <div class="pom-product-row">
-              <h3>Lorem ipsum</h3>
-              <span class="pom-product-price">$XX.XX</span>
-            </div>
-            <p class="pom-product-cat">Music &amp; CDs</p>
-          </div>
-          <span class="pom-link"><span class="pom-link-text">View Details</span><span class="pom-arrow is-ne" aria-hidden="true"></span></span>
-        </a>
-      </article>
-      <article class="pom-product">
-        <a href="/product-details">
-          <div class="pom-media is-store-p02" role="img" aria-label="Sermon resource"></div>
-          <div class="pom-product-meta">
-            <div class="pom-product-row">
-              <h3>Lorem ipsum</h3>
-              <span class="pom-product-price">$XX.XX</span>
+              <h3>Hope for Every Season</h3>
+              <span class="pom-product-price">$18.00</span>
             </div>
             <p class="pom-product-cat">Sermons</p>
           </div>
@@ -67,14 +54,27 @@
         </a>
       </article>
       <article class="pom-product">
-        <a href="/product-details">
-          <div class="pom-media is-store-p03" role="img" aria-label="Book resource"></div>
+        <a href="/rooted-in-faith">
+          <div class="pom-media is-store-p03" role="img" aria-label="Rooted in Faith"></div>
           <div class="pom-product-meta">
             <div class="pom-product-row">
-              <h3>Lorem ipsum</h3>
-              <span class="pom-product-price">$XX.XX</span>
+              <h3>Rooted in Faith</h3>
+              <span class="pom-product-price">$22.00</span>
             </div>
             <p class="pom-product-cat">Books</p>
+          </div>
+          <span class="pom-link"><span class="pom-link-text">View Details</span><span class="pom-arrow is-ne" aria-hidden="true"></span></span>
+        </a>
+      </article>
+      <article class="pom-product">
+        <a href="/praise-and-reflection">
+          <div class="pom-media is-store-p04" role="img" aria-label="Praise and Reflection"></div>
+          <div class="pom-product-meta">
+            <div class="pom-product-row">
+              <h3>Praise &amp; Reflection</h3>
+              <span class="pom-product-price">$20.00</span>
+            </div>
+            <p class="pom-product-cat">Music &amp; CDs</p>
           </div>
           <span class="pom-link"><span class="pom-link-text">View Details</span><span class="pom-arrow is-ne" aria-hidden="true"></span></span>
         </a>
@@ -82,7 +82,7 @@
     </div>
   </section>
 
-  <section class="pom-testimonials" data-pom-region="product-details-testimonials">
+  <section class="pom-testimonials" data-pom-region="product-songs-of-encouragement-testimonials">
     <div class="pom-fallback">
       <div class="pom-testimonials-intro">
         <div>
@@ -97,25 +97,25 @@
       <div class="pom-quote-wrap" data-quotes>
         <blockquote class="pom-quote is-active">
           <div class="pom-quote-mark" aria-hidden="true">“</div>
-          <p>Lorem ipsum dolor sit amet consectetur. Neque rhoncus et quis in pretium augue commodo. Eget est erat auctor sit nunc urna dolor massa eget. Aliquet praesent in laoreet orci turpis et faucibus. Egestas malesuada a ut auctor euismod.</p>
+          <p>These resources have encouraged my faith and given me words and music to return to throughout the week.</p>
           <cite>— Jane Doe</cite>
         </blockquote>
         <blockquote class="pom-quote">
           <div class="pom-quote-mark" aria-hidden="true">“</div>
-          <p>Being part of this community has strengthened my faith and given me a place to belong. Every gathering reminds me that God’s love is near.</p>
+          <p>Being part of this community has strengthened my faith and given me a place to belong.</p>
           <cite>— Michael R.</cite>
         </blockquote>
         <blockquote class="pom-quote">
           <div class="pom-quote-mark" aria-hidden="true">“</div>
-          <p>Saturday Night Live connects us even when we are far apart. The teaching and prayer leave me encouraged for the week ahead.</p>
+          <p>The teaching and prayer leave me encouraged for the week ahead.</p>
           <cite>— Sarah L.</cite>
         </blockquote>
       </div>
     </div>
-    <div class="pom-cms"><squarespace:block-field id="product-details-testimonials" columns="12" /></div>
+    <div class="pom-cms"><squarespace:block-field id="product-songs-of-encouragement-testimonials" columns="12" /></div>
   </section>
 
-  <section class="pom-contact is-crowd" id="get-in-touch" data-pom-region="product-details-contact">
+  <section class="pom-contact is-crowd" id="get-in-touch" data-pom-region="product-songs-of-encouragement-contact">
     <div class="pom-fallback">
       <div class="pom-contact-copy">
         <p class="pom-eyebrow">Get in Touch</p>
@@ -127,13 +127,13 @@
         </div>
       </div>
       <form class="pom-form-card" data-contact-form>
-        <div class="pom-field"><label for="pd-name">Name</label><input id="pd-name" name="name" type="text"></div>
-        <div class="pom-field"><label for="pd-email">Email</label><input id="pd-email" name="email" type="email"></div>
-        <div class="pom-field"><label for="pd-message">Message</label><textarea id="pd-message" name="message"></textarea></div>
+        <div class="pom-field"><label for="songs-of-encouragement-name">Name</label><input id="songs-of-encouragement-name" name="name" type="text"></div>
+        <div class="pom-field"><label for="songs-of-encouragement-email">Email</label><input id="songs-of-encouragement-email" name="email" type="email"></div>
+        <div class="pom-field"><label for="songs-of-encouragement-message">Message</label><textarea id="songs-of-encouragement-message" name="message"></textarea></div>
         <button class="pom-link" type="submit"><span class="pom-link-text">Send Message</span><span class="pom-arrow is-ne" aria-hidden="true"></span></button>
         <p class="pom-form-note" hidden>Thank you. Add a Squarespace Form block to deliver messages.</p>
       </form>
     </div>
-    <div class="pom-cms"><squarespace:block-field id="product-details-contact" columns="12" /></div>
+    <div class="pom-cms"><squarespace:block-field id="product-songs-of-encouragement-contact" columns="12" /></div>
   </section>
 </div>

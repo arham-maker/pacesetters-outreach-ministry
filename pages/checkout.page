@@ -2,7 +2,7 @@
   <section class="pom-checkout" data-pom-region="checkout-main">
     <div class="pom-fallback">
       <div class="pom-checkout-main">
-        <a class="pom-back is-ink" href="/product-details"><span class="pom-arrow is-back" aria-hidden="true"></span> Back to Product</a>
+        <a class="pom-back is-ink" href="/songs-of-encouragement"><span class="pom-arrow is-back" aria-hidden="true"></span> Back to Product</a>
         <h1>Checkout</h1>
         <p class="pom-lede">Complete your order and bring encouragement home.</p>
 
@@ -46,12 +46,12 @@
 
       <aside class="pom-checkout-summary">
         <p class="pom-eyebrow">Your Order Summary</p>
-        <h3>Lorem Ipsum dolor sit amet.</h3>
+        <h3>Songs of Encouragement.</h3>
         <p class="pom-product-cat">Music &amp; CDs</p>
         <div class="pom-media is-checkout-item" role="img" aria-label="Order item"></div>
         <div class="pom-summary-row">
           <span>Quantity : 01</span>
-          <a class="pom-edit" href="/product-details">Edit</a>
+          <a class="pom-edit" href="/songs-of-encouragement">Edit</a>
         </div>
         <div class="pom-summary-lines">
           <div><span>Subtotal</span><strong>$20.00</strong></div>

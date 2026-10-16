@@ -56,12 +56,12 @@
       </div>
       <div class="pom-products" data-product-grid>
         <article class="pom-product" data-category="music">
-          <a href="/product-details">
-            <div class="pom-media is-store-p01" role="img" aria-label="Music resource"></div>
+          <a href="/songs-of-encouragement">
+            <div class="pom-media is-store-p01" role="img" aria-label="Songs of Encouragement"></div>
             <div class="pom-product-meta">
               <div class="pom-product-row">
-                <h3>Lorem ipsum</h3>
-                <span class="pom-product-price">$XX.XX</span>
+                <h3>Songs of Encouragement</h3>
+                <span class="pom-product-price">$20.00</span>
               </div>
               <p class="pom-product-cat">Music &amp; CDs</p>
             </div>
@@ -69,12 +69,12 @@
           </a>
         </article>
         <article class="pom-product" data-category="sermons">
-          <a href="/product-details">
-            <div class="pom-media is-store-p02" role="img" aria-label="Sermon resource"></div>
+          <a href="/hope-for-every-season">
+            <div class="pom-media is-store-p02" role="img" aria-label="Hope for Every Season"></div>
             <div class="pom-product-meta">
               <div class="pom-product-row">
-                <h3>Lorem ipsum</h3>
-                <span class="pom-product-price">$XX.XX</span>
+                <h3>Hope for Every Season</h3>
+                <span class="pom-product-price">$18.00</span>
               </div>
               <p class="pom-product-cat">Sermons</p>
             </div>
@@ -82,12 +82,12 @@
           </a>
         </article>
         <article class="pom-product" data-category="books">
-          <a href="/product-details">
-            <div class="pom-media is-store-p03" role="img" aria-label="Book resource"></div>
+          <a href="/rooted-in-faith">
+            <div class="pom-media is-store-p03" role="img" aria-label="Rooted in Faith"></div>
             <div class="pom-product-meta">
               <div class="pom-product-row">
-                <h3>Lorem ipsum</h3>
-                <span class="pom-product-price">$XX.XX</span>
+                <h3>Rooted in Faith</h3>
+                <span class="pom-product-price">$22.00</span>
               </div>
               <p class="pom-product-cat">Books</p>
             </div>
@@ -95,12 +95,12 @@
           </a>
         </article>
         <article class="pom-product" data-category="music">
-          <a href="/product-details">
-            <div class="pom-media is-store-p04" role="img" aria-label="Music resource"></div>
+          <a href="/praise-and-reflection">
+            <div class="pom-media is-store-p04" role="img" aria-label="Praise and Reflection"></div>
             <div class="pom-product-meta">
               <div class="pom-product-row">
-                <h3>Lorem ipsum</h3>
-                <span class="pom-product-price">$XX.XX</span>
+                <h3>Praise &amp; Reflection</h3>
+                <span class="pom-product-price">$20.00</span>
               </div>
               <p class="pom-product-cat">Music &amp; CDs</p>
             </div>
@@ -108,12 +108,12 @@
           </a>
         </article>
         <article class="pom-product" data-category="books">
-          <a href="/product-details">
-            <div class="pom-media is-store-p05" role="img" aria-label="Book resource"></div>
+          <a href="/daily-words-of-hope">
+            <div class="pom-media is-store-p05" role="img" aria-label="Daily Words of Hope"></div>
             <div class="pom-product-meta">
               <div class="pom-product-row">
-                <h3>Lorem ipsum</h3>
-                <span class="pom-product-price">$XX.XX</span>
+                <h3>Daily Words of Hope</h3>
+                <span class="pom-product-price">$16.00</span>
               </div>
               <p class="pom-product-cat">Books</p>
             </div>
@@ -121,12 +121,12 @@
           </a>
         </article>
         <article class="pom-product" data-category="sermons">
-          <a href="/product-details">
-            <div class="pom-media is-store-p06" role="img" aria-label="Sermon resource"></div>
+          <a href="/walking-with-christ">
+            <div class="pom-media is-store-p06" role="img" aria-label="Walking with Christ"></div>
             <div class="pom-product-meta">
               <div class="pom-product-row">
-                <h3>Lorem ipsum</h3>
-                <span class="pom-product-price">$XX.XX</span>
+                <h3>Walking with Christ</h3>
+                <span class="pom-product-price">$18.00</span>
               </div>
               <p class="pom-product-cat">Sermons</p>
             </div>
