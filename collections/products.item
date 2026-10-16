@@ -30,7 +30,7 @@
           <button type="button" data-qty-plus aria-label="Increase quantity">+</button>
         </div>
       </div>
-      <a class="pom-btn-dark" href="/order"><span class="pom-link-text">Buy Now</span><span class="pom-arrow is-ne" aria-hidden="true"></span></a>
+      <a class="pom-btn-dark" href="#order" data-buy-now><span class="pom-link-text">Buy Now</span><span class="pom-arrow is-ne" aria-hidden="true"></span></a>
       <div class="pom-add sqs-add-to-cart-button-wrapper" data-item-id="{id}">
         <div class="sqs-add-to-cart-button">Add to Cart</div>
       </div>

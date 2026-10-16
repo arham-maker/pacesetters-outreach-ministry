@@ -1,4 +1,5 @@
-<div class="pom-page pom-page-product">
+<div class="pom-page pom-page-product" data-product-page>
+  <div data-product-view>
   <section class="pom-product-head">
     <a class="pom-back is-ink" href="/store"><span class="pom-arrow is-back" aria-hidden="true"></span> Back to Store</a>
     <h1>Product Details</h1>
@@ -28,7 +29,7 @@
           <button type="button" data-qty-plus aria-label="Increase quantity">+</button>
         </div>
       </div>
-      <a class="pom-btn-dark" href="/order"><span class="pom-link-text">Buy Now</span><span class="pom-arrow is-ne" aria-hidden="true"></span></a>
+      <a class="pom-btn-dark" href="#order" data-buy-now><span class="pom-link-text">Buy Now</span><span class="pom-arrow is-ne" aria-hidden="true"></span></a>
     </div>
   </section>
 
@@ -138,4 +139,83 @@
     </div>
     <div class="pom-cms"><squarespace:block-field id="product-daily-words-of-hope-contact" columns="12" /></div>
   </section>
+  </div>
+
+  <div class="pom-page-checkout" data-order-view hidden id="order">
+    <section class="pom-checkout" data-pom-region="daily-words-of-hope-checkout">
+      <div class="pom-fallback">
+        <div class="pom-checkout-main">
+          <button class="pom-back is-ink" type="button" data-back-product><span class="pom-arrow is-back" aria-hidden="true"></span> Back to Product</button>
+          <h1>Checkout</h1>
+          <p class="pom-lede">Complete your order and bring encouragement home.</p>
+
+          <form class="pom-checkout-form" data-checkout-form>
+            <div class="pom-checkout-section">
+              <h2><span>01</span> Contact details</h2>
+              <div class="pom-field"><label for="daily-words-of-hope-chk-name">Name</label><input id="daily-words-of-hope-chk-name" name="name" type="text" autocomplete="name" required></div>
+              <div class="pom-field"><label for="daily-words-of-hope-chk-email">Email</label><input id="daily-words-of-hope-chk-email" name="email" type="email" autocomplete="email" required></div>
+              <div class="pom-field"><label for="daily-words-of-hope-chk-phone">Phone number</label><input id="daily-words-of-hope-chk-phone" name="phone" type="tel" autocomplete="tel"></div>
+            </div>
+
+            <div class="pom-checkout-section">
+              <h2><span>02</span> Shipping details</h2>
+              <div class="pom-field"><label for="daily-words-of-hope-chk-street">Street Address</label><input id="daily-words-of-hope-chk-street" name="street" type="text" autocomplete="address-line1" required></div>
+              <div class="pom-field"><label for="daily-words-of-hope-chk-apt">Apartment, Suite, etc. (Optional)</label><input id="daily-words-of-hope-chk-apt" name="apt" type="text" autocomplete="address-line2"></div>
+              <div class="pom-field-row">
+                <div class="pom-field"><label for="daily-words-of-hope-chk-city">City</label><input id="daily-words-of-hope-chk-city" name="city" type="text" autocomplete="address-level2" required></div>
+                <div class="pom-field"><label for="daily-words-of-hope-chk-state">State</label><input id="daily-words-of-hope-chk-state" name="state" type="text" autocomplete="address-level1" required></div>
+              </div>
+              <div class="pom-field-row">
+                <div class="pom-field"><label for="daily-words-of-hope-chk-zip">Zip Code</label><input id="daily-words-of-hope-chk-zip" name="zip" type="text" autocomplete="postal-code" required></div>
+                <div class="pom-field"><label for="daily-words-of-hope-chk-country">Country</label><input id="daily-words-of-hope-chk-country" name="country" type="text" autocomplete="country-name" required></div>
+              </div>
+            </div>
+
+            <div class="pom-checkout-section">
+              <h2><span>03</span> Payment details</h2>
+              <div class="pom-field"><label for="daily-words-of-hope-chk-card">Card number</label><input id="daily-words-of-hope-chk-card" name="card" type="text" inputmode="numeric" autocomplete="cc-number" required></div>
+              <div class="pom-field-row">
+                <div class="pom-field"><label for="daily-words-of-hope-chk-exp">MM / YY</label><input id="daily-words-of-hope-chk-exp" name="exp" type="text" autocomplete="cc-exp" required></div>
+                <div class="pom-field"><label for="daily-words-of-hope-chk-cvc">CVC</label><input id="daily-words-of-hope-chk-cvc" name="cvc" type="text" autocomplete="cc-csc" required></div>
+              </div>
+              <div class="pom-field"><label for="daily-words-of-hope-chk-cardname">Name on card</label><input id="daily-words-of-hope-chk-cardname" name="cardName" type="text" autocomplete="cc-name" required></div>
+              <p class="pom-secure"><span class="pom-meta-icon is-lock" aria-hidden="true"></span> Your payment details are encrypted.</p>
+              <label class="pom-check"><input type="checkbox" name="terms" required checked><span>I agree to the Terms &amp; Conditions and Privacy Policy.</span></label>
+            </div>
+
+            <button class="pom-btn-dark" type="submit"><span class="pom-link-text">Pay $20.00</span><span class="pom-arrow is-ne" aria-hidden="true"></span></button>
+          </form>
+        </div>
+
+        <aside class="pom-checkout-summary">
+          <p class="pom-eyebrow">Your Order Summary</p>
+          <h3>Daily Words of Hope.</h3>
+          <p class="pom-product-cat">Books</p>
+          <div class="pom-media is-checkout-item is-product-p05" role="img" aria-label="Daily Words of Hope"></div>
+          <div class="pom-summary-row">
+            <span>Quantity : 01</span>
+            <button class="pom-edit" type="button" data-back-product>Edit</button>
+          </div>
+          <div class="pom-summary-lines">
+            <div><span>Subtotal</span><strong>$16.00</strong></div>
+            <div><span>Shipping</span><strong>$4.00</strong></div>
+            <div><span>Tax</span><strong>$0.00</strong></div>
+          </div>
+          <div class="pom-summary-total"><span>Total</span><strong>$20.00</strong></div>
+          <p class="pom-summary-note">Thank you for supporting Pacesetters Outreach Ministry.</p>
+          <p class="pom-summary-help">Need help with your order? <a href="/contact">Contact us</a></p>
+        </aside>
+      </div>
+    </section>
+
+    <div class="pom-modal is-order-confirmed" data-order-modal hidden>
+      <div class="pom-modal-card" role="dialog" aria-modal="true" aria-labelledby="daily-words-of-hope-order-success-title">
+        <button class="pom-modal-close" type="button" data-modal-close aria-label="Close">&times;</button>
+        <div class="pom-modal-check" aria-hidden="true"></div>
+        <h2 id="daily-words-of-hope-order-success-title">Thank You for Your Purchase!</h2>
+        <p>Your order for Daily Words of Hope is confirmed. We appreciate your support of the ministry.</p>
+        <a class="pom-link" href="/store"><span class="pom-link-text">Back to Store</span><span class="pom-arrow is-ne" aria-hidden="true"></span></a>
+      </div>
+    </div>
+  </div>
 </div>

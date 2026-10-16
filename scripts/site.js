@@ -170,6 +170,46 @@
     });
   });
 
+  Array.prototype.forEach.call(document.querySelectorAll("[data-product-page]"), function (page) {
+    var productView = page.querySelector("[data-product-view]");
+    var orderView = page.querySelector("[data-order-view]");
+    if (!productView || !orderView) {
+      return;
+    }
+    function showOrder(on) {
+      page.classList.toggle("is-ordering", on);
+      if (on) {
+        orderView.hidden = false;
+        productView.hidden = true;
+        window.scrollTo(0, 0);
+        if (window.history && window.history.replaceState) {
+          window.history.replaceState(null, "", "#order");
+        }
+      } else {
+        orderView.hidden = true;
+        productView.hidden = false;
+        if (window.history && window.history.replaceState) {
+          window.history.replaceState(null, "", window.location.pathname);
+        }
+      }
+    }
+    Array.prototype.forEach.call(page.querySelectorAll("[data-buy-now]"), function (btn) {
+      btn.addEventListener("click", function (event) {
+        event.preventDefault();
+        showOrder(true);
+      });
+    });
+    Array.prototype.forEach.call(page.querySelectorAll("[data-back-product]"), function (btn) {
+      btn.addEventListener("click", function (event) {
+        event.preventDefault();
+        showOrder(false);
+      });
+    });
+    if (window.location.hash === "#order") {
+      showOrder(true);
+    }
+  });
+
   Array.prototype.forEach.call(document.querySelectorAll("[data-qty]"), function (wrap) {
     var input = wrap.querySelector("input");
     var minus = wrap.querySelector("[data-qty-minus]");

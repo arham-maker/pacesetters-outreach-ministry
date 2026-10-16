@@ -73,6 +73,16 @@ PRODUCTS = [
     },
 ]
 
+SHIPPING = 4.0
+
+
+def money(amount: float) -> str:
+    return f"${amount:.2f}"
+
+
+def price_num(p: dict) -> float:
+    return float(p["price"].replace("$", ""))
+
 
 def related_html(current_slug: str) -> str:
     bits = []
@@ -110,21 +120,105 @@ def gallery_slides(p: dict) -> str:
     dots = []
     for i, img in enumerate(imgs):
         active = " is-active" if i == 0 else ""
-        dot_class = "is-active" if i == 0 else ""
         slides.append(
             f'      <div class="pom-media is-product-{img}{active}" data-slide="{i}" role="img" aria-label="{p["title"].replace("&amp;", "and")} image {i + 1}"></div>'
         )
-        if dot_class:
-            dots.append(f'<span class="{dot_class}" data-dot="{i}"></span>')
+        if i == 0:
+            dots.append(f'<span class="is-active" data-dot="{i}"></span>')
         else:
             dots.append(f'<span data-dot="{i}"></span>')
     return "\n".join(slides), "".join(dots)
 
 
+def checkout_html(p: dict) -> str:
+    s = p["slug"]
+    sub = price_num(p)
+    total = sub + SHIPPING
+    return f"""  <div class="pom-page-checkout" data-order-view hidden id="order">
+    <section class="pom-checkout" data-pom-region="{s}-checkout">
+      <div class="pom-fallback">
+        <div class="pom-checkout-main">
+          <button class="pom-back is-ink" type="button" data-back-product><span class="pom-arrow is-back" aria-hidden="true"></span> Back to Product</button>
+          <h1>Checkout</h1>
+          <p class="pom-lede">Complete your order and bring encouragement home.</p>
+
+          <form class="pom-checkout-form" data-checkout-form>
+            <div class="pom-checkout-section">
+              <h2><span>01</span> Contact details</h2>
+              <div class="pom-field"><label for="{s}-chk-name">Name</label><input id="{s}-chk-name" name="name" type="text" autocomplete="name" required></div>
+              <div class="pom-field"><label for="{s}-chk-email">Email</label><input id="{s}-chk-email" name="email" type="email" autocomplete="email" required></div>
+              <div class="pom-field"><label for="{s}-chk-phone">Phone number</label><input id="{s}-chk-phone" name="phone" type="tel" autocomplete="tel"></div>
+            </div>
+
+            <div class="pom-checkout-section">
+              <h2><span>02</span> Shipping details</h2>
+              <div class="pom-field"><label for="{s}-chk-street">Street Address</label><input id="{s}-chk-street" name="street" type="text" autocomplete="address-line1" required></div>
+              <div class="pom-field"><label for="{s}-chk-apt">Apartment, Suite, etc. (Optional)</label><input id="{s}-chk-apt" name="apt" type="text" autocomplete="address-line2"></div>
+              <div class="pom-field-row">
+                <div class="pom-field"><label for="{s}-chk-city">City</label><input id="{s}-chk-city" name="city" type="text" autocomplete="address-level2" required></div>
+                <div class="pom-field"><label for="{s}-chk-state">State</label><input id="{s}-chk-state" name="state" type="text" autocomplete="address-level1" required></div>
+              </div>
+              <div class="pom-field-row">
+                <div class="pom-field"><label for="{s}-chk-zip">Zip Code</label><input id="{s}-chk-zip" name="zip" type="text" autocomplete="postal-code" required></div>
+                <div class="pom-field"><label for="{s}-chk-country">Country</label><input id="{s}-chk-country" name="country" type="text" autocomplete="country-name" required></div>
+              </div>
+            </div>
+
+            <div class="pom-checkout-section">
+              <h2><span>03</span> Payment details</h2>
+              <div class="pom-field"><label for="{s}-chk-card">Card number</label><input id="{s}-chk-card" name="card" type="text" inputmode="numeric" autocomplete="cc-number" required></div>
+              <div class="pom-field-row">
+                <div class="pom-field"><label for="{s}-chk-exp">MM / YY</label><input id="{s}-chk-exp" name="exp" type="text" autocomplete="cc-exp" required></div>
+                <div class="pom-field"><label for="{s}-chk-cvc">CVC</label><input id="{s}-chk-cvc" name="cvc" type="text" autocomplete="cc-csc" required></div>
+              </div>
+              <div class="pom-field"><label for="{s}-chk-cardname">Name on card</label><input id="{s}-chk-cardname" name="cardName" type="text" autocomplete="cc-name" required></div>
+              <p class="pom-secure"><span class="pom-meta-icon is-lock" aria-hidden="true"></span> Your payment details are encrypted.</p>
+              <label class="pom-check"><input type="checkbox" name="terms" required checked><span>I agree to the Terms &amp; Conditions and Privacy Policy.</span></label>
+            </div>
+
+            <button class="pom-btn-dark" type="submit"><span class="pom-link-text">Pay {money(total)}</span><span class="pom-arrow is-ne" aria-hidden="true"></span></button>
+          </form>
+        </div>
+
+        <aside class="pom-checkout-summary">
+          <p class="pom-eyebrow">Your Order Summary</p>
+          <h3>{p['title']}.</h3>
+          <p class="pom-product-cat">{p['cat']}</p>
+          <div class="pom-media is-checkout-item is-product-{p['img']}" role="img" aria-label="{p['title'].replace('&amp;', 'and')}"></div>
+          <div class="pom-summary-row">
+            <span>Quantity : 01</span>
+            <button class="pom-edit" type="button" data-back-product>Edit</button>
+          </div>
+          <div class="pom-summary-lines">
+            <div><span>Subtotal</span><strong>{p['price']}</strong></div>
+            <div><span>Shipping</span><strong>{money(SHIPPING)}</strong></div>
+            <div><span>Tax</span><strong>$0.00</strong></div>
+          </div>
+          <div class="pom-summary-total"><span>Total</span><strong>{money(total)}</strong></div>
+          <p class="pom-summary-note">Thank you for supporting Pacesetters Outreach Ministry.</p>
+          <p class="pom-summary-help">Need help with your order? <a href="/contact">Contact us</a></p>
+        </aside>
+      </div>
+    </section>
+
+    <div class="pom-modal is-order-confirmed" data-order-modal hidden>
+      <div class="pom-modal-card" role="dialog" aria-modal="true" aria-labelledby="{s}-order-success-title">
+        <button class="pom-modal-close" type="button" data-modal-close aria-label="Close">&times;</button>
+        <div class="pom-modal-check" aria-hidden="true"></div>
+        <h2 id="{s}-order-success-title">Thank You for Your Purchase!</h2>
+        <p>Your order for {p['title']} is confirmed. We appreciate your support of the ministry.</p>
+        <a class="pom-link" href="/store"><span class="pom-link-text">Back to Store</span><span class="pom-arrow is-ne" aria-hidden="true"></span></a>
+      </div>
+    </div>
+  </div>
+"""
+
+
 def page_html(p: dict) -> str:
     related = related_html(p["slug"])
     slides, dots = gallery_slides(p)
-    return f"""<div class="pom-page pom-page-product">
+    return f"""<div class="pom-page pom-page-product" data-product-page>
+  <div data-product-view>
   <section class="pom-product-head">
     <a class="pom-back is-ink" href="/store"><span class="pom-arrow is-back" aria-hidden="true"></span> Back to Store</a>
     <h1>Product Details</h1>
@@ -152,7 +246,7 @@ def page_html(p: dict) -> str:
           <button type="button" data-qty-plus aria-label="Increase quantity">+</button>
         </div>
       </div>
-      <a class="pom-btn-dark" href="/order"><span class="pom-link-text">Buy Now</span><span class="pom-arrow is-ne" aria-hidden="true"></span></a>
+      <a class="pom-btn-dark" href="#order" data-buy-now><span class="pom-link-text">Buy Now</span><span class="pom-arrow is-ne" aria-hidden="true"></span></a>
     </div>
   </section>
 
@@ -224,7 +318,9 @@ def page_html(p: dict) -> str:
     </div>
     <div class="pom-cms"><squarespace:block-field id="product-{p['slug']}-contact" columns="12" /></div>
   </section>
-</div>
+  </div>
+
+{checkout_html(p)}</div>
 """
 
 
@@ -257,46 +353,93 @@ def store_cards() -> str:
     return "\n".join(bits)
 
 
+def standalone_checkout(p: dict) -> str:
+    """Full-page order template (optional CMS page at /order)."""
+    inner = checkout_html(p)
+    # standalone: remove hidden, use link back instead of button toggle
+    inner = inner.replace(' data-order-view hidden id="order"', "")
+    inner = inner.replace(
+        '<button class="pom-back is-ink" type="button" data-back-product><span class="pom-arrow is-back" aria-hidden="true"></span> Back to Product</button>',
+        f'<a class="pom-back is-ink" href="/{p["slug"]}"><span class="pom-arrow is-back" aria-hidden="true"></span> Back to Product</a>',
+    )
+    inner = inner.replace(
+        '<button class="pom-edit" type="button" data-back-product>Edit</button>',
+        f'<a class="pom-edit" href="/{p["slug"]}">Edit</a>',
+    )
+    return f'<div class="pom-page pom-page-checkout">\n{inner}\n</div>\n'
+
+
 def main() -> None:
     for p in PRODUCTS:
         conf_title = p["title"].replace("&amp;", "&")
         conf = (
-            '{\n'
+            "{\n"
             f'  "title": "{conf_title}",\n'
             f'  "description": "Product detail for {conf_title}. Create at URL /{p["slug"]} (Not Linked)."\n'
-            '}\n'
+            "}\n"
         )
         (PAGES / f"{p['slug']}.page").write_text(page_html(p), encoding="utf-8")
         (PAGES / f"{p['slug']}.page.conf").write_text(conf, encoding="utf-8")
         print("Wrote", p["slug"])
 
+    first = PRODUCTS[0]
+    (PAGES / "product-details.page").write_text(page_html(first), encoding="utf-8")
+    print("Updated product-details.page")
+
+    # Standalone order page template (Buy Now works on product pages without this)
+    (PAGES / "order.page").write_text(standalone_checkout(first), encoding="utf-8")
+    (PAGES / "order.page.conf").write_text(
+        '{\n'
+        '  "title": "Order",\n'
+        '  "description": "Optional standalone checkout at /order. Buy Now also opens checkout on each product page."\n'
+        "}\n",
+        encoding="utf-8",
+    )
+    print("Wrote order.page")
+
+    # Keep checkout.page in sync as alias of order
+    (PAGES / "checkout.page").write_text(standalone_checkout(first), encoding="utf-8")
+    print("Updated checkout.page")
+
     # Patch store.page product grid
     store_path = PAGES / "store.page"
     store = store_path.read_text(encoding="utf-8")
-    start = store.index('<div class="pom-products" data-product-grid>')
-    end = store.index("</div>\n    </div>\n    <div class=\"pom-cms\"><squarespace:block-field id=\"store-grid\"")
     new_grid = (
         '<div class="pom-products" data-product-grid>\n'
         + store_cards()
         + "\n      </div>"
     )
-    # find closing of products div more carefully
     marker_end = '      </div>\n    </div>\n    <div class="pom-cms"><squarespace:block-field id="store-grid"'
     start = store.index('<div class="pom-products" data-product-grid>')
     end = store.index(marker_end)
-    store = store[:start] + new_grid + "\n    </div>\n    <div class=\"pom-cms\"><squarespace:block-field id=\"store-grid\"" + store[end + len(marker_end) :]
+    store = (
+        store[:start]
+        + new_grid
+        + "\n    </div>\n    <div class=\"pom-cms\"><squarespace:block-field id=\"store-grid\""
+        + store[end + len(marker_end) :]
+    )
     store_path.write_text(store, encoding="utf-8")
     print("Updated store.page")
 
-    # Patch products.list empty-items {.or} fallback (after repeated items close)
     list_path = ROOT / "collections" / "products.list"
     plist = list_path.read_text(encoding="utf-8")
     start_marker = '        {.or}\n        <article class="pom-product" data-category="music">'
-    end_marker = "\n        {.end}\n      </div>\n    </div>\n    <div class=\"pom-cms\"><squarespace:block-field id=\"store-grid\""
+    end_marker = (
+        "\n        {.end}\n      </div>\n    </div>\n"
+        '    <div class="pom-cms"><squarespace:block-field id="store-grid"'
+    )
     start = plist.index(start_marker)
     end = plist.index(end_marker, start)
+    cats = {
+        "p01": "music",
+        "p02": "sermons",
+        "p03": "books",
+        "p04": "music",
+        "p05": "books",
+        "p06": "sermons",
+    }
     fallback = "\n".join(
-        f"""        <article class="pom-product" data-category="{({'p01':'music','p02':'sermons','p03':'books','p04':'music','p05':'books','p06':'sermons'}[p['img']])}">
+        f"""        <article class="pom-product" data-category="{cats[p['img']]}">
           <a href="/{p['slug']}">
             <div class="pom-media is-store-{p['img']}" role="img" aria-label="{p['title'].replace('&amp;', 'and')}"></div>
             <div class="pom-product-meta">
@@ -311,29 +454,9 @@ def main() -> None:
         </article>"""
         for p in PRODUCTS
     )
-    plist = (
-        plist[:start]
-        + "        {.or}\n"
-        + fallback
-        + plist[end:]
-    )
+    plist = plist[:start] + "        {.or}\n" + fallback + plist[end:]
     list_path.write_text(plist, encoding="utf-8")
     print("Updated products.list")
-
-    # Update product-details.page to redirect-style first product content (songs)
-    first = PRODUCTS[0]
-    (PAGES / "product-details.page").write_text(page_html(first), encoding="utf-8")
-    print("Updated product-details.page -> Songs of Encouragement")
-
-    # Checkout summary
-    checkout = (PAGES / "checkout.page").read_text(encoding="utf-8")
-    checkout = checkout.replace(
-        "<h3>Lorem Ipsum dolor sit amet.</h3>",
-        f"<h3>{first['title']}.</h3>",
-    )
-    checkout = checkout.replace('href="/product-details"', f'href="/{first["slug"]}"')
-    (PAGES / "checkout.page").write_text(checkout, encoding="utf-8")
-    print("Updated checkout.page")
 
 
 if __name__ == "__main__":
