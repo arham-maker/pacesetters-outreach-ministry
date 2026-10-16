@@ -135,7 +135,7 @@ def checkout_html(p: dict) -> str:
     sub = price_num(p)
     total = sub + SHIPPING
     return f"""  <div class="pom-page-checkout" data-order-view hidden id="order" data-unit-price="{sub:.2f}" data-shipping="{SHIPPING:.2f}">
-    <section class="pom-checkout" data-pom-region="{s}-checkout">
+    <section class="pom-checkout" data-pom-region="product-{s}-checkout">
       <div class="pom-fallback">
         <div class="pom-checkout-main">
           <button class="pom-back is-ink" type="button" data-back-product><span class="pom-arrow is-back" aria-hidden="true"></span> Back to Product</button>
@@ -200,6 +200,7 @@ def checkout_html(p: dict) -> str:
           <p class="pom-summary-help">Need help with your order? <a href="/contact">Contact us</a></p>
         </aside>
       </div>
+      <div class="pom-cms"><squarespace:block-field id="product-{s}-checkout" columns="12" /></div>
     </section>
 
     <div class="pom-modal is-order-confirmed" data-order-modal hidden>
@@ -218,51 +219,64 @@ def checkout_html(p: dict) -> str:
 def page_html(p: dict) -> str:
     related = related_html(p["slug"])
     slides, dots = gallery_slides(p)
+    s = p["slug"]
     return f"""<div class="pom-page pom-page-product" data-product-page>
   <div data-product-view>
-  <section class="pom-product-head">
-    <a class="pom-back is-ink" href="/store"><span class="pom-arrow is-back" aria-hidden="true"></span> Back to Store</a>
-    <h1>Product Details</h1>
-    <p class="pom-lede">{p['lede']}</p>
+  <section class="pom-product-head" data-pom-region="product-{s}-head">
+    <div class="pom-fallback">
+      <a class="pom-back is-ink" href="/store"><span class="pom-arrow is-back" aria-hidden="true"></span> Back to Store</a>
+      <h1>Product Details</h1>
+      <p class="pom-lede">{p['lede']}</p>
+    </div>
+    <div class="pom-cms"><squarespace:block-field id="product-{s}-head" columns="12" /></div>
   </section>
 
-  <section class="pom-product-main">
-    <div class="pom-product-gallery" data-gallery>
+  <section class="pom-product-main" data-pom-region="product-{s}-main">
+    <div class="pom-fallback">
+      <div class="pom-product-gallery" data-gallery>
 {slides}
-      <div class="pom-gallery-nav">
-        <button class="pom-icon-btn is-prev" type="button" data-gallery-prev aria-label="Previous image"><span class="pom-arrow"></span></button>
-        <button class="pom-icon-btn is-next" type="button" data-gallery-next aria-label="Next image"><span class="pom-arrow"></span></button>
-      </div>
-      <div class="pom-gallery-dots" data-gallery-dots>{dots}</div>
-    </div>
-    <div class="pom-product-info">
-      <p class="pom-eyebrow">{p['cat']}</p>
-      <h2>{p['title']}</h2>
-      <p class="pom-prose">{p['short']}</p>
-      <div class="pom-qty" data-qty>
-        <span>Quantity</span>
-        <div class="pom-qty-ctrl">
-          <button type="button" data-qty-minus aria-label="Decrease quantity">−</button>
-          <input type="text" value="1" readonly aria-label="Quantity">
-          <button type="button" data-qty-plus aria-label="Increase quantity">+</button>
+        <div class="pom-gallery-nav">
+          <button class="pom-icon-btn is-prev" type="button" data-gallery-prev aria-label="Previous image"><span class="pom-arrow"></span></button>
+          <button class="pom-icon-btn is-next" type="button" data-gallery-next aria-label="Next image"><span class="pom-arrow"></span></button>
         </div>
+        <div class="pom-gallery-dots" data-gallery-dots>{dots}</div>
       </div>
-      <a class="pom-btn-dark" href="#order" data-buy-now><span class="pom-link-text">Buy Now</span><span class="pom-arrow is-ne" aria-hidden="true"></span></a>
+      <div class="pom-product-info">
+        <p class="pom-eyebrow">{p['cat']}</p>
+        <h2>{p['title']}</h2>
+        <p class="pom-prose">{p['short']}</p>
+        <div class="pom-qty" data-qty>
+          <span>Quantity</span>
+          <div class="pom-qty-ctrl">
+            <button type="button" data-qty-minus aria-label="Decrease quantity">−</button>
+            <input type="text" value="1" readonly aria-label="Quantity">
+            <button type="button" data-qty-plus aria-label="Increase quantity">+</button>
+          </div>
+        </div>
+        <a class="pom-btn-dark" href="#order" data-buy-now><span class="pom-link-text">Buy Now</span><span class="pom-arrow is-ne" aria-hidden="true"></span></a>
+      </div>
     </div>
+    <div class="pom-cms"><squarespace:block-field id="product-{s}-main" columns="12" /></div>
   </section>
 
-  <section class="pom-product-about">
-    <h2>About this resource</h2>
-    <p class="pom-prose">{p['about1']}</p>
-    <p class="pom-prose">{p['about2']}</p>
+  <section class="pom-product-about" data-pom-region="product-{s}-about">
+    <div class="pom-fallback">
+      <h2>About this resource</h2>
+      <p class="pom-prose">{p['about1']}</p>
+      <p class="pom-prose">{p['about2']}</p>
+    </div>
+    <div class="pom-cms"><squarespace:block-field id="product-{s}-about" columns="12" /></div>
   </section>
 
-  <section class="pom-related">
-    <p class="pom-eyebrow">You May Also Like</p>
-    <h2>More resources for your walk of faith.</h2>
-    <div class="pom-related-grid">
+  <section class="pom-related" data-pom-region="product-{s}-related">
+    <div class="pom-fallback">
+      <p class="pom-eyebrow">You May Also Like</p>
+      <h2>More resources for your walk of faith.</h2>
+      <div class="pom-related-grid">
 {related}
+      </div>
     </div>
+    <div class="pom-cms"><squarespace:block-field id="product-{s}-related" columns="12" /></div>
   </section>
 
   <section class="pom-testimonials" data-pom-region="product-{p['slug']}-testimonials">

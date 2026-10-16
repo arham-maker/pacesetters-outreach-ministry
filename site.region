@@ -63,20 +63,23 @@
         </div>
       </nav>
 
-      <div class="pom-social">
-        <a href="https://www.facebook.com" aria-label="Facebook">
-          <svg class="pom-social-icon" viewBox="0 0 24 24" width="22" height="22" fill="none" aria-hidden="true">
-            <circle cx="12" cy="12" r="9.25" stroke="currentColor" stroke-width="1.4"/>
-            <path d="M13.1 17.5v-5.2h1.55l.23-1.85H13.1V9.3c0-.53.15-.9.92-.9h.98V6.75c-.17-.02-.75-.07-1.43-.07-1.42 0-2.4.86-2.4 2.45v1.37H9.5v1.85h1.67v5.2h1.93z" fill="currentColor"/>
-          </svg>
-        </a>
-        <a href="https://www.instagram.com" aria-label="Instagram">
-          <svg class="pom-social-icon" viewBox="0 0 24 24" width="22" height="22" fill="none" aria-hidden="true">
-            <rect x="3.75" y="3.75" width="16.5" height="16.5" rx="4.2" stroke="currentColor" stroke-width="1.4"/>
-            <circle cx="12" cy="12" r="3.85" stroke="currentColor" stroke-width="1.4"/>
-            <circle cx="16.85" cy="7.2" r="1.05" fill="currentColor"/>
-          </svg>
-        </a>
+      <div class="pom-social" data-pom-region="site-footer-social">
+        <div class="pom-fallback">
+          <a href="https://www.facebook.com" aria-label="Facebook">
+            <svg class="pom-social-icon" viewBox="0 0 24 24" width="22" height="22" fill="none" aria-hidden="true">
+              <circle cx="12" cy="12" r="9.25" stroke="currentColor" stroke-width="1.4"/>
+              <path d="M13.1 17.5v-5.2h1.55l.23-1.85H13.1V9.3c0-.53.15-.9.92-.9h.98V6.75c-.17-.02-.75-.07-1.43-.07-1.42 0-2.4.86-2.4 2.45v1.37H9.5v1.85h1.67v5.2h1.93z" fill="currentColor"/>
+            </svg>
+          </a>
+          <a href="https://www.instagram.com" aria-label="Instagram">
+            <svg class="pom-social-icon" viewBox="0 0 24 24" width="22" height="22" fill="none" aria-hidden="true">
+              <rect x="3.75" y="3.75" width="16.5" height="16.5" rx="4.2" stroke="currentColor" stroke-width="1.4"/>
+              <circle cx="12" cy="12" r="3.85" stroke="currentColor" stroke-width="1.4"/>
+              <circle cx="16.85" cy="7.2" r="1.05" fill="currentColor"/>
+            </svg>
+          </a>
+        </div>
+        <div class="pom-cms"><squarespace:block-field id="site-footer-social" columns="12" /></div>
       </div>
     </div>
 

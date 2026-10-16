@@ -256,6 +256,8 @@ h1, h2, h3, p { margin: 0; }
 }
 
 .pom-nav-cms { display: none; }
+.has-nav-cms .pom-nav-cms { display: block; }
+.has-nav-cms .pom-nav-fallback { display: none; }
 
 .pom-sidenav {
   position: absolute;
@@ -3730,11 +3732,47 @@ section.pom-join.is-tan {
   z-index: 1;
 }
 
+/* Squarespace Edit mode: every section becomes clickable like native SQS */
+.pom-editing [data-pom-region]:not(.has-cms) > .pom-fallback {
+  opacity: 0.42;
+  pointer-events: none;
+}
+
 .pom-editing [data-pom-region] > .pom-cms {
-  margin: 0;
-  padding: 16px 20px;
-  background: rgba(255, 255, 255, 0.94);
+  margin: 12px 0;
+  padding: 20px 22px;
+  min-height: 72px;
+  background: rgba(254, 254, 254, 0.97);
   color: @ink;
+  outline: 2px dashed @gold-figma;
+  outline-offset: 2px;
+  box-shadow: 0 8px 28px rgba(38, 38, 37, 0.08);
+}
+
+.pom-editing [data-pom-region] > .pom-cms:before {
+  content: "Edit this section — add Text, Image, or Button blocks";
+  display: block;
+  margin: 0 0 14px;
+  font-family: @font-display;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: @gold-figma;
+}
+
+.pom-editing [data-pom-region].has-cms > .pom-cms:before {
+  content: "Editing this section";
+}
+
+.pom-editing .pom-footer [data-pom-region] > .pom-cms {
+  background: rgba(38, 38, 37, 0.92);
+  color: #fefefe;
+  outline-color: @gold-figma;
+}
+
+.pom-editing .pom-social {
+  min-width: 120px;
 }
 
 @media (max-width: 1100px) {

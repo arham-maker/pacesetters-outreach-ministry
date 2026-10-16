@@ -1,9 +1,17 @@
 (function () {
   var body = document.body;
-  var rootClass = document.documentElement.className + " " + body.className;
-  if (/sqs-edit|squarespace-editable|sqs-editing/.test(rootClass)) {
-    body.classList.add("pom-editing");
+
+  function refreshEditing() {
+    var classes = document.documentElement.className + " " + body.className;
+    var editing =
+      /sqs-edit|squarespace-editable|sqs-editing|sqs-backend/.test(classes) ||
+      !!document.querySelector(
+        ".sqs-damask-edit, .sqs-layout-editing, .sqs-backend, [data-controller='EditMode']"
+      );
+    body.classList.toggle("pom-editing", !!editing);
   }
+  refreshEditing();
+  setInterval(refreshEditing, 1500);
 
   if (document.querySelector(".pom-page-plain, .pom-page-checkout") || (!document.querySelector(".pom-page, .pom-hero") && !document.querySelector(".pom-page-product"))) {
     body.classList.add("pom-has-plain");
@@ -40,14 +48,20 @@
 
   Array.prototype.forEach.call(document.querySelectorAll("[data-pom-nav]"), function (nav) {
     var fallback = nav.querySelector("[data-nav-fallback]");
-    if (fallback) {
+    var cms = nav.querySelector("[data-nav-cms]");
+    if (cms && cms.querySelector("a")) {
+      nav.classList.add("has-nav-cms");
+      if (fallback) {
+        fallback.hidden = true;
+      }
+    } else if (fallback) {
       fallback.hidden = false;
     }
   });
 
   Array.prototype.forEach.call(document.querySelectorAll("[data-pom-region]"), function (region) {
     var cms = region.querySelector(".pom-cms");
-    if (cms && cms.querySelector(".sqs-block:not(.sqs-block-spacer), .form-wrapper")) {
+    if (cms && cms.querySelector(".sqs-block:not(.sqs-block-spacer), .form-wrapper, .sqs-block-image, .sqs-block-html, .sqs-block-markdown")) {
       region.classList.add("has-cms");
     }
   });
