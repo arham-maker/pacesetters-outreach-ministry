@@ -6585,19 +6585,106 @@ body.pom-modal-open { overflow: hidden; }
     width: 100%;
   }
 
-  .pom-page-home .pom-testimonials,
-  .pom-page-home .pom-faq {
-    padding-top: 48px;
-    padding-bottom: 48px;
-  }
-
   .pom-page-home .pom-quote-nav {
     justify-content: flex-start;
   }
 
-  .pom-page-home .pom-contact > .pom-fallback {
-    padding-top: 48px;
-    padding-bottom: 48px;
+  /* Testimonials / FAQ / Contact — one 20px pad, no nested doubles */
+  .pom-testimonials,
+  .pom-faq,
+  .pom-page-home .pom-testimonials,
+  .pom-page-home .pom-faq,
+  .pom-page-product .pom-testimonials,
+  .pom-contact,
+  .pom-page-home .pom-contact,
+  .pom-page-product .pom-contact {
+    padding: 48px 20px !important;
+  }
+
+  .pom-testimonials-intro,
+  .pom-faq-intro,
+  .pom-testimonials .pom-testimonials-intro,
+  .pom-faq .pom-faq-intro,
+  .pom-page-home .pom-testimonials-intro,
+  .pom-page-home .pom-faq-intro {
+    padding: 0 0 20px !important;
+    align-items: flex-start !important;
+    text-align: left !important;
+  }
+
+  .pom-testimonials-intro > div,
+  .pom-faq-intro > div,
+  .pom-testimonials .pom-testimonials-intro > div,
+  .pom-faq .pom-faq-intro > div {
+    max-width: none !important;
+    width: 100% !important;
+    text-align: left !important;
+  }
+
+  .pom-testimonials h2,
+  .pom-testimonials .pom-testimonials-intro h2,
+  .pom-faq h2,
+  .pom-faq .pom-faq-intro h2 {
+    max-width: none !important;
+    margin: 0 !important;
+    text-align: left !important;
+  }
+
+  .pom-quote-wrap,
+  .pom-faq-list {
+    padding: 8px 0 0 !important;
+    max-width: none !important;
+    width: 100% !important;
+    justify-self: stretch !important;
+  }
+
+  .pom-quote,
+  .pom-quote.is-active,
+  .pom-quote p {
+    max-width: none !important;
+    width: 100%;
+  }
+
+  .pom-faq-a {
+    padding-right: 0 !important;
+    max-width: none !important;
+  }
+
+  .pom-contact > .pom-fallback,
+  .pom-page-home .pom-contact > .pom-fallback,
+  .pom-page-product .pom-contact {
+    padding: 0 !important;
+    gap: 28px !important;
+    align-items: stretch !important;
+  }
+
+  .pom-contact-copy,
+  .pom-contact-copy .pom-eyebrow,
+  .pom-contact .pom-eyebrow,
+  .pom-contact h2,
+  .pom-contact-lead {
+    text-align: left !important;
+    white-space: normal !important;
+    max-width: none !important;
+  }
+
+  .pom-contact-meta {
+    justify-content: flex-start !important;
+  }
+
+  .pom-form-card {
+    width: 100% !important;
+    max-width: none !important;
+    justify-self: stretch !important;
+    padding: 32px 20px !important;
+    box-sizing: border-box;
+  }
+
+  .pom-form-stack {
+    width: 100%;
+    max-width: none;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   /* About / Services / Events / Outreach / Prayer / Contact mobile */
@@ -6709,12 +6796,16 @@ body.pom-modal-open { overflow: hidden; }
     padding: 40px 20px !important;
   }
 
-  .pom-form-stack,
-  .pom-form-card {
+  .pom-form-stack {
     width: 100%;
     max-width: none;
+  }
+
+  .pom-contact-page .pom-form-stack,
+  .pom-contact-page .pom-form-card {
     padding-left: 20px;
     padding-right: 20px;
+    box-sizing: border-box;
   }
 
   .pom-page-plain.pom-legal-page,
