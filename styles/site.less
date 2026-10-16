@@ -4670,21 +4670,406 @@ body[class*="cart"] ,
   border-color: @ink;
 }
 
+/* Product Details — Figma 702:1382 */
 .pom-page-product {
-  background: @paper;
+  background: @cream;
   color: @ink;
+  font-family: @font-display;
+}
+
+.pom-page-product .pom-product-head {
+  padding: 120px 100px 40px;
+}
+
+.pom-page-product .pom-back.is-ink {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 40px;
+  font-family: @font-display;
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 400;
+  color: @ink;
+  text-decoration: none;
+}
+
+.pom-page-product .pom-back.is-ink .pom-arrow,
+.pom-page-product .pom-back.is-ink .pom-arrow.is-back {
+  width: 14px !important;
+  height: 14px !important;
+  flex: 0 0 14px;
+  border: 0 !important;
+  background: currentColor !important;
+  -webkit-mask: ~'url("/assets/arrow-ne.svg") center / contain no-repeat' !important;
+  mask: ~'url("/assets/arrow-ne.svg") center / contain no-repeat' !important;
+  transform: rotate(-135deg) !important;
+}
+
+.pom-page-product .pom-product-head h1 {
+  font-family: @font-display !important;
+  font-weight: 400;
+  font-size: 90px;
+  line-height: 90px;
+  letter-spacing: 0;
+  color: @ink;
+  margin: 0 0 20px;
+}
+
+.pom-page-product .pom-product-head .pom-lede {
+  font-family: @font-display;
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 400;
+  color: @contact-muted;
+  max-width: 720px;
+  margin: 0;
+}
+
+.pom-page-product .pom-product-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  padding: 20px 100px 72px;
+  align-items: start;
+  background: @cream;
+}
+
+.pom-page-product .pom-product-gallery {
+  position: relative;
+}
+
+.pom-page-product .pom-product-gallery .pom-media {
+  min-height: 560px;
+  height: 560px;
+  aspect-ratio: auto;
+  background-image: ~'url("/assets/store/store-product-01.png")';
+  background-position: center center;
+  background-size: cover;
+}
+
+.pom-page-product .pom-gallery-nav {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 560px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  pointer-events: none;
+}
+
+.pom-page-product .pom-gallery-nav .pom-icon-btn {
+  pointer-events: auto;
+  background: transparent;
+  border: 1px solid @contact-muted;
+  color: @contact-muted;
+}
+
+.pom-page-product .pom-gallery-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.pom-page-product .pom-gallery-dots span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #d9d1c5;
+}
+
+.pom-page-product .pom-gallery-dots span.is-active {
+  background: @ink;
+}
+
+.pom-page-product .pom-product-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 10px;
+}
+
+.pom-page-product .pom-product-info .pom-eyebrow {
+  font-family: @font-display;
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  color: @gold-figma;
+  margin: 0 0 20px;
+}
+
+.pom-page-product .pom-product-info h2 {
+  font-family: @font-display !important;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 56px;
+  letter-spacing: 0;
+  color: @ink !important;
+  margin: 0 0 20px;
+}
+
+.pom-page-product .pom-product-info .pom-prose {
+  font-family: @font-display;
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 400;
+  color: @contact-muted !important;
+  margin: 0 0 30px;
+  padding: 0 0 30px;
+  border-bottom: 1px solid @gold-figma;
+  max-width: none;
+}
+
+.pom-page-product .pom-qty {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+  font-family: @font-display;
+  font-size: 22px;
+  line-height: 30px;
+  color: @ink;
+}
+
+.pom-page-product .pom-qty-ctrl {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid @ink;
+  background: transparent;
+}
+
+.pom-page-product .pom-qty-ctrl button,
+.pom-page-product .pom-qty-ctrl input {
+  width: 48px;
+  height: 48px;
+  border: 0;
+  background: transparent;
+  text-align: center;
+  font-family: @font-display;
+  font-size: 22px;
+  line-height: 30px;
+  color: @ink;
+}
+
+.pom-page-product .pom-qty-ctrl button {
+  cursor: pointer;
+}
+
+.pom-page-product .pom-btn-dark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  min-height: 64px;
+  padding: 18px 32px;
+  background: @ink;
+  color: #fefefe;
+  border: 0;
+  border-radius: 0;
+  font-family: @font-display;
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.pom-page-product .pom-btn-dark .pom-link-text {
+  text-decoration: underline;
+  text-decoration-thickness: 4%;
+  text-underline-offset: 13%;
+}
+
+.pom-page-product .pom-btn-dark .pom-arrow,
+.pom-page-product .pom-btn-dark .pom-arrow.is-ne {
+  width: 14px !important;
+  height: 14px !important;
+  flex: 0 0 14px;
+  border: 0 !important;
+  background: currentColor !important;
+  -webkit-mask: ~'url("/assets/arrow-ne.svg") center / contain no-repeat' !important;
+  mask: ~'url("/assets/arrow-ne.svg") center / contain no-repeat' !important;
+  transform: none !important;
+}
+
+.pom-page-product .pom-product-about {
+  padding: 0 100px 80px;
+  max-width: none;
+  background: @cream;
+}
+
+.pom-page-product .pom-product-about h2 {
+  font-family: @font-display !important;
+  font-size: 48px;
+  line-height: 56px;
+  font-weight: 400;
+  letter-spacing: 0;
+  color: @ink !important;
+  margin: 0 0 30px;
+}
+
+.pom-page-product .pom-product-about .pom-prose {
+  font-family: @font-display;
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 400;
+  color: @contact-muted !important;
+  margin: 0 0 20px;
+  max-width: 920px;
+}
+
+.pom-page-product .pom-product-about .pom-prose:last-child {
+  margin-bottom: 0;
+}
+
+.pom-page-product .pom-related {
+  padding: 80px 100px;
+  background: #fefefe;
+}
+
+.pom-page-product .pom-related .pom-eyebrow {
+  font-family: @font-display;
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  color: @gold-figma;
+  margin: 0 0 20px;
+}
+
+.pom-page-product .pom-related h2 {
+  font-family: @font-display !important;
+  font-size: 48px;
+  line-height: 56px;
+  font-weight: 400;
+  letter-spacing: 0;
+  color: @ink !important;
+  margin: 0 0 50px;
+}
+
+.pom-page-product .pom-related-grid {
+  display: grid;
+  grid-template-columns: ~"repeat(3, 1fr)";
+  gap: 50px;
+}
+
+.pom-page-product .pom-related .pom-product > a {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+  text-decoration: none;
+  color: inherit;
+  width: 100%;
+}
+
+.pom-page-product .pom-related .pom-media {
+  height: 252px;
+  min-height: 252px;
+  width: 100%;
+  margin: 0;
+}
+
+.pom-page-product .pom-related .is-store-p01 { background-image: ~'url("/assets/store/store-product-01.png")'; }
+.pom-page-product .pom-related .is-store-p02 { background-image: ~'url("/assets/store/store-product-02.png")'; }
+.pom-page-product .pom-related .is-store-p03 { background-image: ~'url("/assets/store/store-product-03.png")'; }
+
+.pom-page-product .pom-product-meta {
+  display: block;
+  width: 100%;
+  margin: 0;
+}
+
+.pom-page-product .pom-product-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  width: 100%;
+}
+
+.pom-page-product .pom-related h3 {
+  font-family: @font-display !important;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: 0;
+  color: @ink !important;
+  margin: 0;
+}
+
+.pom-page-product .pom-product-price {
+  font-family: @font-display;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 40px;
+  color: @ink;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.pom-page-product .pom-product-cat {
+  font-family: @font-display;
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 400;
+  color: @contact-muted;
+  margin: 0;
+}
+
+.pom-page-product .pom-related .pom-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 0;
+  color: @ink;
+  font-family: @font-display;
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.pom-page-product .pom-related .pom-link .pom-link-text {
+  text-decoration: underline;
+  text-decoration-thickness: 4%;
+  text-underline-offset: 13%;
+}
+
+.pom-page-product .pom-related .pom-link .pom-arrow,
+.pom-page-product .pom-related .pom-link .pom-arrow.is-ne {
+  width: 14px !important;
+  height: 14px !important;
+  flex: 0 0 14px;
+  border: 0 !important;
+  background: currentColor !important;
+  -webkit-mask: ~'url("/assets/arrow-ne.svg") center / contain no-repeat' !important;
+  mask: ~'url("/assets/arrow-ne.svg") center / contain no-repeat' !important;
+  transform: none !important;
+}
+
+.pom-page-product .pom-testimonials {
+  display: grid;
+  grid-template-columns: 0.42fr 0.58fr;
+  background: #fefefe;
+}
+
+.pom-page-product .pom-contact {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
 }
 
 .pom-product-head {
   padding: 48px @wide 24px;
-}
-
-.pom-product-head h1 {
-  font-family: @font-serif;
-  font-weight: 400;
-  font-size: @font-hero;
-  line-height: 1.05;
-  margin: 18px 0 12px;
 }
 
 .pom-product-main {
@@ -4733,21 +5118,6 @@ body[class*="cart"] ,
 
 .pom-gallery-dots span.is-active { background: @ink; }
 
-.pom-product-info h2 {
-  font-family: @font-serif;
-  font-weight: 400;
-  font-size: 40px;
-  line-height: 1.1;
-  margin-bottom: 16px;
-}
-
-.pom-product-info .pom-prose {
-  margin-bottom: 28px;
-  padding-bottom: 28px;
-  border-bottom: 1px solid @gold-soft;
-  color: @ink-soft;
-}
-
 .pom-qty {
   display: flex;
   align-items: center;
@@ -4778,23 +5148,9 @@ body[class*="cart"] ,
   max-width: 920px;
 }
 
-.pom-product-about h2 {
-  font-family: @font-serif;
-  font-size: 32px;
-  font-weight: 400;
-  margin-bottom: 18px;
-}
-
 .pom-related {
   padding: 64px @wide 72px;
   background: @cream;
-}
-
-.pom-related h2 {
-  font-family: @font-serif;
-  font-size: @font-h2;
-  font-weight: 400;
-  margin-bottom: 36px;
 }
 
 .pom-related-grid {
@@ -4809,18 +5165,6 @@ body[class*="cart"] ,
   gap: 12px;
   align-items: baseline;
   margin-top: 14px;
-}
-
-.pom-page-product .pom-testimonials {
-  display: grid;
-  grid-template-columns: 0.42fr 0.58fr;
-}
-
-.pom-page-product .pom-contact {
-  display: grid !important;
-  grid-template-columns: 1fr 1fr;
-  gap: 64px;
-  align-items: center;
 }
 
 .pom-checkout {
