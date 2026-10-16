@@ -557,7 +557,7 @@ a.pom-join-btn {
 
 .pom-has-plain .pom-header {
   color: @ink;
-  background: @white;
+  background: @cream;
   position: relative;
   display: grid;
   grid-template-columns: auto 1fr auto;
@@ -698,11 +698,14 @@ body.pom-has-cart .sqs-editable-button {
 }
 
 .pom-has-plain #page > .sqs-layout {
-  max-width: 920px;
-  margin: 0 auto;
+  max-width: none;
+  width: 100%;
+  margin: 0;
   padding: 12px 24px 80px;
   color: @ink;
   font-family: @font-sans;
+  background: @cream;
+  box-sizing: border-box;
 }
 
 @media (max-width: 900px) {
@@ -4482,17 +4485,34 @@ section.pom-join.is-tan {
   .pom-split-copy .pom-link.is-end { align-self: flex-start; }
 }
 
+body.pom-has-plain,
+body.pom-has-plain #page,
+.pom-has-plain #page {
+  background: @cream !important;
+}
+
 .pom-page-plain {
-  background: @white;
+  background: @cream;
   min-height: 50vh;
+  width: 100%;
+  max-width: none;
 }
 
 .pom-legal-page {
-  max-width: 760px;
-  margin: 0 auto;
+  background: @cream;
+  max-width: none;
+  width: 100%;
+  margin: 0;
   padding: 48px 100px 100px;
   font-family: @font-display;
   color: @ink;
+  box-sizing: border-box;
+}
+
+.pom-legal-page > .pom-fallback,
+.pom-legal-page > .pom-cms {
+  max-width: 760px;
+  margin: 0 auto;
 }
 
 .pom-legal-page h1 {
@@ -6832,7 +6852,14 @@ body.pom-modal-open { overflow: hidden; }
   .pom-page-plain.pom-legal-page,
   .pom-legal-page {
     padding: 32px 20px 64px !important;
-    max-width: none;
+    max-width: none !important;
+    width: 100% !important;
+    background: @cream !important;
+  }
+
+  body.pom-has-plain,
+  body.pom-has-plain #page {
+    background: @cream !important;
   }
 
   .pom-legal-page h1 {
