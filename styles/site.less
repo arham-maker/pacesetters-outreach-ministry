@@ -5101,7 +5101,7 @@ body[class*="cart"] ,
 }
 
 .pom-page-product .pom-related {
-  padding: 80px 100px;
+  padding: 80px 90px;
   background: #fefefe;
 }
 
@@ -5934,7 +5934,7 @@ body.pom-modal-open { overflow: hidden; }
     padding-right: 24px;
   }
   .pom-page-product .pom-product-head {
-    padding-top: 100px;
+    padding-top: 0;
     padding-bottom: 24px;
   }
   .pom-page-product .pom-product-head h1 {
@@ -6039,5 +6039,237 @@ body.pom-modal-open { overflow: hidden; }
   .pom-modal.is-order-confirmed .pom-link {
     font-size: 18px;
     line-height: 26px;
+  }
+}
+
+/* ========== Site-wide tablet + mobile responsive ========== */
+@media (max-width: 1100px) {
+  .pom-page-store .pom-products,
+  .pom-page-store .pom-cats.is-store-cats > .pom-fallback,
+  .pom-page-store .pom-points.is-store-encourage > .pom-fallback,
+  .pom-page-product .pom-related-grid,
+  .pom-page-checkout .pom-checkout > .pom-fallback,
+  .pom-page-product .pom-product-main,
+  .pom-split > .pom-fallback,
+  .pom-reach > .pom-fallback,
+  .pom-intro > .pom-fallback {
+    grid-template-columns: 1fr !important;
+  }
+
+  .pom-page-store .pom-cats.is-store-cats > .pom-fallback,
+  .pom-page-store .pom-points.is-store-encourage > .pom-fallback {
+    display: grid;
+    gap: 28px;
+  }
+
+  .pom-page-store .pom-cats.is-store-cats article + article:before {
+    display: none;
+  }
+
+  .pom-split .pom-media,
+  .pom-reach .pom-media {
+    min-height: 280px;
+    width: 100%;
+  }
+
+  .pom-header,
+  body.pom-has-cart .pom-header {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media (max-width: 900px) {
+  /* Exactly 20px side padding on every section — keep alignment */
+  .pom-header,
+  .pom-footer,
+  .pom-hero,
+  .pom-page-home .pom-hero-copy,
+  .pom-page-home .pom-hero-bars,
+  .pom-triptych .pom-fallback > .pom-panel:first-child,
+  .pom-triptych .pom-fallback > .pom-panel:last-child,
+  .pom-testimonials,
+  .pom-testimonials-intro,
+  .pom-faq,
+  .pom-faq-intro,
+  .pom-contact > .pom-fallback,
+  .pom-contact-page,
+  .pom-intro,
+  .pom-intro > .pom-fallback,
+  .pom-reach,
+  .pom-reach > .pom-fallback,
+  .pom-expect,
+  .pom-join,
+  .pom-join > .pom-fallback,
+  .pom-about-purpose,
+  .pom-event-block,
+  .pom-eventbar,
+  .pom-points,
+  .pom-split .pom-split-copy,
+  .pom-page-store .pom-intro,
+  .pom-page-store .pom-intro > .pom-fallback,
+  .pom-page-store .pom-cats.is-store-cats,
+  .pom-page-store .pom-store-grid > .pom-fallback,
+  .pom-page-store .pom-points.is-store-encourage,
+  .pom-page-product .pom-product-head,
+  .pom-page-product .pom-product-main,
+  .pom-page-product .pom-product-about,
+  .pom-page-product .pom-related,
+  .pom-page-product .pom-testimonials,
+  .pom-page-product .pom-contact,
+  .pom-page-checkout .pom-checkout,
+  .pom-page-checkout .pom-checkout-summary,
+  .pom-page-plain,
+  .pom-legal-page,
+  .pom-has-plain #page > .sqs-layout,
+  body.pom-has-cart .pom-header,
+  body.pom-has-cart #page,
+  body.pom-has-cart .cart-container,
+  body.pom-has-cart .sqs-cart-page,
+  body.pom-has-cart #cart,
+  .pom-page-outreach .pom-intro,
+  .pom-page-outreach .pom-reach,
+  .pom-page-prayer .pom-split,
+  .pom-page-prayer .pom-reach,
+  .pom-page-events .pom-expect.is-events-expect,
+  .pom-page-events .pom-event-block.is-events-gather,
+  .pom-page-events .pom-join.is-events-join,
+  .pom-sidenav,
+  .pom-has-plain .pom-sidenav {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  .pom-header {
+    padding-top: 20px;
+    padding-bottom: 0;
+  }
+
+  .pom-footer {
+    padding-top: 36px;
+    padding-bottom: 28px;
+  }
+
+  .pom-hero {
+    padding-top: 120px;
+    padding-bottom: 40px;
+  }
+
+  .pom-page-home .pom-hero-copy {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  /* Stack + align left consistently */
+  .pom-page-store .pom-products,
+  .pom-page-store .pom-cats.is-store-cats > .pom-fallback,
+  .pom-page-store .pom-points.is-store-encourage > .pom-fallback,
+  .pom-page-product .pom-product-main,
+  .pom-page-product .pom-related-grid,
+  .pom-page-checkout .pom-checkout > .pom-fallback,
+  .pom-contact-page,
+  .pom-about-purpose-grid,
+  .pom-page-events .pom-expect.is-events-expect .pom-expect-grid,
+  .pom-testimonials,
+  .pom-faq {
+    grid-template-columns: 1fr !important;
+  }
+
+  .pom-page-store .pom-filters {
+    flex-wrap: wrap;
+    gap: 0;
+  }
+
+  .pom-page-store .pom-filters button {
+    flex: 1 1 50%;
+    min-width: 50%;
+    padding: 14px 12px;
+    font-size: 16px;
+    line-height: 22px;
+    white-space: normal;
+  }
+
+  .pom-page-store .pom-store-head h2,
+  .pom-page-product .pom-product-head h1,
+  .pom-page-checkout .pom-checkout-main h1 {
+    font-size: 36px !important;
+    line-height: 42px !important;
+  }
+
+  .pom-page-product .pom-product-head {
+    padding-top: 0 !important;
+    padding-bottom: 20px !important;
+  }
+
+  .pom-page-product .pom-product-main {
+    gap: 24px;
+    padding-top: 12px !important;
+    padding-bottom: 40px !important;
+  }
+
+  .pom-page-product .pom-product-gallery .pom-media,
+  .pom-page-product .pom-gallery-nav {
+    min-height: 240px !important;
+    height: 240px !important;
+  }
+
+  .pom-page-checkout .pom-checkout {
+    padding-top: 40px !important;
+    padding-bottom: 48px !important;
+  }
+
+  .pom-page-checkout .pom-checkout-summary {
+    position: static;
+    padding-top: 28px !important;
+    padding-bottom: 28px !important;
+  }
+
+  .pom-page-store .pom-product .pom-media,
+  .pom-page-product .pom-related .pom-media {
+    height: 220px;
+    min-height: 220px;
+  }
+
+  .pom-split > .pom-fallback,
+  .pom-reach > .pom-fallback,
+  .pom-intro > .pom-fallback {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .pom-contact > .pom-fallback {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    align-items: stretch;
+  }
+
+  .pom-form-card,
+  .pom-form-stack {
+    max-width: none;
+    width: 100%;
+  }
+
+  .pom-field-row {
+    grid-template-columns: 1fr !important;
+  }
+
+  h1, .pom-hero h1 {
+    word-wrap: break-word;
+  }
+
+  .pom-hero-line {
+    white-space: normal !important;
+  }
+
+  body.pom-has-cart #page,
+  body.pom-has-cart .cart-container {
+    padding-top: 48px !important;
+    padding-bottom: 64px !important;
+  }
+
+  .pom-modal.is-order-confirmed .pom-modal-card {
+    margin: 0 20px;
+    padding: 48px 20px 36px;
   }
 }
