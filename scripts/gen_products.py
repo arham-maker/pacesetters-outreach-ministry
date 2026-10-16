@@ -167,14 +167,7 @@ def checkout_html(p: dict) -> str:
             <div class="pom-checkout-section pom-checkout-payment" data-pom-region="product-{s}-payment">
               <div class="pom-fallback">
                 <h2><span>03</span> Payment details</h2>
-                <p class="pom-payment-hint">Demo layout only. In Squarespace Edit, replace this block with your payment method (Commerce checkout, Stripe, PayPal embed, or Code block).</p>
-                <div class="pom-field"><label for="{s}-chk-card">Card number</label><input id="{s}-chk-card" name="card" type="text" inputmode="numeric" autocomplete="cc-number"></div>
-                <div class="pom-field-row">
-                  <div class="pom-field"><label for="{s}-chk-exp">MM / YY</label><input id="{s}-chk-exp" name="exp" type="text" autocomplete="cc-exp" placeholder="MM / YY"></div>
-                  <div class="pom-field"><label for="{s}-chk-cvc">CVC</label><input id="{s}-chk-cvc" name="cvc" type="text" inputmode="numeric" autocomplete="cc-csc"></div>
-                </div>
-                <div class="pom-field"><label for="{s}-chk-cardname">Name on card</label><input id="{s}-chk-cardname" name="cardName" type="text" autocomplete="cc-name"></div>
-                <p class="pom-secure"><span class="pom-meta-icon is-lock" aria-hidden="true"></span> Your payment details are encrypted.</p>
+                <p class="pom-payment-empty">no payment method connected</p>
               </div>
               <div class="pom-cms"><squarespace:block-field id="product-{s}-payment" columns="12" /></div>
             </div>
