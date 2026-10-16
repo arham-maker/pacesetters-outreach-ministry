@@ -3597,10 +3597,15 @@ body.pom-has-cart .sqs-editable-button {
   box-shadow: none !important;
 }
 
-.pom-form-card.has-cms,
-.pom-form-stack.has-cms {
+.pom-form-card.has-cms {
   background: #fff;
   box-shadow: 0 12px 40px rgba(38, 38, 37, 0.1);
+}
+
+.pom-form-stack.has-cms {
+  background: transparent;
+  box-shadow: none;
+  padding: 0 !important;
 }
 
 .pom-form-card .form-wrapper,
@@ -3610,9 +3615,7 @@ body.pom-has-cart .sqs-editable-button {
 }
 
 .pom-form-card .form-wrapper .form-title,
-.pom-form-stack .form-wrapper .form-title,
-.pom-form-card .form-wrapper .title,
-.pom-form-stack .form-wrapper .title {
+.pom-form-card .form-wrapper .title {
   display: none !important;
 }
 
@@ -3705,9 +3708,7 @@ body.pom-has-cart .sqs-editable-button {
 }
 
 .pom-form-card .form-wrapper .form-button-wrapper,
-.pom-form-stack .form-wrapper .form-button-wrapper,
-.pom-form-card .form-wrapper .field-list + .form-button-wrapper,
-.pom-form-stack .form-wrapper .field-list + .form-button-wrapper {
+.pom-form-card .form-wrapper .field-list + .form-button-wrapper {
   display: flex !important;
   justify-content: flex-end !important;
   margin: 8px 0 0 !important;
@@ -3716,13 +3717,9 @@ body.pom-has-cart .sqs-editable-button {
 }
 
 .pom-form-card .form-wrapper input[type="submit"],
-.pom-form-stack .form-wrapper input[type="submit"],
 .pom-form-card .form-wrapper button[type="submit"],
-.pom-form-stack .form-wrapper button[type="submit"],
 .pom-form-card .form-wrapper .sqs-system-button,
-.pom-form-stack .form-wrapper .sqs-system-button,
-.pom-form-card .form-wrapper .button.sqs-system-button,
-.pom-form-stack .form-wrapper .button.sqs-system-button {
+.pom-form-card .form-wrapper .button.sqs-system-button {
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
@@ -3747,18 +3744,10 @@ body.pom-has-cart .sqs-editable-button {
 }
 
 .pom-form-card .form-wrapper input[type="submit"]:hover,
-.pom-form-stack .form-wrapper input[type="submit"]:hover,
-.pom-form-card .form-wrapper .sqs-system-button:hover,
-.pom-form-stack .form-wrapper .sqs-system-button:hover {
+.pom-form-card .form-wrapper .sqs-system-button:hover {
   opacity: 0.72 !important;
   background: transparent !important;
   color: @ink !important;
-}
-
-.pom-form-stack.has-cms {
-  background: #fff;
-  padding: 48px 40px !important;
-  box-sizing: border-box;
 }
 
 .pom-form-card .form-wrapper .field.error .field-element,
@@ -3771,6 +3760,184 @@ body.pom-has-cart .sqs-editable-button {
   font-family: @font-display !important;
   font-size: 16px !important;
   color: @ink !important;
+}
+
+/* Contact page Form block — Figma: underline fields + dark full-width button */
+.pom-form-stack .form-wrapper .form-title,
+.pom-form-stack .form-wrapper > .title,
+.pom-contact-page .pom-form-stack .form-wrapper .form-title {
+  display: block !important;
+  margin: 0 0 36px !important;
+  padding: 0 !important;
+  font-family: @font-display !important;
+  font-weight: 400 !important;
+  font-size: 32px !important;
+  line-height: 40px !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+  color: @ink !important;
+}
+
+.pom-form-stack .form-wrapper .field-list .field,
+.pom-form-stack .field-list .form-item {
+  margin: 0 0 36px !important;
+}
+
+.pom-form-stack .form-wrapper .field-list .field .title,
+.pom-form-stack .form-wrapper .field-list .field .caption,
+.pom-form-stack .form-wrapper .field-list .caption {
+  color: @ink-soft !important;
+  font-size: 16px !important;
+  margin: 0 0 12px !important;
+}
+
+.pom-form-stack .form-wrapper .field-list .field .field-element,
+.pom-form-stack .form-wrapper input[type="text"],
+.pom-form-stack .form-wrapper input[type="email"],
+.pom-form-stack .form-wrapper input[type="tel"],
+.pom-form-stack .form-wrapper input[type="number"],
+.pom-form-stack .form-wrapper textarea {
+  border-bottom: 1px solid rgba(38, 38, 37, 0.28) !important;
+  padding: 10px 0 16px !important;
+  min-height: 44px !important;
+}
+
+.pom-form-stack .form-wrapper textarea {
+  min-height: 100px !important;
+}
+
+/* Name: First + Last side by side */
+.pom-form-stack .form-wrapper .field.name .fields,
+.pom-form-stack .form-wrapper .form-item.field.name .fields {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 28px !important;
+  width: 100% !important;
+}
+
+.pom-form-stack .form-wrapper .field.name .title {
+  display: none !important;
+}
+
+.pom-form-stack .form-wrapper .field.name .firstname,
+.pom-form-stack .form-wrapper .field.name .lastname,
+.pom-form-stack .form-wrapper .field.name .first-name,
+.pom-form-stack .form-wrapper .field.name .last-name,
+.pom-form-stack .form-wrapper .field.name .fields > .field {
+  float: none !important;
+  width: 100% !important;
+  margin: 0 !important;
+  display: flex !important;
+  flex-direction: column-reverse !important;
+}
+
+.pom-form-stack .form-wrapper .field.name .caption {
+  margin: 0 0 12px !important;
+}
+
+.pom-form-stack .form-wrapper .field.checkbox,
+.pom-form-stack .form-wrapper .form-item.field.checkbox {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 12px !important;
+  margin: 8px 0 28px !important;
+}
+
+.pom-form-stack .form-wrapper .field.checkbox input[type="checkbox"],
+.pom-form-stack .form-wrapper .field.checkbox .option input {
+  width: 18px !important;
+  height: 18px !important;
+  margin: 2px 0 0 !important;
+  accent-color: @ink !important;
+  flex: 0 0 18px !important;
+}
+
+.pom-form-stack .form-wrapper .field.checkbox .title,
+.pom-form-stack .form-wrapper .field.checkbox .description,
+.pom-form-stack .form-wrapper .field.checkbox .option,
+.pom-form-stack .form-wrapper .field.checkbox label {
+  font-family: @font-display !important;
+  font-size: 16px !important;
+  line-height: 24px !important;
+  color: @ink !important;
+  text-transform: none !important;
+}
+
+.pom-form-stack .form-wrapper .form-button-wrapper,
+.pom-form-stack .form-wrapper .field-list + .form-button-wrapper {
+  display: block !important;
+  position: relative !important;
+  width: 100% !important;
+  margin: 8px 0 0 !important;
+  padding: 0 !important;
+  text-align: center !important;
+}
+
+.pom-form-stack .form-wrapper input[type="submit"],
+.pom-form-stack .form-wrapper button[type="submit"],
+.pom-form-stack .form-wrapper .sqs-system-button,
+.pom-form-stack .form-wrapper .button.sqs-system-button {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  min-width: 100% !important;
+  min-height: 64px !important;
+  margin: 0 !important;
+  padding: 14px 48px !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: @ink !important;
+  box-shadow: none !important;
+  font-family: @font-display !important;
+  font-size: 22px !important;
+  line-height: 30px !important;
+  font-weight: 400 !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+  text-decoration: none !important;
+  color: #fefefe !important;
+  cursor: pointer !important;
+}
+
+.pom-form-stack .form-wrapper input[type="submit"]:hover,
+.pom-form-stack .form-wrapper .sqs-system-button:hover {
+  opacity: 0.92 !important;
+  background: @ink !important;
+  color: #fefefe !important;
+}
+
+.pom-form-stack .form-wrapper .form-button-wrapper:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 28px;
+  width: 14px;
+  height: 14px;
+  margin-top: -7px;
+  background: #fefefe;
+  -webkit-mask: ~'url("/assets/arrow-ne.svg") center / contain no-repeat';
+  mask: ~'url("/assets/arrow-ne.svg") center / contain no-repeat';
+  pointer-events: none;
+}
+
+@media (max-width: 700px) {
+  .pom-form-stack .form-wrapper .field.name .fields,
+  .pom-form-stack .form-wrapper .form-item.field.name .fields {
+    grid-template-columns: 1fr !important;
+    gap: 36px !important;
+  }
+
+  .pom-form-stack .form-wrapper .form-title {
+    font-size: 28px !important;
+    line-height: 36px !important;
+  }
+
+  .pom-form-stack .form-wrapper input[type="submit"],
+  .pom-form-stack .form-wrapper .sqs-system-button {
+    font-size: 18px !important;
+    min-height: 56px !important;
+  }
 }
 
 .pom-contact > .pom-cms {
