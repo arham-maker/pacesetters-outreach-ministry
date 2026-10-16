@@ -50,7 +50,7 @@
     <h2>More resources for your walk of faith.</h2>
     <div class="pom-related-grid">
       <article class="pom-product">
-        <a href="/store">
+        <a href="/product-details">
           <div class="pom-media is-store-p01" role="img" aria-label="Music resource"></div>
           <div class="pom-product-meta">
             <div class="pom-product-row">
@@ -63,7 +63,7 @@
         </a>
       </article>
       <article class="pom-product">
-        <a href="/store">
+        <a href="/product-details">
           <div class="pom-media is-store-p02" role="img" aria-label="Sermon resource"></div>
           <div class="pom-product-meta">
             <div class="pom-product-row">
@@ -76,7 +76,7 @@
         </a>
       </article>
       <article class="pom-product">
-        <a href="/store">
+        <a href="/product-details">
           <div class="pom-media is-store-p03" role="img" aria-label="Book resource"></div>
           <div class="pom-product-meta">
             <div class="pom-product-row">

@@ -73,7 +73,7 @@
         </article>
         {.or}
         <article class="pom-product" data-category="music">
-          <a href="/store">
+          <a href="/product-details">
             <div class="pom-media is-store-p01" role="img" aria-label="Music resource"></div>
             <div class="pom-product-meta">
               <div class="pom-product-row">
@@ -86,7 +86,7 @@
           </a>
         </article>
         <article class="pom-product" data-category="sermons">
-          <a href="/store">
+          <a href="/product-details">
             <div class="pom-media is-store-p02" role="img" aria-label="Sermon resource"></div>
             <div class="pom-product-meta">
               <div class="pom-product-row">
@@ -99,7 +99,7 @@
           </a>
         </article>
         <article class="pom-product" data-category="books">
-          <a href="/store">
+          <a href="/product-details">
             <div class="pom-media is-store-p03" role="img" aria-label="Book resource"></div>
             <div class="pom-product-meta">
               <div class="pom-product-row">
@@ -112,7 +112,7 @@
           </a>
         </article>
         <article class="pom-product" data-category="music">
-          <a href="/store">
+          <a href="/product-details">
             <div class="pom-media is-store-p04" role="img" aria-label="Music resource"></div>
             <div class="pom-product-meta">
               <div class="pom-product-row">
@@ -125,7 +125,7 @@
           </a>
         </article>
         <article class="pom-product" data-category="books">
-          <a href="/store">
+          <a href="/product-details">
             <div class="pom-media is-store-p05" role="img" aria-label="Book resource"></div>
             <div class="pom-product-meta">
               <div class="pom-product-row">
@@ -138,7 +138,7 @@
           </a>
         </article>
         <article class="pom-product" data-category="sermons">
-          <a href="/store">
+          <a href="/product-details">
             <div class="pom-media is-store-p06" role="img" aria-label="Sermon resource"></div>
             <div class="pom-product-meta">
               <div class="pom-product-row">
