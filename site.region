@@ -11,22 +11,20 @@
   <a class="pom-skip" href="#page">Skip to content</a>
 
   <header class="pom-header">
-    <div class="pom-header-brand">
-      <div class="pom-logo-wrap" data-pom-region="site-header-logo">
-        <div class="pom-fallback">
-          <a class="pom-logo" href="/">
-            <img class="pom-logo-mark" src="/assets/logo.png" alt="Pacesetters Outreach Ministry" width="200" height="48">
-          </a>
-        </div>
-        <div class="pom-cms"><squarespace:block-field id="site-header-logo" columns="12" /></div>
+    <div class="pom-logo-wrap" data-pom-region="site-header-logo">
+      <div class="pom-fallback">
+        <a class="pom-logo" href="/">
+          <img class="pom-logo-mark" src="/assets/logo.png" alt="Pacesetters Outreach Ministry" width="200" height="48">
+        </a>
       </div>
+      <div class="pom-cms"><squarespace:block-field id="site-header-logo" columns="12" /></div>
+    </div>
+
+    <div class="pom-header-tools">
       <a class="pom-btn pom-join-btn" href="/events">
         <span class="pom-link-text">Join Now</span>
         <span class="pom-arrow is-ne" aria-hidden="true"></span>
       </a>
-    </div>
-
-    <div class="pom-header-tools">
       <button class="pom-menu-toggle" type="button" aria-expanded="false" aria-controls="pom-drawer" data-menu-toggle>
         <span class="pom-menu-bars" aria-hidden="true"></span>
         <span class="pom-sr">Menu</span>

@@ -230,16 +230,7 @@ h1, h2, h3, p { margin: 0; }
 .pom-header a,
 .pom-header button,
 .pom-header .pom-logo-wrap,
-.pom-header .pom-header-brand,
 .pom-sidenav { pointer-events: auto; }
-
-.pom-header-brand {
-  display: flex;
-  align-items: center;
-  gap: 28px;
-  position: relative;
-  z-index: 2;
-}
 
 .pom-logo-wrap {
   position: relative;
@@ -480,17 +471,18 @@ button.pom-btn {
 a.pom-join-btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
   background: transparent;
-  border: 0;
-  border-radius: 0;
-  min-height: 0;
-  padding: 0;
+  border: 1px solid #fff;
+  border-radius: 999px;
+  min-height: 44px;
+  padding: 10px 20px;
   color: @white;
   font-family: @font-display;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
-  line-height: 26px;
+  line-height: 1;
   text-shadow: 0 1px 8px rgba(12, 8, 6, 0.55);
   white-space: nowrap;
 }
@@ -511,17 +503,11 @@ a.pom-join-btn .pom-arrow.is-ne {
 .pom-has-plain a.pom-join-btn {
   color: @ink;
   border: 1px solid @ink;
-  border-radius: 999px;
-  min-height: 44px;
-  padding: 10px 18px;
   text-shadow: none;
 }
 body.pom-has-cart a.pom-join-btn {
   color: @white;
-  border: 1px solid rgba(255, 255, 255, 0.7);
-  border-radius: 999px;
-  min-height: 44px;
-  padding: 10px 18px;
+  border: 1px solid #fff;
   text-shadow: none;
 }
 .pom-join-btn .pom-arrow,
@@ -646,9 +632,6 @@ body.pom-has-cart a.pom-join-btn {
   padding-bottom: 28px;
 }
 
-.pom-has-plain .pom-header-brand {
-  grid-column: 1;
-}
 
 .pom-has-plain .pom-sidenav {
   position: static;
@@ -800,10 +783,10 @@ body.pom-has-cart .sqs-editable-button {
     z-index: 60;
   }
   .pom-logo-mark { height: 40px; }
-  .pom-header-brand { gap: 16px; }
   a.pom-join-btn {
-    font-size: 15px;
-    line-height: 22px;
+    font-size: 14px;
+    min-height: 40px;
+    padding: 8px 14px;
   }
   .pom-menu-toggle {
     display: inline-flex;
