@@ -230,7 +230,16 @@ h1, h2, h3, p { margin: 0; }
 .pom-header a,
 .pom-header button,
 .pom-header .pom-logo-wrap,
+.pom-header .pom-header-brand,
 .pom-sidenav { pointer-events: auto; }
+
+.pom-header-brand {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  position: relative;
+  z-index: 2;
+}
 
 .pom-logo-wrap {
   position: relative;
@@ -478,14 +487,38 @@ a.pom-join-btn {
   min-height: 0;
   padding: 0;
   color: @white;
-  font-size: 16px;
+  font-family: @font-display;
+  font-size: 18px;
   font-weight: 400;
-  line-height: 1;
+  line-height: 26px;
   text-shadow: 0 1px 8px rgba(12, 8, 6, 0.55);
+  white-space: nowrap;
+}
+a.pom-join-btn .pom-link-text {
+  text-decoration: none;
+}
+a.pom-join-btn .pom-arrow,
+a.pom-join-btn .pom-arrow.is-ne {
+  width: 14px !important;
+  height: 14px !important;
+  flex: 0 0 14px;
+  border: 0 !important;
+  background: currentColor !important;
+  -webkit-mask: ~'url("/assets/arrow-ne.svg") center / contain no-repeat' !important;
+  mask: ~'url("/assets/arrow-ne.svg") center / contain no-repeat' !important;
+  transform: none !important;
 }
 .pom-has-plain a.pom-join-btn {
   color: @ink;
   border: 1px solid @ink;
+  border-radius: 999px;
+  min-height: 44px;
+  padding: 10px 18px;
+  text-shadow: none;
+}
+body.pom-has-cart a.pom-join-btn {
+  color: @white;
+  border: 1px solid rgba(255, 255, 255, 0.7);
   border-radius: 999px;
   min-height: 44px;
   padding: 10px 18px;
@@ -611,6 +644,10 @@ a.pom-join-btn {
   grid-template-columns: auto 1fr auto;
   align-items: center;
   padding-bottom: 28px;
+}
+
+.pom-has-plain .pom-header-brand {
+  grid-column: 1;
 }
 
 .pom-has-plain .pom-sidenav {
@@ -763,6 +800,11 @@ body.pom-has-cart .sqs-editable-button {
     z-index: 60;
   }
   .pom-logo-mark { height: 40px; }
+  .pom-header-brand { gap: 16px; }
+  a.pom-join-btn {
+    font-size: 15px;
+    line-height: 22px;
+  }
   .pom-menu-toggle {
     display: inline-flex;
     position: relative;
