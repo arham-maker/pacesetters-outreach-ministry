@@ -1128,8 +1128,9 @@ body.pom-has-cart .sqs-editable-button {
 }
 .pom-page-home .pom-hero.is-pew {
   background-image: ~'url("/assets/home-hero.png")';
-  background-position: center 42%;
+  background-position: center 40%;
   background-size: cover;
+  background-repeat: no-repeat;
 }
 .pom-page-home .pom-hero:before {
   z-index: 0;
@@ -2990,12 +2991,18 @@ body.pom-has-cart .sqs-editable-button {
 }
 .pom-hero-bar.is-light { background: @cream; color: @ink; }
 .pom-hero-bar.is-dark { background: @ink; color: #f7f4ed; }
-.pom-page-home .pom-triptych .is-hands { background-image: ~'url("/assets/home-purpose.png")'; }
+.pom-page-home .pom-triptych .is-hands {
+  background-image: ~'url("/assets/home-purpose.png")';
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
 .pom-page-home .pom-split.is-cream .is-bible,
 .pom-split.is-cream.is-snl .pom-media.is-bible {
   background-image: ~'url("/assets/home-snl-hires.png")' !important;
   background-size: cover !important;
   background-position: center center !important;
+  background-repeat: no-repeat !important;
   background-color: #1a120e;
   min-height: 560px;
   align-self: stretch;
@@ -3003,6 +3010,9 @@ body.pom-has-cart .sqs-editable-button {
 .pom-page-home .pom-split.is-dark .is-books,
 .pom-split.is-dark.is-store .pom-media.is-books {
   background-image: ~'url("/assets/home-store-figma.png")' !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
 }
 .pom-page-home .pom-contact.is-crowd,
 .pom-contact.is-crowd {
