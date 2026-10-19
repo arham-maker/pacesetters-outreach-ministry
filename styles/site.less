@@ -291,10 +291,13 @@ h1, h2, h3, p { margin: 0; }
   top: 430px;
   right: 64px;
   z-index: 3;
-  text-align: right;
+  text-align: left;
 }
 
-.pom-sidenav .pom-nav-list { align-items: flex-end; gap: 18px; }
+.pom-sidenav .pom-nav-list {
+  align-items: flex-start;
+  gap: 18px;
+}
 .pom-sidenav .pom-nav-list a {
   font-family: @font-display;
   font-size: 24px;
@@ -302,7 +305,7 @@ h1, h2, h3, p { margin: 0; }
   line-height: 32px;
   letter-spacing: 0;
   color: #fefefe;
-  text-align: right;
+  text-align: left;
   text-shadow: 0 1px 8px rgba(12, 8, 6, 0.55);
 }
 
@@ -615,7 +618,7 @@ a.pom-join-btn {
   grid-column: 2;
   justify-self: end;
   margin-right: 28px;
-  text-align: right;
+  text-align: left;
 }
 
 .pom-has-plain .pom-header-tools { grid-column: 3; }
@@ -655,7 +658,7 @@ body.pom-has-cart .pom-sidenav {
   grid-column: 2;
   justify-self: end;
   margin-right: 28px;
-  text-align: right;
+  text-align: left;
   top: auto;
   right: auto;
 }
@@ -6049,12 +6052,14 @@ body[class*="cart"] ,
   gap: 30px;
 }
 
-.pom-page-checkout .pom-payment-hint {
-  margin: 0 0 24px;
+.pom-page-checkout .pom-payment-empty,
+.pom-checkout .pom-payment-empty {
+  margin: 8px 0 0;
   font-family: @font-display;
-  font-size: 16px;
-  line-height: 24px;
-  color: rgba(38, 38, 37, 0.7);
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 400;
+  color: @ink-soft;
 }
 
 .pom-page-checkout .pom-checkout-payment > .pom-cms {
