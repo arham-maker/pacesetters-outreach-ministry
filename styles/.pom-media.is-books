@@ -3034,7 +3034,7 @@ body.pom-has-cart .sqs-editable-button {
 }
 .pom-page-home .pom-split.is-dark .is-books,
 .pom-split.is-dark.is-store .pom-media.is-books {
-  background-image: ~'url("/assets/home-store-figma.png")' !important;
+  background-image: ~'url("assets/homw/blackhome.jpg")' !important;
   background-size: cover !important;
   background-position: center center !important;
   background-repeat: no-repeat !important;
