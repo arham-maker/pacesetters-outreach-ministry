@@ -300,20 +300,6 @@ def page_html(p: dict) -> str:
           <cite>— God raised me from the dead and healed me</cite>
         </blockquote>
       </div>
-          <p>These resources have encouraged my faith and given me words and music to return to throughout the week.</p>
-          <cite>— Jane Doe</cite>
-        </blockquote>
-        <blockquote class="pom-quote">
-          <div class="pom-quote-mark" aria-hidden="true">“</div>
-          <p>Being part of this community has strengthened my faith and given me a place to belong.</p>
-          <cite>— Michael R.</cite>
-        </blockquote>
-        <blockquote class="pom-quote">
-          <div class="pom-quote-mark" aria-hidden="true">“</div>
-          <p>The teaching and prayer leave me encouraged for the week ahead.</p>
-          <cite>— Sarah L.</cite>
-        </blockquote>
-      </div>
     </div>
     <div class="pom-cms"><squarespace:block-field id="product-{p['slug']}-testimonials" columns="12" /></div>
   </section>
