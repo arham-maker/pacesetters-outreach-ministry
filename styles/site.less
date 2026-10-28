@@ -3369,14 +3369,38 @@ body.pom-has-cart .sqs-editable-button {
 }
 
 .pom-quote-wrap {
+  position: relative;
   padding: 96px @wide 96px 48px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  min-height: 420px;
 }
 
-.pom-quote { display: none; }
-.pom-quote.is-active { display: block; max-width: 728px; }
+.pom-quote {
+  display: block;
+  max-width: 728px;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  position: absolute;
+  left: 48px;
+  right: @wide;
+  top: 96px;
+  margin: 0;
+  transition: opacity 0.7s ease, visibility 0.7s ease;
+}
+
+.pom-quote.is-active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pom-quote { transition: none; }
+}
 
 .pom-quote-mark {
   width: 28px;
@@ -7166,6 +7190,12 @@ body.pom-modal-open { overflow: hidden; }
   .pom-quote p {
     max-width: none !important;
     width: 100%;
+  }
+
+  .pom-quote {
+    left: 0 !important;
+    right: 0 !important;
+    top: 8px !important;
   }
 
   .pom-faq-a {

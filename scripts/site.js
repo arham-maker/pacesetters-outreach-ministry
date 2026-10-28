@@ -116,19 +116,73 @@
       return;
     }
     var index = 0;
+    var timer = null;
+    var reduceMotion =
+      window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var autoMs = 6500;
+
+    function syncHeight() {
+      var styles = window.getComputedStyle(wrap);
+      var padY =
+        (parseFloat(styles.paddingTop) || 0) + (parseFloat(styles.paddingBottom) || 0);
+      var tallest = 0;
+      Array.prototype.forEach.call(quotes, function (quote) {
+        var h = quote.offsetHeight;
+        if (h > tallest) {
+          tallest = h;
+        }
+      });
+      if (tallest) {
+        wrap.style.minHeight = Math.ceil(tallest + padY) + "px";
+      }
+    }
+
     function show(next) {
       index = (next + quotes.length) % quotes.length;
       Array.prototype.forEach.call(quotes, function (quote, i) {
         quote.classList.toggle("is-active", i === index);
       });
     }
+
+    function stopAuto() {
+      if (timer) {
+        clearInterval(timer);
+        timer = null;
+      }
+    }
+
+    function startAuto() {
+      stopAuto();
+      if (reduceMotion || quotes.length < 2) {
+        return;
+      }
+      timer = setInterval(function () {
+        show(index + 1);
+      }, autoMs);
+    }
+
     var scope = wrap.parentNode;
     Array.prototype.forEach.call(scope.querySelectorAll("[data-quote]"), function (button) {
       button.addEventListener("click", function () {
         var dir = button.getAttribute("data-quote") === "prev" ? -1 : 1;
         show(index + dir);
+        startAuto();
       });
     });
+
+    var section = wrap.closest(".pom-testimonials") || scope;
+    section.addEventListener("mouseenter", stopAuto);
+    section.addEventListener("mouseleave", startAuto);
+    section.addEventListener("focusin", stopAuto);
+    section.addEventListener("focusout", function (event) {
+      if (!section.contains(event.relatedTarget)) {
+        startAuto();
+      }
+    });
+
+    syncHeight();
+    window.addEventListener("resize", syncHeight);
+    startAuto();
   });
 
   Array.prototype.forEach.call(document.querySelectorAll("[data-filters]"), function (bar) {
