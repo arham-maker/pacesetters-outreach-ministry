@@ -9,20 +9,20 @@
 
     <div class="pom-hero-copy" data-pom-region="about-hero-copy">
       <div class="pom-fallback">
-      <p class="pom-eyebrow">About Pacesetters</p>
-      <h1><span class="pom-hero-line">Rooted in faith.</span><br><span class="pom-hero-line">Reaching out with hope.</span></h1>
-      <p class="pom-lede">Lorem ipsum dolor sit amet consectetur. Ultricies erat bibendum ridiculus fringilla nisl venenatis eu.</p>
-    </div>
-        <div class="pom-cms"><squarespace:block-field id="about-hero-copy" columns="12" /></div>
+        <p class="pom-eyebrow">About Pacesetters</p>
+        <h1><span class="pom-hero-line">Rooted in faith.</span><br><span class="pom-hero-line">Reaching out with hope.</span></h1>
+        <p class="pom-lede">A 501(c)(3) non-profit ministry impacting Youngstown, Cleveland, Pennsylvania, and beyond for over 30 years.</p>
       </div>
-</section>
+      <div class="pom-cms"><squarespace:block-field id="about-hero-copy" columns="12" /></div>
+    </div>
+  </section>
 
   <section class="pom-triptych is-about-story" data-pom-region="about-story">
     <div class="pom-fallback">
       <div class="pom-panel">
         <div>
           <p class="pom-eyebrow">Our Story</p>
-          <h2>Over 30 years<br>of reaching people.</h2>
+          <h2>Over 30 years<br>reaching people.</h2>
         </div>
       </div>
       <div class="pom-media is-about-story" role="img" aria-label="Hands reaching toward each other at sunset" data-pom-region="about-about-story">
@@ -32,7 +32,7 @@
         <div class="pom-cms"><squarespace:block-field id="about-about-story" columns="12" /></div>
       </div>
       <div class="pom-panel">
-        <p>Lorem ipsum dolor sit amet consectetur. Nisi libero dapibus justo nunc imperdiet amet convallis. Donec adipiscing varius luctus at maecenas dictum ut. Tincidunt tincidunt lorem nisl maecenas. Dui risus amet posuere semper.</p>
+        <p>Pacesetters Outreach Ministry is a 501(c)(3) non-profit ministry that has been impacting communities in the Youngstown, Cleveland, and Pennsylvania areas for over 30 years. During this time, thousands of people have been impacted by this organization.</p>
       </div>
     </div>
     <div class="pom-cms"><squarespace:block-field id="about-story" columns="12" /></div>
@@ -46,21 +46,21 @@
           <h2>To be a light<br>in our communities.</h2>
         </div>
         <div class="pom-about-purpose-rule" aria-hidden="true"></div>
-        <p class="pom-about-purpose-prose">Lorem ipsum dolor sit amet consectetur. Nisi libero dapibus justo nunc imperdiet amet convallis. Donec adipiscing varius luctus at maecenas dictum ut. Tincidunt tincidunt lorem nisl maecenas.</p>
+        <p class="pom-about-purpose-prose">To reach the sick, lost, hurting, youth, and homeless — and to be a blessing and example in the community. We share what the Lord has done and is doing in each of our lives, so every person can be a light in their own community.</p>
       </div>
       <div class="pom-about-purpose-line" aria-hidden="true"></div>
       <div class="pom-about-purpose-grid">
         <article>
-          <h3>Serve with compassion</h3>
-          <p>Lorem ipsum dolor sit amet consectetur.</p>
+          <h3>Reach with compassion</h3>
+          <p>Serve the sick, lost, hurting, youth, and homeless with care and the hope of Christ.</p>
         </article>
         <article>
-          <h3>Encourage growth in faith</h3>
-          <p>Lorem ipsum dolor sit amet consectetur.</p>
+          <h3>Be a light</h3>
+          <p>Be a blessing and example to others, sharing God’s work in our lives.</p>
         </article>
         <article>
-          <h3>Strengthen local fellowship</h3>
-          <p>Lorem ipsum dolor sit amet consectetur.</p>
+          <h3>Grow in Christ</h3>
+          <p>Encourage spiritual growth, maturity in Christ, and active life in a local church.</p>
         </article>
       </div>
     </div>
@@ -71,9 +71,27 @@
     <div class="pom-fallback">
       <div class="pom-split-copy" data-pom-region="about-copy">
         <div class="pom-fallback">
-        <h2>Faith shapes how we serve.</h2>
-        <p>Lorem ipsum dolor sit amet consectetur. Pellentesque etiam sit urna ac urna laoreet vitae orci. Feugiat egestas eu fames libero tincidunt suspendisse.</p>
-      </div>
+          <h2>Faith shapes how we serve.</h2>
+          <p>Pacesetters is serving in four different programs:</p>
+          <div class="pom-program-list">
+            <article>
+              <h3>Zoom Program</h3>
+              <p>We expanded online to reach more people through a weekly “Saturday Night Live” program on Pacelive.net, headed up by Pastor Michael Vance — preaching, music, and prayer.</p>
+            </article>
+            <article>
+              <h3>Online Store</h3>
+              <p>Materials that minister to people’s lives: CDs and downloads for dating, marriage, and music; kids’ resources; t-shirts; anointing oil; and more. Our vision is to grow and share these products worldwide — and we welcome help with marketing.</p>
+            </article>
+            <article>
+              <h3>In-person Outreach</h3>
+              <p>Meetings in hotels, halls, parks, and tents — open to the public. We bus people from shelters; ministers, counselors, and prayer warriors serve those facing addiction and oppression, then provide food and donated clothing.</p>
+            </article>
+            <article>
+              <h3>Street Outreach</h3>
+              <p>Young people feed the homeless on special occasions — like Easter care packages — then pray with each person. In-person meetings are in Ohio today; our vision is to expand nationwide, and we need transportation help to grow.</p>
+            </article>
+          </div>
+        </div>
         <div class="pom-cms"><squarespace:block-field id="about-copy" columns="12" /></div>
       </div>
       <div class="pom-media is-about-faith" role="img" aria-label="Hands raised in prayer at sunset" data-pom-region="about-about-faith">
@@ -96,11 +114,11 @@
       </div>
       <div class="pom-split-copy" data-pom-region="about-copy-2">
         <div class="pom-fallback">
-        <p class="pom-eyebrow">Our Growing Reach</p>
-        <h2>Local roots.<br>Fellowship beyond borders.</h2>
-        <p>Lorem ipsum dolor sit amet consectetur. Et ultrices massa amet fermentum massa iaculis turpis. Commodo at commodo et orci nisi risus.</p>
-        <a class="pom-link" href="/events"><span class="pom-link-text">View Program &amp; Join</span><span class="pom-arrow is-ne" aria-hidden="true"></span></a>
-      </div>
+          <p class="pom-eyebrow">Our Growing Reach</p>
+          <h2>Local roots.<br>Fellowship beyond borders.</h2>
+          <p>We currently have people online from five states — Ohio, Texas, Virginia, North Carolina, and Florida — still small in number. Our vision is to reach more people countrywide and worldwide.</p>
+          <a class="pom-link" href="/events"><span class="pom-link-text">View Program &amp; Join</span><span class="pom-arrow is-ne" aria-hidden="true"></span></a>
+        </div>
         <div class="pom-cms"><squarespace:block-field id="about-copy-2" columns="12" /></div>
       </div>
     </div>

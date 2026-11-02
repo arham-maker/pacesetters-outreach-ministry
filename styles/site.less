@@ -2892,15 +2892,15 @@ body.pom-has-cart .sqs-editable-button {
 }
 
 .pom-page-about .pom-split.is-about-faith {
-  min-height: 500px;
+  min-height: 640px;
   background: @ink;
   font-family: @font-display;
 }
 
 .pom-page-about .pom-split.is-about-faith .pom-split-copy {
-  align-items: flex-end;
-  text-align: right;
-  padding: 48px 50px;
+  align-items: flex-start;
+  text-align: left;
+  padding: 56px 50px;
   justify-content: center;
 }
 
@@ -2911,28 +2911,60 @@ body.pom-has-cart .sqs-editable-button {
   line-height: 56px;
   letter-spacing: 0;
   color: #fefefe !important;
-  max-width: none;
-  white-space: nowrap;
+  max-width: 646px;
+  white-space: normal;
   margin: 0;
-  text-align: right;
+  text-align: left;
 }
 
 .pom-page-about .pom-split.is-about-faith .pom-split-copy > p {
   font-family: @font-display;
-  font-size: 28px;
-  line-height: 36px;
+  font-size: 22px;
+  line-height: 30px;
   font-weight: 400;
   color: #f0e5d3 !important;
-  margin: 10px 0 0;
+  margin: 14px 0 0;
   max-width: 646px;
-  text-align: right;
+  text-align: left;
+}
+
+.pom-page-about .pom-program-list {
+  display: grid;
+  gap: 22px;
+  margin: 28px 0 0;
+  max-width: 646px;
+  text-align: left;
+}
+
+.pom-page-about .pom-program-list article {
+  padding-top: 18px;
+  border-top: 1px solid rgba(240, 229, 211, 0.22);
+}
+
+.pom-page-about .pom-program-list h3 {
+  font-family: @font-display;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 28px;
+  color: @gold-figma;
+  margin: 0 0 8px;
+}
+
+.pom-page-about .pom-program-list p {
+  font-family: @font-display;
+  font-size: 18px;
+  line-height: 26px;
+  color: rgba(254, 254, 254, 0.88) !important;
+  margin: 0;
+  max-width: none;
+  text-align: left;
 }
 
 .pom-page-about .pom-split.is-about-faith .pom-media.is-about-faith {
   background-image: ~'url("/assets/about/about-faith.png")' !important;
   background-size: cover !important;
   background-position: center center !important;
-  min-height: 500px;
+  min-height: 640px;
 }
 
 .pom-page-about .pom-split.is-about-reach {
