@@ -1,5 +1,5 @@
 <div class="pom-page pom-page-events">
-  <section class="pom-hero is-events-zoom" data-pom-region="events-hero">
+  <section class="pom-hero is-events-zoom">
     <div class="pom-hero-media" data-pom-region="events-hero-image">
       <div class="pom-fallback">
         <img src="/assets/events/events-hero.png" alt="" loading="eager" decoding="async">
@@ -14,8 +14,7 @@
     </div>
         <div class="pom-cms"><squarespace:block-field id="events-hero-copy" columns="12" /></div>
       </div>
-    <div class="pom-cms"><squarespace:block-field id="events-hero" columns="12" /></div>
-  </section>
+</section>
 
   <section class="pom-split is-events-feature" data-pom-region="events-feature">
     <div class="pom-fallback">

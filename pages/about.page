@@ -1,5 +1,5 @@
 <div class="pom-page pom-page-about">
-  <section class="pom-hero is-about-tree" data-pom-region="about-hero">
+  <section class="pom-hero is-about-tree">
     <div class="pom-hero-media" data-pom-region="about-hero-image">
       <div class="pom-fallback">
         <img src="/assets/about/about-hero.png" alt="" loading="eager" decoding="async">
@@ -15,8 +15,7 @@
     </div>
         <div class="pom-cms"><squarespace:block-field id="about-hero-copy" columns="12" /></div>
       </div>
-    <div class="pom-cms"><squarespace:block-field id="about-hero" columns="12" /></div>
-  </section>
+</section>
 
   <section class="pom-triptych is-about-story" data-pom-region="about-story">
     <div class="pom-fallback">

@@ -1,18 +1,17 @@
 <div class="pom-page pom-page-home">
-  <section class="pom-hero is-pew" data-pom-region="home-hero">
+  <section class="pom-hero is-pew">
     <div class="pom-hero-media" data-pom-region="home-hero-image">
       <div class="pom-fallback">
         <img src="/assets/home-hero.png" alt="" loading="eager" decoding="async">
       </div>
       <div class="pom-cms"><squarespace:block-field id="home-hero-image" columns="12" /></div>
     </div>
-
-    <div class="pom-fallback">
+    <div class="pom-hero-layout">
       <div class="pom-hero-copy" data-pom-region="home-hero-copy">
         <div class="pom-fallback">
-        <h1><span class="pom-hero-line">Faith. Hope.</span><br><span class="pom-hero-line">A place to belong.</span></h1>
-        <p class="pom-lede"><span class="pom-hero-line">Sharing God’s love in our communities</span><br><span class="pom-hero-line">and beyond.</span></p>
-      </div>
+          <h1><span class="pom-hero-line">Faith. Hope.</span><br><span class="pom-hero-line">A place to belong.</span></h1>
+          <p class="pom-lede"><span class="pom-hero-line">Sharing God’s love in our communities</span><br><span class="pom-hero-line">and beyond.</span></p>
+        </div>
         <div class="pom-cms"><squarespace:block-field id="home-hero-copy" columns="12" /></div>
       </div>
       <div class="pom-hero-bars">
@@ -20,7 +19,6 @@
         <a class="pom-hero-bar is-dark" href="/about"><span class="pom-link-text">Explore Our Ministry</span><span class="pom-arrow is-ne" aria-hidden="true"></span></a>
       </div>
     </div>
-    <div class="pom-cms"><squarespace:block-field id="home-hero" columns="12" /></div>
   </section>
 
   <section class="pom-triptych" data-pom-region="home-purpose" aria-label="Our purpose">

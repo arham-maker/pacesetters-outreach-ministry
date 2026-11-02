@@ -1,5 +1,5 @@
 <div class="pom-page pom-page-store">
-  <section class="pom-hero is-store-resources" data-pom-region="store-hero">
+  <section class="pom-hero is-store-resources">
     <div class="pom-hero-media" data-pom-region="store-hero-image">
       <div class="pom-fallback">
         <img src="/assets/store/store-hero.png" alt="" loading="eager" decoding="async">
@@ -14,8 +14,7 @@
     </div>
         <div class="pom-cms"><squarespace:block-field id="store-hero-copy" columns="12" /></div>
       </div>
-    <div class="pom-cms"><squarespace:block-field id="store-hero" columns="12" /></div>
-  </section>
+</section>
 
   <section class="pom-intro is-store-intro" data-pom-region="store-intro">
     <div class="pom-fallback">

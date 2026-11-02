@@ -1,5 +1,5 @@
 <div class="pom-page pom-page-services">
-  <section class="pom-hero is-services-candles" data-pom-region="services-hero">
+  <section class="pom-hero is-services-candles">
     <div class="pom-hero-media" data-pom-region="services-hero-image">
       <div class="pom-fallback">
         <img src="/assets/services/services-hero.png" alt="" loading="eager" decoding="async">
@@ -15,8 +15,7 @@
     </div>
         <div class="pom-cms"><squarespace:block-field id="services-hero-copy" columns="12" /></div>
       </div>
-    <div class="pom-cms"><squarespace:block-field id="services-hero" columns="12" /></div>
-  </section>
+</section>
 
   <section class="pom-split is-svc is-svc-cream" data-pom-region="services-outreach">
     <div class="pom-fallback">

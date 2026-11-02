@@ -1,5 +1,5 @@
 <div class="pom-page pom-page-contact">
-  <section class="pom-hero is-contact-bible" data-pom-region="contact-hero">
+  <section class="pom-hero is-contact-bible">
     <div class="pom-hero-media" data-pom-region="contact-hero-image">
       <div class="pom-fallback">
         <img src="/assets/contact/contact-hero.png" alt="" loading="eager" decoding="async">
@@ -14,8 +14,7 @@
     </div>
         <div class="pom-cms"><squarespace:block-field id="contact-hero-copy" columns="12" /></div>
       </div>
-    <div class="pom-cms"><squarespace:block-field id="contact-hero" columns="12" /></div>
-  </section>
+</section>
 
   <section class="pom-contact-page">
     <div class="pom-contact-info" data-pom-region="contact-info">

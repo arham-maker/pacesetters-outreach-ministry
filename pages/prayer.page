@@ -1,5 +1,5 @@
 <div class="pom-page pom-page-prayer">
-  <section class="pom-hero is-prayer-bible" data-pom-region="prayer-hero">
+  <section class="pom-hero is-prayer-bible">
     <div class="pom-hero-media" data-pom-region="prayer-hero-image">
       <div class="pom-fallback">
         <img src="/assets/prayer/prayer-hero.png" alt="" loading="eager" decoding="async">
@@ -15,8 +15,7 @@
     </div>
         <div class="pom-cms"><squarespace:block-field id="prayer-hero-copy" columns="12" /></div>
       </div>
-    <div class="pom-cms"><squarespace:block-field id="prayer-hero" columns="12" /></div>
-  </section>
+</section>
 
   <section class="pom-split is-prayer-alone" data-pom-region="prayer-alone">
     <div class="pom-fallback">

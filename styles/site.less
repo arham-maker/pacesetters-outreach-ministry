@@ -1172,8 +1172,8 @@ body.pom-has-cart .sqs-editable-button {
   z-index: 1;
 }
 
-/* When hero image layer exists, CSS bg is only a fallback until img loads */
-.pom-hero:has(> .pom-hero-media) {
+/* When a CMS image replaces the hero photo, drop the CSS background */
+.pom-hero:has(> .pom-hero-media.has-cms) {
   background-image: none !important;
 }
 
@@ -1198,7 +1198,8 @@ body.pom-has-cart .sqs-editable-button {
   overflow: hidden;
 }
 
-.pom-page-home .pom-hero > .pom-fallback {
+.pom-page-home .pom-hero > .pom-fallback,
+.pom-page-home .pom-hero > .pom-hero-layout {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -1206,7 +1207,7 @@ body.pom-has-cart .sqs-editable-button {
   position: absolute;
   inset: 0;
   width: 100%;
-  z-index: 1;
+  z-index: 2;
 }
 .pom-page-home .pom-hero.is-pew {
   background-image: ~'url("/assets/home-hero.png")';
@@ -1215,7 +1216,7 @@ body.pom-has-cart .sqs-editable-button {
   background-repeat: no-repeat;
 }
 .pom-page-home .pom-hero:before {
-  z-index: 0;
+  z-index: 1;
   background:
     ~"linear-gradient(90deg, rgba(20, 12, 8, 0.28) 0%, rgba(20, 12, 8, 0.1) 40%, rgba(20, 12, 8, 0) 62%)",
     ~"linear-gradient(180deg, rgba(20, 12, 8, 0.18) 0%, rgba(20, 12, 8, 0) 28%, rgba(20, 12, 8, 0.22) 100%)";
@@ -4379,50 +4380,49 @@ section.pom-join.is-tan {
   z-index: 1;
 }
 
-/* Squarespace Edit mode: overlay hotspots like 7.1 section editing */
-.pom-editing [data-pom-region] {
-  outline: 2px dashed rgba(183, 140, 49, 0.55);
-  outline-offset: -2px;
-}
-
+/*
+  Edit mode: keep the designed page visible.
+  Empty CMS slots sit BELOW each area as a compact bar — never cover content.
+*/
 .pom-editing [data-pom-region]:not(.has-cms) > .pom-fallback {
   opacity: 1;
   pointer-events: none;
 }
 
 .pom-editing [data-pom-region]:not(.has-cms) > .pom-cms {
-  position: absolute !important;
-  inset: 0 !important;
+  position: relative !important;
+  inset: auto !important;
+  display: block;
   width: auto !important;
   height: auto !important;
-  min-height: 64px;
-  margin: 0 !important;
-  padding: 16px 18px;
+  min-height: 52px;
+  margin: 10px 0 0 !important;
+  padding: 12px 14px !important;
   overflow: visible !important;
   clip: auto !important;
   pointer-events: auto !important;
-  z-index: 30 !important;
-  background: rgba(183, 140, 49, 0.12);
+  z-index: 5 !important;
+  background: rgba(254, 254, 254, 0.96);
   color: @ink;
   outline: 2px dashed @gold-figma;
-  outline-offset: -2px;
-  box-shadow: none;
+  outline-offset: 0;
+  box-shadow: 0 6px 20px rgba(38, 38, 37, 0.12);
 }
 
 .pom-editing [data-pom-region].has-cms > .pom-cms {
   margin: 0;
-  padding: 12px 16px;
-  min-height: 48px;
-  background: rgba(254, 254, 254, 0.98);
-  color: @ink;
-  outline: 2px solid @gold-figma;
-  outline-offset: -2px;
+  padding: 8px 0;
+  min-height: 0;
+  background: transparent;
+  color: inherit;
+  outline: 2px solid rgba(183, 140, 49, 0.65);
+  outline-offset: 4px;
 }
 
-.pom-editing [data-pom-region] > .pom-cms:before {
-  content: "Click to edit — add Text, Heading, Image, or Button";
+.pom-editing [data-pom-region]:not(.has-cms) > .pom-cms:before {
+  content: "Edit — add Text, Heading, Image, or Button";
   display: block;
-  margin: 0 0 10px;
+  margin: 0;
   font-family: @font-display;
   font-size: 12px;
   line-height: 16px;
@@ -4433,35 +4433,37 @@ section.pom-join.is-tan {
 }
 
 .pom-editing [data-pom-region].has-cms > .pom-cms:before {
-  content: "Editing — Text / Image / Heading";
+  content: none;
+  display: none;
 }
 
 .pom-editing .pom-media:not(.has-cms) > .pom-cms:before,
 .pom-editing .pom-hero-media:not(.has-cms) > .pom-cms:before {
-  content: "Replace image — add Image block";
+  content: "Edit image — add Image block";
 }
 
 .pom-editing .pom-form-card:not(.has-cms) > .pom-cms:before,
 .pom-editing .pom-form-stack:not(.has-cms) > .pom-cms:before {
-  content: "Add Form block here";
+  content: "Add Form block";
 }
 
 .pom-editing .pom-logo-wrap:not(.has-cms) > .pom-cms:before {
-  content: "Edit logo — add Image block";
+  content: "Edit logo";
 }
 
 .pom-editing .pom-join-wrap:not(.has-cms) > .pom-cms:before {
-  content: "Edit Join button — Text / Button block";
+  content: "Edit Join button";
 }
 
 .pom-editing .pom-logo-wrap > .pom-cms,
 .pom-editing .pom-join-wrap > .pom-cms {
-  min-height: 48px;
-  padding: 8px 12px;
+  min-height: 40px;
+  padding: 8px 10px !important;
+  margin-top: 6px !important;
 }
 
-.pom-editing .pom-footer [data-pom-region] > .pom-cms {
-  background: rgba(38, 38, 37, 0.88);
+.pom-editing .pom-footer [data-pom-region]:not(.has-cms) > .pom-cms {
+  background: rgba(38, 38, 37, 0.94);
   color: #fefefe;
   outline-color: @gold-figma;
 }
@@ -4503,11 +4505,9 @@ section.pom-join.is-tan {
   align-items: center;
 }
 
-/* Image slots stay full-bleed after CMS fill (override relative .pom-cms) */
+/* Filled image slots stay full-bleed */
 .pom-media.has-cms > .pom-cms,
-.pom-hero-media.has-cms > .pom-cms,
-.pom-editing .pom-media > .pom-cms,
-.pom-editing .pom-hero-media > .pom-cms {
+.pom-hero-media.has-cms > .pom-cms {
   position: absolute !important;
   inset: 0 !important;
   width: auto !important;
@@ -4516,12 +4516,32 @@ section.pom-join.is-tan {
   padding: 0 !important;
   overflow: hidden !important;
   background: transparent;
+  outline: none;
+}
+
+/* Empty image slots: compact edit bar at bottom of media, not full cover */
+.pom-editing .pom-media:not(.has-cms),
+.pom-editing .pom-hero-media:not(.has-cms) {
+  outline: 2px dashed rgba(183, 140, 49, 0.7);
+  outline-offset: -2px;
 }
 
 .pom-editing .pom-media:not(.has-cms) > .pom-cms,
 .pom-editing .pom-hero-media:not(.has-cms) > .pom-cms {
-  padding: 12px !important;
-  background: rgba(183, 140, 49, 0.18);
+  position: absolute !important;
+  left: 12px !important;
+  right: 12px !important;
+  bottom: 12px !important;
+  top: auto !important;
+  inset: auto 12px 12px 12px !important;
+  width: auto !important;
+  height: auto !important;
+  min-height: 44px;
+  margin: 0 !important;
+  padding: 10px 12px !important;
+  overflow: visible !important;
+  background: rgba(254, 254, 254, 0.96);
+  z-index: 6 !important;
 }
 
 @media (max-width: 1100px) {
