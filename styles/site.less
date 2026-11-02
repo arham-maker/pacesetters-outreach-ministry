@@ -892,7 +892,7 @@ body.pom-has-cart .sqs-editable-button {
   content: "";
   position: absolute;
   inset: 0;
-  z-index: 0;
+  z-index: 1;
   pointer-events: none;
   background:
     ~"linear-gradient(90deg, rgba(12, 8, 6, 0.72) 0%, rgba(12, 8, 6, 0.28) 48%, rgba(12, 8, 6, 0.35) 100%)";
@@ -1110,14 +1110,71 @@ body.pom-has-cart .sqs-editable-button {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  overflow: hidden;
 }
 
-.pom-media img {
+.pom-media > .pom-fallback,
+.pom-media.has-cms > .pom-cms,
+.pom-hero-media > .pom-fallback,
+.pom-hero-media.has-cms > .pom-cms {
+  position: absolute;
+  inset: 0;
+}
+
+.pom-media img,
+.pom-hero-media img,
+.pom-media .sqs-block-image img,
+.pom-media .sqs-block-image .thumb-image,
+.pom-media .sqs-block-image .content-fit,
+.pom-hero-media .sqs-block-image img,
+.pom-hero-media .sqs-block-image .thumb-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
   position: absolute;
   inset: 0;
+  display: block;
+}
+
+.pom-media.has-cms,
+.pom-hero-media.has-cms {
+  background-image: none !important;
+}
+
+.pom-media .sqs-block,
+.pom-hero-media .sqs-block,
+.pom-media .sqs-block-image,
+.pom-hero-media .sqs-block-image,
+.pom-media .sqs-block-image .sqs-block-content,
+.pom-hero-media .sqs-block-image .sqs-block-content,
+.pom-media .sqs-block-image .image-block-wrapper,
+.pom-hero-media .sqs-block-image .image-block-wrapper {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.pom-hero-media {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  background-color: #2a211c;
+}
+
+.pom-hero > .pom-hero-media ~ .pom-fallback,
+.pom-hero > .pom-hero-media ~ .pom-hero-copy,
+.pom-hero > .pom-hero-media ~ [data-pom-region].pom-hero-copy {
+  position: relative;
+  z-index: 1;
+}
+
+/* When hero image layer exists, CSS bg is only a fallback until img loads */
+.pom-hero:has(> .pom-hero-media) {
+  background-image: none !important;
 }
 
 .is-amber { background-image: ~"radial-gradient(circle at 70% 40%, #f0c27a 0%, #c47a3a 28%, #5a3018 62%, #1c120e 100%)"; }
@@ -4322,37 +4379,66 @@ section.pom-join.is-tan {
   z-index: 1;
 }
 
-/* Squarespace Edit mode: every section becomes clickable like native SQS */
+/* Squarespace Edit mode: overlay hotspots like 7.1 section editing */
+.pom-editing [data-pom-region] {
+  outline: 2px dashed rgba(183, 140, 49, 0.55);
+  outline-offset: -2px;
+}
+
 .pom-editing [data-pom-region]:not(.has-cms) > .pom-fallback {
-  opacity: 0.42;
+  opacity: 1;
   pointer-events: none;
 }
 
-.pom-editing [data-pom-region] > .pom-cms {
-  margin: 12px 0;
-  padding: 20px 22px;
-  min-height: 72px;
-  background: rgba(254, 254, 254, 0.97);
+.pom-editing [data-pom-region]:not(.has-cms) > .pom-cms {
+  position: absolute !important;
+  inset: 0 !important;
+  width: auto !important;
+  height: auto !important;
+  min-height: 64px;
+  margin: 0 !important;
+  padding: 16px 18px;
+  overflow: visible !important;
+  clip: auto !important;
+  pointer-events: auto !important;
+  z-index: 30 !important;
+  background: rgba(183, 140, 49, 0.12);
   color: @ink;
   outline: 2px dashed @gold-figma;
-  outline-offset: 2px;
-  box-shadow: 0 8px 28px rgba(38, 38, 37, 0.08);
+  outline-offset: -2px;
+  box-shadow: none;
+}
+
+.pom-editing [data-pom-region].has-cms > .pom-cms {
+  margin: 0;
+  padding: 12px 16px;
+  min-height: 48px;
+  background: rgba(254, 254, 254, 0.98);
+  color: @ink;
+  outline: 2px solid @gold-figma;
+  outline-offset: -2px;
 }
 
 .pom-editing [data-pom-region] > .pom-cms:before {
-  content: "Edit this section — add Text, Image, or Button blocks";
+  content: "Click to edit — add Text, Heading, Image, or Button";
   display: block;
-  margin: 0 0 14px;
+  margin: 0 0 10px;
   font-family: @font-display;
-  font-size: 13px;
-  line-height: 18px;
+  font-size: 12px;
+  line-height: 16px;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: @gold-figma;
+  pointer-events: none;
 }
 
 .pom-editing [data-pom-region].has-cms > .pom-cms:before {
-  content: "Editing this section";
+  content: "Editing — Text / Image / Heading";
+}
+
+.pom-editing .pom-media:not(.has-cms) > .pom-cms:before,
+.pom-editing .pom-hero-media:not(.has-cms) > .pom-cms:before {
+  content: "Replace image — add Image block";
 }
 
 .pom-editing .pom-form-card:not(.has-cms) > .pom-cms:before,
@@ -4364,19 +4450,78 @@ section.pom-join.is-tan {
   content: "Edit logo — add Image block";
 }
 
-.pom-editing .pom-logo-wrap > .pom-cms {
+.pom-editing .pom-join-wrap:not(.has-cms) > .pom-cms:before {
+  content: "Edit Join button — Text / Button block";
+}
+
+.pom-editing .pom-logo-wrap > .pom-cms,
+.pom-editing .pom-join-wrap > .pom-cms {
   min-height: 48px;
   padding: 8px 12px;
 }
 
 .pom-editing .pom-footer [data-pom-region] > .pom-cms {
-  background: rgba(38, 38, 37, 0.92);
+  background: rgba(38, 38, 37, 0.88);
   color: #fefefe;
   outline-color: @gold-figma;
 }
 
 .pom-editing .pom-social {
   min-width: 120px;
+}
+
+/* CMS block typography inherits site look */
+[data-pom-region].has-cms > .pom-cms {
+  font-family: @font-display;
+  color: inherit;
+}
+
+[data-pom-region].has-cms > .pom-cms h1,
+[data-pom-region].has-cms > .pom-cms h2,
+[data-pom-region].has-cms > .pom-cms h3,
+[data-pom-region].has-cms > .pom-cms h4 {
+  font-family: @font-display;
+  font-weight: 400;
+  color: inherit;
+}
+
+[data-pom-region].has-cms > .pom-cms p,
+[data-pom-region].has-cms > .pom-cms .sqs-html-content p {
+  font-family: @font-display;
+  color: inherit;
+}
+
+.pom-join-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.pom-join-wrap.has-cms .pom-btn,
+.pom-join-wrap .pom-cms a {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Image slots stay full-bleed after CMS fill (override relative .pom-cms) */
+.pom-media.has-cms > .pom-cms,
+.pom-hero-media.has-cms > .pom-cms,
+.pom-editing .pom-media > .pom-cms,
+.pom-editing .pom-hero-media > .pom-cms {
+  position: absolute !important;
+  inset: 0 !important;
+  width: auto !important;
+  height: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  background: transparent;
+}
+
+.pom-editing .pom-media:not(.has-cms) > .pom-cms,
+.pom-editing .pom-hero-media:not(.has-cms) > .pom-cms {
+  padding: 12px !important;
+  background: rgba(183, 140, 49, 0.18);
 }
 
 @media (max-width: 1100px) {

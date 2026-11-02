@@ -21,10 +21,15 @@
     </div>
 
     <div class="pom-header-tools">
-      <a class="pom-btn pom-join-btn" href="/events">
-        <span class="pom-link-text">Join Now</span>
-        <span class="pom-arrow is-ne" aria-hidden="true"></span>
-      </a>
+      <div class="pom-join-wrap" data-pom-region="site-header-join">
+        <div class="pom-fallback">
+          <a class="pom-btn pom-join-btn" href="/events">
+            <span class="pom-link-text">Join Now</span>
+            <span class="pom-arrow is-ne" aria-hidden="true"></span>
+          </a>
+        </div>
+        <div class="pom-cms"><squarespace:block-field id="site-header-join" columns="12" /></div>
+      </div>
       <button class="pom-menu-toggle" type="button" aria-expanded="false" aria-controls="pom-drawer" data-menu-toggle>
         <span class="pom-menu-bars" aria-hidden="true"></span>
         <span class="pom-sr">Menu</span>

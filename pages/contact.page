@@ -1,9 +1,19 @@
 <div class="pom-page pom-page-contact">
   <section class="pom-hero is-contact-bible" data-pom-region="contact-hero">
-    <div class="pom-hero-copy pom-fallback">
+    <div class="pom-hero-media" data-pom-region="contact-hero-image">
+      <div class="pom-fallback">
+        <img src="/assets/contact/contact-hero.png" alt="" loading="eager" decoding="async">
+      </div>
+      <div class="pom-cms"><squarespace:block-field id="contact-hero-image" columns="12" /></div>
+    </div>
+
+    <div class="pom-hero-copy" data-pom-region="contact-hero-copy">
+      <div class="pom-fallback">
       <h1>Contact Us</h1>
       <p class="pom-lede">We’d love to hear from you.</p>
     </div>
+        <div class="pom-cms"><squarespace:block-field id="contact-hero-copy" columns="12" /></div>
+      </div>
     <div class="pom-cms"><squarespace:block-field id="contact-hero" columns="12" /></div>
   </section>
 
@@ -42,7 +52,8 @@
 
   <section class="pom-testimonials" data-pom-region="contact-testimonials">
     <div class="pom-fallback">
-      <div class="pom-testimonials-intro">
+      <div class="pom-testimonials-intro" data-pom-region="contact-testimonials-intro">
+        <div class="pom-fallback">
         <div>
           <p class="pom-eyebrow">Testimonials</p>
           <h2>Stories of faith<br>and hope.</h2>
@@ -51,6 +62,8 @@
             <button class="pom-icon-btn is-next" type="button" data-quote="next" aria-label="Next story"><span class="pom-arrow"></span></button>
           </div>
         </div>
+      </div>
+        <div class="pom-cms"><squarespace:block-field id="contact-testimonials-intro" columns="12" /></div>
       </div>
       <div class="pom-quote-wrap" data-quotes>
         <blockquote class="pom-quote is-active">
@@ -70,7 +83,10 @@
 
   <section class="pom-faq" data-pom-region="contact-faq">
     <div class="pom-fallback">
-      <div class="pom-faq-intro"><div><p class="pom-eyebrow">FAQ</p><h2>A few helpful<br>answers.</h2></div></div>
+      <div class="pom-faq-intro" data-pom-region="contact-faq-intro">
+        <div class="pom-fallback"><div><p class="pom-eyebrow">FAQ</p><h2>A few helpful<br>answers.</h2></div></div>
+        <div class="pom-cms"><squarespace:block-field id="contact-faq-intro" columns="12" /></div>
+      </div>
       <div class="pom-faq-list" data-accordion>
         <div class="pom-faq-item is-open">
           <button class="pom-faq-q" type="button" aria-expanded="true">What can I find in the store? <span class="pom-faq-icon" aria-hidden="true"></span></button>

@@ -1,20 +1,38 @@
 <div class="pom-page pom-page-services">
   <section class="pom-hero is-services-candles" data-pom-region="services-hero">
-    <div class="pom-hero-copy pom-fallback">
+    <div class="pom-hero-media" data-pom-region="services-hero-image">
+      <div class="pom-fallback">
+        <img src="/assets/services/services-hero.png" alt="" loading="eager" decoding="async">
+      </div>
+      <div class="pom-cms"><squarespace:block-field id="services-hero-image" columns="12" /></div>
+    </div>
+
+    <div class="pom-hero-copy" data-pom-region="services-hero-copy">
+      <div class="pom-fallback">
       <p class="pom-eyebrow">How We Serve</p>
       <h1>Faith in action.</h1>
       <p class="pom-lede">Compassion, prayer, and fellowship for our communities and beyond.</p>
     </div>
+        <div class="pom-cms"><squarespace:block-field id="services-hero-copy" columns="12" /></div>
+      </div>
     <div class="pom-cms"><squarespace:block-field id="services-hero" columns="12" /></div>
   </section>
 
   <section class="pom-split is-svc is-svc-cream" data-pom-region="services-outreach">
     <div class="pom-fallback">
-      <div class="pom-media is-svc-outreach" role="img" aria-label="Hands stacked together in unity"></div>
-      <div class="pom-split-copy">
+      <div class="pom-media is-svc-outreach" role="img" aria-label="Hands stacked together in unity" data-pom-region="services-svc-outreach">
+        <div class="pom-fallback">
+          <img src="/assets/services/services-outreach.png" alt="Hands stacked together in unity" loading="lazy" decoding="async">
+        </div>
+        <div class="pom-cms"><squarespace:block-field id="services-svc-outreach" columns="12" /></div>
+      </div>
+      <div class="pom-split-copy" data-pom-region="services-copy">
+        <div class="pom-fallback">
         <h2>Community Outreach</h2>
         <p>Reaching people who are hurting, young people, and those experiencing homelessness with compassion and Christian encouragement.</p>
         <a class="pom-link" href="/community-outreach"><span class="pom-link-text">Explore Outreach</span><span class="pom-arrow is-ne" aria-hidden="true"></span></a>
+      </div>
+        <div class="pom-cms"><squarespace:block-field id="services-copy" columns="12" /></div>
       </div>
     </div>
     <div class="pom-cms"><squarespace:block-field id="services-outreach" columns="12" /></div>
@@ -22,23 +40,39 @@
 
   <section class="pom-split is-svc is-svc-tan is-svc-end" data-pom-region="services-prayer">
     <div class="pom-fallback">
-      <div class="pom-split-copy">
+      <div class="pom-split-copy" data-pom-region="services-copy-2">
+        <div class="pom-fallback">
         <h2>Prayer &amp; Encouragement</h2>
         <p>Connect with our ministry for prayer, a listening heart, and encouragement through God’s Word.</p>
         <a class="pom-link" href="/prayer"><span class="pom-link-text">Request Prayer</span><span class="pom-arrow is-ne" aria-hidden="true"></span></a>
       </div>
-      <div class="pom-media is-svc-prayer" role="img" aria-label="Hands clasped in prayer over an open Bible"></div>
+        <div class="pom-cms"><squarespace:block-field id="services-copy-2" columns="12" /></div>
+      </div>
+      <div class="pom-media is-svc-prayer" role="img" aria-label="Hands clasped in prayer over an open Bible" data-pom-region="services-svc-prayer">
+        <div class="pom-fallback">
+          <img src="/assets/services/services-prayer.png" alt="Hands clasped in prayer over an open Bible" loading="lazy" decoding="async">
+        </div>
+        <div class="pom-cms"><squarespace:block-field id="services-svc-prayer" columns="12" /></div>
+      </div>
     </div>
     <div class="pom-cms"><squarespace:block-field id="services-prayer" columns="12" /></div>
   </section>
 
   <section class="pom-split is-svc is-svc-cream" data-pom-region="services-online">
     <div class="pom-fallback">
-      <div class="pom-media is-svc-online" role="img" aria-label="Laptop showing an online fellowship call"></div>
-      <div class="pom-split-copy">
+      <div class="pom-media is-svc-online" role="img" aria-label="Laptop showing an online fellowship call" data-pom-region="services-svc-online">
+        <div class="pom-fallback">
+          <img src="/assets/services/services-online.png" alt="Laptop showing an online fellowship call" loading="lazy" decoding="async">
+        </div>
+        <div class="pom-cms"><squarespace:block-field id="services-svc-online" columns="12" /></div>
+      </div>
+      <div class="pom-split-copy" data-pom-region="services-copy-3">
+        <div class="pom-fallback">
         <h2>Online Fellowship</h2>
         <p>Join Pastor Michael Vance for preaching, music, and prayer through our weekly Saturday Night Live Zoom program.</p>
         <a class="pom-link" href="/events"><span class="pom-link-text">View Program</span><span class="pom-arrow is-ne" aria-hidden="true"></span></a>
+      </div>
+        <div class="pom-cms"><squarespace:block-field id="services-copy-3" columns="12" /></div>
       </div>
     </div>
     <div class="pom-cms"><squarespace:block-field id="services-online" columns="12" /></div>
@@ -46,19 +80,28 @@
 
   <section class="pom-split is-svc is-svc-tan is-svc-end" data-pom-region="services-resources">
     <div class="pom-fallback">
-      <div class="pom-split-copy">
+      <div class="pom-split-copy" data-pom-region="services-copy-4">
+        <div class="pom-fallback">
         <h2>Ministry Resources</h2>
         <p>Explore music, sermons, and books to encourage your everyday walk of faith.</p>
         <a class="pom-link" href="/store"><span class="pom-link-text">Browse the Store</span><span class="pom-arrow is-ne" aria-hidden="true"></span></a>
       </div>
-      <div class="pom-media is-svc-resources" role="img" aria-label="People gathered studying open Bibles"></div>
+        <div class="pom-cms"><squarespace:block-field id="services-copy-4" columns="12" /></div>
+      </div>
+      <div class="pom-media is-svc-resources" role="img" aria-label="People gathered studying open Bibles" data-pom-region="services-svc-resources">
+        <div class="pom-fallback">
+          <img src="/assets/services/services-resources.png" alt="People gathered studying open Bibles" loading="lazy" decoding="async">
+        </div>
+        <div class="pom-cms"><squarespace:block-field id="services-svc-resources" columns="12" /></div>
+      </div>
     </div>
     <div class="pom-cms"><squarespace:block-field id="services-resources" columns="12" /></div>
   </section>
 
   <section class="pom-testimonials" data-pom-region="services-testimonials">
     <div class="pom-fallback">
-      <div class="pom-testimonials-intro">
+      <div class="pom-testimonials-intro" data-pom-region="services-testimonials-intro">
+        <div class="pom-fallback">
         <div>
           <p class="pom-eyebrow">Testimonials</p>
           <h2>Stories of faith<br>and hope.</h2>
@@ -67,6 +110,8 @@
             <button class="pom-icon-btn is-next" type="button" data-quote="next" aria-label="Next story"><span class="pom-arrow"></span></button>
           </div>
         </div>
+      </div>
+        <div class="pom-cms"><squarespace:block-field id="services-testimonials-intro" columns="12" /></div>
       </div>
       <div class="pom-quote-wrap" data-quotes>
         <blockquote class="pom-quote is-active">
@@ -86,7 +131,10 @@
 
   <section class="pom-faq" data-pom-region="services-faq">
     <div class="pom-fallback">
-      <div class="pom-faq-intro"><div><p class="pom-eyebrow">FAQ</p><h2>A few helpful<br>answers.</h2></div></div>
+      <div class="pom-faq-intro" data-pom-region="services-faq-intro">
+        <div class="pom-fallback"><div><p class="pom-eyebrow">FAQ</p><h2>A few helpful<br>answers.</h2></div></div>
+        <div class="pom-cms"><squarespace:block-field id="services-faq-intro" columns="12" /></div>
+      </div>
       <div class="pom-faq-list" data-accordion>
         <div class="pom-faq-item is-open">
           <button class="pom-faq-q" type="button" aria-expanded="true">How can I join Saturday Night Live? <span class="pom-faq-icon" aria-hidden="true"></span></button>

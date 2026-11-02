@@ -1,27 +1,50 @@
 <div class="pom-page pom-page-prayer">
   <section class="pom-hero is-prayer-bible" data-pom-region="prayer-hero">
-    <div class="pom-hero-copy pom-fallback">
+    <div class="pom-hero-media" data-pom-region="prayer-hero-image">
+      <div class="pom-fallback">
+        <img src="/assets/prayer/prayer-hero.png" alt="" loading="eager" decoding="async">
+      </div>
+      <div class="pom-cms"><squarespace:block-field id="prayer-hero-image" columns="12" /></div>
+    </div>
+
+    <div class="pom-hero-copy" data-pom-region="prayer-hero-copy">
+      <div class="pom-fallback">
       <a class="pom-back" href="/services"><span class="pom-arrow is-back" aria-hidden="true"></span> Back to Services</a>
       <h1><span class="pom-hero-line">Prayer &amp;</span><br><span class="pom-hero-line">Encouragement</span></h1>
       <p class="pom-lede">A listening heart. Encouragement through God’s Word.</p>
     </div>
+        <div class="pom-cms"><squarespace:block-field id="prayer-hero-copy" columns="12" /></div>
+      </div>
     <div class="pom-cms"><squarespace:block-field id="prayer-hero" columns="12" /></div>
   </section>
 
   <section class="pom-split is-prayer-alone" data-pom-region="prayer-alone">
     <div class="pom-fallback">
-      <div class="pom-split-copy">
+      <div class="pom-split-copy" data-pom-region="prayer-copy">
+        <div class="pom-fallback">
         <h2>You don’t have to walk alone.</h2>
         <p>Connect with our ministry for prayer and spiritual encouragement when you are hurting, facing uncertainty, or simply need someone to listen.</p>
       </div>
-      <div class="pom-media is-prayer-alone" role="img" aria-label="Friends standing together at sunset"></div>
+        <div class="pom-cms"><squarespace:block-field id="prayer-copy" columns="12" /></div>
+      </div>
+      <div class="pom-media is-prayer-alone" role="img" aria-label="Friends standing together at sunset" data-pom-region="prayer-prayer-alone">
+        <div class="pom-fallback">
+          <img src="/assets/prayer/prayer-alone.png" alt="Friends standing together at sunset" loading="lazy" decoding="async">
+        </div>
+        <div class="pom-cms"><squarespace:block-field id="prayer-prayer-alone" columns="12" /></div>
+      </div>
     </div>
     <div class="pom-cms"><squarespace:block-field id="prayer-alone" columns="12" /></div>
   </section>
 
   <section class="pom-reach is-prayer-support" data-pom-region="prayer-support">
     <div class="pom-fallback">
-      <div class="pom-media is-prayer-support" role="img" aria-label="Hands joined in support"></div>
+      <div class="pom-media is-prayer-support" role="img" aria-label="Hands joined in support" data-pom-region="prayer-prayer-support">
+        <div class="pom-fallback">
+          <img src="/assets/prayer/prayer-support.png" alt="Hands joined in support" loading="lazy" decoding="async">
+        </div>
+        <div class="pom-cms"><squarespace:block-field id="prayer-prayer-support" columns="12" /></div>
+      </div>
       <div class="pom-reach-list">
         <p class="pom-eyebrow">How we can support you</p>
         <article>
@@ -43,7 +66,8 @@
 
   <section class="pom-testimonials" data-pom-region="prayer-testimonials">
     <div class="pom-fallback">
-      <div class="pom-testimonials-intro">
+      <div class="pom-testimonials-intro" data-pom-region="prayer-testimonials-intro">
+        <div class="pom-fallback">
         <div>
           <p class="pom-eyebrow">Testimonials</p>
           <h2>Stories of faith<br>and hope.</h2>
@@ -52,6 +76,8 @@
             <button class="pom-icon-btn is-next" type="button" data-quote="next" aria-label="Next story"><span class="pom-arrow"></span></button>
           </div>
         </div>
+      </div>
+        <div class="pom-cms"><squarespace:block-field id="prayer-testimonials-intro" columns="12" /></div>
       </div>
       <div class="pom-quote-wrap" data-quotes>
         <blockquote class="pom-quote is-active">
@@ -71,7 +97,10 @@
 
   <section class="pom-faq" data-pom-region="prayer-faq">
     <div class="pom-fallback">
-      <div class="pom-faq-intro"><div><p class="pom-eyebrow">FAQ</p><h2>A few helpful<br>answers.</h2></div></div>
+      <div class="pom-faq-intro" data-pom-region="prayer-faq-intro">
+        <div class="pom-fallback"><div><p class="pom-eyebrow">FAQ</p><h2>A few helpful<br>answers.</h2></div></div>
+        <div class="pom-cms"><squarespace:block-field id="prayer-faq-intro" columns="12" /></div>
+      </div>
       <div class="pom-faq-list" data-accordion>
         <div class="pom-faq-item is-open">
           <button class="pom-faq-q" type="button" aria-expanded="true">Can I request prayer for someone else? <span class="pom-faq-icon" aria-hidden="true"></span></button>

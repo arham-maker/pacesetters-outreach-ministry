@@ -47,7 +47,12 @@
           <p class="pom-eyebrow">Your Order Summary</p>
           <h3>Songs of Encouragement.</h3>
           <p class="pom-product-cat">Music &amp; CDs</p>
-          <div class="pom-media is-checkout-item is-product-p01" role="img" aria-label="Songs of Encouragement"></div>
+          <div class="pom-media is-checkout-item is-product-p01" role="img" aria-label="Songs of Encouragement" data-pom-region="product-songs-of-encouragement-checkout-image">
+            <div class="pom-fallback">
+              <img src="/assets/store/store-product-01.png" alt="Songs of Encouragement" loading="lazy" decoding="async">
+            </div>
+            <div class="pom-cms"><squarespace:block-field id="product-songs-of-encouragement-checkout-image" columns="12" /></div>
+          </div>
           <div class="pom-summary-row">
             <span data-order-qty>Quantity : 01</span>
             <a class="pom-edit" href="/songs-of-encouragement">Edit</a>

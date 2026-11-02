@@ -84,6 +84,20 @@ def price_num(p: dict) -> float:
     return float(p["price"].replace("$", ""))
 
 
+def media_block(region: str, classes: str, src: str, alt: str, extra_attrs: str = "") -> str:
+    attrs = f' class="{classes}" role="img" aria-label="{alt}" data-pom-region="{region}"'
+    if extra_attrs:
+        attrs += f" {extra_attrs}"
+    return (
+        f"<div{attrs}>\n"
+        f'        <div class="pom-fallback">\n'
+        f'          <img src="{src}" alt="{alt}" loading="lazy" decoding="async">\n'
+        f"        </div>\n"
+        f'        <div class="pom-cms"><squarespace:block-field id="{region}" columns="12" /></div>\n'
+        f"      </div>"
+    )
+
+
 def related_html(current_slug: str) -> str:
     bits = []
     for o in PRODUCTS:
@@ -91,10 +105,17 @@ def related_html(current_slug: str) -> str:
             continue
         if len(bits) >= 3:
             break
+        alt = o["title"].replace("&amp;", "and")
+        region = f"product-{current_slug}-related-{o['img']}"
+        src = f"/assets/store/store-product-{o['img'].replace('p', '').zfill(2)}.png"
+        # o['img'] is like p01
+        num = o["img"][1:] if o["img"].startswith("p") else o["img"]
+        src = f"/assets/store/store-product-{num.zfill(2)}.png"
+        media = media_block(region, f"pom-media is-store-{o['img']}", src, alt)
         bits.append(
             f"""      <article class="pom-product">
         <a href="/{o['slug']}">
-          <div class="pom-media is-store-{o['img']}" role="img" aria-label="{o['title'].replace('&amp;', 'and')}"></div>
+          {media}
           <div class="pom-product-meta">
             <div class="pom-product-row">
               <h3>{o['title']}</h3>
@@ -118,10 +139,21 @@ def gallery_slides(p: dict) -> str:
             break
     slides = []
     dots = []
+    s = p["slug"]
     for i, img in enumerate(imgs):
         active = " is-active" if i == 0 else ""
+        num = img[1:] if img.startswith("p") else img
+        src = f"/assets/store/store-product-{num.zfill(2)}.png"
+        alt = f'{p["title"].replace("&amp;", "and")} image {i + 1}'
+        region = f"product-{s}-gallery-{i}"
         slides.append(
-            f'      <div class="pom-media is-product-{img}{active}" data-slide="{i}" role="img" aria-label="{p["title"].replace("&amp;", "and")} image {i + 1}"></div>'
+            media_block(
+                region,
+                f"pom-media is-product-{img}{active}",
+                src,
+                alt,
+                extra_attrs=f'data-slide="{i}"',
+            )
         )
         if i == 0:
             dots.append(f'<span class="is-active" data-dot="{i}"></span>')
@@ -134,6 +166,9 @@ def checkout_html(p: dict) -> str:
     s = p["slug"]
     sub = price_num(p)
     total = sub + SHIPPING
+    img_num = p["img"][1:] if str(p["img"]).startswith("p") else str(p["img"])
+    img_src = f"/assets/store/store-product-{img_num.zfill(2)}.png"
+    img_alt = p["title"].replace("&amp;", "and")
     return f"""  <div class="pom-page-checkout" data-order-view hidden id="order" data-unit-price="{sub:.2f}" data-shipping="{SHIPPING:.2f}">
     <section class="pom-checkout" data-pom-region="product-{s}-checkout">
       <div class="pom-fallback">
@@ -182,7 +217,12 @@ def checkout_html(p: dict) -> str:
           <p class="pom-eyebrow">Your Order Summary</p>
           <h3>{p['title']}.</h3>
           <p class="pom-product-cat">{p['cat']}</p>
-          <div class="pom-media is-checkout-item is-product-{p['img']}" role="img" aria-label="{p['title'].replace('&amp;', 'and')}"></div>
+          <div class="pom-media is-checkout-item is-product-{p['img']}" role="img" aria-label="{img_alt}" data-pom-region="product-{s}-checkout-image">
+            <div class="pom-fallback">
+              <img src="{img_src}" alt="{img_alt}" loading="lazy" decoding="async">
+            </div>
+            <div class="pom-cms"><squarespace:block-field id="product-{s}-checkout-image" columns="12" /></div>
+          </div>
           <div class="pom-summary-row">
             <span data-order-qty>Quantity : 01</span>
             <button class="pom-edit" type="button" data-back-product>Edit</button>
@@ -349,10 +389,15 @@ def store_cards() -> str:
     }
     bits = []
     for p in PRODUCTS:
+        alt = p["title"].replace("&amp;", "and")
+        num = p["img"][1:] if p["img"].startswith("p") else p["img"]
+        src = f"/assets/store/store-product-{num.zfill(2)}.png"
+        region = f"store-product-{p['img']}"
+        media = media_block(region, f"pom-media is-store-{p['img']}", src, alt)
         bits.append(
             f"""        <article class="pom-product" data-category="{cats[p['img']]}">
           <a href="/{p['slug']}">
-            <div class="pom-media is-store-{p['img']}" role="img" aria-label="{p['title'].replace('&amp;', 'and')}"></div>
+            {media}
             <div class="pom-product-meta">
               <div class="pom-product-row">
                 <h3>{p['title']}</h3>

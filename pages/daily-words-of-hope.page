@@ -12,9 +12,24 @@
   <section class="pom-product-main" data-pom-region="product-daily-words-of-hope-main">
     <div class="pom-fallback">
       <div class="pom-product-gallery" data-gallery>
-      <div class="pom-media is-product-p05 is-active" data-slide="0" role="img" aria-label="Daily Words of Hope image 1"></div>
-      <div class="pom-media is-product-p01" data-slide="1" role="img" aria-label="Daily Words of Hope image 2"></div>
-      <div class="pom-media is-product-p02" data-slide="2" role="img" aria-label="Daily Words of Hope image 3"></div>
+<div class="pom-media is-product-p05 is-active" role="img" aria-label="Daily Words of Hope image 1" data-pom-region="product-daily-words-of-hope-gallery-0" data-slide="0">
+        <div class="pom-fallback">
+          <img src="/assets/store/store-product-05.png" alt="Daily Words of Hope image 1" loading="lazy" decoding="async">
+        </div>
+        <div class="pom-cms"><squarespace:block-field id="product-daily-words-of-hope-gallery-0" columns="12" /></div>
+      </div>
+<div class="pom-media is-product-p01" role="img" aria-label="Daily Words of Hope image 2" data-pom-region="product-daily-words-of-hope-gallery-1" data-slide="1">
+        <div class="pom-fallback">
+          <img src="/assets/store/store-product-01.png" alt="Daily Words of Hope image 2" loading="lazy" decoding="async">
+        </div>
+        <div class="pom-cms"><squarespace:block-field id="product-daily-words-of-hope-gallery-1" columns="12" /></div>
+      </div>
+<div class="pom-media is-product-p02" role="img" aria-label="Daily Words of Hope image 3" data-pom-region="product-daily-words-of-hope-gallery-2" data-slide="2">
+        <div class="pom-fallback">
+          <img src="/assets/store/store-product-02.png" alt="Daily Words of Hope image 3" loading="lazy" decoding="async">
+        </div>
+        <div class="pom-cms"><squarespace:block-field id="product-daily-words-of-hope-gallery-2" columns="12" /></div>
+      </div>
         <div class="pom-gallery-nav">
           <button class="pom-icon-btn is-prev" type="button" data-gallery-prev aria-label="Previous image"><span class="pom-arrow"></span></button>
           <button class="pom-icon-btn is-next" type="button" data-gallery-next aria-label="Next image"><span class="pom-arrow"></span></button>
@@ -55,7 +70,12 @@
       <div class="pom-related-grid">
       <article class="pom-product">
         <a href="/songs-of-encouragement">
-          <div class="pom-media is-store-p01" role="img" aria-label="Songs of Encouragement"></div>
+          <div class="pom-media is-store-p01" role="img" aria-label="Songs of Encouragement" data-pom-region="product-daily-words-of-hope-related-p01">
+        <div class="pom-fallback">
+          <img src="/assets/store/store-product-01.png" alt="Songs of Encouragement" loading="lazy" decoding="async">
+        </div>
+        <div class="pom-cms"><squarespace:block-field id="product-daily-words-of-hope-related-p01" columns="12" /></div>
+      </div>
           <div class="pom-product-meta">
             <div class="pom-product-row">
               <h3>Songs of Encouragement</h3>
@@ -68,7 +88,12 @@
       </article>
       <article class="pom-product">
         <a href="/hope-for-every-season">
-          <div class="pom-media is-store-p02" role="img" aria-label="Hope for Every Season"></div>
+          <div class="pom-media is-store-p02" role="img" aria-label="Hope for Every Season" data-pom-region="product-daily-words-of-hope-related-p02">
+        <div class="pom-fallback">
+          <img src="/assets/store/store-product-02.png" alt="Hope for Every Season" loading="lazy" decoding="async">
+        </div>
+        <div class="pom-cms"><squarespace:block-field id="product-daily-words-of-hope-related-p02" columns="12" /></div>
+      </div>
           <div class="pom-product-meta">
             <div class="pom-product-row">
               <h3>Hope for Every Season</h3>
@@ -81,7 +106,12 @@
       </article>
       <article class="pom-product">
         <a href="/rooted-in-faith">
-          <div class="pom-media is-store-p03" role="img" aria-label="Rooted in Faith"></div>
+          <div class="pom-media is-store-p03" role="img" aria-label="Rooted in Faith" data-pom-region="product-daily-words-of-hope-related-p03">
+        <div class="pom-fallback">
+          <img src="/assets/store/store-product-03.png" alt="Rooted in Faith" loading="lazy" decoding="async">
+        </div>
+        <div class="pom-cms"><squarespace:block-field id="product-daily-words-of-hope-related-p03" columns="12" /></div>
+      </div>
           <div class="pom-product-meta">
             <div class="pom-product-row">
               <h3>Rooted in Faith</h3>
@@ -99,7 +129,8 @@
 
   <section class="pom-testimonials" data-pom-region="product-daily-words-of-hope-testimonials">
     <div class="pom-fallback">
-      <div class="pom-testimonials-intro">
+      <div class="pom-testimonials-intro" data-pom-region="daily-words-of-hope-testimonials-intro">
+        <div class="pom-fallback">
         <div>
           <p class="pom-eyebrow">Testimonials</p>
           <h2>Stories of faith<br>and hope.</h2>
@@ -108,6 +139,8 @@
             <button class="pom-icon-btn is-next" type="button" data-quote="next" aria-label="Next story"><span class="pom-arrow"></span></button>
           </div>
         </div>
+      </div>
+        <div class="pom-cms"><squarespace:block-field id="daily-words-of-hope-testimonials-intro" columns="12" /></div>
       </div>
       <div class="pom-quote-wrap" data-quotes>
         <blockquote class="pom-quote is-active">
@@ -203,7 +236,12 @@
           <p class="pom-eyebrow">Your Order Summary</p>
           <h3>Daily Words of Hope.</h3>
           <p class="pom-product-cat">Books</p>
-          <div class="pom-media is-checkout-item is-product-p05" role="img" aria-label="Daily Words of Hope"></div>
+          <div class="pom-media is-checkout-item is-product-p05" role="img" aria-label="Daily Words of Hope" data-pom-region="product-daily-words-of-hope-checkout-image">
+            <div class="pom-fallback">
+              <img src="/assets/store/store-product-05.png" alt="Daily Words of Hope" loading="lazy" decoding="async">
+            </div>
+            <div class="pom-cms"><squarespace:block-field id="product-daily-words-of-hope-checkout-image" columns="12" /></div>
+          </div>
           <div class="pom-summary-row">
             <span data-order-qty>Quantity : 01</span>
             <button class="pom-edit" type="button" data-back-product>Edit</button>

@@ -1,10 +1,20 @@
 <div class="pom-page pom-page-outreach">
   <section class="pom-hero is-outreach-embrace" data-pom-region="outreach-hero">
-    <div class="pom-hero-copy pom-fallback">
+    <div class="pom-hero-media" data-pom-region="outreach-hero-image">
+      <div class="pom-fallback">
+        <img src="/assets/outreach/outreach-hero.png" alt="" loading="eager" decoding="async">
+      </div>
+      <div class="pom-cms"><squarespace:block-field id="outreach-hero-image" columns="12" /></div>
+    </div>
+
+    <div class="pom-hero-copy" data-pom-region="outreach-hero-copy">
+      <div class="pom-fallback">
       <a class="pom-back" href="/services"><span class="pom-arrow is-back" aria-hidden="true"></span> Back to Services</a>
       <h1><span class="pom-hero-line">Community</span><br><span class="pom-hero-line">Outreach</span></h1>
       <p class="pom-lede">Compassion and encouragement,<br>close to home.</p>
     </div>
+        <div class="pom-cms"><squarespace:block-field id="outreach-hero-copy" columns="12" /></div>
+      </div>
     <div class="pom-cms"><squarespace:block-field id="outreach-hero" columns="12" /></div>
   </section>
 
@@ -24,7 +34,12 @@
 
   <section class="pom-reach is-outreach-who" data-pom-region="outreach-who">
     <div class="pom-fallback">
-      <div class="pom-media is-outreach-reach" role="img" aria-label="Hands stacked together"></div>
+      <div class="pom-media is-outreach-reach" role="img" aria-label="Hands stacked together" data-pom-region="outreach-outreach-reach">
+        <div class="pom-fallback">
+          <img src="/assets/outreach/outreach-reach.png" alt="Hands stacked together" loading="lazy" decoding="async">
+        </div>
+        <div class="pom-cms"><squarespace:block-field id="outreach-outreach-reach" columns="12" /></div>
+      </div>
       <div class="pom-reach-list">
         <p class="pom-eyebrow">Who we reach</p>
         <article>
@@ -46,7 +61,8 @@
 
   <section class="pom-testimonials" data-pom-region="outreach-testimonials">
     <div class="pom-fallback">
-      <div class="pom-testimonials-intro">
+      <div class="pom-testimonials-intro" data-pom-region="outreach-testimonials-intro">
+        <div class="pom-fallback">
         <div>
           <p class="pom-eyebrow">Testimonials</p>
           <h2>Stories of faith<br>and hope.</h2>
@@ -55,6 +71,8 @@
             <button class="pom-icon-btn is-next" type="button" data-quote="next" aria-label="Next story"><span class="pom-arrow"></span></button>
           </div>
         </div>
+      </div>
+        <div class="pom-cms"><squarespace:block-field id="outreach-testimonials-intro" columns="12" /></div>
       </div>
       <div class="pom-quote-wrap" data-quotes>
         <blockquote class="pom-quote is-active">
@@ -74,7 +92,10 @@
 
   <section class="pom-faq" data-pom-region="outreach-faq">
     <div class="pom-fallback">
-      <div class="pom-faq-intro"><div><p class="pom-eyebrow">FAQ</p><h2>A few helpful<br>answers.</h2></div></div>
+      <div class="pom-faq-intro" data-pom-region="outreach-faq-intro">
+        <div class="pom-fallback"><div><p class="pom-eyebrow">FAQ</p><h2>A few helpful<br>answers.</h2></div></div>
+        <div class="pom-cms"><squarespace:block-field id="outreach-faq-intro" columns="12" /></div>
+      </div>
       <div class="pom-faq-list" data-accordion>
         <div class="pom-faq-item is-open">
           <button class="pom-faq-q" type="button" aria-expanded="true">Where does the ministry serve? <span class="pom-faq-icon" aria-hidden="true"></span></button>

@@ -74,11 +74,11 @@
   });
 
   Array.prototype.forEach.call(document.querySelectorAll("[data-pom-region]"), function (region) {
-    var cms = region.querySelector(".pom-cms");
+    var cms = region.querySelector(":scope > .pom-cms") || region.querySelector(".pom-cms");
     if (
       cms &&
       cms.querySelector(
-        ".sqs-block:not(.sqs-block-spacer), .form-wrapper, .sqs-block-form, .sqs-block-image, .sqs-block-html, .sqs-block-markdown"
+        ".sqs-block:not(.sqs-block-spacer), .form-wrapper, .sqs-block-form, .sqs-block-image, .sqs-block-html, .sqs-block-markdown, .sqs-block-button, .sqs-block-quote, .sqs-block-video"
       )
     ) {
       region.classList.add("has-cms");

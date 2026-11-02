@@ -1,21 +1,39 @@
 <div class="pom-page pom-page-events">
   <section class="pom-hero is-events-zoom" data-pom-region="events-hero">
-    <div class="pom-hero-copy pom-fallback">
+    <div class="pom-hero-media" data-pom-region="events-hero-image">
+      <div class="pom-fallback">
+        <img src="/assets/events/events-hero.png" alt="" loading="eager" decoding="async">
+      </div>
+      <div class="pom-cms"><squarespace:block-field id="events-hero-image" columns="12" /></div>
+    </div>
+
+    <div class="pom-hero-copy" data-pom-region="events-hero-copy">
+      <div class="pom-fallback">
       <h1>Online Fellowship</h1>
       <p class="pom-lede">Faith and fellowship, wherever you are.</p>
     </div>
+        <div class="pom-cms"><squarespace:block-field id="events-hero-copy" columns="12" /></div>
+      </div>
     <div class="pom-cms"><squarespace:block-field id="events-hero" columns="12" /></div>
   </section>
 
   <section class="pom-split is-events-feature" data-pom-region="events-feature">
     <div class="pom-fallback">
-      <div class="pom-split-copy">
+      <div class="pom-split-copy" data-pom-region="events-copy">
+        <div class="pom-fallback">
         <p class="pom-eyebrow">Weekly · Online via Zoom</p>
         <h2>Night Live</h2>
         <p>Join Pastor Michael Vance for preaching, music, prayer, and spiritual encouragement.</p>
         <a class="pom-link" href="#get-in-touch"><span class="pom-link-text">Request Zoom Details</span><span class="pom-arrow is-ne" aria-hidden="true"></span></a>
       </div>
-      <div class="pom-media is-events-feature" role="img" aria-label="Online livestream and camera setup"></div>
+        <div class="pom-cms"><squarespace:block-field id="events-copy" columns="12" /></div>
+      </div>
+      <div class="pom-media is-events-feature" role="img" aria-label="Online livestream and camera setup" data-pom-region="events-events-feature">
+        <div class="pom-fallback">
+          <img src="/assets/events/events-feature.png" alt="Online livestream and camera setup" loading="lazy" decoding="async">
+        </div>
+        <div class="pom-cms"><squarespace:block-field id="events-events-feature" columns="12" /></div>
+      </div>
     </div>
     <div class="pom-cms"><squarespace:block-field id="events-feature" columns="12" /></div>
   </section>
@@ -91,7 +109,8 @@
 
   <section class="pom-testimonials" data-pom-region="events-testimonials">
     <div class="pom-fallback">
-      <div class="pom-testimonials-intro">
+      <div class="pom-testimonials-intro" data-pom-region="events-testimonials-intro">
+        <div class="pom-fallback">
         <div>
           <p class="pom-eyebrow">Testimonials</p>
           <h2>Stories of faith<br>and hope.</h2>
@@ -100,6 +119,8 @@
             <button class="pom-icon-btn is-next" type="button" data-quote="next" aria-label="Next story"><span class="pom-arrow"></span></button>
           </div>
         </div>
+      </div>
+        <div class="pom-cms"><squarespace:block-field id="events-testimonials-intro" columns="12" /></div>
       </div>
       <div class="pom-quote-wrap" data-quotes>
         <blockquote class="pom-quote is-active">
@@ -119,7 +140,10 @@
 
   <section class="pom-faq" data-pom-region="events-faq">
     <div class="pom-fallback">
-      <div class="pom-faq-intro"><div><p class="pom-eyebrow">FAQ</p><h2>A few helpful<br>answers.</h2></div></div>
+      <div class="pom-faq-intro" data-pom-region="events-faq-intro">
+        <div class="pom-fallback"><div><p class="pom-eyebrow">FAQ</p><h2>A few helpful<br>answers.</h2></div></div>
+        <div class="pom-cms"><squarespace:block-field id="events-faq-intro" columns="12" /></div>
+      </div>
       <div class="pom-faq-list" data-accordion>
         <div class="pom-faq-item is-open">
           <button class="pom-faq-q" type="button" aria-expanded="true">When does Saturday Night Live meet? <span class="pom-faq-icon" aria-hidden="true"></span></button>

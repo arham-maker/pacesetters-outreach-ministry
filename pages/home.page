@@ -1,9 +1,19 @@
 <div class="pom-page pom-page-home">
   <section class="pom-hero is-pew" data-pom-region="home-hero">
+    <div class="pom-hero-media" data-pom-region="home-hero-image">
+      <div class="pom-fallback">
+        <img src="/assets/home-hero.png" alt="" loading="eager" decoding="async">
+      </div>
+      <div class="pom-cms"><squarespace:block-field id="home-hero-image" columns="12" /></div>
+    </div>
+
     <div class="pom-fallback">
-      <div class="pom-hero-copy">
+      <div class="pom-hero-copy" data-pom-region="home-hero-copy">
+        <div class="pom-fallback">
         <h1><span class="pom-hero-line">Faith. Hope.</span><br><span class="pom-hero-line">A place to belong.</span></h1>
         <p class="pom-lede"><span class="pom-hero-line">Sharing God’s love in our communities</span><br><span class="pom-hero-line">and beyond.</span></p>
+      </div>
+        <div class="pom-cms"><squarespace:block-field id="home-hero-copy" columns="12" /></div>
       </div>
       <div class="pom-hero-bars">
         <a class="pom-hero-bar is-light" href="/events"><span class="pom-link-text">Join Saturday Night Live</span><span class="pom-arrow is-ne" aria-hidden="true"></span></a>
@@ -21,7 +31,12 @@
           <h2>A light in every<br>community.</h2>
         </div>
       </div>
-      <div class="pom-media is-hands" role="img" aria-label="People gathered with open Bibles"></div>
+      <div class="pom-media is-hands" role="img" aria-label="People gathered with open Bibles" data-pom-region="home-hands">
+        <div class="pom-fallback">
+          <img src="/assets/home-purpose.png" alt="People gathered with open Bibles" loading="lazy" decoding="async">
+        </div>
+        <div class="pom-cms"><squarespace:block-field id="home-hands" columns="12" /></div>
+      </div>
       <div class="pom-panel">
         <div>
           <p>For over 30 years, we’ve reached people with compassion, Christian fellowship, and the encouragement of God’s Word.</p>
@@ -34,12 +49,20 @@
 
   <section class="pom-split is-cream is-snl" id="saturday-night-live" data-pom-region="home-snl">
     <div class="pom-fallback">
-      <div class="pom-media is-bible" role="img" aria-label="Open Bible and microphone"></div>
-      <div class="pom-split-copy">
+      <div class="pom-media is-bible" role="img" aria-label="Open Bible and microphone" data-pom-region="home-bible">
+        <div class="pom-fallback">
+          <img src="/assets/home-snl-hires.png" alt="Open Bible and microphone" loading="lazy" decoding="async">
+        </div>
+        <div class="pom-cms"><squarespace:block-field id="home-bible" columns="12" /></div>
+      </div>
+      <div class="pom-split-copy" data-pom-region="home-copy">
+        <div class="pom-fallback">
         <p class="pom-eyebrow">Weekly · Online via Zoom</p>
         <h2>Saturday night live</h2>
         <p>Preaching, music, and prayer with Pastor Michael Vance.</p>
         <a class="pom-link" href="/events"><span class="pom-link-text">View Program &amp; Join</span><span class="pom-arrow is-ne" aria-hidden="true"></span></a>
+      </div>
+        <div class="pom-cms"><squarespace:block-field id="home-copy" columns="12" /></div>
       </div>
     </div>
     <div class="pom-cms"><squarespace:block-field id="home-saturday" columns="12" /></div>
@@ -47,19 +70,28 @@
 
   <section class="pom-split is-dark is-store is-reverse" data-pom-region="home-store-promo">
     <div class="pom-fallback">
-      <div class="pom-split-copy">
+      <div class="pom-split-copy" data-pom-region="home-copy-2">
+        <div class="pom-fallback">
         <h2>Encouragement for everyday faith.</h2>
         <p>Music, sermons, and books from our ministry.</p>
         <a class="pom-link is-end" href="/store"><span class="pom-link-text">Browse the Store</span><span class="pom-arrow is-ne" aria-hidden="true"></span></a>
       </div>
-      <div class="pom-media is-books" role="img" aria-label="Books, CDs, and headphones"></div>
+        <div class="pom-cms"><squarespace:block-field id="home-copy-2" columns="12" /></div>
+      </div>
+      <div class="pom-media is-books" role="img" aria-label="Books, CDs, and headphones" data-pom-region="home-books">
+        <div class="pom-fallback">
+          <img src="/assets/homw/blackhome.jpg" alt="Books, CDs, and headphones" loading="lazy" decoding="async">
+        </div>
+        <div class="pom-cms"><squarespace:block-field id="home-books" columns="12" /></div>
+      </div>
     </div>
     <div class="pom-cms"><squarespace:block-field id="home-store-promo" columns="12" /></div>
   </section>
 
   <section class="pom-testimonials" data-pom-region="home-testimonials" aria-label="Testimonials">
     <div class="pom-fallback">
-      <div class="pom-testimonials-intro">
+      <div class="pom-testimonials-intro" data-pom-region="home-testimonials-intro">
+        <div class="pom-fallback">
         <div>
           <p class="pom-eyebrow">Testimonials</p>
           <h2>Stories of faith<br>and hope.</h2>
@@ -68,6 +100,8 @@
             <button class="pom-icon-btn is-next" type="button" data-quote="next" aria-label="Next story"><span class="pom-arrow"></span></button>
           </div>
         </div>
+      </div>
+        <div class="pom-cms"><squarespace:block-field id="home-testimonials-intro" columns="12" /></div>
       </div>
       <div class="pom-quote-wrap" data-quotes>
         <blockquote class="pom-quote is-active">
@@ -87,11 +121,14 @@
 
   <section class="pom-faq" data-pom-region="home-faq" aria-label="Frequently asked questions">
     <div class="pom-fallback">
-      <div class="pom-faq-intro">
+      <div class="pom-faq-intro" data-pom-region="home-faq-intro">
+        <div class="pom-fallback">
         <div>
           <p class="pom-eyebrow">FAQ</p>
           <h2>A few helpful<br>answers.</h2>
         </div>
+      </div>
+        <div class="pom-cms"><squarespace:block-field id="home-faq-intro" columns="12" /></div>
       </div>
       <div class="pom-faq-list" data-accordion>
         <div class="pom-faq-item is-open">

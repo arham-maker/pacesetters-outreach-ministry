@@ -1,9 +1,19 @@
 <div class="pom-page pom-page-store">
   <section class="pom-hero is-store-resources" data-pom-region="store-hero">
-    <div class="pom-hero-copy pom-fallback">
+    <div class="pom-hero-media" data-pom-region="store-hero-image">
+      <div class="pom-fallback">
+        <img src="/assets/store/store-hero.png" alt="" loading="eager" decoding="async">
+      </div>
+      <div class="pom-cms"><squarespace:block-field id="store-hero-image" columns="12" /></div>
+    </div>
+
+    <div class="pom-hero-copy pom-fallback" data-pom-region="products-hero-copy">
+        <div class="pom-fallback">
       <h1>Ministry Resources</h1>
       <p class="pom-lede">Encouragement for everyday faith.</p>
     </div>
+        <div class="pom-cms"><squarespace:block-field id="products-hero-copy" columns="12" /></div>
+      </div>
     <div class="pom-cms"><squarespace:block-field id="store-hero" columns="12" /></div>
   </section>
 
@@ -24,17 +34,32 @@
   <section class="pom-cats is-store-cats" data-pom-region="store-categories" aria-label="Resource categories">
     <div class="pom-fallback">
       <article>
-        <div class="pom-media is-store-cat-music" role="img" aria-label="Music and CDs"></div>
+        <div class="pom-media is-store-cat-music" role="img" aria-label="Music and CDs" data-pom-region="products-store-cat-music">
+        <div class="pom-fallback">
+          <img src="/assets/store/store-cat-music.png" alt="Music and CDs" loading="lazy" decoding="async">
+        </div>
+        <div class="pom-cms"><squarespace:block-field id="products-store-cat-music" columns="12" /></div>
+      </div>
         <h3>Music &amp; CDs</h3>
         <p>Music to encourage worship and reflection.</p>
       </article>
       <article>
-        <div class="pom-media is-store-cat-sermons" role="img" aria-label="Sermons"></div>
+        <div class="pom-media is-store-cat-sermons" role="img" aria-label="Sermons" data-pom-region="products-store-cat-sermons">
+        <div class="pom-fallback">
+          <img src="/assets/store/store-cat-sermons.png" alt="Sermons" loading="lazy" decoding="async">
+        </div>
+        <div class="pom-cms"><squarespace:block-field id="products-store-cat-sermons" columns="12" /></div>
+      </div>
         <h3>Sermons</h3>
         <p>Messages rooted in God’s<br>Word.</p>
       </article>
       <article>
-        <div class="pom-media is-store-cat-books" role="img" aria-label="Books"></div>
+        <div class="pom-media is-store-cat-books" role="img" aria-label="Books" data-pom-region="products-store-cat-books">
+        <div class="pom-fallback">
+          <img src="/assets/store/store-cat-books.png" alt="Books" loading="lazy" decoding="async">
+        </div>
+        <div class="pom-cms"><squarespace:block-field id="products-store-cat-books" columns="12" /></div>
+      </div>
         <h3>Books</h3>
         <p>Reading for spiritual growth and encouragement.</p>
       </article>
@@ -74,7 +99,12 @@
         {.or}
         <article class="pom-product" data-category="music">
           <a href="/songs-of-encouragement">
-            <div class="pom-media is-store-p01" role="img" aria-label="Songs of Encouragement"></div>
+            <div class="pom-media is-store-p01" role="img" aria-label="Songs of Encouragement" data-pom-region="products-store-p01">
+        <div class="pom-fallback">
+          <img src="/assets/store/store-product-01.png" alt="Songs of Encouragement" loading="lazy" decoding="async">
+        </div>
+        <div class="pom-cms"><squarespace:block-field id="products-store-p01" columns="12" /></div>
+      </div>
             <div class="pom-product-meta">
               <div class="pom-product-row">
                 <h3>Songs of Encouragement</h3>
@@ -87,7 +117,12 @@
         </article>
         <article class="pom-product" data-category="sermons">
           <a href="/hope-for-every-season">
-            <div class="pom-media is-store-p02" role="img" aria-label="Hope for Every Season"></div>
+            <div class="pom-media is-store-p02" role="img" aria-label="Hope for Every Season" data-pom-region="products-store-p02">
+        <div class="pom-fallback">
+          <img src="/assets/store/store-product-02.png" alt="Hope for Every Season" loading="lazy" decoding="async">
+        </div>
+        <div class="pom-cms"><squarespace:block-field id="products-store-p02" columns="12" /></div>
+      </div>
             <div class="pom-product-meta">
               <div class="pom-product-row">
                 <h3>Hope for Every Season</h3>
@@ -100,7 +135,12 @@
         </article>
         <article class="pom-product" data-category="books">
           <a href="/rooted-in-faith">
-            <div class="pom-media is-store-p03" role="img" aria-label="Rooted in Faith"></div>
+            <div class="pom-media is-store-p03" role="img" aria-label="Rooted in Faith" data-pom-region="products-store-p03">
+        <div class="pom-fallback">
+          <img src="/assets/store/store-product-03.png" alt="Rooted in Faith" loading="lazy" decoding="async">
+        </div>
+        <div class="pom-cms"><squarespace:block-field id="products-store-p03" columns="12" /></div>
+      </div>
             <div class="pom-product-meta">
               <div class="pom-product-row">
                 <h3>Rooted in Faith</h3>
@@ -113,7 +153,12 @@
         </article>
         <article class="pom-product" data-category="music">
           <a href="/praise-and-reflection">
-            <div class="pom-media is-store-p04" role="img" aria-label="Praise and Reflection"></div>
+            <div class="pom-media is-store-p04" role="img" aria-label="Praise and Reflection" data-pom-region="products-store-p04">
+        <div class="pom-fallback">
+          <img src="/assets/store/store-product-04.png" alt="Praise and Reflection" loading="lazy" decoding="async">
+        </div>
+        <div class="pom-cms"><squarespace:block-field id="products-store-p04" columns="12" /></div>
+      </div>
             <div class="pom-product-meta">
               <div class="pom-product-row">
                 <h3>Praise &amp; Reflection</h3>
@@ -126,7 +171,12 @@
         </article>
         <article class="pom-product" data-category="books">
           <a href="/daily-words-of-hope">
-            <div class="pom-media is-store-p05" role="img" aria-label="Daily Words of Hope"></div>
+            <div class="pom-media is-store-p05" role="img" aria-label="Daily Words of Hope" data-pom-region="products-store-p05">
+        <div class="pom-fallback">
+          <img src="/assets/store/store-product-05.png" alt="Daily Words of Hope" loading="lazy" decoding="async">
+        </div>
+        <div class="pom-cms"><squarespace:block-field id="products-store-p05" columns="12" /></div>
+      </div>
             <div class="pom-product-meta">
               <div class="pom-product-row">
                 <h3>Daily Words of Hope</h3>
@@ -139,7 +189,12 @@
         </article>
         <article class="pom-product" data-category="sermons">
           <a href="/walking-with-christ">
-            <div class="pom-media is-store-p06" role="img" aria-label="Walking with Christ"></div>
+            <div class="pom-media is-store-p06" role="img" aria-label="Walking with Christ" data-pom-region="products-store-p06">
+        <div class="pom-fallback">
+          <img src="/assets/store/store-product-06.png" alt="Walking with Christ" loading="lazy" decoding="async">
+        </div>
+        <div class="pom-cms"><squarespace:block-field id="products-store-p06" columns="12" /></div>
+      </div>
             <div class="pom-product-meta">
               <div class="pom-product-row">
                 <h3>Walking with Christ</h3>
@@ -179,7 +234,8 @@
 
   <section class="pom-testimonials" data-pom-region="store-testimonials">
     <div class="pom-fallback">
-      <div class="pom-testimonials-intro">
+      <div class="pom-testimonials-intro" data-pom-region="products-testimonials-intro">
+        <div class="pom-fallback">
         <div>
           <p class="pom-eyebrow">Testimonials</p>
           <h2>Stories of faith<br>and hope.</h2>
@@ -188,6 +244,8 @@
             <button class="pom-icon-btn is-next" type="button" data-quote="next" aria-label="Next story"><span class="pom-arrow"></span></button>
           </div>
         </div>
+      </div>
+        <div class="pom-cms"><squarespace:block-field id="products-testimonials-intro" columns="12" /></div>
       </div>
       <div class="pom-quote-wrap" data-quotes>
         <blockquote class="pom-quote is-active">
@@ -207,7 +265,10 @@
 
   <section class="pom-faq" data-pom-region="store-faq">
     <div class="pom-fallback">
-      <div class="pom-faq-intro"><div><p class="pom-eyebrow">FAQ</p><h2>A few helpful<br>answers.</h2></div></div>
+      <div class="pom-faq-intro" data-pom-region="products-faq-intro">
+        <div class="pom-fallback"><div><p class="pom-eyebrow">FAQ</p><h2>A few helpful<br>answers.</h2></div></div>
+        <div class="pom-cms"><squarespace:block-field id="products-faq-intro" columns="12" /></div>
+      </div>
       <div class="pom-faq-list" data-accordion>
         <div class="pom-faq-item is-open">
           <button class="pom-faq-q" type="button" aria-expanded="true">What can I find in the store? <span class="pom-faq-icon" aria-hidden="true"></span></button>
@@ -228,7 +289,8 @@
 
   <section class="pom-contact is-crowd" id="get-in-touch" data-pom-region="store-contact">
     <div class="pom-fallback">
-      <div class="pom-contact-copy">
+      <div class="pom-contact-copy" data-pom-region="products-contact-copy">
+        <div class="pom-fallback">
         <p class="pom-eyebrow">Get in Touch</p>
         <h2>We’d love to hear from you.</h2>
         <p class="pom-contact-lead">Have a question, need prayer, or want to help?</p>
@@ -236,6 +298,8 @@
           <a href="tel:3305059087">330 505-9087 <span class="pom-meta-icon is-phone" aria-hidden="true"></span></a>
           <a href="mailto:terryolivia@currently.com">terryolivia@currently.com <span class="pom-meta-icon is-mail" aria-hidden="true"></span></a>
         </div>
+      </div>
+        <div class="pom-cms"><squarespace:block-field id="products-contact-copy" columns="12" /></div>
       </div>
       <form class="pom-form-card" data-contact-form>
         <div class="pom-field"><label for="store-name">Name</label><input id="store-name" name="name" type="text"></div>

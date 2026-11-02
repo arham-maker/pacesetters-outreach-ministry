@@ -1,10 +1,20 @@
 <div class="pom-page pom-page-about">
   <section class="pom-hero is-about-tree" data-pom-region="about-hero">
-    <div class="pom-hero-copy pom-fallback">
+    <div class="pom-hero-media" data-pom-region="about-hero-image">
+      <div class="pom-fallback">
+        <img src="/assets/about/about-hero.png" alt="" loading="eager" decoding="async">
+      </div>
+      <div class="pom-cms"><squarespace:block-field id="about-hero-image" columns="12" /></div>
+    </div>
+
+    <div class="pom-hero-copy" data-pom-region="about-hero-copy">
+      <div class="pom-fallback">
       <p class="pom-eyebrow">About Pacesetters</p>
       <h1><span class="pom-hero-line">Rooted in faith.</span><br><span class="pom-hero-line">Reaching out with hope.</span></h1>
       <p class="pom-lede">Lorem ipsum dolor sit amet consectetur. Ultricies erat bibendum ridiculus fringilla nisl venenatis eu.</p>
     </div>
+        <div class="pom-cms"><squarespace:block-field id="about-hero-copy" columns="12" /></div>
+      </div>
     <div class="pom-cms"><squarespace:block-field id="about-hero" columns="12" /></div>
   </section>
 
@@ -16,7 +26,12 @@
           <h2>Over 30 years<br>of reaching people.</h2>
         </div>
       </div>
-      <div class="pom-media is-about-story" role="img" aria-label="Hands reaching toward each other at sunset"></div>
+      <div class="pom-media is-about-story" role="img" aria-label="Hands reaching toward each other at sunset" data-pom-region="about-about-story">
+        <div class="pom-fallback">
+          <img src="/assets/about/about-story.png" alt="Hands reaching toward each other at sunset" loading="lazy" decoding="async">
+        </div>
+        <div class="pom-cms"><squarespace:block-field id="about-about-story" columns="12" /></div>
+      </div>
       <div class="pom-panel">
         <p>Lorem ipsum dolor sit amet consectetur. Nisi libero dapibus justo nunc imperdiet amet convallis. Donec adipiscing varius luctus at maecenas dictum ut. Tincidunt tincidunt lorem nisl maecenas. Dui risus amet posuere semper.</p>
       </div>
@@ -55,23 +70,39 @@
 
   <section class="pom-split is-dark is-about-faith" data-pom-region="about-faith">
     <div class="pom-fallback">
-      <div class="pom-split-copy">
+      <div class="pom-split-copy" data-pom-region="about-copy">
+        <div class="pom-fallback">
         <h2>Faith shapes how we serve.</h2>
         <p>Lorem ipsum dolor sit amet consectetur. Pellentesque etiam sit urna ac urna laoreet vitae orci. Feugiat egestas eu fames libero tincidunt suspendisse.</p>
       </div>
-      <div class="pom-media is-about-faith" role="img" aria-label="Hands raised in prayer at sunset"></div>
+        <div class="pom-cms"><squarespace:block-field id="about-copy" columns="12" /></div>
+      </div>
+      <div class="pom-media is-about-faith" role="img" aria-label="Hands raised in prayer at sunset" data-pom-region="about-about-faith">
+        <div class="pom-fallback">
+          <img src="/assets/about/about-faith.png" alt="Hands raised in prayer at sunset" loading="lazy" decoding="async">
+        </div>
+        <div class="pom-cms"><squarespace:block-field id="about-about-faith" columns="12" /></div>
+      </div>
     </div>
     <div class="pom-cms"><squarespace:block-field id="about-faith" columns="12" /></div>
   </section>
 
   <section class="pom-split is-cream is-about-reach" data-pom-region="about-reach">
     <div class="pom-fallback">
-      <div class="pom-media is-about-reach" role="img" aria-label="People gathered studying an open Bible"></div>
-      <div class="pom-split-copy">
+      <div class="pom-media is-about-reach" role="img" aria-label="People gathered studying an open Bible" data-pom-region="about-about-reach">
+        <div class="pom-fallback">
+          <img src="/assets/about/about-reach.png" alt="People gathered studying an open Bible" loading="lazy" decoding="async">
+        </div>
+        <div class="pom-cms"><squarespace:block-field id="about-about-reach" columns="12" /></div>
+      </div>
+      <div class="pom-split-copy" data-pom-region="about-copy-2">
+        <div class="pom-fallback">
         <p class="pom-eyebrow">Our Growing Reach</p>
         <h2>Local roots.<br>Fellowship beyond borders.</h2>
         <p>Lorem ipsum dolor sit amet consectetur. Et ultrices massa amet fermentum massa iaculis turpis. Commodo at commodo et orci nisi risus.</p>
         <a class="pom-link" href="/events"><span class="pom-link-text">View Program &amp; Join</span><span class="pom-arrow is-ne" aria-hidden="true"></span></a>
+      </div>
+        <div class="pom-cms"><squarespace:block-field id="about-copy-2" columns="12" /></div>
       </div>
     </div>
     <div class="pom-cms"><squarespace:block-field id="about-reach" columns="12" /></div>
@@ -79,7 +110,8 @@
 
   <section class="pom-testimonials" data-pom-region="about-testimonials" aria-label="Testimonials">
     <div class="pom-fallback">
-      <div class="pom-testimonials-intro">
+      <div class="pom-testimonials-intro" data-pom-region="about-testimonials-intro">
+        <div class="pom-fallback">
         <div>
           <p class="pom-eyebrow">Testimonials</p>
           <h2>Stories of faith<br>and hope.</h2>
@@ -88,6 +120,8 @@
             <button class="pom-icon-btn is-next" type="button" data-quote="next" aria-label="Next story"><span class="pom-arrow"></span></button>
           </div>
         </div>
+      </div>
+        <div class="pom-cms"><squarespace:block-field id="about-testimonials-intro" columns="12" /></div>
       </div>
       <div class="pom-quote-wrap" data-quotes>
         <blockquote class="pom-quote is-active">
@@ -107,7 +141,10 @@
 
   <section class="pom-faq" data-pom-region="about-faq">
     <div class="pom-fallback">
-      <div class="pom-faq-intro"><div><p class="pom-eyebrow">FAQ</p><h2>A few helpful<br>answers.</h2></div></div>
+      <div class="pom-faq-intro" data-pom-region="about-faq-intro">
+        <div class="pom-fallback"><div><p class="pom-eyebrow">FAQ</p><h2>A few helpful<br>answers.</h2></div></div>
+        <div class="pom-cms"><squarespace:block-field id="about-faq-intro" columns="12" /></div>
+      </div>
       <div class="pom-faq-list" data-accordion>
         <div class="pom-faq-item is-open">
           <button class="pom-faq-q" type="button" aria-expanded="true">How can I join Saturday Night Live? <span class="pom-faq-icon" aria-hidden="true"></span></button>
