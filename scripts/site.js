@@ -85,6 +85,182 @@
     }
   });
 
+  /* Hover → Edit chip on text/headings (Squarespace Edit mode only) */
+  var EDITABLE_SEL =
+    ".pom-fallback h1, .pom-fallback h2, .pom-fallback h3, .pom-fallback h4, .pom-fallback p, .pom-fallback .pom-lede, .pom-fallback .pom-eyebrow, .pom-fallback .pom-prose, .pom-fallback .pom-contact-lead, .pom-fallback cite";
+  var editChip = null;
+  var editHost = null;
+  var hideChipTimer = null;
+
+  function ensureEditChip() {
+    if (editChip) {
+      return editChip;
+    }
+    editChip = document.createElement("button");
+    editChip.type = "button";
+    editChip.className = "pom-edit-chip";
+    editChip.textContent = "Edit";
+    editChip.setAttribute("aria-label", "Edit this text");
+    document.body.appendChild(editChip);
+    editChip.addEventListener("mouseenter", function () {
+      if (hideChipTimer) {
+        clearTimeout(hideChipTimer);
+        hideChipTimer = null;
+      }
+    });
+    editChip.addEventListener("mouseleave", function () {
+      scheduleHideChip();
+    });
+    editChip.addEventListener("click", function (event) {
+      event.preventDefault();
+      event.stopPropagation();
+      if (editHost) {
+        startInlineEdit(editHost);
+      }
+    });
+    return editChip;
+  }
+
+  function placeChip(el) {
+    var chip = ensureEditChip();
+    var rect = el.getBoundingClientRect();
+    chip.style.display = "inline-flex";
+    chip.style.position = "fixed";
+    chip.style.top = Math.max(8, rect.top - 14) + "px";
+    chip.style.left = Math.min(window.innerWidth - 88, Math.max(8, rect.right - 72)) + "px";
+    chip.style.right = "auto";
+  }
+
+  function scheduleHideChip() {
+    if (hideChipTimer) {
+      clearTimeout(hideChipTimer);
+    }
+    hideChipTimer = setTimeout(function () {
+      if (editChip && !editHost) {
+        editChip.style.display = "none";
+      } else if (editChip && editHost && !editHost.classList.contains("is-hover") && !editHost.classList.contains("is-editing")) {
+        editChip.style.display = "none";
+        editHost = null;
+      }
+    }, 120);
+  }
+
+  function openRegionCms(el) {
+    var region = el.closest("[data-pom-region]");
+    if (!region) {
+      return;
+    }
+    var cms = region.querySelector(":scope > .pom-cms") || region.querySelector(".pom-cms");
+    if (!cms) {
+      return;
+    }
+    region.classList.add("is-edit-focus");
+    cms.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    var hit =
+      cms.querySelector(".sqs-block, .sqs-layout, .sqs-block-content, [data-block-id]") || cms;
+    try {
+      hit.dispatchEvent(new MouseEvent("click", { bubbles: true, cancelable: true, view: window }));
+    } catch (err) {
+      if (hit.click) {
+        hit.click();
+      }
+    }
+    setTimeout(function () {
+      region.classList.remove("is-edit-focus");
+    }, 2400);
+  }
+
+  function startInlineEdit(el) {
+    if (!body.classList.contains("pom-editing") || el.getAttribute("contenteditable") === "true") {
+      return;
+    }
+    el.classList.add("is-editing", "is-hover");
+    el.setAttribute("contenteditable", "true");
+    el.focus();
+    placeChip(el);
+    openRegionCms(el);
+  }
+
+  function stopInlineEdit(el) {
+    el.classList.remove("is-editing");
+    el.removeAttribute("contenteditable");
+    el.classList.remove("is-hover");
+    if (editHost === el) {
+      editHost = null;
+    }
+    scheduleHideChip();
+  }
+
+  function bindHoverEdit() {
+    if (!body.classList.contains("pom-editing")) {
+      if (editChip) {
+        editChip.style.display = "none";
+      }
+      return;
+    }
+    Array.prototype.forEach.call(document.querySelectorAll(EDITABLE_SEL), function (el) {
+      if (el.closest(".pom-cms") || el.getAttribute("data-pom-edit-bound") === "1") {
+        return;
+      }
+      if (!el.closest("[data-pom-region]")) {
+        return;
+      }
+      /* skip nested text inside another editable heading wrapper */
+      if (el.parentElement && el.parentElement.closest(EDITABLE_SEL)) {
+        return;
+      }
+      el.setAttribute("data-pom-edit-bound", "1");
+      el.classList.add("pom-editable");
+
+      el.addEventListener("mouseenter", function () {
+        if (!body.classList.contains("pom-editing")) {
+          return;
+        }
+        if (hideChipTimer) {
+          clearTimeout(hideChipTimer);
+          hideChipTimer = null;
+        }
+        if (editHost && editHost !== el) {
+          editHost.classList.remove("is-hover");
+        }
+        editHost = el;
+        el.classList.add("is-hover");
+        placeChip(el);
+      });
+      el.addEventListener("mouseleave", function () {
+        el.classList.remove("is-hover");
+        scheduleHideChip();
+      });
+      el.addEventListener("click", function (event) {
+        if (!body.classList.contains("pom-editing")) {
+          return;
+        }
+        if (event.target.closest("a, button, input, textarea")) {
+          return;
+        }
+        event.preventDefault();
+        event.stopPropagation();
+        startInlineEdit(el);
+      });
+      el.addEventListener("blur", function () {
+        stopInlineEdit(el);
+      });
+      el.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") {
+          el.blur();
+        }
+      });
+    });
+  }
+
+  bindHoverEdit();
+  setInterval(bindHoverEdit, 1500);
+  window.addEventListener("scroll", function () {
+    if (editHost && editChip && editChip.style.display !== "none") {
+      placeChip(editHost);
+    }
+  }, true);
+
   Array.prototype.forEach.call(document.querySelectorAll("[data-accordion]"), function (list) {
     var items = list.querySelectorAll(".pom-faq-item");
     Array.prototype.forEach.call(items, function (item) {

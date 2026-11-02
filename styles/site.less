@@ -4381,12 +4381,63 @@ section.pom-join.is-tan {
 }
 
 /*
-  Edit mode: keep the designed page visible.
-  Empty CMS slots sit BELOW each area as a compact bar — never cover content.
+  Edit mode: designed page stays visible.
+  Text/headings are hover-editable; CMS slots sit below as the save target.
 */
 .pom-editing [data-pom-region]:not(.has-cms) > .pom-fallback {
   opacity: 1;
-  pointer-events: none;
+  pointer-events: auto;
+}
+
+.pom-editing .pom-editable {
+  position: relative;
+  cursor: text;
+  transition: outline-color 0.15s ease, box-shadow 0.15s ease;
+  outline: 2px solid transparent;
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+.pom-editing .pom-editable:hover,
+.pom-editing .pom-editable.is-hover {
+  outline-color: @gold-figma;
+  box-shadow: 0 0 0 6px rgba(183, 140, 49, 0.16);
+}
+
+.pom-editing .pom-editable.is-editing {
+  outline-color: @gold-figma;
+  outline-style: solid;
+  background: rgba(254, 254, 254, 0.08);
+  caret-color: @gold-figma;
+}
+
+.pom-edit-chip {
+  position: fixed;
+  z-index: 99999;
+  display: none;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border: 0;
+  border-radius: 4px;
+  background: @gold-figma;
+  color: #1a120e;
+  font-family: @font-display;
+  font-size: 11px;
+  line-height: 1;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(38, 38, 37, 0.28);
+}
+
+.pom-edit-chip:hover {
+  filter: brightness(1.06);
+}
+
+.pom-editing [data-pom-region].is-edit-focus > .pom-cms {
+  outline-color: @gold-figma !important;
+  box-shadow: 0 0 0 4px rgba(183, 140, 49, 0.35);
 }
 
 .pom-editing [data-pom-region]:not(.has-cms) > .pom-cms {
@@ -4420,7 +4471,7 @@ section.pom-join.is-tan {
 }
 
 .pom-editing [data-pom-region]:not(.has-cms) > .pom-cms:before {
-  content: "Edit — add Text, Heading, Image, or Button";
+  content: "Save edits here — add Text / Heading block, then Save";
   display: block;
   margin: 0;
   font-family: @font-display;
