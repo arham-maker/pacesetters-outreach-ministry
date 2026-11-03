@@ -97,6 +97,26 @@
     <div class="pom-cms"><squarespace:block-field id="services-resources" columns="12" /></div>
   </section>
 
+  <section class="pom-split is-svc is-svc-cream" data-pom-region="services-invite" id="invite-pastor">
+    <div class="pom-fallback">
+      <div class="pom-media is-svc-online" role="img" aria-label="Pastor speaking and fellowship online" data-pom-region="services-svc-invite">
+        <div class="pom-fallback">
+          <img src="/assets/services/services-online.png" alt="Pastor speaking and fellowship online" loading="lazy" decoding="async">
+        </div>
+        <div class="pom-cms"><squarespace:block-field id="services-svc-invite" columns="12" /></div>
+      </div>
+      <div class="pom-split-copy" data-pom-region="services-copy-invite">
+        <div class="pom-fallback">
+          <h2>Invite Pastor Michael Vance to speak</h2>
+          <p>To invite Pastor Michael Vance to speak at your church, conference, or event, please call <a href="tel:8886319665">888-631-9665</a> or email <a href="mailto:terryolivia@currently.com">terryolivia@currently.com</a>. Leave your contact information and we will have him contact you.</p>
+          <a class="pom-link" href="tel:8886319665"><span class="pom-link-text">Call 888-631-9665</span><span class="pom-arrow is-ne" aria-hidden="true"></span></a>
+        </div>
+        <div class="pom-cms"><squarespace:block-field id="services-copy-invite" columns="12" /></div>
+      </div>
+    </div>
+    <div class="pom-cms"><squarespace:block-field id="services-invite" columns="12" /></div>
+  </section>
+
   <section class="pom-testimonials" data-pom-region="services-testimonials">
     <div class="pom-fallback">
       <div class="pom-testimonials-intro" data-pom-region="services-testimonials-intro">
@@ -142,6 +162,7 @@
         <div class="pom-faq-item"><button class="pom-faq-q" type="button" aria-expanded="false">Can I request prayer? <span class="pom-faq-icon" aria-hidden="true"></span></button><div class="pom-faq-a">Yes. Reach out through our contact form or email and our team will pray with you and for you.</div></div>
         <div class="pom-faq-item"><button class="pom-faq-q" type="button" aria-expanded="false">How can I get involved? <span class="pom-faq-icon" aria-hidden="true"></span></button><div class="pom-faq-a">Join Saturday Night Live, serve in outreach, or support the ministry store. Contact us and we’ll help you take the next step.</div></div>
         <div class="pom-faq-item"><button class="pom-faq-q" type="button" aria-expanded="false">What can I find in the store? <span class="pom-faq-icon" aria-hidden="true"></span></button><div class="pom-faq-a">Music &amp; CDs, sermons, and books for everyday encouragement and faith.</div></div>
+        <div class="pom-faq-item"><button class="pom-faq-q" type="button" aria-expanded="false">Can we invite Pastor Michael to speak? <span class="pom-faq-icon" aria-hidden="true"></span></button><div class="pom-faq-a">Yes. Call 888-631-9665 or email terryolivia@currently.com with your church, conference, or event details, and we will have him contact you.</div></div>
       </div>
     </div>
     <div class="pom-cms"><squarespace:block-field id="services-faq" columns="12" /></div>
@@ -155,7 +176,7 @@
           <h2>We’d love to hear from you.</h2>
           <p class="pom-contact-lead">Have a question, need prayer, or want to help?</p>
           <div class="pom-contact-meta is-icons">
-            <a href="tel:3305059087">330 505-9087 <span class="pom-meta-icon is-phone" aria-hidden="true"></span></a>
+            <a href="tel:8886319665">888-631-9665 <span class="pom-meta-icon is-phone" aria-hidden="true"></span></a>
             <a href="mailto:terryolivia@currently.com">terryolivia@currently.com <span class="pom-meta-icon is-mail" aria-hidden="true"></span></a>
           </div>
         </div>
