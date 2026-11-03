@@ -125,8 +125,7 @@
       </div>
       <div class="pom-form-card" data-pom-region="outreach-contact-form">
         <div class="pom-fallback">
-          <p class="pom-form-cms-hint">Edit this page → click here → add a <strong>Form</strong> block to receive messages by email.</p>
-          <form data-contact-form>
+<form data-contact-form>
             <div class="pom-field"><label for="outreach-name">Name</label><input id="outreach-name" name="name" type="text"></div>
             <div class="pom-field"><label for="outreach-email">Email</label><input id="outreach-email" name="email" type="email"></div>
             <div class="pom-field"><label for="outreach-message">Message</label><textarea id="outreach-message" name="message"></textarea></div>

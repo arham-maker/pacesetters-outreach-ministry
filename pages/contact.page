@@ -32,8 +32,7 @@
     <div class="pom-form-stack" data-pom-region="contact-form">
       <div class="pom-fallback">
         <h3>Send us a message</h3>
-        <p class="pom-form-cms-hint">Edit this page → click this form area → add a <strong>Form</strong> block. Submissions go to your Squarespace inbox / email.</p>
-        <form data-contact-form>
+<form data-contact-form>
           <div class="pom-field-row">
             <div class="pom-field"><label for="contact-first">First name</label><input id="contact-first" name="firstName" type="text" autocomplete="given-name"></div>
             <div class="pom-field"><label for="contact-last">Last name</label><input id="contact-last" name="lastName" type="text" autocomplete="family-name"></div>

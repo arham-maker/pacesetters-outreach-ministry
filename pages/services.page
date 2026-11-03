@@ -184,8 +184,7 @@
       </div>
       <div class="pom-form-card" data-pom-region="services-contact-form">
         <div class="pom-fallback">
-          <p class="pom-form-cms-hint">Edit this page → click here → add a <strong>Form</strong> block to receive messages by email.</p>
-          <form data-contact-form>
+<form data-contact-form>
             <div class="pom-field"><label for="svc-name">Name</label><input id="svc-name" name="name" type="text"></div>
             <div class="pom-field"><label for="svc-email">Email</label><input id="svc-email" name="email" type="email"></div>
             <div class="pom-field"><label for="svc-message">Message</label><textarea id="svc-message" name="message"></textarea></div>

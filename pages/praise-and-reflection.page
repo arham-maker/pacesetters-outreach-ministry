@@ -174,8 +174,7 @@
       </div>
       <div class="pom-form-card" data-pom-region="product-praise-and-reflection-contact-form">
         <div class="pom-fallback">
-          <p class="pom-form-cms-hint">Edit this page → click here → add a <strong>Form</strong> block to receive messages by email.</p>
-          <form data-contact-form>
+<form data-contact-form>
             <div class="pom-field"><label for="praise-and-reflection-name">Name</label><input id="praise-and-reflection-name" name="name" type="text"></div>
             <div class="pom-field"><label for="praise-and-reflection-email">Email</label><input id="praise-and-reflection-email" name="email" type="email"></div>
             <div class="pom-field"><label for="praise-and-reflection-message">Message</label><textarea id="praise-and-reflection-message" name="message"></textarea></div>

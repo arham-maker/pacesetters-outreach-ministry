@@ -21,8 +21,7 @@ def contact_block(prefix: str, field_prefix: str, with_id: bool = True) -> str:
       </div>
       <div class="pom-form-card" data-pom-region="{prefix}-contact-form">
         <div class="pom-fallback">
-          <p class="pom-form-cms-hint">Edit this page → click here → add a <strong>Form</strong> block to receive messages by email.</p>
-          <form data-contact-form>
+<form data-contact-form>
             <div class="pom-field"><label for="{field_prefix}-name">Name</label><input id="{field_prefix}-name" name="name" type="text"></div>
             <div class="pom-field"><label for="{field_prefix}-email">Email</label><input id="{field_prefix}-email" name="email" type="email"></div>
             <div class="pom-field"><label for="{field_prefix}-message">Message</label><textarea id="{field_prefix}-message" name="message"></textarea></div>

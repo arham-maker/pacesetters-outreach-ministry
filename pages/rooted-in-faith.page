@@ -174,8 +174,7 @@
       </div>
       <div class="pom-form-card" data-pom-region="product-rooted-in-faith-contact-form">
         <div class="pom-fallback">
-          <p class="pom-form-cms-hint">Edit this page → click here → add a <strong>Form</strong> block to receive messages by email.</p>
-          <form data-contact-form>
+<form data-contact-form>
             <div class="pom-field"><label for="rooted-in-faith-name">Name</label><input id="rooted-in-faith-name" name="name" type="text"></div>
             <div class="pom-field"><label for="rooted-in-faith-email">Email</label><input id="rooted-in-faith-email" name="email" type="email"></div>
             <div class="pom-field"><label for="rooted-in-faith-message">Message</label><textarea id="rooted-in-faith-message" name="message"></textarea></div>

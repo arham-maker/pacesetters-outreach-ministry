@@ -174,8 +174,7 @@
       </div>
       <div class="pom-form-card" data-pom-region="product-walking-with-christ-contact-form">
         <div class="pom-fallback">
-          <p class="pom-form-cms-hint">Edit this page → click here → add a <strong>Form</strong> block to receive messages by email.</p>
-          <form data-contact-form>
+<form data-contact-form>
             <div class="pom-field"><label for="walking-with-christ-name">Name</label><input id="walking-with-christ-name" name="name" type="text"></div>
             <div class="pom-field"><label for="walking-with-christ-email">Email</label><input id="walking-with-christ-email" name="email" type="email"></div>
             <div class="pom-field"><label for="walking-with-christ-message">Message</label><textarea id="walking-with-christ-message" name="message"></textarea></div>

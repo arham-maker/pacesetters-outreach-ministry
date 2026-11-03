@@ -134,8 +134,7 @@
       </div>
       <div class="pom-form-card" data-pom-region="prayer-contact-form">
         <div class="pom-fallback">
-          <p class="pom-form-cms-hint">Edit this page → click here → add a <strong>Form</strong> block to receive messages by email.</p>
-          <form data-contact-form>
+<form data-contact-form>
             <div class="pom-field"><label for="prayer-name">Name</label><input id="prayer-name" name="name" type="text"></div>
             <div class="pom-field"><label for="prayer-email">Email</label><input id="prayer-email" name="email" type="email"></div>
             <div class="pom-field"><label for="prayer-message">Message</label><textarea id="prayer-message" name="message"></textarea></div>

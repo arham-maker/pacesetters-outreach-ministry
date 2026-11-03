@@ -360,8 +360,7 @@ def page_html(p: dict) -> str:
       </div>
       <div class="pom-form-card" data-pom-region="product-{p['slug']}-contact-form">
         <div class="pom-fallback">
-          <p class="pom-form-cms-hint">Edit this page → click here → add a <strong>Form</strong> block to receive messages by email.</p>
-          <form data-contact-form>
+<form data-contact-form>
             <div class="pom-field"><label for="{p['slug']}-name">Name</label><input id="{p['slug']}-name" name="name" type="text"></div>
             <div class="pom-field"><label for="{p['slug']}-email">Email</label><input id="{p['slug']}-email" name="email" type="email"></div>
             <div class="pom-field"><label for="{p['slug']}-message">Message</label><textarea id="{p['slug']}-message" name="message"></textarea></div>
