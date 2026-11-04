@@ -12,7 +12,7 @@ ROOT = Path(__file__).resolve().parents[1]
 MEDIA_SRC = {
     "is-hands": "/assets/home-purpose.png",
     "is-bible": "/assets/home-snl-hires.png",
-    "is-books": "/assets/homw/home-store-scripture.jpg",
+    "is-books": "/assets/homw/home-store-church-pew.jpg",
     "is-about-story": "/assets/about/about-story.png",
     "is-about-faith": "/assets/about/about-faith.png",
     "is-about-reach": "/assets/about/about-reach.png",

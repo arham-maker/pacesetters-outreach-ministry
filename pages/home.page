@@ -76,11 +76,11 @@
       </div>
         <div class="pom-cms"><squarespace:block-field id="home-copy-2" columns="12" /></div>
       </div>
-      <div class="pom-media is-books" role="img" aria-label="Elderly woman reading the Bible" data-pom-region="home-store-image">
+      <div class="pom-media is-books" role="img" aria-label="Elderly woman reading the Bible in church" data-pom-region="home-store-image-v2">
         <div class="pom-fallback">
-          <img src="/assets/homw/home-store-scripture.jpg" alt="Elderly woman reading the Bible" loading="lazy" decoding="async">
+          <img src="/assets/homw/home-store-church-pew.jpg" alt="Elderly woman reading the Bible in church" loading="lazy" decoding="async">
         </div>
-        <div class="pom-cms"><squarespace:block-field id="home-store-image" columns="12" /></div>
+        <div class="pom-cms"><squarespace:block-field id="home-store-image-v2" columns="12" /></div>
       </div>
     </div>
     <div class="pom-cms"><squarespace:block-field id="home-store-promo" columns="12" /></div>
