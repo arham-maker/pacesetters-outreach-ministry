@@ -106,9 +106,9 @@
 
   <section class="pom-split is-cream is-about-reach" data-pom-region="about-reach">
     <div class="pom-fallback">
-      <div class="pom-media is-about-reach" role="img" aria-label="People gathered studying an open Bible" data-pom-region="about-about-reach">
+      <div class="pom-media is-about-reach" role="img" aria-label="Elderly woman reading the Bible" data-pom-region="about-about-reach">
         <div class="pom-fallback">
-          <img src="/assets/about/about-reach.png" alt="People gathered studying an open Bible" loading="lazy" decoding="async">
+          <img src="/assets/about/about-reach.png" alt="Elderly woman reading the Bible" loading="lazy" decoding="async">
         </div>
         <div class="pom-cms"><squarespace:block-field id="about-about-reach" columns="12" /></div>
       </div>
