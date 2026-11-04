@@ -76,9 +76,9 @@
       </div>
         <div class="pom-cms"><squarespace:block-field id="home-copy-2" columns="12" /></div>
       </div>
-      <div class="pom-media is-books" role="img" aria-label="Books, CDs, and headphones" data-pom-region="home-books">
+      <div class="pom-media is-books" role="img" aria-label="Elderly woman reading the Bible" data-pom-region="home-books">
         <div class="pom-fallback">
-          <img src="/assets/homw/blackhome.jpg" alt="Books, CDs, and headphones" loading="lazy" decoding="async">
+          <img src="/assets/homw/blackhome.jpg" alt="Elderly woman reading the Bible" loading="lazy" decoding="async">
         </div>
         <div class="pom-cms"><squarespace:block-field id="home-books" columns="12" /></div>
       </div>
